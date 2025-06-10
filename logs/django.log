@@ -1,0 +1,939 @@
+INFO 2025-06-10 19:05:47,669 autoreload 8840 13244 Watching for file changes with StatReloader
+INFO 2025-06-10 19:06:02,795 autoreload 8840 13244 C:\Users\Resat\Desktop\universite\core\web\core\settings.py changed, reloading.
+INFO 2025-06-10 19:06:03,559 autoreload 14412 22008 Watching for file changes with StatReloader
+INFO 2025-06-10 19:06:17,432 autoreload 14412 22008 C:\Users\Resat\Desktop\universite\core\web\core\settings.py changed, reloading.
+INFO 2025-06-10 19:06:18,228 autoreload 18028 18232 Watching for file changes with StatReloader
+INFO 2025-06-10 19:06:43,941 autoreload 18028 18232 C:\Users\Resat\Desktop\universite\core\web\core\settings.py changed, reloading.
+INFO 2025-06-10 19:06:44,688 autoreload 10452 16296 Watching for file changes with StatReloader
+INFO 2025-06-10 19:07:18,939 autoreload 10452 16296 C:\Users\Resat\Desktop\universite\core\web\core\settings.py changed, reloading.
+INFO 2025-06-10 19:07:19,790 autoreload 21288 19708 Watching for file changes with StatReloader
+INFO 2025-06-10 19:07:57,270 autoreload 21288 19708 C:\Users\Resat\Desktop\universite\core\web\core\settings.py changed, reloading.
+INFO 2025-06-10 19:07:58,048 autoreload 11408 7056 Watching for file changes with StatReloader
+INFO 2025-06-10 19:08:23,679 autoreload 11408 7056 C:\Users\Resat\Desktop\universite\core\web\core\settings.py changed, reloading.
+INFO 2025-06-10 19:08:24,436 autoreload 14964 19388 Watching for file changes with StatReloader
+INFO 2025-06-10 19:08:29,921 runserver 14964 13928 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:58994]
+INFO 2025-06-10 19:08:29,982 runserver 14964 13928 WebSocket CONNECT /ws/chat/ [192.168.0.210:58994]
+INFO 2025-06-10 19:08:29,985 runserver 14964 13928 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:58995]
+INFO 2025-06-10 19:08:29,989 runserver 14964 13928 WebSocket CONNECT /ws/notifications/ [192.168.0.210:58995]
+INFO 2025-06-10 19:08:35,879 runserver 14964 13928 [32mHTTP GET /post/ 302 [0.07, 192.168.0.164:58621][0m
+WARNING 2025-06-10 19:08:35,896 log 14964 20008 Not Found: /accounts/login/
+WARNING 2025-06-10 19:08:35,897 runserver 14964 13928 [33mHTTP GET /accounts/login/?next=/post/ 404 [0.01, 192.168.0.164:58621][0m
+WARNING 2025-06-10 19:08:36,139 log 14964 20008 Not Found: /favicon.ico
+WARNING 2025-06-10 19:08:36,139 runserver 14964 13928 [33mHTTP GET /favicon.ico 404 [0.02, 192.168.0.164:58621][0m
+INFO 2025-06-10 19:08:38,652 runserver 14964 13928 [mHTTP GET / 200 [0.01, 192.168.0.164:58621][0m
+INFO 2025-06-10 19:08:38,672 runserver 14964 13928 [36mHTTP GET /static/assets/vendor/fonts/tabler-icons.css 304 [0.01, 192.168.0.164:58621][0m
+INFO 2025-06-10 19:08:38,854 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/icons/megaphone.png 304 [0.01, 192.168.0.164:58621][0m
+INFO 2025-06-10 19:08:38,873 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/gazi.png 304 [0.02, 192.168.0.164:58620][0m
+INFO 2025-06-10 19:08:38,873 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/mersin.png 304 [0.01, 192.168.0.164:58626][0m
+INFO 2025-06-10 19:08:38,874 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/dokuz-eylul.png 304 [0.01, 192.168.0.164:58627][0m
+INFO 2025-06-10 19:08:38,874 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/bogazici.png 304 [0.01, 192.168.0.164:58621][0m
+INFO 2025-06-10 19:08:38,876 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/selcuk.png 304 [0.01, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:38,880 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/akdeniz.png 304 [0.02, 192.168.0.164:58629][0m
+INFO 2025-06-10 19:08:38,891 runserver 14964 13928 [36mHTTP GET /static/assets/img/front-pages/branding/anadolu.png 304 [0.01, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:39,219 runserver 14964 13928 [36mHTTP GET /static/assets/vendor/fonts/tabler/tabler-icons.woff2?v3.4.0 304 [0.00, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:40,376 runserver 14964 13928 [mHTTP GET /login/ 200 [0.05, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:45,481 runserver 14964 13928 [32mHTTP POST /login/ 302 [0.79, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:45,542 runserver 14964 13928 [32mHTTP GET / 302 [0.06, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:45,718 runserver 14964 13928 [mHTTP GET /post/ 200 [0.17, 192.168.0.164:58628][0m
+WARNING 2025-06-10 19:08:45,917 runserver 14964 13928 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:08:45,961 runserver 14964 13928 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58634]
+INFO 2025-06-10 19:08:45,972 runserver 14964 13928 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58634]
+INFO 2025-06-10 19:08:46,001 runserver 14964 13928 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58635]
+INFO 2025-06-10 19:08:46,015 runserver 14964 13928 WebSocket CONNECT /ws/chat/ [192.168.0.164:58635]
+INFO 2025-06-10 19:08:50,601 runserver 14964 13928 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:58995]
+INFO 2025-06-10 19:08:50,602 runserver 14964 13928 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:58994]
+INFO 2025-06-10 19:08:55,422 runserver 14964 13928 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:58999]
+INFO 2025-06-10 19:08:55,426 runserver 14964 13928 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59000]
+INFO 2025-06-10 19:08:55,447 runserver 14964 13928 WebSocket CONNECT /ws/chat/ [192.168.0.210:58999]
+INFO 2025-06-10 19:08:55,448 runserver 14964 13928 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59000]
+INFO 2025-06-10 19:08:55,533 runserver 14964 13928 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.10, 192.168.0.210:65003][0m
+INFO 2025-06-10 19:08:55,534 runserver 14964 13928 [mHTTP GET /api/v1/likes/content-types/ 200 [0.10, 192.168.0.210:65004][0m
+INFO 2025-06-10 19:08:55,566 runserver 14964 13928 [mHTTP GET /api/v1/chat/rooms/ 200 [0.14, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:08:55,862 runserver 14964 13928 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.10, 192.168.0.210:65003][0m
+INFO 2025-06-10 19:08:55,871 runserver 14964 13928 [mHTTP GET /api/v1/profiles/me/ 200 [0.11, 192.168.0.210:65004][0m
+INFO 2025-06-10 19:08:55,873 runserver 14964 13928 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.26, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:08:56,052 runserver 14964 13928 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.10, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:08:56,064 runserver 14964 13928 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.09, 192.168.0.210:65003][0m
+INFO 2025-06-10 19:08:56,225 runserver 14964 13928 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.15, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:08:56,486 runserver 14964 13928 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.04, 192.168.0.210:65003][0m
+INFO 2025-06-10 19:08:56,487 runserver 14964 13928 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.04, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:08:56,487 runserver 14964 13928 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.04, 192.168.0.210:65004][0m
+INFO 2025-06-10 19:08:56,494 runserver 14964 13928 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.04, 192.168.0.210:65005][0m
+INFO 2025-06-10 19:08:56,519 runserver 14964 13928 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65003][0m
+INFO 2025-06-10 19:08:56,526 runserver 14964 13928 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:08:56,689 runserver 14964 13928 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.24, 192.168.0.210:65006][0m
+INFO 2025-06-10 19:08:59,039 runserver 14964 13928 [mHTTP POST /like/like/ 200 [0.10, 192.168.0.164:58628][0m
+WARNING 2025-06-10 19:08:59,710 services 14964 16348 User 1 için aktif push token bulunamadı
+INFO 2025-06-10 19:08:59,717 runserver 14964 13928 [mHTTP POST /like/like/ 200 [0.19, 192.168.0.164:58628][0m
+INFO 2025-06-10 19:09:00,724 runserver 14964 13928 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.16, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:09:00,728 runserver 14964 13928 [mHTTP GET /api/v1/notifications/list/?page=2&page_size=20 200 [0.13, 192.168.0.210:65004][0m
+INFO 2025-06-10 19:09:00,765 runserver 14964 13928 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.20, 192.168.0.210:65003][0m
+INFO 2025-06-10 19:09:28,341 runserver 14964 13928 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.18, 192.168.0.210:65002][0m
+INFO 2025-06-10 19:12:12,813 autoreload 14964 19388 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\serializers.py changed, reloading.
+INFO 2025-06-10 19:12:13,745 autoreload 14492 3788 Watching for file changes with StatReloader
+INFO 2025-06-10 19:12:15,069 runserver 14492 17064 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59001]
+INFO 2025-06-10 19:12:15,072 runserver 14492 17064 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59002]
+INFO 2025-06-10 19:12:15,140 runserver 14492 17064 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59001]
+INFO 2025-06-10 19:12:15,141 runserver 14492 17064 WebSocket CONNECT /ws/chat/ [192.168.0.210:59002]
+INFO 2025-06-10 19:12:15,969 runserver 14492 17064 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58706]
+INFO 2025-06-10 19:12:15,984 runserver 14492 17064 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58706]
+INFO 2025-06-10 19:12:15,998 runserver 14492 17064 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58708]
+INFO 2025-06-10 19:12:16,004 runserver 14492 17064 WebSocket CONNECT /ws/chat/ [192.168.0.164:58708]
+INFO 2025-06-10 19:12:30,352 autoreload 14492 3788 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\serializers.py changed, reloading.
+INFO 2025-06-10 19:12:31,267 autoreload 11832 15856 Watching for file changes with StatReloader
+INFO 2025-06-10 19:12:32,674 runserver 11832 7964 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59003]
+INFO 2025-06-10 19:12:32,687 runserver 11832 7964 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59004]
+INFO 2025-06-10 19:12:32,744 runserver 11832 7964 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59003]
+INFO 2025-06-10 19:12:32,744 runserver 11832 7964 WebSocket CONNECT /ws/chat/ [192.168.0.210:59004]
+INFO 2025-06-10 19:12:33,595 runserver 11832 7964 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58737]
+INFO 2025-06-10 19:12:33,624 runserver 11832 7964 WebSocket CONNECT /ws/chat/ [192.168.0.164:58737]
+INFO 2025-06-10 19:12:35,601 runserver 11832 7964 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58739]
+INFO 2025-06-10 19:12:35,616 runserver 11832 7964 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58739]
+INFO 2025-06-10 19:12:55,121 autoreload 11832 15856 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\serializers.py changed, reloading.
+INFO 2025-06-10 19:12:55,949 autoreload 400 14396 Watching for file changes with StatReloader
+INFO 2025-06-10 19:12:57,383 runserver 400 8640 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59006]
+INFO 2025-06-10 19:12:57,389 runserver 400 8640 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59005]
+INFO 2025-06-10 19:12:57,478 runserver 400 8640 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59006]
+INFO 2025-06-10 19:12:57,478 runserver 400 8640 WebSocket CONNECT /ws/chat/ [192.168.0.210:59005]
+INFO 2025-06-10 19:12:58,324 runserver 400 8640 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58755]
+INFO 2025-06-10 19:12:58,357 runserver 400 8640 WebSocket CONNECT /ws/chat/ [192.168.0.164:58755]
+INFO 2025-06-10 19:13:00,314 runserver 400 8640 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58759]
+INFO 2025-06-10 19:13:00,331 runserver 400 8640 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58759]
+INFO 2025-06-10 19:13:59,230 runserver 400 8640 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:59005]
+INFO 2025-06-10 19:13:59,232 runserver 400 8640 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:59006]
+INFO 2025-06-10 19:14:02,713 runserver 400 8640 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59010]
+INFO 2025-06-10 19:14:02,718 runserver 400 8640 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59011]
+INFO 2025-06-10 19:14:02,747 runserver 400 8640 WebSocket CONNECT /ws/chat/ [192.168.0.210:59010]
+INFO 2025-06-10 19:14:02,751 runserver 400 8640 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59011]
+INFO 2025-06-10 19:14:02,835 runserver 400 8640 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.11, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:02,842 runserver 400 8640 [mHTTP GET /api/v1/likes/content-types/ 200 [0.12, 192.168.0.210:65016][0m
+INFO 2025-06-10 19:14:02,877 runserver 400 8640 [mHTTP GET /api/v1/chat/rooms/ 200 [0.16, 192.168.0.210:65014][0m
+INFO 2025-06-10 19:14:02,960 runserver 400 8640 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.10, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:03,116 runserver 400 8640 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.11, 192.168.0.210:65014][0m
+INFO 2025-06-10 19:14:03,116 runserver 400 8640 [mHTTP GET /api/v1/profiles/me/ 200 [0.11, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:03,192 runserver 400 8640 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.05, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:03,194 runserver 400 8640 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.06, 192.168.0.210:65014][0m
+INFO 2025-06-10 19:14:03,364 runserver 400 8640 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.15, 192.168.0.210:65014][0m
+INFO 2025-06-10 19:14:03,494 runserver 400 8640 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65016][0m
+INFO 2025-06-10 19:14:03,495 runserver 400 8640 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:03,495 runserver 400 8640 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65014][0m
+INFO 2025-06-10 19:14:03,500 runserver 400 8640 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65017][0m
+INFO 2025-06-10 19:14:03,523 runserver 400 8640 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.01, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:03,527 runserver 400 8640 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.01, 192.168.0.210:65016][0m
+INFO 2025-06-10 19:14:03,556 runserver 400 8640 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.07, 192.168.0.210:65018][0m
+INFO 2025-06-10 19:14:04,761 runserver 400 8640 [mHTTP GET /api/v1/notifications/list/?page=2&page_size=20 200 [0.12, 192.168.0.210:65016][0m
+INFO 2025-06-10 19:14:04,765 runserver 400 8640 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.14, 192.168.0.210:65014][0m
+INFO 2025-06-10 19:14:04,789 runserver 400 8640 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.16, 192.168.0.210:65015][0m
+INFO 2025-06-10 19:14:07,989 autoreload 400 14396 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:14:08,784 autoreload 9760 19248 Watching for file changes with StatReloader
+INFO 2025-06-10 19:14:19,060 autoreload 9760 19248 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:14:19,871 autoreload 7292 17816 Watching for file changes with StatReloader
+INFO 2025-06-10 19:14:29,194 autoreload 7292 17816 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:14:29,966 autoreload 6636 13664 Watching for file changes with StatReloader
+INFO 2025-06-10 19:14:44,639 autoreload 6636 13664 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:14:45,374 autoreload 13168 10256 Watching for file changes with StatReloader
+INFO 2025-06-10 19:14:46,175 runserver 13168 16044 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58834]
+INFO 2025-06-10 19:14:46,423 runserver 13168 16044 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58834]
+INFO 2025-06-10 19:14:46,444 runserver 13168 16044 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58846]
+INFO 2025-06-10 19:14:46,449 runserver 13168 16044 WebSocket CONNECT /ws/chat/ [192.168.0.164:58846]
+INFO 2025-06-10 19:14:51,177 runserver 13168 16044 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59014]
+INFO 2025-06-10 19:14:51,183 runserver 13168 16044 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59015]
+INFO 2025-06-10 19:14:51,213 runserver 13168 16044 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59014]
+INFO 2025-06-10 19:14:51,213 runserver 13168 16044 WebSocket CONNECT /ws/chat/ [192.168.0.210:59015]
+INFO 2025-06-10 19:15:00,171 runserver 13168 16044 [mHTTP GET /post/ 200 [0.35, 192.168.0.164:58854][0m
+INFO 2025-06-10 19:15:00,183 runserver 13168 16044 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:58834]
+INFO 2025-06-10 19:15:00,183 runserver 13168 16044 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:58846]
+WARNING 2025-06-10 19:15:00,441 runserver 13168 16044 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:58854][0m
+INFO 2025-06-10 19:15:00,463 runserver 13168 16044 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58858]
+INFO 2025-06-10 19:15:00,476 runserver 13168 16044 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58858]
+INFO 2025-06-10 19:15:00,493 runserver 13168 16044 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58859]
+INFO 2025-06-10 19:15:00,505 runserver 13168 16044 WebSocket CONNECT /ws/chat/ [192.168.0.164:58859]
+ERROR 2025-06-10 19:15:01,863 log 13168 4652 Internal Server Error: /api/v1/posts/posts/
+Traceback (most recent call last):
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py", line 66, in get_queryset
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\query.py", line 1645, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\query.py", line 1697, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\aggregates.py", line 181, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\expressions.py", line 300, in resolve_expression
+    expr.resolve_expression(query, allow_joins, reuse, summarize)
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 2046, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1897, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'likes' into field. Choices are: content, created_at, hashtags, id, images, updated_at, user, user_id
+ERROR 2025-06-10 19:15:01,877 runserver 13168 16044 [35;1mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 500 [0.20, 192.168.0.210:65024][0m
+INFO 2025-06-10 19:15:05,975 runserver 13168 16044 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:59015]
+INFO 2025-06-10 19:15:05,978 runserver 13168 16044 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:59014]
+INFO 2025-06-10 19:15:09,463 runserver 13168 16044 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59020]
+INFO 2025-06-10 19:15:09,468 runserver 13168 16044 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59021]
+INFO 2025-06-10 19:15:09,507 runserver 13168 16044 WebSocket CONNECT /ws/chat/ [192.168.0.210:59020]
+INFO 2025-06-10 19:15:09,510 runserver 13168 16044 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59021]
+INFO 2025-06-10 19:15:09,610 runserver 13168 16044 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.14, 192.168.0.210:65032][0m
+INFO 2025-06-10 19:15:09,617 runserver 13168 16044 [mHTTP GET /api/v1/likes/content-types/ 200 [0.14, 192.168.0.210:65033][0m
+INFO 2025-06-10 19:15:09,645 runserver 13168 16044 [mHTTP GET /api/v1/chat/rooms/ 200 [0.20, 192.168.0.210:65024][0m
+INFO 2025-06-10 19:15:09,729 runserver 13168 16044 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.10, 192.168.0.210:65032][0m
+INFO 2025-06-10 19:15:09,849 runserver 13168 16044 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.07, 192.168.0.210:65024][0m
+INFO 2025-06-10 19:15:09,853 runserver 13168 16044 [mHTTP GET /api/v1/profiles/me/ 200 [0.08, 192.168.0.210:65032][0m
+INFO 2025-06-10 19:15:09,924 runserver 13168 16044 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.06, 192.168.0.210:65032][0m
+INFO 2025-06-10 19:15:09,926 runserver 13168 16044 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.06, 192.168.0.210:65024][0m
+ERROR 2025-06-10 19:15:10,023 log 13168 4652 Internal Server Error: /api/v1/posts/posts/
+Traceback (most recent call last):
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py", line 66, in get_queryset
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\query.py", line 1645, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\query.py", line 1697, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\aggregates.py", line 181, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\expressions.py", line 300, in resolve_expression
+    expr.resolve_expression(query, allow_joins, reuse, summarize)
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 2046, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1897, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\db\models\sql\query.py", line 1802, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'likes' into field. Choices are: content, created_at, hashtags, id, images, updated_at, user, user_id
+ERROR 2025-06-10 19:15:10,028 runserver 13168 16044 [35;1mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 500 [0.09, 192.168.0.210:65024][0m
+INFO 2025-06-10 19:16:20,431 autoreload 13168 10256 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:16:21,261 autoreload 19736 11744 Watching for file changes with StatReloader
+INFO 2025-06-10 19:16:22,774 runserver 19736 19512 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59022]
+INFO 2025-06-10 19:16:22,777 runserver 19736 19512 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59023]
+INFO 2025-06-10 19:16:22,847 runserver 19736 19512 WebSocket CONNECT /ws/chat/ [192.168.0.210:59022]
+INFO 2025-06-10 19:16:22,849 runserver 19736 19512 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59023]
+INFO 2025-06-10 19:16:23,665 runserver 19736 19512 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58903]
+INFO 2025-06-10 19:16:23,686 runserver 19736 19512 WebSocket CONNECT /ws/chat/ [192.168.0.164:58903]
+INFO 2025-06-10 19:16:25,649 runserver 19736 19512 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58905]
+INFO 2025-06-10 19:16:25,662 runserver 19736 19512 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58905]
+INFO 2025-06-10 19:16:33,468 autoreload 19736 11744 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:16:34,292 autoreload 4908 17244 Watching for file changes with StatReloader
+INFO 2025-06-10 19:16:35,793 runserver 4908 16008 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59024]
+INFO 2025-06-10 19:16:35,800 runserver 4908 16008 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59025]
+INFO 2025-06-10 19:16:35,876 runserver 4908 16008 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59024]
+INFO 2025-06-10 19:16:35,877 runserver 4908 16008 WebSocket CONNECT /ws/chat/ [192.168.0.210:59025]
+INFO 2025-06-10 19:16:36,690 runserver 4908 16008 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58920]
+INFO 2025-06-10 19:16:36,731 runserver 4908 16008 WebSocket CONNECT /ws/chat/ [192.168.0.164:58920]
+INFO 2025-06-10 19:16:37,502 runserver 4908 16008 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:59025]
+INFO 2025-06-10 19:16:37,504 runserver 4908 16008 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:59024]
+INFO 2025-06-10 19:16:38,674 runserver 4908 16008 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58925]
+INFO 2025-06-10 19:16:38,681 runserver 4908 16008 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58925]
+INFO 2025-06-10 19:16:41,083 runserver 4908 16008 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59029]
+INFO 2025-06-10 19:16:41,085 runserver 4908 16008 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59030]
+INFO 2025-06-10 19:16:41,093 runserver 4908 16008 WebSocket CONNECT /ws/chat/ [192.168.0.210:59029]
+INFO 2025-06-10 19:16:41,096 runserver 4908 16008 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59030]
+INFO 2025-06-10 19:16:41,190 runserver 4908 16008 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.10, 192.168.0.210:65042][0m
+INFO 2025-06-10 19:16:41,196 runserver 4908 16008 [mHTTP GET /api/v1/likes/content-types/ 200 [0.10, 192.168.0.210:65043][0m
+INFO 2025-06-10 19:16:41,232 runserver 4908 16008 [mHTTP GET /api/v1/chat/rooms/ 200 [0.14, 192.168.0.210:65041][0m
+INFO 2025-06-10 19:16:41,312 runserver 4908 16008 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.10, 192.168.0.210:65042][0m
+INFO 2025-06-10 19:16:41,414 runserver 4908 16008 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.07, 192.168.0.210:65041][0m
+INFO 2025-06-10 19:16:41,419 runserver 4908 16008 [mHTTP GET /api/v1/profiles/me/ 200 [0.07, 192.168.0.210:65042][0m
+INFO 2025-06-10 19:16:41,479 runserver 4908 16008 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.05, 192.168.0.210:65042][0m
+INFO 2025-06-10 19:16:41,626 runserver 4908 16008 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.20, 192.168.0.210:65041][0m
+ERROR 2025-06-10 19:16:41,724 log 4908 22016 Internal Server Error: /api/v1/posts/posts/
+Traceback (most recent call last):
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\current_thread_executor.py", line 40, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\.venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py", line 67, in get_queryset
+    like_count=models.Subquery(
+               ^^^^^^
+NameError: name 'models' is not defined
+ERROR 2025-06-10 19:16:41,732 runserver 4908 16008 [35;1mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 500 [0.07, 192.168.0.210:65041][0m
+INFO 2025-06-10 19:16:44,929 runserver 4908 16008 [mHTTP GET /post/ 200 [0.26, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:44,940 runserver 4908 16008 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:58920]
+INFO 2025-06-10 19:16:44,942 runserver 4908 16008 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:58925]
+INFO 2025-06-10 19:16:45,012 runserver 4908 16008 [mHTTP GET /static/assets/vendor/fonts/fontawesome.css 200 [0.02, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,013 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 200 [0.01, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,014 runserver 4908 16008 [mHTTP GET /static/assets/css/demo.css 200 [0.02, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,015 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 200 [0.02, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,020 runserver 4908 16008 [mHTTP GET /static/assets/vendor/css/core.css 200 [0.02, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,029 runserver 4908 16008 [mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 200 [0.03, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:45,045 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 200 [0.03, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,047 runserver 4908 16008 [mHTTP GET /static/css/notifications.css 200 [0.02, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,047 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 200 [0.02, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,048 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/select2/select2.css 200 [0.02, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,057 runserver 4908 16008 [mHTTP GET /static/assets/vendor/js/helpers.js 200 [0.02, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,076 runserver 4908 16008 [mHTTP GET /static/assets/vendor/js/template-customizer.js 200 [0.03, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,076 runserver 4908 16008 [mHTTP GET /static/assets/js/config.js 200 [0.02, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,080 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 200 [0.02, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,090 runserver 4908 16008 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.03, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,102 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/popper/popper.js 200 [0.00, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,114 runserver 4908 16008 [mHTTP GET /static/assets/vendor/js/bootstrap.js 200 [0.01, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,124 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 200 [0.01, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,162 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/skin-default.svg 200 [0.01, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,175 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/skin-border.svg 200 [0.02, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,175 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 200 [0.01, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,175 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 200 [0.01, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,176 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/content-compact.svg 200 [0.01, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,176 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/content-wide.svg 200 [0.01, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:45,179 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 200 [0.01, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,200 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 200 [0.02, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,200 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 200 [0.02, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,202 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/navbar-static.svg 200 [0.02, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,202 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/horizontal-static.svg 200 [0.02, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,206 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/direction-rtl.svg 200 [0.02, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,207 runserver 4908 16008 [mHTTP GET /static/assets/img/customizer/direction-ltr.svg 200 [0.02, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:45,230 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 200 [0.02, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,231 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 200 [0.02, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,232 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 200 [0.02, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,233 runserver 4908 16008 [mHTTP GET /static/assets/vendor/js/menu.js 200 [0.02, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:45,233 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 200 [0.02, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,253 runserver 4908 16008 [mHTTP GET /static/assets/js/main.js 200 [0.02, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,261 runserver 4908 16008 [mHTTP GET /static/js/notifications.js 200 [0.01, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,262 runserver 4908 16008 [mHTTP GET /static/js/header-chat.js 200 [0.01, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:45,264 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 200 [0.01, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,264 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/select2/select2.js 200 [0.01, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,267 runserver 4908 16008 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.06, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,273 runserver 4908 16008 [mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 200 [0.01, 192.168.0.164:58938][0m
+INFO 2025-06-10 19:16:45,282 runserver 4908 16008 [mHTTP GET /static/js/relative-time.js 200 [0.02, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,284 runserver 4908 16008 [mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 200 [0.02, 192.168.0.164:58937][0m
+INFO 2025-06-10 19:16:45,286 runserver 4908 16008 [mHTTP GET /static/js/waypoints/infinite.min.js 200 [0.01, 192.168.0.164:58944][0m
+INFO 2025-06-10 19:16:45,292 runserver 4908 16008 [mHTTP GET /static/js/waypoints/custom.js 200 [0.02, 192.168.0.164:58943][0m
+INFO 2025-06-10 19:16:45,295 runserver 4908 16008 [mHTTP GET /static/bookmark/js/bookmark.js 200 [0.02, 192.168.0.164:58946][0m
+INFO 2025-06-10 19:16:45,299 runserver 4908 16008 [mHTTP GET /static/like/js/likes.js 200 [0.02, 192.168.0.164:58938][0m
+WARNING 2025-06-10 19:16:45,310 runserver 4908 16008 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,349 runserver 4908 16008 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58947]
+INFO 2025-06-10 19:16:45,355 runserver 4908 16008 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58947]
+INFO 2025-06-10 19:16:45,372 runserver 4908 16008 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58948]
+INFO 2025-06-10 19:16:45,382 runserver 4908 16008 WebSocket CONNECT /ws/chat/ [192.168.0.164:58948]
+INFO 2025-06-10 19:16:45,502 runserver 4908 16008 [mHTTP GET /static/assets/img/favicon/favicon.ico 200 [0.01, 192.168.0.164:58945][0m
+INFO 2025-06-10 19:16:45,918 autoreload 4908 17244 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:16:46,922 autoreload 8964 11080 Watching for file changes with StatReloader
+INFO 2025-06-10 19:16:48,284 runserver 8964 20772 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59031]
+INFO 2025-06-10 19:16:48,293 runserver 8964 20772 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59032]
+INFO 2025-06-10 19:16:48,394 runserver 8964 20772 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59031]
+INFO 2025-06-10 19:16:48,394 runserver 8964 20772 WebSocket CONNECT /ws/chat/ [192.168.0.210:59032]
+INFO 2025-06-10 19:16:49,147 runserver 8964 20772 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58962]
+INFO 2025-06-10 19:16:49,162 runserver 8964 20772 WebSocket CONNECT /ws/chat/ [192.168.0.164:58962]
+INFO 2025-06-10 19:16:51,160 runserver 8964 20772 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58964]
+INFO 2025-06-10 19:16:51,166 runserver 8964 20772 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58964]
+INFO 2025-06-10 19:17:01,487 autoreload 8964 11080 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:17:02,362 autoreload 17260 1528 Watching for file changes with StatReloader
+INFO 2025-06-10 19:17:03,735 runserver 17260 8252 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59033]
+INFO 2025-06-10 19:17:03,757 runserver 17260 8252 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59034]
+INFO 2025-06-10 19:17:03,820 runserver 17260 8252 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59033]
+INFO 2025-06-10 19:17:03,821 runserver 17260 8252 WebSocket CONNECT /ws/chat/ [192.168.0.210:59034]
+INFO 2025-06-10 19:17:04,703 runserver 17260 8252 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58980]
+INFO 2025-06-10 19:17:04,736 runserver 17260 8252 WebSocket CONNECT /ws/chat/ [192.168.0.164:58980]
+INFO 2025-06-10 19:17:06,700 runserver 17260 8252 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:58983]
+INFO 2025-06-10 19:17:06,715 runserver 17260 8252 WebSocket CONNECT /ws/notifications/ [192.168.0.164:58983]
+INFO 2025-06-10 19:17:15,614 autoreload 17260 1528 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:17:16,458 autoreload 21872 7776 Watching for file changes with StatReloader
+INFO 2025-06-10 19:17:18,802 runserver 21872 12292 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:58997]
+INFO 2025-06-10 19:17:18,892 runserver 21872 12292 WebSocket CONNECT /ws/chat/ [192.168.0.164:58997]
+INFO 2025-06-10 19:17:19,200 runserver 21872 12292 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59038]
+INFO 2025-06-10 19:17:19,202 runserver 21872 12292 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59039]
+INFO 2025-06-10 19:17:19,225 runserver 21872 12292 WebSocket CONNECT /ws/chat/ [192.168.0.210:59038]
+INFO 2025-06-10 19:17:19,228 runserver 21872 12292 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59039]
+INFO 2025-06-10 19:17:19,312 runserver 21872 12292 [mHTTP GET /api/v1/likes/content-types/ 200 [0.10, 192.168.0.210:65053][0m
+INFO 2025-06-10 19:17:19,317 runserver 21872 12292 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.11, 192.168.0.210:65052][0m
+INFO 2025-06-10 19:17:19,359 runserver 21872 12292 [mHTTP GET /api/v1/chat/rooms/ 200 [0.15, 192.168.0.210:65051][0m
+INFO 2025-06-10 19:17:19,550 runserver 21872 12292 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.09, 192.168.0.210:65052][0m
+INFO 2025-06-10 19:17:19,562 runserver 21872 12292 [mHTTP GET /api/v1/profiles/me/ 200 [0.10, 192.168.0.210:65053][0m
+INFO 2025-06-10 19:17:19,562 runserver 21872 12292 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.13, 192.168.0.210:65051][0m
+INFO 2025-06-10 19:17:19,624 runserver 21872 12292 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.06, 192.168.0.210:65052][0m
+INFO 2025-06-10 19:17:19,625 runserver 21872 12292 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.04, 192.168.0.210:65051][0m
+INFO 2025-06-10 19:17:19,777 runserver 21872 12292 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.14, 192.168.0.210:65051][0m
+INFO 2025-06-10 19:17:19,911 runserver 21872 12292 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65051][0m
+INFO 2025-06-10 19:17:19,916 runserver 21872 12292 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65053][0m
+INFO 2025-06-10 19:17:19,916 runserver 21872 12292 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65052][0m
+INFO 2025-06-10 19:17:19,932 runserver 21872 12292 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65054][0m
+INFO 2025-06-10 19:17:19,950 runserver 21872 12292 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65051][0m
+INFO 2025-06-10 19:17:19,961 runserver 21872 12292 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65052][0m
+INFO 2025-06-10 19:17:20,006 runserver 21872 12292 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.10, 192.168.0.210:65055][0m
+INFO 2025-06-10 19:17:20,797 runserver 21872 12292 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59011]
+INFO 2025-06-10 19:17:20,815 runserver 21872 12292 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59011]
+INFO 2025-06-10 19:17:36,302 autoreload 21872 7776 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\serializers.py changed, reloading.
+INFO 2025-06-10 19:17:37,095 autoreload 18360 12880 Watching for file changes with StatReloader
+INFO 2025-06-10 19:17:38,567 runserver 18360 11176 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59040]
+INFO 2025-06-10 19:17:38,569 runserver 18360 11176 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59041]
+INFO 2025-06-10 19:17:38,634 runserver 18360 11176 WebSocket CONNECT /ws/chat/ [192.168.0.210:59040]
+INFO 2025-06-10 19:17:38,635 runserver 18360 11176 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59041]
+INFO 2025-06-10 19:17:39,491 runserver 18360 11176 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59029]
+INFO 2025-06-10 19:17:39,514 runserver 18360 11176 WebSocket CONNECT /ws/chat/ [192.168.0.164:59029]
+INFO 2025-06-10 19:17:39,640 runserver 18360 11176 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:59040]
+INFO 2025-06-10 19:17:39,642 runserver 18360 11176 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:59041]
+INFO 2025-06-10 19:17:41,484 runserver 18360 11176 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59034]
+INFO 2025-06-10 19:17:41,502 runserver 18360 11176 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59034]
+INFO 2025-06-10 19:17:43,084 runserver 18360 11176 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59045]
+INFO 2025-06-10 19:17:43,100 runserver 18360 11176 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59046]
+INFO 2025-06-10 19:17:43,128 runserver 18360 11176 WebSocket CONNECT /ws/chat/ [192.168.0.210:59045]
+INFO 2025-06-10 19:17:43,131 runserver 18360 11176 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59046]
+INFO 2025-06-10 19:17:43,242 runserver 18360 11176 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.15, 192.168.0.210:65062][0m
+INFO 2025-06-10 19:17:43,245 runserver 18360 11176 [mHTTP GET /api/v1/likes/content-types/ 200 [0.15, 192.168.0.210:65063][0m
+INFO 2025-06-10 19:17:43,271 runserver 18360 11176 [mHTTP GET /api/v1/chat/rooms/ 200 [0.18, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:43,372 runserver 18360 11176 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.09, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:43,517 runserver 18360 11176 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.08, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:43,520 runserver 18360 11176 [mHTTP GET /api/v1/profiles/me/ 200 [0.09, 192.168.0.210:65062][0m
+INFO 2025-06-10 19:17:43,689 runserver 18360 11176 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.06, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:43,707 runserver 18360 11176 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.08, 192.168.0.210:65062][0m
+INFO 2025-06-10 19:17:43,958 runserver 18360 11176 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.15, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:44,161 runserver 18360 11176 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.03, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:44,162 runserver 18360 11176 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65062][0m
+INFO 2025-06-10 19:17:44,164 runserver 18360 11176 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65063][0m
+INFO 2025-06-10 19:17:44,164 runserver 18360 11176 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65064][0m
+INFO 2025-06-10 19:17:44,213 runserver 18360 11176 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.07, 192.168.0.210:65065][0m
+INFO 2025-06-10 19:17:44,339 runserver 18360 11176 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:17:44,359 runserver 18360 11176 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65062][0m
+INFO 2025-06-10 19:17:55,300 runserver 18360 11176 [mHTTP GET /api/v1/notifications/list/?page=2&page_size=20 200 [0.08, 192.168.0.210:65063][0m
+INFO 2025-06-10 19:17:55,313 runserver 18360 11176 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.12, 192.168.0.210:65062][0m
+INFO 2025-06-10 19:17:55,362 runserver 18360 11176 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.17, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:18:05,134 runserver 18360 11176 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.14, 192.168.0.210:65061][0m
+INFO 2025-06-10 19:18:12,065 autoreload 18360 12880 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\serializers.py changed, reloading.
+INFO 2025-06-10 19:18:12,894 autoreload 7324 14764 Watching for file changes with StatReloader
+INFO 2025-06-10 19:18:29,576 autoreload 7324 14764 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\serializers.py changed, reloading.
+INFO 2025-06-10 19:18:30,254 autoreload 16200 18836 Watching for file changes with StatReloader
+INFO 2025-06-10 19:18:31,409 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59088]
+INFO 2025-06-10 19:18:31,478 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59088]
+INFO 2025-06-10 19:18:31,501 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59094]
+INFO 2025-06-10 19:18:31,507 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59094]
+INFO 2025-06-10 19:18:33,244 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59047]
+INFO 2025-06-10 19:18:33,250 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59048]
+INFO 2025-06-10 19:18:33,278 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.210:59047]
+INFO 2025-06-10 19:18:33,280 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59048]
+INFO 2025-06-10 19:18:36,043 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:59047]
+INFO 2025-06-10 19:18:36,045 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:59048]
+INFO 2025-06-10 19:18:39,430 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59052]
+INFO 2025-06-10 19:18:39,438 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59053]
+INFO 2025-06-10 19:18:39,464 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.210:59052]
+INFO 2025-06-10 19:18:39,466 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59053]
+INFO 2025-06-10 19:18:39,554 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:39,560 runserver 16200 21404 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.13, 192.168.0.210:65073][0m
+INFO 2025-06-10 19:18:39,590 runserver 16200 21404 [mHTTP GET /api/v1/chat/rooms/ 200 [0.16, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:18:39,807 runserver 16200 21404 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.13, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:39,809 runserver 16200 21404 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.10, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:18:39,813 runserver 16200 21404 [mHTTP GET /api/v1/profiles/me/ 200 [0.10, 192.168.0.210:65073][0m
+INFO 2025-06-10 19:18:39,893 runserver 16200 21404 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.07, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:39,895 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.06, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:18:40,055 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.15, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:40,186 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:18:40,187 runserver 16200 21404 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:40,187 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65073][0m
+INFO 2025-06-10 19:18:40,191 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.02, 192.168.0.210:65074][0m
+INFO 2025-06-10 19:18:40,208 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.01, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:18:40,218 runserver 16200 21404 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.01, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:40,255 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.07, 192.168.0.210:65075][0m
+INFO 2025-06-10 19:18:41,868 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 200 [0.11, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:44,953 runserver 16200 21404 [mHTTP GET /post/ 200 [0.18, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:44,963 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59088]
+INFO 2025-06-10 19:18:44,965 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59094]
+WARNING 2025-06-10 19:18:45,215 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:45,263 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59117]
+INFO 2025-06-10 19:18:45,272 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59117]
+INFO 2025-06-10 19:18:45,299 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59118]
+INFO 2025-06-10 19:18:45,305 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59118]
+WARNING 2025-06-10 19:18:47,127 services 16200 20792 User 2 için aktif push token bulunamadı
+WARNING 2025-06-10 19:18:47,182 services 16200 20792 User 2 için aktif push token bulunamadı
+INFO 2025-06-10 19:18:47,198 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 201 [0.19, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:18:48,978 runserver 16200 21404 [mHTTP GET /post/ 200 [0.15, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:48,984 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59117]
+INFO 2025-06-10 19:18:48,986 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59118]
+WARNING 2025-06-10 19:18:49,207 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:49,234 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59123]
+INFO 2025-06-10 19:18:49,242 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59123]
+INFO 2025-06-10 19:18:49,269 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59124]
+INFO 2025-06-10 19:18:49,275 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59124]
+INFO 2025-06-10 19:18:54,739 runserver 16200 21404 [mHTTP GET /post/90/ 200 [0.14, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:54,827 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59123]
+INFO 2025-06-10 19:18:54,828 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59124]
+WARNING 2025-06-10 19:18:54,893 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:54,910 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59126]
+INFO 2025-06-10 19:18:54,920 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59126]
+INFO 2025-06-10 19:18:54,941 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59127]
+INFO 2025-06-10 19:18:54,961 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59127]
+INFO 2025-06-10 19:18:56,533 runserver 16200 21404 [mHTTP GET /post/ 200 [0.18, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:56,629 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59126]
+INFO 2025-06-10 19:18:56,629 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59127]
+WARNING 2025-06-10 19:18:56,665 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:18:56,683 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59129]
+INFO 2025-06-10 19:18:56,689 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59129]
+INFO 2025-06-10 19:18:56,712 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59130]
+INFO 2025-06-10 19:18:56,719 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59130]
+INFO 2025-06-10 19:19:00,196 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 200 [0.07, 192.168.0.210:65071][0m
+WARNING 2025-06-10 19:19:00,992 services 16200 14860 User 2 için aktif push token bulunamadı
+WARNING 2025-06-10 19:19:01,050 services 16200 14860 User 2 için aktif push token bulunamadı
+INFO 2025-06-10 19:19:01,058 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 201 [0.22, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:04,602 runserver 16200 21404 [mHTTP POST /api/v1/bookmark/toggle/ 201 [0.09, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:07,440 runserver 16200 21404 [mHTTP GET /api/v1/profiles/me/ 200 [0.10, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:07,483 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.01, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:08,594 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/my_posts/?page=1 200 [0.14, 192.168.0.210:65071][0m
+WARNING 2025-06-10 19:19:08,664 log 16200 4592 Not Found: /api/v1/posts/posts/my_posts/
+WARNING 2025-06-10 19:19:08,664 runserver 16200 21404 [33mHTTP GET /api/v1/posts/posts/my_posts/?page=2 404 [0.20, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:19:11,110 runserver 16200 21404 [mHTTP GET /api/v1/bookmark/my_bookmarks/ 200 [0.12, 192.168.0.210:65071][0m
+WARNING 2025-06-10 19:19:11,225 log 16200 2664 Not Found: /api/v1/comments/comments/282/
+WARNING 2025-06-10 19:19:11,226 runserver 16200 21404 [33mHTTP GET /api/v1/comments/comments/282/ 404 [0.09, 192.168.0.210:65077][0m
+INFO 2025-06-10 19:19:11,283 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/90/ 200 [0.15, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:11,286 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/75/ 200 [0.15, 192.168.0.210:65072][0m
+INFO 2025-06-10 19:19:28,560 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.11, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:37,025 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.08, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:37,104 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/90/ 200 [0.07, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:37,216 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=90&page=1 200 [0.09, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:37,314 runserver 16200 21404 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.01, 192.168.0.210:65071][0m
+WARNING 2025-06-10 19:19:39,646 services 16200 6524 User 2 için aktif push token bulunamadı
+INFO 2025-06-10 19:19:39,667 runserver 16200 21404 [mHTTP POST /api/v1/comments/comments/ 201 [0.15, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:39,851 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=90&page=1 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:44,983 runserver 16200 21404 [mHTTP GET /comment/comment/294/ 200 [0.12, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:19:45,128 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59129]
+INFO 2025-06-10 19:19:45,129 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59130]
+WARNING 2025-06-10 19:19:45,142 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:19:45,181 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59159]
+INFO 2025-06-10 19:19:45,192 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59159]
+INFO 2025-06-10 19:19:45,212 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59160]
+INFO 2025-06-10 19:19:45,230 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59160]
+WARNING 2025-06-10 19:19:48,780 services 16200 13584 User 2 için aktif push token bulunamadı
+WARNING 2025-06-10 19:19:48,856 services 16200 13584 User 2 için aktif push token bulunamadı
+INFO 2025-06-10 19:19:48,865 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 201 [0.21, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:52,129 runserver 16200 21404 [mHTTP GET /comment/comment/291/ 200 [0.21, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:19:52,170 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59159]
+INFO 2025-06-10 19:19:52,171 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59160]
+WARNING 2025-06-10 19:19:52,333 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:19:52,352 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59165]
+INFO 2025-06-10 19:19:52,364 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59165]
+INFO 2025-06-10 19:19:52,381 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59166]
+INFO 2025-06-10 19:19:52,397 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59166]
+INFO 2025-06-10 19:19:55,306 runserver 16200 21404 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.08, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:55,319 runserver 16200 21404 [mHTTP GET /api/v1/notifications/list/?page=2&page_size=20 200 [0.07, 192.168.0.210:65079][0m
+INFO 2025-06-10 19:19:55,349 runserver 16200 21404 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.11, 192.168.0.210:65078][0m
+INFO 2025-06-10 19:19:57,432 runserver 16200 21404 [mHTTP GET /api/v1/profiles/me/ 200 [0.11, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:19:57,513 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.19, 192.168.0.210:65078][0m
+INFO 2025-06-10 19:20:02,342 runserver 16200 21404 [mHTTP POST /api/v1/posts/posts/ 201 [0.07, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:03,909 runserver 16200 21404 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.10, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:03,973 runserver 16200 21404 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.06, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:04,107 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:04,370 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.15, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:07,172 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/by_hashtag/?hashtag=evet&page=1 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:08,092 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 201 [0.06, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:08,904 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/by_hashtag/?hashtag=evet&page=1 200 [0.10, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:09,757 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/by_hashtag/?hashtag=evet&page=1 200 [0.11, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:12,752 runserver 16200 21404 [mHTTP GET /post/ 200 [0.16, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:20:12,792 runserver 16200 21404 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59165]
+INFO 2025-06-10 19:20:12,792 runserver 16200 21404 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59166]
+WARNING 2025-06-10 19:20:12,905 runserver 16200 21404 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:20:12,926 runserver 16200 21404 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59184]
+INFO 2025-06-10 19:20:12,932 runserver 16200 21404 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59184]
+INFO 2025-06-10 19:20:12,955 runserver 16200 21404 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59185]
+INFO 2025-06-10 19:20:12,962 runserver 16200 21404 WebSocket CONNECT /ws/chat/ [192.168.0.164:59185]
+WARNING 2025-06-10 19:20:14,465 services 16200 7964 User 1 için aktif push token bulunamadı
+INFO 2025-06-10 19:20:14,472 runserver 16200 21404 [mHTTP POST /like/like/ 200 [0.14, 192.168.0.164:59113][0m
+INFO 2025-06-10 19:20:16,564 runserver 16200 21404 [mHTTP GET /api/v1/notifications/list/?page=2&page_size=20 200 [0.06, 192.168.0.210:65079][0m
+INFO 2025-06-10 19:20:16,582 runserver 16200 21404 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.11, 192.168.0.210:65078][0m
+INFO 2025-06-10 19:20:16,640 runserver 16200 21404 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.17, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:17,535 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.09, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:17,632 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.08, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:17,702 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.06, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:21,039 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.07, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:21,134 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.09, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:21,209 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.06, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:22,502 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:22,607 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.05, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:31,454 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.14, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:35,639 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.09, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:35,723 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.07, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:35,795 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.05, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:36,797 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:36,929 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.08, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:37,778 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.12, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:37,877 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.05, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:39,303 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 200 [0.10, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:40,269 runserver 16200 21404 [mHTTP POST /api/v1/likes/likes/toggle/ 201 [0.11, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:41,545 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.07, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:41,769 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.21, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:42,490 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.08, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:20:42,587 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.06, 192.168.0.210:65071][0m
+INFO 2025-06-10 19:21:38,739 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.12, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:39,719 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.07, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:39,951 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.22, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:40,034 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.06, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:41,046 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.26, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:41,159 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.05, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:43,594 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.15, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:44,774 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.10, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:44,963 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.09, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:45,110 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.06, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:47,124 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.14, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:51,399 runserver 16200 21404 [mHTTP POST /api/v1/bookmark/toggle/ 201 [0.09, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:53,255 runserver 16200 21404 [mHTTP GET /api/v1/profiles/me/ 200 [0.11, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:55,466 runserver 16200 21404 [mHTTP GET /api/v1/bookmark/my_bookmarks/ 200 [0.11, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:21:55,575 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.09, 192.168.0.210:65081][0m
+WARNING 2025-06-10 19:21:55,602 log 16200 4592 Not Found: /api/v1/comments/comments/282/
+WARNING 2025-06-10 19:21:55,603 runserver 16200 21404 [33mHTTP GET /api/v1/comments/comments/282/ 404 [0.10, 192.168.0.210:65087][0m
+INFO 2025-06-10 19:21:55,609 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/75/ 200 [0.10, 192.168.0.210:65086][0m
+INFO 2025-06-10 19:21:55,611 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/90/ 200 [0.11, 192.168.0.210:65085][0m
+INFO 2025-06-10 19:22:05,584 runserver 16200 21404 [mHTTP GET /api/v1/profiles/me/ 200 [0.09, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:22:08,587 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.11, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:22:12,201 runserver 16200 21404 [mHTTP POST /like/like/ 200 [0.20, 192.168.0.164:59249][0m
+WARNING 2025-06-10 19:22:12,957 services 16200 10700 User 1 için aktif push token bulunamadı
+INFO 2025-06-10 19:22:12,964 runserver 16200 21404 [mHTTP POST /like/like/ 200 [0.27, 192.168.0.164:59249][0m
+INFO 2025-06-10 19:22:14,900 runserver 16200 21404 [mHTTP GET /api/v1/likes/content-types/ 200 [0.09, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:22:15,130 runserver 16200 21404 [mHTTP GET /api/v1/posts/posts/direct/91/ 200 [0.22, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:22:15,212 runserver 16200 21404 [mHTTP GET /api/v1/comments/comments/?content_type_id=17&object_id=91&page=1 200 [0.06, 192.168.0.210:65081][0m
+INFO 2025-06-10 19:23:21,803 autoreload 16200 18836 C:\Users\Resat\Desktop\universite\core\web\apps\post\models.py changed, reloading.
+INFO 2025-06-10 19:23:22,668 autoreload 6356 21160 Watching for file changes with StatReloader
+INFO 2025-06-10 19:23:24,065 runserver 6356 14964 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59055]
+INFO 2025-06-10 19:23:24,073 runserver 6356 14964 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59056]
+INFO 2025-06-10 19:23:24,263 runserver 6356 14964 WebSocket CONNECT /ws/chat/ [192.168.0.210:59055]
+INFO 2025-06-10 19:23:24,263 runserver 6356 14964 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59056]
+INFO 2025-06-10 19:23:25,029 runserver 6356 14964 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59284]
+INFO 2025-06-10 19:23:25,055 runserver 6356 14964 WebSocket CONNECT /ws/chat/ [192.168.0.164:59284]
+INFO 2025-06-10 19:23:27,024 runserver 6356 14964 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59288]
+INFO 2025-06-10 19:23:27,036 runserver 6356 14964 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59288]
+INFO 2025-06-10 19:23:30,496 autoreload 6356 21160 C:\Users\Resat\Desktop\universite\core\web\apps\post\models.py changed, reloading.
+INFO 2025-06-10 19:23:31,352 autoreload 1148 19400 Watching for file changes with StatReloader
+INFO 2025-06-10 19:23:32,745 runserver 1148 8824 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59057]
+INFO 2025-06-10 19:23:32,753 runserver 1148 8824 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59058]
+INFO 2025-06-10 19:23:32,830 runserver 1148 8824 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59057]
+INFO 2025-06-10 19:23:32,831 runserver 1148 8824 WebSocket CONNECT /ws/chat/ [192.168.0.210:59058]
+INFO 2025-06-10 19:23:33,737 runserver 1148 8824 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59302]
+INFO 2025-06-10 19:23:33,767 runserver 1148 8824 WebSocket CONNECT /ws/chat/ [192.168.0.164:59302]
+INFO 2025-06-10 19:23:35,729 runserver 1148 8824 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59304]
+INFO 2025-06-10 19:23:35,737 runserver 1148 8824 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59304]
+INFO 2025-06-10 19:23:43,395 autoreload 1148 19400 C:\Users\Resat\Desktop\universite\core\web\apps\post\models.py changed, reloading.
+INFO 2025-06-10 19:23:44,297 autoreload 10140 8772 Watching for file changes with StatReloader
+INFO 2025-06-10 19:23:45,649 runserver 10140 9240 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59059]
+INFO 2025-06-10 19:23:45,666 runserver 10140 9240 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59060]
+INFO 2025-06-10 19:23:45,724 runserver 10140 9240 WebSocket CONNECT /ws/chat/ [192.168.0.210:59059]
+INFO 2025-06-10 19:23:45,724 runserver 10140 9240 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59060]
+INFO 2025-06-10 19:23:46,577 runserver 10140 9240 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59319]
+INFO 2025-06-10 19:23:46,589 runserver 10140 9240 WebSocket CONNECT /ws/chat/ [192.168.0.164:59319]
+INFO 2025-06-10 19:23:48,595 runserver 10140 9240 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59321]
+INFO 2025-06-10 19:23:48,611 runserver 10140 9240 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59321]
+INFO 2025-06-10 19:23:57,472 runserver 10140 9240 [32mHTTP GET /logout/ 302 [0.23, 192.168.0.164:59324][0m
+INFO 2025-06-10 19:23:57,531 runserver 10140 9240 [mHTTP GET /login/ 200 [0.05, 192.168.0.164:59324][0m
+INFO 2025-06-10 19:23:57,574 runserver 10140 9240 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59319]
+INFO 2025-06-10 19:23:57,574 runserver 10140 9240 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59321]
+INFO 2025-06-10 19:23:57,962 autoreload 10140 8772 C:\Users\Resat\Desktop\universite\core\web\apps\post\models.py changed, reloading.
+INFO 2025-06-10 19:23:58,996 autoreload 8580 17808 Watching for file changes with StatReloader
+INFO 2025-06-10 19:24:00,302 runserver 8580 16388 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59061]
+INFO 2025-06-10 19:24:00,306 runserver 8580 16388 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59062]
+INFO 2025-06-10 19:24:00,373 runserver 8580 16388 WebSocket CONNECT /ws/chat/ [192.168.0.210:59061]
+INFO 2025-06-10 19:24:00,374 runserver 8580 16388 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59062]
+INFO 2025-06-10 19:24:03,664 runserver 8580 16388 [32mHTTP POST /login/ 302 [0.94, 192.168.0.164:59341][0m
+INFO 2025-06-10 19:24:03,724 runserver 8580 16388 [32mHTTP GET / 302 [0.06, 192.168.0.164:59341][0m
+INFO 2025-06-10 19:24:04,021 runserver 8580 16388 [mHTTP GET /post/ 200 [0.29, 192.168.0.164:59341][0m
+WARNING 2025-06-10 19:24:04,284 runserver 8580 16388 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59341][0m
+INFO 2025-06-10 19:24:04,313 runserver 8580 16388 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59347]
+INFO 2025-06-10 19:24:04,324 runserver 8580 16388 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59347]
+INFO 2025-06-10 19:24:04,348 runserver 8580 16388 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59348]
+INFO 2025-06-10 19:24:04,356 runserver 8580 16388 WebSocket CONNECT /ws/chat/ [192.168.0.164:59348]
+INFO 2025-06-10 19:24:06,460 runserver 8580 16388 [mHTTP GET /admin/ 200 [0.10, 192.168.0.164:59341][0m
+INFO 2025-06-10 19:24:06,502 runserver 8580 16388 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59347]
+INFO 2025-06-10 19:24:06,503 runserver 8580 16388 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59348]
+INFO 2025-06-10 19:24:06,514 runserver 8580 16388 [36mHTTP GET /static/admin/css/base.css 304 [0.01, 192.168.0.164:59341][0m
+INFO 2025-06-10 19:24:06,524 runserver 8580 16388 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.02, 192.168.0.164:59342][0m
+INFO 2025-06-10 19:24:06,526 runserver 8580 16388 [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 192.168.0.164:59353][0m
+INFO 2025-06-10 19:24:06,527 runserver 8580 16388 [36mHTTP GET /static/admin/css/dashboard.css 304 [0.01, 192.168.0.164:59351][0m
+INFO 2025-06-10 19:24:06,527 runserver 8580 16388 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 192.168.0.164:59354][0m
+INFO 2025-06-10 19:24:06,527 runserver 8580 16388 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 192.168.0.164:59352][0m
+INFO 2025-06-10 19:24:06,537 runserver 8580 16388 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 192.168.0.164:59352][0m
+INFO 2025-06-10 19:24:06,560 runserver 8580 16388 [36mHTTP GET /static/admin/img/icon-deletelink.svg 304 [0.00, 192.168.0.164:59351][0m
+INFO 2025-06-10 19:24:06,561 runserver 8580 16388 [36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.01, 192.168.0.164:59352][0m
+INFO 2025-06-10 19:24:06,561 runserver 8580 16388 [36mHTTP GET /static/admin/img/icon-changelink.svg 304 [0.01, 192.168.0.164:59354][0m
+WARNING 2025-06-10 19:24:06,649 log 8580 13464 Not Found: /favicon.ico
+WARNING 2025-06-10 19:24:06,649 runserver 8580 16388 [33mHTTP GET /favicon.ico 404 [0.02, 192.168.0.164:59354][0m
+INFO 2025-06-10 19:24:11,774 autoreload 8580 17808 C:\Users\Resat\Desktop\universite\core\web\apps\like\models.py changed, reloading.
+INFO 2025-06-10 19:24:12,926 autoreload 17440 5136 Watching for file changes with StatReloader
+INFO 2025-06-10 19:24:43,507 autoreload 17440 5136 C:\Users\Resat\Desktop\universite\core\web\apps\comment\models.py changed, reloading.
+INFO 2025-06-10 19:24:44,322 autoreload 21440 13472 Watching for file changes with StatReloader
+INFO 2025-06-10 19:25:15,847 autoreload 21440 13472 C:\Users\Resat\Desktop\universite\core\web\apps\comment\models.py changed, reloading.
+INFO 2025-06-10 19:25:16,562 autoreload 3116 8440 Watching for file changes with StatReloader
+INFO 2025-06-10 19:25:21,362 autoreload 3116 8440 C:\Users\Resat\Desktop\universite\core\web\apps\like\models.py changed, reloading.
+INFO 2025-06-10 19:25:22,013 autoreload 13664 8680 Watching for file changes with StatReloader
+INFO 2025-06-10 19:25:25,841 autoreload 13664 8680 C:\Users\Resat\Desktop\universite\core\web\apps\bookmark\models.py changed, reloading.
+INFO 2025-06-10 19:25:26,595 autoreload 8472 12248 Watching for file changes with StatReloader
+INFO 2025-06-10 19:25:29,641 runserver 8472 5564 [mHTTP GET /admin/post/post/ 200 [0.22, 192.168.0.164:59427][0m
+INFO 2025-06-10 19:25:29,735 runserver 8472 5564 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.02, 192.168.0.164:59428][0m
+INFO 2025-06-10 19:25:29,735 runserver 8472 5564 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.02, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:29,737 runserver 8472 5564 [36mHTTP GET /static/admin/js/core.js 304 [0.02, 192.168.0.164:59433][0m
+INFO 2025-06-10 19:25:29,738 runserver 8472 5564 [36mHTTP GET /static/admin/css/changelists.css 304 [0.02, 192.168.0.164:59431][0m
+INFO 2025-06-10 19:25:29,741 runserver 8472 5564 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.02, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:29,758 runserver 8472 5564 [36mHTTP GET /static/admin/js/actions.js 304 [0.02, 192.168.0.164:59433][0m
+INFO 2025-06-10 19:25:29,760 runserver 8472 5564 [36mHTTP GET /static/admin/js/urlify.js 304 [0.02, 192.168.0.164:59428][0m
+INFO 2025-06-10 19:25:29,762 runserver 8472 5564 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.02, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:29,764 runserver 8472 5564 [36mHTTP GET /static/admin/img/search.svg 304 [0.01, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:29,766 runserver 8472 5564 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.02, 192.168.0.164:59431][0m
+INFO 2025-06-10 19:25:29,808 runserver 8472 5564 [36mHTTP GET /static/admin/js/filters.js 304 [0.01, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:29,860 runserver 8472 5564 [mHTTP GET /admin/jsi18n/ 200 [0.15, 192.168.0.164:59427][0m
+INFO 2025-06-10 19:25:29,954 runserver 8472 5564 [36mHTTP GET /static/admin/img/tooltag-add.svg 304 [0.01, 192.168.0.164:59427][0m
+INFO 2025-06-10 19:25:29,962 runserver 8472 5564 [36mHTTP GET /static/admin/img/sorting-icons.svg 304 [0.01, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:29,963 runserver 8472 5564 [36mHTTP GET /static/admin/img/icon-viewlink.svg 304 [0.01, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:31,494 runserver 8472 5564 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59069]
+INFO 2025-06-10 19:25:31,534 runserver 8472 5564 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59070]
+INFO 2025-06-10 19:25:31,591 runserver 8472 5564 WebSocket CONNECT /ws/chat/ [192.168.0.210:59069]
+INFO 2025-06-10 19:25:31,591 runserver 8472 5564 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59070]
+INFO 2025-06-10 19:25:34,843 runserver 8472 5564 [mHTTP GET /admin/comment/comment/ 200 [0.15, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:34,880 runserver 8472 5564 [36mHTTP GET /static/admin/css/forms.css 304 [0.01, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:34,900 runserver 8472 5564 [36mHTTP GET /static/admin/css/widgets.css 304 [0.00, 192.168.0.164:59434][0m
+INFO 2025-06-10 19:25:34,942 runserver 8472 5564 [mHTTP GET /admin/jsi18n/ 200 [0.07, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:38,312 runserver 8472 5564 [mHTTP GET /admin/comment/commentimage/ 200 [0.08, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:38,399 runserver 8472 5564 [mHTTP GET /admin/jsi18n/ 200 [0.06, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:40,312 runserver 8472 5564 [mHTTP GET /admin/bookmark/bookmark/ 200 [0.10, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:40,399 runserver 8472 5564 [mHTTP GET /admin/jsi18n/ 200 [0.06, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:45,524 runserver 8472 5564 [32mHTTP GET / 302 [0.10, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:45,738 runserver 8472 5564 [mHTTP GET /post/ 200 [0.21, 192.168.0.164:59432][0m
+WARNING 2025-06-10 19:25:46,051 runserver 8472 5564 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:46,075 runserver 8472 5564 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59450]
+INFO 2025-06-10 19:25:46,082 runserver 8472 5564 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59450]
+INFO 2025-06-10 19:25:46,107 runserver 8472 5564 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59451]
+INFO 2025-06-10 19:25:46,117 runserver 8472 5564 WebSocket CONNECT /ws/chat/ [192.168.0.164:59451]
+INFO 2025-06-10 19:25:46,984 runserver 8472 5564 [mHTTP GET /post/ 200 [0.19, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:46,997 runserver 8472 5564 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59450]
+INFO 2025-06-10 19:25:46,998 runserver 8472 5564 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59451]
+WARNING 2025-06-10 19:25:47,128 runserver 8472 5564 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59432][0m
+INFO 2025-06-10 19:25:47,144 runserver 8472 5564 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59453]
+INFO 2025-06-10 19:25:47,150 runserver 8472 5564 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59453]
+INFO 2025-06-10 19:25:47,171 runserver 8472 5564 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59454]
+INFO 2025-06-10 19:25:47,186 runserver 8472 5564 WebSocket CONNECT /ws/chat/ [192.168.0.164:59454]
+INFO 2025-06-10 19:25:51,499 runserver 8472 5564 WebSocket DISCONNECT /ws/notifications/ [192.168.0.210:59070]
+INFO 2025-06-10 19:25:51,501 runserver 8472 5564 WebSocket DISCONNECT /ws/chat/ [192.168.0.210:59069]
+INFO 2025-06-10 19:25:57,879 runserver 8472 5564 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59074]
+INFO 2025-06-10 19:25:57,884 runserver 8472 5564 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59075]
+INFO 2025-06-10 19:25:57,927 runserver 8472 5564 WebSocket CONNECT /ws/chat/ [192.168.0.210:59074]
+INFO 2025-06-10 19:25:57,931 runserver 8472 5564 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59075]
+INFO 2025-06-10 19:25:58,027 runserver 8472 5564 [mHTTP GET /api/v1/likes/content-types/ 200 [0.13, 192.168.0.210:65105][0m
+INFO 2025-06-10 19:25:58,054 runserver 8472 5564 [mHTTP GET /api/v1/chat/rooms/ 200 [0.17, 192.168.0.210:65103][0m
+INFO 2025-06-10 19:25:58,109 runserver 8472 5564 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.22, 192.168.0.210:65104][0m
+INFO 2025-06-10 19:25:58,319 runserver 8472 5564 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.12, 192.168.0.210:65104][0m
+INFO 2025-06-10 19:25:58,326 runserver 8472 5564 [mHTTP GET /api/v1/profiles/me/ 200 [0.13, 192.168.0.210:65105][0m
+INFO 2025-06-10 19:25:58,365 runserver 8472 5564 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.18, 192.168.0.210:65103][0m
+INFO 2025-06-10 19:25:58,407 runserver 8472 5564 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.07, 192.168.0.210:65104][0m
+INFO 2025-06-10 19:25:58,415 runserver 8472 5564 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.07, 192.168.0.210:65105][0m
+INFO 2025-06-10 19:25:58,546 runserver 8472 5564 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.12, 192.168.0.210:65103][0m
+INFO 2025-06-10 19:25:58,721 runserver 8472 5564 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.03, 192.168.0.210:65104][0m
+INFO 2025-06-10 19:25:58,722 runserver 8472 5564 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.04, 192.168.0.210:65103][0m
+INFO 2025-06-10 19:25:58,724 runserver 8472 5564 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.04, 192.168.0.210:65105][0m
+INFO 2025-06-10 19:25:58,724 runserver 8472 5564 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.03, 192.168.0.210:65106][0m
+INFO 2025-06-10 19:25:58,752 runserver 8472 5564 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.01, 192.168.0.210:65103][0m
+INFO 2025-06-10 19:25:58,756 runserver 8472 5564 [mHTTP GET /media/avatars/2025/06/da74322c-a4eb-4fbe-9bee-0efe8db3f6c3.jpeg 200 [0.01, 192.168.0.210:65105][0m
+INFO 2025-06-10 19:25:58,775 runserver 8472 5564 [mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 200 [0.02, 192.168.0.210:65104][0m
+INFO 2025-06-10 19:25:58,814 runserver 8472 5564 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.12, 192.168.0.210:65107][0m
+INFO 2025-06-10 19:26:10,837 runserver 8472 5564 [mHTTP GET /api/v1/notifications/list/?page=2&page_size=20 200 [0.11, 192.168.0.210:65105][0m
+INFO 2025-06-10 19:26:10,838 runserver 8472 5564 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.13, 192.168.0.210:65103][0m
+INFO 2025-06-10 19:26:10,870 runserver 8472 5564 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.16, 192.168.0.210:65104][0m
+INFO 2025-06-10 19:26:43,931 autoreload 8472 12248 C:\Users\Resat\Desktop\universite\core\web\apps\profiles\models.py changed, reloading.
+INFO 2025-06-10 19:26:44,789 autoreload 21088 11956 Watching for file changes with StatReloader
+INFO 2025-06-10 19:26:54,754 autoreload 21088 11956 C:\Users\Resat\Desktop\universite\core\web\apps\profiles\models.py changed, reloading.
+INFO 2025-06-10 19:26:55,422 autoreload 10444 7292 Watching for file changes with StatReloader
+INFO 2025-06-10 19:26:56,235 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59496]
+INFO 2025-06-10 19:26:56,306 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59496]
+INFO 2025-06-10 19:26:56,330 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59507]
+INFO 2025-06-10 19:26:56,334 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.164:59507]
+INFO 2025-06-10 19:26:59,856 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59076]
+INFO 2025-06-10 19:26:59,858 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59077]
+INFO 2025-06-10 19:26:59,864 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.210:59076]
+INFO 2025-06-10 19:26:59,868 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59077]
+INFO 2025-06-10 19:27:25,597 runserver 10444 11380 [mHTTP GET /post/ 200 [0.34, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:25,608 runserver 10444 11380 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59496]
+INFO 2025-06-10 19:27:25,608 runserver 10444 11380 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59507]
+WARNING 2025-06-10 19:27:25,782 runserver 10444 11380 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:25,801 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59536]
+INFO 2025-06-10 19:27:25,817 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59536]
+INFO 2025-06-10 19:27:25,842 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59537]
+INFO 2025-06-10 19:27:25,851 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.164:59537]
+INFO 2025-06-10 19:27:26,847 runserver 10444 11380 [mHTTP GET /post/ 200 [0.18, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:26,854 runserver 10444 11380 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59536]
+INFO 2025-06-10 19:27:26,856 runserver 10444 11380 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59537]
+WARNING 2025-06-10 19:27:27,072 runserver 10444 11380 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:27,095 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59539]
+INFO 2025-06-10 19:27:27,107 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59539]
+INFO 2025-06-10 19:27:27,123 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59540]
+INFO 2025-06-10 19:27:27,130 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.164:59540]
+INFO 2025-06-10 19:27:28,138 runserver 10444 11380 [mHTTP GET /post/ 200 [0.29, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:28,147 runserver 10444 11380 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59539]
+INFO 2025-06-10 19:27:28,149 runserver 10444 11380 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59540]
+WARNING 2025-06-10 19:27:28,275 runserver 10444 11380 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:28,294 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59542]
+INFO 2025-06-10 19:27:28,306 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59542]
+INFO 2025-06-10 19:27:28,325 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59543]
+INFO 2025-06-10 19:27:28,335 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.164:59543]
+INFO 2025-06-10 19:27:30,837 runserver 10444 11380 [mHTTP GET /api/v1/profiles/me/ 200 [0.11, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:30,868 runserver 10444 11380 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.14, 192.168.0.210:65110][0m
+INFO 2025-06-10 19:27:32,102 runserver 10444 11380 [mHTTP POST /api/v1/posts/posts/ 201 [0.09, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:33,948 runserver 10444 11380 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.09, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:34,012 runserver 10444 11380 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.05, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:34,140 runserver 10444 11380 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.12, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:34,402 runserver 10444 11380 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.15, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:36,634 runserver 10444 11380 [mHTTP GET /post/ 200 [0.21, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:36,647 runserver 10444 11380 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59542]
+INFO 2025-06-10 19:27:36,647 runserver 10444 11380 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59543]
+WARNING 2025-06-10 19:27:36,766 runserver 10444 11380 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:36,791 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59560]
+INFO 2025-06-10 19:27:36,800 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59560]
+INFO 2025-06-10 19:27:36,826 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59561]
+INFO 2025-06-10 19:27:36,834 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.164:59561]
+INFO 2025-06-10 19:27:37,542 runserver 10444 11380 [mHTTP POST /like/like/ 200 [0.07, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:39,532 runserver 10444 11380 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.18, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:40,523 runserver 10444 11380 [mHTTP POST /api/v1/likes/likes/toggle/ 200 [0.08, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:41,392 runserver 10444 11380 [mHTTP GET /api/v1/posts/posts/?posts_type=all&university=2&page=1 200 [0.15, 192.168.0.210:65109][0m
+INFO 2025-06-10 19:27:42,909 runserver 10444 11380 [mHTTP GET /post/ 200 [0.16, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:42,919 runserver 10444 11380 WebSocket DISCONNECT /ws/notifications/ [192.168.0.164:59560]
+INFO 2025-06-10 19:27:42,920 runserver 10444 11380 WebSocket DISCONNECT /ws/chat/ [192.168.0.164:59561]
+WARNING 2025-06-10 19:27:43,040 runserver 10444 11380 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.0.164:59532][0m
+INFO 2025-06-10 19:27:43,066 runserver 10444 11380 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59570]
+INFO 2025-06-10 19:27:43,076 runserver 10444 11380 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59570]
+INFO 2025-06-10 19:27:43,102 runserver 10444 11380 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59571]
+INFO 2025-06-10 19:27:43,111 runserver 10444 11380 WebSocket CONNECT /ws/chat/ [192.168.0.164:59571]
+INFO 2025-06-10 19:28:30,755 autoreload 10444 7292 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:28:31,521 autoreload 10984 15876 Watching for file changes with StatReloader
+INFO 2025-06-10 19:28:32,994 runserver 10984 14776 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.210:59078]
+INFO 2025-06-10 19:28:33,015 runserver 10984 14776 WebSocket HANDSHAKING /ws/chat/ [192.168.0.210:59079]
+INFO 2025-06-10 19:28:33,072 runserver 10984 14776 WebSocket CONNECT /ws/notifications/ [192.168.0.210:59078]
+INFO 2025-06-10 19:28:33,072 runserver 10984 14776 WebSocket CONNECT /ws/chat/ [192.168.0.210:59079]
+INFO 2025-06-10 19:28:33,939 runserver 10984 14776 WebSocket HANDSHAKING /ws/chat/ [192.168.0.164:59602]
+INFO 2025-06-10 19:28:33,963 runserver 10984 14776 WebSocket CONNECT /ws/chat/ [192.168.0.164:59602]
+INFO 2025-06-10 19:28:35,938 runserver 10984 14776 WebSocket HANDSHAKING /ws/notifications/ [192.168.0.164:59604]
+INFO 2025-06-10 19:28:35,938 runserver 10984 14776 WebSocket CONNECT /ws/notifications/ [192.168.0.164:59604]
+INFO 2025-06-10 19:29:23,214 autoreload 10984 15876 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:29:24,057 autoreload 16252 16684 Watching for file changes with StatReloader
+INFO 2025-06-10 19:30:41,024 autoreload 16252 16684 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:30:41,792 autoreload 19204 13596 Watching for file changes with StatReloader
+INFO 2025-06-10 19:30:54,227 autoreload 19204 13596 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:30:55,053 autoreload 9740 19348 Watching for file changes with StatReloader
+INFO 2025-06-10 19:32:05,554 autoreload 9740 19348 C:\Users\Resat\Desktop\universite\core\web\apps\post\api\views.py changed, reloading.
+INFO 2025-06-10 19:32:06,346 autoreload 15048 14688 Watching for file changes with StatReloader
+INFO 2025-06-10 19:32:27,360 autoreload 15048 14688 C:\Users\Resat\Desktop\universite\core\web\core\__init__.py changed, reloading.

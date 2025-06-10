@@ -1,0 +1,286 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/css/pages/app-chat.css' %}" />
+<link rel="stylesheet" href="{% static 'chat/css/chat.css' %}" />
+
+{% endblock extra_css %}
+{% block content %}
+<div class="app-chat card overflow-hidden">
+   <div class="row g-0">
+      <div class="col app-chat-sidebar-left app-sidebar overflow-hidden" id="app-chat-sidebar-left">
+         <textarea id="chat-sidebar-left-user-about" maxlength="100"></textarea>
+         <small id="textarea-maxlength-info"></small>
+      </div>
+      <!-- Chat & Contacts -->
+      <div
+         class="col app-chat-contacts app-sidebar flex-grow-0 overflow-hidden border-end"
+         id="app-chat-contacts">
+         <div class="sidebar-header h-px-75 px-5 border-bottom d-flex align-items-center">
+            <div class="d-flex align-items-center me-6 me-lg-0">
+               <div
+                  class="flex-shrink-0 avatar me-4">
+                  {% if user.profile.avatar %}
+                  <img class="user-avatar rounded-circle cursor-pointer"
+                     src="{{ user.profile.avatar.url }}"
+                     alt="Avatar" />
+                  {% else %}
+                     <span class="avatar-initial rounded-circle bg-label-primary">
+                        {{ user.first_name|slice:":1"|upper }}{{ user.last_name|slice:":1"|upper }}
+                     </span>
+                  {% endif %}
+               </div>
+               <div class="flex-grow-1 input-group input-group-merge">
+                  <span class="input-group-text" id="basic-addon-search31"
+                     ><i class="icon-base ti tabler-search icon-xs"></i
+                     ></span>
+                  <input
+                     type="text"
+                     class="form-control chat-search-input"
+                     placeholder="Kişi veya Mesaj Ara..."
+                     aria-label="Kişi veya Mesaj Ara..."
+                     aria-describedby="basic-addon-search31" />
+               </div>
+            </div>
+            <i
+               id="close-sidebar-btn"
+               class="icon-base ti tabler-x icon-lg cursor-pointer position-absolute top-50 end-0 translate-middle d-lg-none d-block"
+               ></i>
+         </div>
+         <div class="sidebar-body">
+            <!-- Chats -->
+            <ul class="list-unstyled chat-contact-list py-2 mb-0" id="chat-list">
+               <li class="chat-contact-list-item chat-contact-list-item-title mt-0">
+                  <h5 class="text-primary mb-0">Sohbetler</h5>
+               </li>
+               <li class="chat-contact-list-item chat-list-item-0 d-none">
+                  <h6 class="text-body-secondary mb-0">Sohbet Bulunamadı</h6>
+               </li>
+               {% if chat_rooms %}
+               {% for chat in chat_rooms %}
+               <li class="chat-contact-list-item mb-1 {% if active_chat_room and active_chat_room.id == chat.id %}active{% endif %}">
+                  <a href="{% url 'chat:chat_detail' chat.id %}" class="d-flex align-items-center">
+                     <div class="flex-shrink-0 avatar">
+                        {% if chat.other_user.avatar %}
+                        <img src="{{ chat.other_user.avatar }}" alt="Avatar" class="rounded-circle" />
+                        {% else %}
+                        <span class="avatar-initial rounded-circle bg-label-primary">
+                        {{ chat.other_user.first_name|slice:":1"|upper }}{{ chat.other_user.last_name|slice:":1"|upper }}
+                        </span>
+                        {% endif %}
+                     </div>
+                     <div class="chat-contact-info flex-grow-1 ms-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                           <h6 class="chat-contact-name text-truncate fw-normal m-0">
+                              {{ chat.other_user.full_name }}
+                           </h6>
+                           <small class="chat-contact-list-item-time">
+                           {% if chat.last_message.timestamp %}
+                           {{ chat.last_message.timestamp|timesince }}
+                           {% else %}
+                           New
+                           {% endif %}
+                           </small>
+                        </div>
+                        <div class="d-flex bd-highlight">
+                           <div class="w-100 bd-highlight">
+                              <small class="chat-contact-list-item-time mr-auto">
+                              {% if chat.last_message.text %}
+                              {% if chat.last_message.is_mine %}Sen: {% endif %}
+                              {{ chat.last_message.text|truncatechars:30 }}
+                              {% else %}
+                              No messages yet
+                              {% endif %}
+                              </small>
+                           </div>
+                           <div class="flex-shrink-1 bd-highlight">
+                              {% if chat.unread_count > 0 %}
+                              <span class="badge bg-primary rounded-pill ms-2">{{ chat.unread_count }}</span>
+                              {% endif %}
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </li>
+               {% endfor %}          {% else %}
+               <li class="chat-contact-list-item mb-1">
+                  <div class="d-flex align-items-center justify-content-center p-4">
+                     <p class="text-muted mb-0">Sohbet Bulunamadı!</p>
+                  </div>
+               </li>
+               {% endif %}
+            </ul>
+            <!-- People search results -->
+            <ul class="list-unstyled chat-contact-list py-2 mb-0" id="people-list">
+               <li class="chat-contact-list-item chat-contact-list-item-title mt-3" id="people-heading" style="display: none;">
+                  <h5 class="text-primary mb-0">Kişi Bul</h5>
+               </li>
+               <div id="search-users-container">
+                  <!-- User search results will be inserted here -->
+               </div>
+            </ul>
+         </div>
+      </div>
+      <!-- /Chat contacts -->
+      <!-- Chat conversation -->
+      <div
+         class="col app-chat-conversation {% if active_chat_room %}d-none{% else %}d-flex{% endif %} align-items-center justify-content-center flex-column"
+         id="app-chat-conversation">
+         <div class="bg-label-primary p-8 rounded-circle">
+            <i class="icon-base ti tabler-message-2 icon-50px"></i>
+         </div>
+         <p class="my-4">Sohbet Seç</p>
+         <button class="btn btn-primary app-chat-conversation-btn" id="app-chat-conversation-btn">
+         Sohbet Seç
+         </button>
+      </div>
+      <!-- /Chat conversation -->
+      <!-- Chat History -->
+      <div class="col app-chat-history {% if active_chat_room %}d-block{% else %}d-none{% endif %}" id="app-chat-history">
+         <div class="chat-history-wrapper chat-container" data-room-id="{{ active_chat_room.id }}" data-user-id="{{ user.id }}">
+            <div class="chat-history-header border-bottom">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex overflow-hidden align-items-center">
+                     <i
+                        class="icon-base ti tabler-menu-2 icon-lg cursor-pointer d-lg-none d-block me-4"
+                        data-bs-toggle="sidebar"
+                        data-overlay
+                        data-target="#app-chat-contacts"></i>
+                     {% if active_chat_room %}
+                     <a href="{% url 'profiles:profile' active_chat_room.other_user.username %}" class="d-flex align-items-center text-decoration-none">
+                        <div class="flex-shrink-0 avatar">
+                           {% if active_chat_room.other_user.avatar %}
+                           <img src="{{ active_chat_room.other_user.avatar }}" alt="Avatar" class="rounded-circle" />
+                           {% else %}
+                           <span class="avatar-initial rounded-circle bg-label-primary">
+                           {{ active_chat_room.other_user.first_name|slice:":1"|upper }}{{ active_chat_room.other_user.last_name|slice:":1"|upper }}
+                           </span>
+                           {% endif %}
+                        </div>
+                        <div class="chat-contact-info flex-grow-1 ms-4">
+                           <div class="d-flex align-items-center">
+                              <h6 class="m-0 fw-normal">{{ active_chat_room.other_user.full_name }}</h6>
+                              {% if active_chat_room.other_user.is_verified %}
+                              <i class="icon-base ti tabler-rosette-discount-check-filled icon-sm text-primary"></i>
+                              {% endif %}
+                           </div>
+                           <small class="user-status text-body">{{ active_chat_room.other_user.university }}</small>
+                        </div>
+                     </a>
+                     {% endif %}
+                  </div>
+                  <div class="d-flex align-items-center">
+                     <div class="dropdown">
+                        <button
+                           class="btn btn-icon btn-text-secondary text-secondary rounded-pill dropdown-toggle hide-arrow"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="true"
+                           id="chat-header-actions">
+                        <i class="icon-base ti tabler-dots-vertical icon-22px"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="chat-header-actions">
+                           <a class="dropdown-item delete-chat" href="javascript:void(0);" data-chat-id="{{ active_chat_room.id }}">Delete Chat</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="chat-history-body">
+               <ul class="list-unstyled chat-history messages-list-room mb-0">
+                  {% if messages %}
+                  {% for message in messages %}                
+                  <li class="chat-message {% if message.sender == request.user %}chat-message-right{% endif %}" data-id="{{ message.id }}" data-timestamp="{{ message.timestamp.isoformat }}">
+                     <div class="d-flex overflow-hidden">
+                        <div class="chat-message-wrapper flex-grow-1">
+                           {% if message.text and message.text.strip %}
+                           <div class="chat-message-text">
+                              <p class="mb-0 text-break">{{ message.text }}</p>
+                           </div>
+                           {% endif %}
+                           {% if message.attachments.all %}
+                           <div class="chat-message-attachments">
+                              {% for attachment in message.attachments.all %}
+                              {% if attachment.file_type|slice:":5" == "image" %}
+                              <img src="{{ attachment.file.url }}" class="chat-message-attachment-img" alt="Image attachment" onclick="window.open('{{ attachment.file.url }}', '_blank')">
+                              {% endif %}
+                              {% endfor %}
+                           </div>
+                           {% endif %}
+                           <div class="{% if message.sender == request.user %}text-end{% endif %} text-body-secondary mt-1">
+                              <small>{{ message.timestamp|date:"H:i" }}</small>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+                  {% endfor %}
+                  {% else %}
+                  <!-- Placeholder to show when no messages -->
+                  <li class="chat-message chat-message-center">
+                     <!-- <div class="text-center p-5">
+                        <div class="bg-label-primary p-4 rounded-circle mb-3 mx-auto">
+                           <i class="icon-base ti tabler-message-2 icon-32px"></i>
+                        </div>
+                        {% if active_chat_room.message_status.can_message %}
+                        <p>Send a message to start the conversation</p>
+                        {% else %}
+                        <p class="text-danger">{{ active_chat_room.message_status.message }}</p>
+                        {% endif %}
+                     </div> -->
+                  </li>
+                  {% endif %}               
+               </ul>
+            </div>
+            <!-- Chat message form -->
+            {% if active_chat_room.message_status and not active_chat_room.message_status.can_message %}
+            <div class="chat-history-footer shadow-xs">
+               <div class="text-center py-4">
+                  <!-- <div class="bg-label-danger p-3 rounded-circle mb-3 mx-auto">
+                     <i class="icon-base ti tabler-lock icon-24px"></i>
+                     </div> -->
+                  <p class="text-body mb-0">{{ active_chat_room.message_status.message }}</p>
+               </div>
+            </div>
+            {% else %}
+            <div class="chat-history-footer shadow-xs">
+               <!-- Image previews container -->
+               <div id="image-preview-container" class="d-flex flex-wrap px-3">
+                  <!-- Image previews will be added here dynamically -->
+               </div>
+               <form id="message-form" class="message-form form-send-message d-flex justify-content-between align-items-center">
+                  {% csrf_token %}
+                  <input type="hidden" name="chat_room_id" value="{{ active_chat_room.id }}" />
+                  <input
+                     class="form-control message-input border-0 me-4 shadow-none"
+                     name="message"
+                     maxlength="280"
+                     placeholder="Mesajınızı buraya yazın..." />
+                  <div class="message-actions d-flex align-items-center">              <label for="attach-doc" class="form-label mb-0">
+                     <span class="btn btn-text-secondary btn-icon rounded-pill cursor-pointer mx-1 waves-effect">
+                     <i class="icon-base ti tabler-photo icon-22px text-heading"></i>
+                     </span>
+                     <input 
+                        type="file" 
+                        id="attach-doc" 
+                        name="images[]" 
+                        accept="image/*" 
+                        multiple 
+                        hidden>
+                     </label> 
+                     <button type="submit" class="btn btn-primary d-flex send-msg-btn">
+                     <span class="align-middle d-md-inline-block d-none">Gönder</span>
+                     <i class="icon-base ti tabler-send icon-16px ms-md-2 ms-0"></i>
+                     </button>
+                  </div>
+               </form>
+            </div>
+            {% endif %}
+         </div>
+      </div>
+      <!-- /Chat History -->
+      <div class="app-overlay"></div>
+   </div>
+</div>
+{%endblock%}
+{% block extra_javascript %}
+<script src="{% static 'chat/js/chat.js' %}"></script>
+{% endblock extra_javascript %}

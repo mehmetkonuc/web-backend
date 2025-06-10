@@ -1,0 +1,37 @@
+{% load static %}
+
+<li class="timeline-item ps-6 border-dashed">
+    <span class="timeline-indicator-advanced timeline-indicator-primary border-0 shadow-none">
+        <i class="icon-base ti tabler-bubble-text"></i>
+      </span>
+      <h5 class="mb-3 mt-3">Yorum</h5>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <div class="d-flex align-items-start mb-3">
+            {% with user=main_comment.user created_at=main_comment.created_at %}
+                {% include "comment/layout/user_avatar.html" %}
+            {% endwith %}
+            
+            {% if main_comment.user == request.user %}
+            <div class="dropdown ms-auto">
+                <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ti tabler-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' main_comment.pk %}">
+                            <i class="ti tabler-trash me-1"></i> Sil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        
+        {% with comment_obj=main_comment %}
+            {% include "comment/layout/comment_content.html" %}
+        {% endwith %}
+    </div>
+</div>
+</li>

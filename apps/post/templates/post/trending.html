@@ -1,0 +1,271 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load post_tags %}
+
+{% block title %}Trendler - Popüler Hashtagler{% endblock %}
+
+{% block extra_css %}
+<style>
+    .post-card {
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-images-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .post-images-container.images-1 {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-images-container.images-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .post-images-container.images-3,
+    .post-images-container.images-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .post-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+    
+    .image-count-badge {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border-radius: 20px;
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+    
+    .user-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .small-user-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .post-actions {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.2rem;
+        border-top: 1px solid #f0f0f0;
+    }
+    
+    .post-actions button {
+        background: transparent;
+        border: none;
+        color: #82868b;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: color 0.2s;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+    
+    .post-actions button:hover {
+        background: rgba(115, 103, 240, 0.1);
+        color: #7367f0;
+    }
+    
+    .post-date {
+        font-size: 0.8rem;
+        color: #82868b;
+    }
+    
+    .trending-card {
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .trending-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .trending-header {
+        background-color: #f8f9fa;
+        border-radius: 0.5rem 0.5rem 0 0;
+        padding: 1.5rem;
+        border-left: 5px solid #7367f0;
+    }
+    
+    .hashtag-name {
+        color: #7367f0;
+        font-weight: 600;
+    }
+    
+    .trend-rank {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #7367f0;
+        color: white;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    
+    .trend-rank-1 {
+        background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    }
+    
+    .trend-rank-2 {
+        background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    }
+    
+    .trend-rank-3 {
+        background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light"><a href="{% url 'post:post_list' %}">Gönderiler</a> /</span> Trendler
+    </h4>
+    
+    <div class="row">        
+        <!-- Ana İçerik Alanı -->
+        <div class="col-lg-12 col-md-8 col-12 order-0 order-md-1">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Günün Trendleri</h5>
+                    <p class="card-text">Son 24 saatteki en popüler hashtag'leri keşfedin ve ilgili konuşmalara katılın.</p>
+                    <div class="alert alert-primary d-flex" role="alert">
+                        <span class="badge badge-center rounded-pill bg-primary border-label-primary me-2"><i class="ti tabler-trending-up"></i></span>
+                        <div>Trend listesi her saat güncellenir ve son 24 saatte en çok kullanılan hashtag'leri gösterir.</div>
+                    </div>
+                </div>
+            </div>
+            
+            {% if trending_hashtags %}
+                <div class="row">
+                    {% for hashtag in trending_hashtags %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card trending-card">
+                            <div class="trending-header">
+                                <div class="d-flex align-items-center">
+                                    {% if forloop.counter <= 3 %}
+                                    <div class="trend-rank trend-rank-{{ forloop.counter }}">{{ forloop.counter }}</div>
+                                    {% else %}
+                                    <div class="trend-rank">{{ forloop.counter }}</div>
+                                    {% endif %}
+                                    <div>
+                                        <h5 class="hashtag-name mb-0">#{{ hashtag.name }}</h5>
+                                        <small class="text-muted">{{ hashtag.post_count_last_24h }} gönderi (son 24 saat)</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="{% url 'post:hashtag_posts' hashtag.name %}" class="btn btn-outline-primary btn-sm w-100 mb-3">
+                                    <i class="ti tabler-arrow-right me-1"></i> Tüm Gönderileri Gör
+                                </a>
+                                
+                                {% with posts=trending_posts|get_item:hashtag.id %}
+                                    {% if posts %}
+                                        {% for post in posts %}
+                                        <div class="d-flex align-items-start mb-3">
+                                            <a href="{% url 'profiles:profile' post.user.username %}" class="me-2">
+                                                {% if post.user.profile.avatar %}
+                                                    <img src="{{ post.user.profile.avatar.url }}" alt="{{ post.user.username }}" class="small-user-avatar">
+                                                {% else %}
+                                                    <div class="avatar avatar-sm">
+                                                        <div class="avatar-initial rounded-circle bg-label-primary">
+                                                            {{ post.user.username|first|upper }}
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </a>
+                                            <div>
+                                                <div class="mb-1">
+                                                    <a href="{% url 'profiles:profile' post.user.username %}" class="me-1 h6 mb-0">
+                                                        {{ post.user.username }}
+                                                    </a>
+                                                    <small class="text-muted post-date">{{ post.created_at|date:"d.m H:i" }}</small>
+                                                </div>
+                                                <p class="mb-0 small">{{ post.content|linkify_hashtags }}</p>
+                                                {% if post.images.exists %}
+                                                <small class="text-muted"><i class="ti tabler-photo"></i> {{ post.images.count }} resim</small>
+                                                {% endif %}
+                                                <div class="mt-1">
+                                                    {% load like_tags %}
+                                                    {% has_user_liked post request.user as user_liked %}
+                                                    <button type="button" class="like-button btn btn-text-secondary btn-sm px-0 me-2 {% if user_liked %}liked{% endif %}"
+                                                       data-app-name="post" data-model-name="post" data-object-id="{{ post.pk }}" data-liked="{{ user_liked|yesno:'true,false' }}">
+                                                       <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} me-1"></i> 
+                                                       <span class="like-count">{% get_like_count post %}</span>
+                                                    </button>
+                                                    <a href="{% url 'post:post_detail' post.id %}" class="btn btn-text-secondary btn-sm px-0">
+                                                        Görüntüle <i class="ti tabler-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% if not forloop.last %}
+                                        <hr class="my-2">
+                                        {% endif %}
+                                        {% endfor %}
+                                    {% else %}
+                                        <p class="text-muted small">Bu hashtag için henüz gönderi yok.</p>
+                                    {% endif %}
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+            {% else %}
+                <div class="card">
+                    <div class="card-body text-center py-5">
+                        <i class="ti tabler-eye-x icon-xl"></i>
+                        <h5>Henüz trend olan bir hashtag yok</h5>
+                        <p class="text-muted">Şu anda trend olan hashtagler bulunamadı. Kullanıcılar daha fazla gönderi oluşturduğunda trendler görünecektir.</p>
+                        <a href="{% url 'post:post_list' %}" class="btn btn-primary">Ana Sayfaya Dön</a>
+                    </div>
+                </div>
+            {% endif %}
+                </div>
+
+        </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Register template tag filter for dictionary access
+    if (!window.django) window.django = {};
+    if (!window.django.template) window.django.template = {};
+    window.django.template.get_item = function(dict, key) {
+        return dict[key];
+    };
+});
+</script>
+{% endblock %}

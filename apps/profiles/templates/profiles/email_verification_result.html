@@ -1,0 +1,43 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid container-p-y">
+  <div class="row mb-4 justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card py-5 px-4 text-center">
+        <div class="mb-4">
+          {% if success %}
+            <i class="ti tabler-circle-check text-success" style="font-size: 4rem;"></i>
+            <h2 class="mt-3">E-posta Adresiniz Doğrulandı!</h2>
+            
+            {% if is_edu_email %}
+              <p class="mb-1">E-posta adresiniz başarıyla doğrulandı.</p>
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span>Doğrulanmış hesap rozetiniz aktifleştirildi</span>
+                <i class="icon-base ti tabler-rosette-discount-check-filled icon-sm text-primary ms-2"></i>
+              </div>
+            {% else %}
+              <p>E-posta adresiniz başarıyla doğrulandı.</p>
+            {% endif %}
+            
+          {% else %}
+            <i class="ti tabler-alert-triangle text-warning" style="font-size: 4rem;"></i>
+            <h2 class="mt-3">Doğrulama Hatası</h2>
+            <p>{{ message }}</p>
+          {% endif %}
+        </div>
+        
+        <div class="mt-3">
+          {% if request.user.is_authenticated %}
+            <a href="{% url 'profiles:profile' request.user.username %}" class="btn btn-primary">Profilime Git</a>
+          {% else %}
+            <a href="{% url 'guest:login' %}" class="btn btn-primary">Giriş Yap</a>
+          {% endif %}
+          <a href="{% url 'guest:home' %}" class="btn btn-outline-secondary ms-2">Ana Sayfaya Dön</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

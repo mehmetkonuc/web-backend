@@ -1,0 +1,75 @@
+/**
+ * Bildirim sistemi için CSS stilleri
+ */
+
+/* Okunmamış bildirim stilleri */
+.notification-unread {
+    background-color: rgba(67, 89, 113, 0.04) !important;
+    border-left: 3px solid var(--bs-primary) !important;
+}
+
+/* Bildirim nokta göstergesi */
+.badge-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+}
+
+/* Bildirim içeriği stilleri */
+.dropdown-notifications-item .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.dropdown-notifications-item .avatar img,
+.dropdown-notifications-item .avatar-initial {
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown-notifications-item .avatar-initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Bildirim başlık ve metin stilleri */
+.dropdown-notifications-item h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+}
+
+.dropdown-notifications-item .text-body {
+    font-size: 0.85rem;
+    color: #697a8d;
+}
+
+.dropdown-notifications-item .text-body-secondary {
+    font-size: 0.75rem;
+    color: #a1acb8;
+}
+
+/* Bildirim liste sayfası özel stilleri */
+.notifications-list .notification-unread {
+    background-color: rgba(67, 89, 113, 0.04);
+}
+
+.notifications-list .list-group-item:hover {
+    background-color: rgba(67, 89, 113, 0.05);
+}
+
+/* Bildirim filtre bölümü stilleri */
+.notification-filters .form-select {
+    font-size: 0.9rem;
+}
+
+.notification-filters .form-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+} 

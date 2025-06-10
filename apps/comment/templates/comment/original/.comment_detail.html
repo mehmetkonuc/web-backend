@@ -1,0 +1,609 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load post_tags %}
+{% load comment_tags %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/fancybox/jquery.fancybox.min.css' %}">
+<style>
+    .post-card {
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    }
+    .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .post-input-box {
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    }
+    .post-image-preview {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
+    .post-image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    }
+    .remove-image {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ea5455;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    }
+    .post-images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-top: 15px;
+    }
+    .post-images-container.images-1 {
+    grid-template-columns: 1fr;
+    }
+    .post-images-container.images-2 {
+    grid-template-columns: 1fr 1fr;
+    }
+    .post-images-container.images-3,
+    .post-images-container.images-4 {
+    grid-template-columns: 1fr 1fr;
+    }
+    .post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    }
+    .image-count-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 12px;
+    }
+    .user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+    .small-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+    .post-actions {
+         display: flex;
+         justify-content: space-between;
+         padding-top: 0.2rem;
+         border-top: 1px solid #f0f0f0;
+     }
+    .post-actions button {
+    background: transparent;
+    border: none;
+    color: #82868b;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    }
+    .post-actions button:hover {
+    background: rgba(115, 103, 240, 0.1);
+    color: #7367f0;
+    }
+    .post-date {
+    font-size: 0.8rem;
+    color: #82868b;
+    }
+    .image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    }
+    /* Filter styles */
+    .filter-section {
+    margin-top: 20px;
+    }
+    .filter-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #5d596c;
+    }
+    .filter-form label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    }
+    .filter-form select,
+    .filter-form .form-control {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    }
+    .filter-radio-group {
+    margin-bottom: 15px;
+    }
+    .filter-radio-label {
+    font-size: 0.85rem;
+    margin-left: 5px;
+    }
+ </style>
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+   <div class="row justify-content-center">
+      <div class="col-md-8">
+         <div class="d-flex justify-content-between align-items-center mb-4">
+            <a href="{{ request.META.HTTP_REFERER|default:'/' }}" class="btn btn-outline-primary">
+            <i class="ti tabler-arrow-left me-1"></i> Gönderilere Dön
+            </a>
+         </div>
+         <ul class="timeline mb-0">
+            <li class="timeline-item ps-6 border-dashed">
+               <span class="timeline-indicator-advanced timeline-indicator-success border-0 shadow-none">
+               <i class="icon-base ti tabler-article"></i>
+               </span>
+               <h5 class="mb-3 mt-3">İçerik</h5>
+               <div class="card mt-4">
+                  <div class="card-body">
+                     <div class="d-flex align-items-start mb-3">
+                        <a href="{% url 'profiles:profile' comment.content_object.user.username %}" class="me-3">
+                           {% if comment.content_object.user.profile.avatar %}
+                           <img src="{{ comment.content_object.user.profile.avatar.url }}" alt="{{ comment.content_object.user.username }}" class="user-avatar">
+                           {% else %}
+                           <div class="avatar avatar-md">
+                              <div class="avatar-initial rounded-circle bg-label-primary">
+                                 {{ comment.content_object.user.username|first|upper }}
+                              </div>
+                           </div>
+                           {% endif %}
+                        </a>
+                        <div>
+                           <div class="d-flex align-items-center">
+                              <a href="{% url 'profiles:profile' comment.content_object.user.username %}" class="me-1">
+                                 <h6 class="mb-0">{{ comment.content_object.user.get_full_name|default:comment.content_object.user.username }}</h6>
+                              </a>
+                              {% if comment.content_object.user.profile.is_verified %}
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#7367F0" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                 <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                              </svg>
+                              {% endif %}
+                           </div>
+                           <small class="text-muted">{{ comment.content_object.user.profile.university }}</small> ·
+                           <small class="text-muted comment-date">{{ comment.content_object.created_at|date:"d F Y, H:i" }}</small>
+                        </div>
+                        {% if comment.content_object.user == request.user %}
+                        <div class="dropdown ms-auto">
+                           <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                           <i class="ti tabler-dots-vertical"></i>
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                 <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' comment.content_object.pk %}">
+                                 <i class="ti tabler-trash me-1"></i> Sil
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                        {% endif %}
+                     </div>
+                     <p class="card-text">{{ comment.content_object.content|linkify_hashtags }}</p>
+                     {% if comment.content_object.images.exists %}
+                     <div class="post-images-container images-{{ comment.content_object.images.count }}">
+                        {% for image in comment.content_object.images.all %}
+                        <div class="position-relative">
+                        <a href="{{ image.image.url }}" data-fancybox="gallery-{{ comment.content_object.id }}-{{ image.id }}">
+
+                           <img src="{{ image.image.url }}" alt="Post Image" class="post-image">
+                        </a>
+                        </div>
+                        {% endfor %}
+                     </div>
+                     {% endif %}
+                     <div class="post-actions mt-3">
+                        {% load like_tags %}
+                        {% has_user_liked comment.content_object request.user as user_liked %}
+                        <button type="button" class="like-button d-flex align-items-center {% if user_liked %}liked{% endif %}"
+                           data-app-name="{{app_name}}" data-model-name="{{app_name}}" data-object-id="{{ comment.content_object.id }}" data-liked="{{ user_liked|yesno:'true,false' }}">
+                           <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} icon-sm me-1"></i> 
+                           Beğen (<span class="like-count">{% get_like_count object %}</span>)
+                        </button>
+
+                        <a href ="{% url 'post:post_detail' object.pk %}" class="d-flex align-items-center">
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-message-circle me-1"></i> 
+                        Yorum Yap ({% get_comment_count object %})
+                        </button>
+                        </a>
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-share me-1"></i> Paylaş
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            {% if comment.parent %}
+            {% main_comment comment.parent.id %}
+            {%endif%}
+            <li class="timeline-item ps-6 border-dashed">
+               {% if comment.parent %}
+               <h5 class="mb-3 mt-3">Yorumun Yanıtı</h5>
+               <span class="timeline-indicator-advanced timeline-indicator-warning border-0 shadow-none">
+               <i class="icon-base ti tabler-repeat"></i>
+               </span>
+               {%else%}
+               <span class="timeline-indicator-advanced timeline-indicator-primary border-0 shadow-none">
+               <i class="icon-base ti tabler-bubble-text"></i>
+               </span>
+               <h5 class="mb-3 mt-3">Yorum</h5>
+               {%endif%}
+               <div class="card mt-4 bg-label-primary">
+                  <div class="card-body">
+                     <div class="d-flex align-items-start mb-3">
+                        <a href="{% url 'profiles:profile' comment.user.username %}" class="me-3">
+                           {% if comment.user.profile.avatar %}
+                           <img src="{{ comment.user.profile.avatar.url }}" alt="{{ comment.user.username }}" class="user-avatar">
+                           {% else %}
+                           <div class="avatar avatar-md">
+                              <div class="avatar-initial rounded-circle bg-label-primary">
+                                 {{ comment.user.username|first|upper }}
+                              </div>
+                           </div>
+                           {% endif %}
+                        </a>
+                        <div>
+                           <div class="d-flex align-items-center">
+                              <a href="{% url 'profiles:profile' comment.user.username %}" class="me-1">
+                                 <h6 class="mb-0">{{ comment.user.get_full_name|default:comment.user.username }}</h6>
+                              </a>
+                              {% if comment.user.profile.is_verified %}
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#7367F0" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                 <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                              </svg>
+                              {% endif %}
+                           </div>
+                           <small class="text-muted">{{ comment.user.profile.university }}</small> ·
+                           <small class="text-muted comment-date">{{ comment.created_at|date:"d F Y, H:i" }}</small>
+                        </div>
+                        {% if comment.user == request.user %}
+                        <div class="dropdown ms-auto">
+                           <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                           <i class="ti tabler-dots-vertical"></i>
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                 <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' comment.pk %}">
+                                 <i class="ti tabler-trash me-1"></i> Sil
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                        {% endif %}
+                     </div>
+                     <p class="card-text">{{ comment.body }}</p>
+                     {% if comment.images.exists %}
+                     <div class="post-images-container images-{{ post.images.count }}">
+                        {% for image in comment.images.all %}
+                        <div class="position-relative">
+                        <a href="{{ image.image.url }}" data-fancybox="gallery-{{ comment.id }}-{{ image.id }}">
+                           <img src="{{ image.image.url }}" alt="Post Image" class="post-image">
+                        </a>
+                        </div>
+                        {% endfor %}
+                     </div>
+                     {% endif %}
+                     <div class="post-actions mt-3">
+                        {% has_user_liked comment request.user as user_liked %}
+                        <button type="button" class="like-button d-flex align-items-center {% if user_liked %}liked{% endif %}"
+                           data-app-name="comment" data-model-name="comment" data-object-id="{{ comment.id }}" data-liked="{{ user_liked|yesno:'true,false' }}">
+                           <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} icon-sm me-1"></i> 
+                           Beğen (<span class="like-count">{% get_like_count comment %}</span>)
+                        </button>
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-message-circle me-1"></i> 
+                        {% with reply_count=comment.get_replies.count %}
+                        Yanıtlar {% if reply_count > 0 %}({{ reply_count }}){% endif %}
+                        {% endwith %}
+                        </button>
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-share me-1"></i> Paylaş
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li class="timeline-item ps-6 border-dashed">
+               <span class="timeline-indicator-advanced timeline-indicator-danger border-0 shadow-none">
+               <i class="icon-base ti tabler-writing-sign"></i>
+               </span>
+               <!-- Reply Form -->
+               <h5 class="mb-3 mt-3">Yanıt Yaz</h5>
+               <div class="card mb-4 mt-4">
+                  <div class="card-body">
+                     <form action="{% url 'comment:create_comment' app_name=app_name model_name=model_name object_id=object.id %}" method="POST"  enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="hidden" name="parent_id" value="{{ comment.id }}">
+                        <div class="flex-grow-1">
+                            <div class="form-floating">
+                                <textarea class="form-control" name="body" id="commentBody" placeholder="Yorum yazın..." style="height: 70px"></textarea>
+                                <label for="commentBody">Yorum yazın...</label>
+                                <div id="characterCounter" class="position-absolute end-0 bottom-0 me-2 mb-2 badge bg-primary rounded-pill">280</div>
+            
+                            </div>
+                            <div class="image-preview-container" id="imagePreviewContainer"></div>
+            
+                            <div class="d-flex d-flex justify-content-end align-items-center mt-4">
+                                <label for="id_images" class="btn btn-sm btn-label-primary me-2">
+                                   <i class="ti tabler-photo"></i>
+                                </label>
+                                <input type="file" name="images" id="id_images" multiple class="d-none" accept="image/*">
+                             <button type="submit" id="postSubmitBtn" class="btn btn-sm btn-primary">
+                                <i class="ti tabler-send me-1"></i> Paylaş
+                             </button>
+                          </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </li>
+            <!-- Replies List -->
+            <h5 class="mb-3">Yanıtlar</h5>
+            {% if replies %}
+            <div class="replies-list infinite-container">
+               {% for reply in replies %}
+               <div class="card mb-3 infinite-item">
+                  <div class="card-body">
+                     <div class="d-flex align-items-start mb-3">
+                        <a href="{% url 'profiles:profile' reply.user.username %}" class="me-3">
+                           {% if reply.user.profile.avatar %}
+                           <img src="{{ reply.user.profile.avatar.url }}" alt="{{ reply.user.username }}" class="user-avatar">
+                           {% else %}
+                           <div class="avatar avatar-md">
+                              <div class="avatar-initial rounded-circle bg-label-primary">
+                                 {{ reply.user.username|first|upper }}
+                              </div>
+                           </div>
+                           {% endif %}
+                        </a>
+                        <div>
+                           <div class="d-flex align-items-center">
+                              <a href="{% url 'profiles:profile' reply.user.username %}" class="me-1">
+                                 <h6 class="mb-0">{{ reply.user.get_full_name|default:reply.user.username }}</h6>
+                              </a>
+                              {% if reply.user.profile.is_verified %}
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#7367F0" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                 <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                              </svg>
+                              {% endif %}
+                           </div>
+                           <small class="text-muted">{{ reply.user.profile.university }}</small> ·
+                           <small class="text-muted">{{ reply.created_at|date:"d F Y, H:i" }}</small>
+                        </div>
+                        {% if reply.user == request.user %}
+                        <div class="dropdown ms-auto">
+                           <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                           <i class="ti tabler-dots-vertical"></i>
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                 <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' reply.pk %}">
+                                 <i class="ti tabler-trash me-1"></i> Sil
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                        {% endif %}
+                     </div>
+                     <p class="card-text">{{ reply.body }}</p>
+                     {% if reply.images.exists %}
+                     <div class="post-images-container images-{{ post.images.count }}">
+                        {% for image in reply.images.all %}
+                        <div class="position-relative">
+                        <a href="{{ image.image.url }}" data-fancybox="gallery-{{ reply.id }}-{{ image.id }}">
+                           <img src="{{ image.image.url }}" alt="Post Image" class="post-image">
+                        
+                        </a>
+                        </div>
+                        {% endfor %}
+                     </div>
+                     {% endif %}
+                     <div class="post-actions mt-3">
+                        {% has_user_liked reply request.user as user_liked %}
+                        <button type="button" class="like-button d-flex align-items-center {% if user_liked %}liked{% endif %}"
+                           data-app-name="comment" data-model-name="comment" data-object-id="{{ reply.id }}" data-liked="{{ user_liked|yesno:'true,false' }}">
+                           <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} icon-sm me-1"></i> 
+                           Beğen (<span class="like-count">{% get_like_count reply %}</span>)
+                        </button>
+                        <a href ="{% url 'comment:comment_detail' reply.pk %}" class="d-flex align-items-center">
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-message-circle me-1"></i> 
+                        {% with reply_count=reply.get_replies.count %}
+                        Yanıt Yaz ({{ reply_count }})
+                        {% endwith %}
+                        </button>
+                        </a>
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-share me-1"></i> Paylaş
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+            {% else %}
+            <div class="text-center py-3 text-muted">
+               <i class="ti tabler-message-circle fs-3 mb-2"></i>
+               <p>Henüz yanıt yapılmamış. İlk yanıtı sen yap!</p>
+            </div>
+            {% endif %}
+            <div class="row">
+               <div class="col-lg-8">
+                  {% if replies.has_next %}
+                  <a class="infinite-more-link" href="?{% for key, value in request.GET.items %}{{ key }}={{ value }}&{% endfor %}page={{ replies.next_page_number }}">Sonraki</a>
+                  {% endif %}
+               </div>
+            </div>
+         </ul>
+      </div>
+   </div>
+</div>
+{% endblock %}
+{% block extra_javascript %}
+<script src="{% static 'assets/vendor/libs/fancybox/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'js/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/waypoints/infinite.min.js' %}"></script>
+<script src="{% static 'js/waypoints/custom.js' %}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Image preview functionality
+        const imageInput = document.getElementById('id_images');
+        const previewContainer = document.getElementById('imagePreviewContainer');
+        const maxImages = 4;
+        let selectedImages = [];
+        
+        // Karakter sayacı ve autosize işlevselliği
+        const contentTextarea = document.getElementById('commentBody');
+        const characterCounter = document.getElementById('characterCounter');
+        const maxLength = 280;
+        const submitButton = document.getElementById('postSubmitBtn');
+        
+        // Textarea'yı otomatik boyutlandırma fonksiyonu
+        function autosize(textarea) {
+            // Önce yüksekliği resetleyelim
+            textarea.style.height = 'auto';
+            
+            // Sonra içeriğe göre yüksekliği ayarlayalım (ekstra 2px border için)
+            textarea.style.height = (textarea.scrollHeight) + 'px';
+            
+            // Maksimum yükseklik kontrolü
+            const maxHeight = 200; // Piksel cinsinden maksimum yükseklik
+            if (textarea.scrollHeight > maxHeight) {
+                textarea.style.height = maxHeight + 'px';
+                textarea.style.overflowY = 'auto';
+            } else {
+                textarea.style.overflowY = 'hidden';
+            }
+        }
+        
+        // Sayacı başlangıçta güncelleyelim
+        if(contentTextarea && characterCounter) {
+            // Başlangıç değerini ayarla
+            updateCharacterCount();
+            
+            // Başlangıçta textarea boyutunu ayarla
+            autosize(contentTextarea);
+            
+            // Her tuş vuruşunda sayacı ve textarea boyutunu güncelle
+            contentTextarea.addEventListener('input', function() {
+                updateCharacterCount();
+                autosize(this);
+            });
+            
+            function updateCharacterCount() {
+                const currentLength = contentTextarea.value.length;
+                const remainingChars = maxLength - currentLength;
+                
+                // Sayacı güncelle
+                characterCounter.textContent = remainingChars;
+                
+                // Sayacın rengini kalan karakter sayısına göre değiştir
+                if(remainingChars <= 10) {
+                    characterCounter.className = 'position-absolute end-0 bottom-0 me-2 mb-2 badge bg-danger rounded-pill';
+                } else if(remainingChars <= 20) {
+                    characterCounter.className = 'position-absolute end-0 bottom-0 me-2 mb-2 badge bg-warning rounded-pill';
+                } else {
+                    characterCounter.className = 'position-absolute end-0 bottom-0 me-2 mb-2 badge bg-primary rounded-pill';
+                }
+                
+                // Karakter sayısı sınırı aşıldığında butonu devre dışı bırak
+                if(currentLength > maxLength || currentLength === 0) {
+                    submitButton.disabled = true;
+                } else {
+                    submitButton.disabled = false;
+                }
+            }
+        }
+        
+        imageInput.style.display = 'none'; // Hide the default file input
+        
+        imageInput.addEventListener('change', function() {
+            const files = Array.from(this.files);
+            
+            // Validate number of images
+            if (files.length > maxImages) {
+                alert(`En fazla ${maxImages} resim yükleyebilirsiniz.`);
+                this.value = '';
+                return;
+            }
+            
+            // Clear previous previews
+            previewContainer.innerHTML = '';
+            selectedImages = [];
+            
+            // Create preview for each file
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const previewWrapper = document.createElement('div');
+                    previewWrapper.className = 'post-image-preview';
+                    
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'img-thumbnail';
+                    
+                    const removeBtn = document.createElement('span');
+                    removeBtn.className = 'remove-image';
+                    removeBtn.innerHTML = '&times;';
+                    removeBtn.addEventListener('click', function() {
+                        previewWrapper.remove();
+                        
+                        // Remove from selected images
+                        const index = selectedImages.indexOf(file);
+                        if (index > -1) {
+                            selectedImages.splice(index, 1);
+                        }
+                        
+                        // Update file input
+                        const dataTransfer = new DataTransfer();
+                        selectedImages.forEach(img => dataTransfer.items.add(img));
+                        imageInput.files = dataTransfer.files;
+                    });
+                    
+                    previewWrapper.appendChild(img);
+                    previewWrapper.appendChild(removeBtn);
+                    previewContainer.appendChild(previewWrapper);
+                    
+                    // Add to selected images
+                    selectedImages.push(file);
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+ </script>
+{% endblock %}

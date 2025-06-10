@@ -1,0 +1,448 @@
+{% extends 'guest/layout/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- Cropper.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+<style>
+  .avatar-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #e5e5e5;
+    background-color: #f8f9fa;
+  }
+  
+  .avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .upload-controls {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .preview-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 1rem auto;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+  
+  .preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cropper-container {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .cropper-view-box, 
+  .cropper-face {
+    border-radius: 50%;
+  }
+  
+  .action-buttons {
+    margin-top: 1.5rem;
+    display: none;
+  }
+  
+  .cropper-hint {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+  }
+  
+  /* İlk yükleme durumunda gösterilecek placeholder */
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: #adb5bd;
+  }
+  
+  /* Cropper noktalarını daha görünür yap */
+  .cropper-point {
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    opacity: 0.8;
+  }
+  
+  /* Animasyon */
+  .fade-in {
+    animation: fadeIn ease 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  /* Debug Panel */
+  #debug-panel {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: monospace;
+    text-align: left;
+    display: none;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title">Profil Fotoğrafınızı Yükleyin</h4>
+  </div>
+  <div class="card-body">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center mb-4">
+          <p>Profil fotoğrafınızı yükleyerek hesabınızı kişiselleştirebilirsiniz.</p>
+        </div>
+        
+        <!-- Avatar bilgileri için veri öznitelikleri -->
+        <div id="profile-data" 
+          data-has-avatar="{% if profile.avatar %}true{% else %}false{% endif %}" 
+          {% if profile.avatar %}data-avatar-url="{{ profile.avatar.url }}"{% endif %}
+          style="display: none;"></div>
+        
+        <!-- Ana avatar container - Cropper burada çalışacak -->
+        <div class="avatar-container mb-3" id="avatar-container">
+          {% if profile.avatar %}
+            <img src="{{ profile.avatar.url }}" id="avatar-image" alt="Profil Fotoğrafı">
+          {% else %}
+            <div class="avatar-placeholder">
+              <i class="ti tabler-user"></i>
+            </div>
+          {% endif %}
+        </div>
+        
+        <!-- Upload kontrolleri -->
+        <div class="upload-controls">
+          <span class="btn btn-primary btn-file">
+            <i class="ti tabler-upload"></i> Resim Seç
+            <input type="file" id="upload-input" accept="image/*">
+          </span>
+        </div>
+        
+        <!-- Cropper kullanım ipuçları - Sadece resim seçildiğinde gösterilecek -->
+        <div class="cropper-hint mt-4" id="cropper-hint" style="display: none;">
+          <h6 class="mb-2"><i class="ti tabler-info-circle"></i> Kullanım İpuçları:</h6>
+          <ul class="mb-0 ps-3">
+            <li><strong>Sürükle:</strong> Resmi taşıyabilirsiniz</li>
+            <li><strong>Fare Tekerleği:</strong> Yakınlaştırabilir veya uzaklaştırabilirsiniz</li>
+            <li><strong>Köşelerden Tutarak:</strong> Kırpma alanını yeniden boyutlandırabilirsiniz</li>
+          </ul>
+        </div>
+        
+        <!-- İşlem butonları - Sadece resim seçildiğinde gösterilecek -->
+        <div class="action-buttons text-center" id="action-buttons">
+          <form method="POST" id="avatar-form">
+            {% csrf_token %}
+            <input type="hidden" name="avatar" id="avatar-data">
+            <button type="button" class="btn btn-success me-2" id="save-button">
+              <i class="ti tabler-check"></i> Kaydet
+            </button>
+            <button type="button" class="btn btn-secondary" id="cancel-button">
+              <i class="ti tabler-x"></i> İptal
+            </button>
+          </form>
+        </div>
+        
+        <!-- Atlama seçeneği -->
+        <div class="skip-option text-center mt-4" id="skip-option">
+          <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="skip" value="true">
+            <button type="submit" class="btn btn-outline-secondary">
+              <i class="ti tabler-arrow-right"></i> Bu adımı atla
+            </button>
+          </form>
+        </div>
+        
+        <!-- Debug Panel -->
+        <div id="debug-panel"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Cropper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Debug modu - geliştirme sırasında açın
+    var DEBUG = true;
+    
+    // DOM elementleri
+    var $uploadInput = $('#upload-input');
+    var $avatarContainer = $('#avatar-container');
+    var $avatarImage = $('#avatar-image');
+    var $placeholderDiv = $('.avatar-placeholder');
+    var $cropperHint = $('#cropper-hint');
+    var $actionButtons = $('#action-buttons');
+    var $skipOption = $('#skip-option');
+    var $saveButton = $('#save-button');
+    var $cancelButton = $('#cancel-button');
+    var $avatarForm = $('#avatar-form');
+    var $avatarData = $('#avatar-data');
+    var $debugPanel = $('#debug-panel');
+    
+    // Avatar bilgilerini veri özniteliklerinden al
+    var $profileData = $('#profile-data');
+    var hasExistingAvatar = $profileData.data('hasAvatar') === true;
+    var existingAvatarUrl = hasExistingAvatar ? $profileData.data('avatarUrl') : '';
+    
+    // Cropper instance
+    var cropper = null;
+    
+    // Debug fonksiyonu
+    function debug(message) {
+      if (!DEBUG) return;
+      
+      console.log(message);
+      $debugPanel.show().append($('<div>').text(new Date().toLocaleTimeString() + ': ' + message));
+      $debugPanel.scrollTop($debugPanel[0].scrollHeight);
+    }
+    
+    // Hata fonksiyonu
+    function showError(message) {
+      debug('ERROR: ' + message);
+      alert('Hata: ' + message);
+    }
+    
+    // Resim yükleme işlevi
+    function handleImageUpload(file) {
+      if (!file) {
+        debug('Dosya seçilmedi');
+        return;
+      }
+      
+      debug('Dosya seçildi: ' + file.name + ' (' + file.type + ', ' + Math.round(file.size/1024) + 'KB)');
+      
+      // Sadece resim dosyaları
+      if (!file.type.match('image.*')) {
+        showError('Lütfen sadece resim dosyası seçin');
+        return;
+      }
+      
+      // FileReader ile dosyayı oku
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+        debug('Dosya okundu');
+        
+        // Mevcut cropper'ı temizle
+        if (cropper) {
+          debug('Mevcut cropper kapatılıyor');
+          cropper.destroy();
+          cropper = null;
+        }
+        
+        // Avatarı göster, placeholder'ı gizle
+        if ($placeholderDiv.length) {
+          $placeholderDiv.remove();
+          $avatarContainer.html('<img id="avatar-image" src="' + e.target.result + '" alt="Profil Fotoğrafı">');
+          $avatarImage = $('#avatar-image');
+        } else {
+          $avatarImage.attr('src', e.target.result);
+        }
+        
+        debug('Resim yüklendi, cropper başlatılıyor...');
+        
+        // UI elementlerini güncelle
+        $cropperHint.fadeIn();
+        $actionButtons.fadeIn();
+        $skipOption.fadeOut();
+        
+        // Cropper'ı DOM güncellemesinden sonra başlat
+        setTimeout(function() {
+          try {
+            cropper = new Cropper($avatarImage[0], {
+              aspectRatio: 1,
+              viewMode: 1,
+              dragMode: 'move',
+              autoCropArea: 1,
+              minCropBoxWidth: 100,
+              minCropBoxHeight: 100,
+              guides: true,
+              highlight: true,
+              cropBoxMovable: true,
+              cropBoxResizable: true,
+              responsive: true,
+              background: false,
+              checkCrossOrigin: false,
+              checkOrientation: false,
+              zoomOnWheel: true,
+              wheelZoomRatio: 0.05,
+              ready: function() {
+                debug('Cropper.js hazır');
+              }
+            });
+          } catch (error) {
+            showError('Cropper başlatılamadı: ' + error.message);
+          }
+        }, 200);
+      };
+      
+      reader.onerror = function() {
+        showError('Dosya okunamadı');
+      };
+      
+      reader.readAsDataURL(file);
+    }
+    
+    // Dosya seçme olayı
+    $uploadInput.on('change', function(e) {
+      var files = e.target.files;
+      if (files && files.length > 0) {
+        handleImageUpload(files[0]);
+      }
+    });
+    
+    // Kaydet butonu olayı
+    $saveButton.on('click', function() {
+      if (!cropper) {
+        showError('Önce bir resim seçmelisiniz');
+        return;
+      }
+      
+      debug('Resim kırpılıyor...');
+      
+      try {
+        var canvas = cropper.getCroppedCanvas({
+          width: 320,
+          height: 320,
+          fillColor: '#fff',
+          imageSmoothingEnabled: true,
+          imageSmoothingQuality: 'high'
+        });
+        
+        if (canvas) {
+          debug('Canvas oluşturuldu, form gönderiliyor...');
+          
+          // Canvas'ı data URL'e dönüştür
+          var dataURL = canvas.toDataURL('image/jpeg', 0.9);
+          $avatarData.val(dataURL);
+          $avatarForm.submit();
+        } else {
+          showError('Canvas oluşturulamadı');
+        }
+      } catch (error) {
+        showError('Kırpma işlemi başarısız: ' + error.message);
+      }
+    });
+    
+    // İptal butonu olayı
+    $cancelButton.on('click', function() {
+      debug('İşlem iptal edildi');
+      
+      if (cropper) {
+        cropper.destroy();
+        cropper = null;
+      }
+      
+      // UI'ı sıfırla
+      if ($placeholderDiv.length === 0 && !hasExistingAvatar) {
+        // Eğer hem placeholder hem de avatar yoksa, placeholder'ı geri getir
+        $avatarContainer.html('<div class="avatar-placeholder"><i class="ti tabler-user"></i></div>');
+        $placeholderDiv = $('.avatar-placeholder');
+      } else if (hasExistingAvatar && existingAvatarUrl) {
+        // Eğer mevcut avatar varsa, onu geri yükle
+        $avatarImage.attr('src', existingAvatarUrl);
+      }
+      
+      $uploadInput.val('');
+      $cropperHint.fadeOut();
+      $actionButtons.fadeOut();
+      $skipOption.fadeIn();
+    });
+    
+    // Sürükle-bırak desteği
+    $avatarContainer.on('dragover', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).addClass('border-primary');
+    });
+    
+    $avatarContainer.on('dragleave', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).removeClass('border-primary');
+    });
+    
+    $avatarContainer.on('drop', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).removeClass('border-primary');
+      
+      var dt = e.originalEvent.dataTransfer;
+      if (dt && dt.files && dt.files.length) {
+        handleImageUpload(dt.files[0]);
+      }
+    });
+    
+    // Klavye kısayolları
+    $(document).on('keydown', function(e) {
+      if (!cropper) return;
+      
+      switch (e.key) {
+        case 'Escape':
+          $cancelButton.click();
+          break;
+        case 'Enter':
+          $saveButton.click();
+          break;
+      }
+    });
+    
+    debug('Sayfa yüklendi, kullanıma hazır');
+  });
+</script>
+{% endblock %}

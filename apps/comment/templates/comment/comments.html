@@ -1,0 +1,68 @@
+<!-- Comments section -->
+{% load static %}
+
+<div class="comments-section mt-4">
+    <div class="card">
+        <div class="card-body">
+            <!-- Comment form -->
+            {% include "comment/layout/comment_form.html" with object_id=object.id app_name=app_name model_name=model_name %}
+        </div>
+    </div>
+    
+    <h4 class="mt-4">Yorumlar</h4>
+    <!-- Comments list -->
+
+    {% if comments %}
+        <div class="comments-list">
+            <div class="infinite-container">
+                
+                {% for comment in comments %}
+                <div class="card mt-4 infinite-item">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            {% with user=comment.user created_at=comment.created_at %}
+                                {% include "comment/layout/user_avatar.html" %}
+                            {% endwith %}
+                            
+                            {% if comment.user == request.user %}
+                            <div class="dropdown ms-auto">
+                                <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ti tabler-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' comment.pk %}">
+                                            <i class="ti tabler-trash me-1"></i> Sil
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            {% endif %}
+                        </div>
+                        
+                        {% with comment_obj=comment %}
+                            {% include "comment/layout/comment_content.html" %}
+                        {% endwith %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <div class="text-center py-3 text-muted">
+            <i class="ti tabler-message-circle fs-3 mb-2"></i>
+            <p>Henüz yorum yapılmamış. İlk yorumu sen yap!</p>
+        </div>
+    {% endif %}
+    
+    <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+           {% if comments.has_next %}
+           <a class="infinite-more-link d-none" href="?{% for key, value in request.GET.items %}{{ key }}={{ value }}&{% endfor %}page={{ comments.next_page_number }}">Sonraki</a>
+        <div class="spinner-border spinner-border-sm text-primary loading" role="status">
+            <span class="visually-hidden">Loading...</span>
+         </div>
+           {% endif %}
+        </div>
+    </div>
+</div>

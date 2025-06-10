@@ -1,0 +1,103 @@
+{% load static %}
+
+<li class="timeline-item ps-6 border-dashed">
+    <span class="timeline-indicator-advanced timeline-indicator-primary border-0 shadow-none">
+        <i class="icon-base ti tabler-bubble-text"></i>
+      </span>
+      <h5 class="mb-3 mt-3">Yorum</h5>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <div class="d-flex align-items-start mb-3">
+            <a href="{% url 'profiles:profile' main_comment.user.username %}" class="me-3">
+                {% if main_comment.user.profile.avatar %}
+                    <img src="{{ main_comment.user.profile.avatar.url }}" alt="{{ main_comment.user.username }}" class="user-avatar">
+                {% else %}
+                    <div class="avatar avatar-md">
+                        <div class="avatar-initial rounded-circle bg-label-primary">
+                            {{ main_comment.user.username|first|upper }}
+                        </div>
+                    </div>
+                {% endif %}
+            </a>
+            <div>
+                <div class="d-flex align-items-center">
+                    <a href="{% url 'profiles:profile' main_comment.user.username %}" class="me-1">
+                        <h6 class="mb-0">{{ main_comment.user.get_full_name|default:main_comment.user.username }}</h6>
+                    </a>
+                    {% if main_comment.user.profile.is_verified %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#7367F0" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                      </svg>
+                    {% endif %}
+                </div>
+                <small class="text-muted">{{ main_comment.user.profile.university }}</small> ·
+                <small class="text-muted comment-date">{{ main_comment.created_at|date:"d F Y, H:i" }}</small>
+            </div>
+            
+            {% if main_comment.user == request.user %}
+            <div class="dropdown ms-auto">
+                <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="ti tabler-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' main_comment.pk %}">
+                            <i class="ti tabler-trash me-1"></i> Sil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        
+        <p class="card-text">{{ main_comment.body }}</p>
+        
+        {% if main_comment.images.exists %}
+        <div class="post-images-container images-{{ post.images.count }}">
+            {% for image in main_comment.images.all %}
+            <div class="position-relative">
+                <img src="{{ image.image.url }}" alt="Post Image" class="post-image" data-bs-toggle="modal" data-bs-target="#imageModal-{{ image.id }}">
+            </div>
+            
+            <!-- Modal for image -->
+            <div class="modal fade" id="imageModal-{{ image.id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="{{ image.image.url }}" alt="Post Image" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="post-actions mt-3">
+            {% load like_tags %}
+            {% has_user_liked main_comment request.user as user_liked %}
+            <button type="button" class="like-button d-flex align-items-center {% if user_liked %}liked{% endif %}"
+               data-app-name="comment" data-model-name="comment" data-object-id="{{ main_comment.id }}" data-liked="{{ user_liked|yesno:'true,false' }}">
+               <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} icon-sm me-1"></i> 
+               Beğen (<span class="like-count">{% get_like_count main_comment %}</span>)
+            </button>
+            <a href ="{% url 'comment:comment_detail' main_comment.pk %}" class="d-flex align-items-center">
+
+                <button type="button" class="d-flex align-items-center">
+                <i class="ti tabler-message-circle me-1"></i> 
+                {% with reply_count=main_comment.get_replies.count %}
+                    Yanıt Yaz ({{ reply_count }})
+                {% endwith %}
+                </button>
+            </a>
+            <button type="button" class="d-flex align-items-center">
+                <i class="ti tabler-share me-1"></i> Paylaş
+            </button>
+        </div>
+    </div>
+</div>
+</li>

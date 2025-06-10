@@ -1,0 +1,54 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block title %}Kaydedilenler{% endblock %}
+
+{% block content %}
+   <div class="d-flex bd-highlight align-items-center">
+      <div class="flex-grow-1 bd-highlight">
+         <h4 class="fw-bold">
+            Kaydettiklerim
+         </h4>
+      </div>
+   </div>
+    <div class="row">
+        <div class="col-12">
+            {% if bookmarks %}
+                <div class="row">
+                    {% for bookmark in bookmarks %}
+                        <div class="col-md-4 mb-4">
+                            <div class="card bookmark-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ bookmark.content_object }}</h5>
+                                    <p class="card-text text-muted small">
+                                        {{ bookmark.created_at|date:"d.m.Y H:i" }} tarihinde kaydedildi
+                                    </p>
+                                    
+                                    {% if bookmark.get_bookmark_url %}
+                                        <a href="{{ bookmark.get_bookmark_url }}" class="btn btn-sm btn-primary">Görüntüle</a>
+                                    {% endif %}
+                                    
+                                    <button class="btn btn-sm btn-danger remove-bookmark" 
+                                            data-app="{{ bookmark.content_type.app_label }}" 
+                                            data-model="{{ bookmark.content_type.model }}" 
+                                            data-id="{{ bookmark.object_id }}">
+                                        Kaldır
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="alert alert-info">
+                    Henüz bir içerik kaydetmediniz.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'bookmark/js/user_bookmarks.js' %}"></script>
+{% endblock %}

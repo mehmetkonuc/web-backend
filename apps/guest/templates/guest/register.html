@@ -1,0 +1,190 @@
+{% extends 'guest/layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'assets/vendor/libs/select2/select2.css' %}" />
+{% endblock %}
+{% block content %}
+
+          <!-- Register Card -->
+          <div class="card">
+            <div class="card-body">
+              <!-- Logo -->
+              <div class="app-brand justify-content-center mb-6">
+                <a href="{% url 'guest:home' %}" class="app-brand-link">
+                  <span class="app-brand-logo demo">
+                    <span class="text-primary">
+                      <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
+                          fill="currentColor" />
+                        <path
+                          opacity="0.06"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
+                          fill="#161616" />
+                        <path
+                          opacity="0.06"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
+                          fill="#161616" />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                  </span>
+                  <span class="app-brand-text demo text-heading fw-bold">Fakulten</span>
+                </a>
+              </div>
+              <!-- /Logo -->
+
+              
+              <!-- Step Indicator -->
+              <div class="mb-4">
+                <div class="d-flex justify-content-between">
+                  <div class="text-{% if step == 1 %}primary{% else %}secondary{% endif %} fw-bold">1. Kullanıcı Bilgileri</div>
+                  <div class="text-{% if step == 2 %}primary{% else %}secondary{% endif %} fw-bold">2. Eğitim Bilgileri</div>
+                </div>
+                <div class="progress mt-2" style="height: 6px;">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: {% if step == 1 %}50%{% else %}100%{% endif %}"></div>
+                </div>
+              </div>
+
+              <!-- Messages -->
+              {% if messages %}
+                {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
+
+              <form class="mb-6" method="POST">
+                {% csrf_token %}
+
+                {% if step == 1 %}
+                  <h5 class="mb-3">Hesap Bilgileriniz</h5>
+                  
+                  <!-- Username field feedback -->
+                  <div id="username-feedback" class="text-info mb-2 small" style="display: none;">
+                    <span id="username-status">Kullanıcı adı kontrol ediliyor...</span>
+                  </div>
+                {% else %}
+                  <h5 class="mb-3">Eğitim Bilgileriniz</h5>
+                {% endif %}
+
+                {{form|crispy}}
+
+                {% if step == 1 %}
+                <label class="form-check-label mb-2" for="terms-conditions">
+                  <input type="checkbox" id="terms-conditions" class="form-check-input" required>
+                  <a href="javascript:void(0);" data-bs-target="#modalScrollable" data-bs-toggle="modal">Gizlilik politikası ve şartları</a> kabul ediyorum
+                </label>
+                <button id="submit-btn" class="btn btn-primary d-grid w-100">Devam Et</button>
+                {% else %}
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="{% url 'guest:register' %}" class="btn btn-outline-secondary" onclick="resetStep()">Geri Dön</a>
+                  <button class="btn btn-primary">Kaydı Tamamla</button>
+                </div>
+                {% endif %}
+              </form>
+
+              <p class="text-center">
+                <span>Zaten hesabınız var mı?</span>
+                <a href="{% url 'guest:login' %}" class="link fw-bold">
+                  <span>Giriş Yap</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- Register Card -->
+{% block privacy_policy %}
+  {% include 'guest/privacy_policy.html' %}
+{% endblock privacy_policy%}
+
+{%endblock %}
+  {% block extra_js %}
+<script src="{% static 'assets/vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'assets/vendor/libs/select2/forms-selects.js' %}"></script>
+
+<script>
+  function resetStep() {
+    fetch('{% url 'guest:register' %}', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': '{{ csrf_token }}'
+      },
+      body: 'reset_step=true'
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = '{% url 'guest:register' %}';
+      }
+    });
+    return false;
+  }
+  
+  {% if step == 1 %}
+  // Username availability check
+  document.addEventListener('DOMContentLoaded', function() {
+    const usernameInput = document.getElementById('id_username');
+    const feedbackElement = document.getElementById('username-feedback');
+    const statusElement = document.getElementById('username-status');
+    const submitButton = document.getElementById('submit-btn');
+    let typingTimer;
+    const doneTypingInterval = 500; // ms
+    
+    if (usernameInput) {
+      usernameInput.addEventListener('keyup', function() {
+        const username = this.value.trim();
+        
+        // Clear any previous timers
+        clearTimeout(typingTimer);
+        
+        if (username.length > 0) {
+          // Show loading spinner
+          feedbackElement.style.display = 'block';
+          statusElement.textContent = 'Kullanıcı adı kontrol ediliyor...';
+          feedbackElement.className = 'text-info mb-2 small';
+          
+          // Set timer
+          typingTimer = setTimeout(function() {
+            checkUsernameAvailability(username);
+          }, doneTypingInterval);
+        } else {
+          feedbackElement.style.display = 'none';
+        }
+      });
+    }
+    
+    function checkUsernameAvailability(username) {
+      fetch(`{% url 'guest:check_username' %}?username=${encodeURIComponent(username)}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.is_taken) {
+            feedbackElement.className = 'text-danger mb-2 small';
+            statusElement.textContent = 'Bu kullanıcı adı zaten kullanılıyor.';
+            submitButton.disabled = true;
+          } else {
+            feedbackElement.className = 'text-success mb-2 small';
+            statusElement.textContent = 'Bu kullanıcı adı kullanılabilir.';
+            submitButton.disabled = false;
+          }
+          feedbackElement.style.display = 'block';
+        })
+        .catch(error => {
+          console.error('Error checking username:', error);
+          feedbackElement.style.display = 'none';
+        });
+    }
+  });
+  {% endif %}
+</script>
+{% endblock %}

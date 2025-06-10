@@ -1,0 +1,140 @@
+<!-- Comments section -->
+{% load static %}
+
+<div class="comments-section mt-4">
+    <div class="card">
+        <div class="card-body">
+    <!-- Comment form -->
+    <form action="{% url 'comment:create_comment' app_name=app_name model_name=model_name object_id=object.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class="flex-grow-1">
+                <div class="form-floating">
+                    <textarea class="form-control" name="body" id="commentBody" placeholder="Yorum yazın..." style="height: 70px"></textarea>
+                    <label for="commentBody">Yorum yazın...</label>
+                    <div id="characterCounter" class="position-absolute end-0 bottom-0 me-2 mb-2 badge bg-primary rounded-pill">280</div>
+
+                </div>
+                <div class="image-preview-container" id="imagePreviewContainer"></div>
+
+                <div class="d-flex d-flex justify-content-end align-items-center mt-4">
+                    <label for="id_images" class="btn btn-sm btn-label-primary me-2">
+                       <i class="ti tabler-photo"></i>
+                    </label>
+                    <input type="file" name="images" id="id_images" multiple class="d-none" accept="image/*">
+                 <button type="submit" id="postSubmitBtn" class="btn btn-sm btn-primary">
+                    <i class="ti tabler-send me-1"></i> Paylaş
+                 </button>
+              </div>
+            </div>
+    </form>
+    </div>
+</div>
+    <h4 class="mt-4">Yorumlar</h4>
+    <!-- Comments list -->
+
+    {% if comments %}
+        <div class="comments-list">
+    <div class="infinite-container">
+            
+            {% for comment in comments %}
+            <div class="card mt-4 infinite-item">
+            <div class="card-body">
+                <div class="d-flex align-items-start mb-3">
+                    <a href="{% url 'profiles:profile' comment.user.username %}" class="me-3">
+                        {% if comment.user.profile.avatar %}
+                            <img src="{{ comment.user.profile.avatar.url }}" alt="{{ comment.user.username }}" class="user-avatar">
+                        {% else %}
+                            <div class="avatar avatar-md">
+                                <div class="avatar-initial rounded-circle bg-label-primary">
+                                    {{ comment.user.username|first|upper }}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </a>
+                    <div>
+                        <div class="d-flex align-items-center">
+                            <a href="{% url 'profiles:profile' comment.user.username %}" class="me-1">
+                                <h6 class="mb-0">{{ comment.user.get_full_name|default:comment.user.username }}</h6>
+                            </a>
+                            {% if comment.user.profile.is_verified %}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#7367F0" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                              </svg>
+                            {% endif %}
+                        </div>
+                        <small class="text-muted">{{ comment.user.profile.university }}</small> ·
+                        <small class="text-muted comment-date">{{ comment.created_at|date:"d F Y, H:i" }}</small>
+                    </div>
+                    
+                    {% if comment.user == request.user %}
+                    <div class="dropdown ms-auto">
+                        <button class="btn btn-sm btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="ti tabler-dots-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item text-danger" href="{% url 'comment:delete_comment' comment.pk %}">
+                                    <i class="ti tabler-trash me-1"></i> Sil
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <p class="card-text">{{ comment.body }}</p>
+                
+                {% if comment.images.exists %}
+                <div class="post-images-container images-{{ comment.images.count }}">
+                    {% for image in comment.images.all %}
+                    <div class="position-relative">
+                        <a href="{{ image.image.url }}" data-fancybox="gallery-{{ comment.id }}-{{ image.id }}">
+                        <img src="{{ image.image.url }}" alt="Post Image" class="post-image" >
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <div class="post-actions mt-3">
+                    {% load like_tags %}
+                    {% has_user_liked comment request.user as user_liked %}
+                    <button type="button" class="like-button d-flex align-items-center {% if user_liked %}liked{% endif %}"
+                       data-app-name="comment" data-model-name="comment" data-object-id="{{ comment.pk }}" data-liked="{{ user_liked|yesno:'true,false' }}">
+                       <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} icon-sm me-1"></i> 
+                       Beğen (<span class="like-count">{% get_like_count comment %}</span>)
+                    </button>
+
+                    <a href ="{% url 'comment:comment_detail' comment.pk %}" class="d-flex align-items-center">
+                        <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-message-circle me-1"></i> 
+                        {% with reply_count=comment.get_replies.count %}
+                            Yanıt Yaz ({{ reply_count }})
+                        {% endwith %}
+                        </button>
+                    </a>
+                    <button type="button" class="d-flex align-items-center">
+                        <i class="ti tabler-share me-1"></i> Paylaş
+                    </button>
+                </div>
+            </div>
+            </div>
+
+
+            {% endfor %}
+    </div>
+        </div>
+    {% else %}
+        <div class="text-center py-3 text-muted">
+            <i class="ti tabler-message-circle fs-3 mb-2"></i>
+            <p>Henüz yorum yapılmamış. İlk yorumu sen yap!</p>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-lg-8">
+           {% if comments.has_next %}
+           <a class="infinite-more-link" href="?{% for key, value in request.GET.items %}{{ key }}={{ value }}&{% endfor %}page={{ comments.next_page_number }}">Sonraki</a>
+           {% endif %}
+        </div>
+     </div>
+</div>

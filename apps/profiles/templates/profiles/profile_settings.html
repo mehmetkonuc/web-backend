@@ -1,0 +1,286 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/select2/select2.css' %}" />
+
+{% endblock extra_css %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+      <div class="nav-align-top">
+        <ul class="nav nav-pills flex-column flex-md-row mb-6 gap-md-0 gap-2">
+          <li class="nav-item">
+            <a class="nav-link {% if active_tab == 'account' %}active{% endif %}" href="{% url 'profiles:settings' %}"
+              ><i class="icon-base ti tabler-users icon-sm me-1_5"></i> Hesap</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if active_tab == 'password' %}active{% endif %}" href="{% url 'profiles:password_change' %}"
+              ><i class="icon-base ti tabler-key icon-sm me-1_5"></i> Şifre</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if active_tab == 'privacy' %}active{% endif %}" href="{% url 'profiles:privacy_settings' %}"
+              ><i class="icon-base ti tabler-lock icon-sm me-1_5"></i> Gizlilik</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if active_tab == 'delete' %}active{% endif %}" href="{% url 'profiles:delete_account' %}"
+              ><i class="icon-base ti tabler-trash icon-sm me-1_5"></i> Hesabı Sil</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible mb-4" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if active_tab == 'account' %}
+      <!-- Hesap Ayarları -->
+      <div class="card mb-6">
+        <!-- Account -->
+        <div class="card-body">
+          <div class="d-flex align-items-start align-items-sm-center gap-6">
+            {% if profile.avatar %}
+            <img
+              src="{{ profile.avatar.url }}"
+              alt="{{ profile.user.username }}"
+              class="d-block w-px-100 h-px-100 rounded"
+              id="uploadedAvatar" />
+            {% else %}
+            <img
+              src="{% static 'assets/img/avatars/1.png' %}"
+              alt="default-avatar"
+              class="d-block w-px-100 h-px-100 rounded"
+              id="uploadedAvatar" />
+            {% endif %}
+            <div class="button-wrapper">
+              <form id="reset-avatar-form" method="post" action="{% url 'profiles:reset_avatar' %}">
+                {% csrf_token %}
+              <a href="{% url 'profiles:upload_avatar' %}" class="btn btn-primary  me-3 mb-4">
+                <span class="d-none d-sm-block">Fotoğraf yükle</span>
+                <i class="icon-base ti tabler-upload d-block d-sm-none"></i>
+              </a>
+                <button type="button" class="btn btn-label-danger  account-image-reset mb-4" id="reset-avatar">
+                  <i class="icon-base ti tabler-trash d-block d-sm-none"></i>
+                  <span class="d-none d-sm-block">Fotoğrafı Sil</span>
+                </button>
+              </form>
+              <div>JPG, GIF veya PNG formatı. En fazla 800K</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-4">
+          <form id="formAccountSettings" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row gy-4 gx-6 mb-6">
+              <div class="col-md-6 form-control-validation">
+                {{ form.username|as_crispy_field }}
+              </div>
+              <div class="col-md-6 form-control-validation">
+                {{ form.first_name|as_crispy_field }}
+              </div>
+              <div class="col-md-6 form-control-validation">
+                {{ form.last_name|as_crispy_field }}
+              </div>
+              <div class="col-md-6">
+                {{ form.email|as_crispy_field }}
+              </div>
+              <div class="col-md-6">
+                {{ form.university|as_crispy_field }}
+              </div>
+              <div class="col-md-6">
+                {{ form.department|as_crispy_field }}
+              </div>
+              <div class="col-md-6">
+                {{ form.graduation_status|as_crispy_field }}
+              </div>
+              <div class="col-12">
+                <label for="id_bio" class="form-label">Hakkımda</label>
+                {{ form.bio }}
+              </div>
+            </div>
+            <div class="mt-2">
+              <button type="submit" class="btn btn-primary me-3">Değişiklikleri Kaydet</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if active_tab == 'privacy' %}
+      <!-- Gizlilik Ayarları -->
+      <div class="card mb-6">
+        <h5 class="card-header">Gizlilik Ayarları</h5>
+        <div class="card-body">
+          <form id="formPrivacySettings" method="POST">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                  {{ form.is_private|as_crispy_field }}
+              </div>
+              <div class="col-md-6 mb-4">
+                  {{ form.message_privacy|as_crispy_field }}
+              </div>
+            </div>
+            <div class="mt-4">
+              <button type="submit" class="btn btn-primary me-3">Değişiklikleri Kaydet</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      {% endif %}
+      
+      {% if active_tab == 'password' %}
+      <!-- Şifre Değiştirme -->
+      <div class="card mb-6">
+        <h5 class="card-header">Şifre Değiştir</h5>
+        <div class="card-body">
+          <form id="formChangePassword" method="POST">
+            {% csrf_token %}
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="form-password-toggle">
+                  <label class="form-label" for="id_old_password">{{ form.old_password.label }}*</label>
+                  <div class="input-group input-group-merge">
+                    <input
+                    class="form-control"
+                    type="password"
+                    name="old_password"
+                    id="id_old_password" />
+                    <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye"></i></span>
+                  </div>
+                  {% if form.old_password.errors %}
+                  <div class="text-danger">
+                    {% for error in form.old_password.errors %}
+                      {{ error }}
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  {% if form.old_password.help_text %}
+                  <div class="form-text">{{ form.old_password.help_text|safe }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="row gy-4 mt-2">
+              <div class="col-md-6">
+                <div class="form-password-toggle">
+                  <label class="form-label" for="id_new_password1">{{ form.new_password1.label }}*</label>
+                  <div class="input-group input-group-merge">
+                    <input
+                    class="form-control"
+                    type="password"
+                    id="id_new_password1"
+                    name="new_password1" />
+                    <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye"></i></span>
+                  </div>
+                  {% if form.new_password1.errors %}
+                  <div class="text-danger">
+                    {% for error in form.new_password1.errors %}
+                      {{ error }}
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  {% if form.new_password1.help_text %}
+                  <div class="form-text">{{ form.new_password1.help_text|safe }}</div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-password-toggle">
+                  <label class="form-label" for="id_new_password2">{{ form.new_password2.label }}*</label>
+                  <div class="input-group input-group-merge">
+                    <input
+                    class="form-control"
+                    type="password"
+                    name="new_password2"
+                    id="id_new_password2"/>
+                    <span class="input-group-text cursor-pointer"><i class="icon-base ti tabler-eye"></i></span>
+                  </div>
+                  {% if form.new_password2.errors %}
+                  <div class="text-danger">
+                    {% for error in form.new_password2.errors %}
+                      {{ error }}
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  {% if form.new_password2.help_text %}
+                  <div class="form-text">{{ form.new_password2.help_text|safe }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button type="submit" class="btn btn-primary me-3">Şifreyi Değiştir</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if active_tab == 'delete' %}
+      <!-- Hesabı Silme -->
+      <div class="card">
+        <h5 class="card-header">Hesabı Sil</h5>
+        <div class="card-body">
+          <div class="mb-6 col-12 mb-0">
+            <div class="alert alert-warning">
+              <h5 class="alert-heading mb-1">Hesabınızı silmek istediğinizden emin misiniz?</h5>
+              <p class="mb-0">Hesabınızı sildikten sonra geri dönüş yoktur. Lütfen emin olun.</p>
+            </div>
+          </div>
+          <form id="formAccountDeactivation" method="POST">
+            {% csrf_token %}
+              {{ form.confirm_deletion|as_crispy_field }}
+            <div class="mb-4">
+              {{ form.password|as_crispy_field }}
+            </div>
+            <button type="submit" class="btn btn-danger deactivate-account">
+              Hesabımı Sil
+            </button>
+          </form>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {%endblock%}
+  {% block extra_javascript %}
+<script src="{% static 'assets/vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'assets/vendor/libs/select2/forms-selects.js' %}"></script>
+  <!-- JavaScript for handling avatar reset -->
+  {% if active_tab == 'account' %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Avatar reset handling
+      const resetButton = document.getElementById('reset-avatar');
+      const resetForm = document.getElementById('reset-avatar-form');
+
+      if (resetButton) {
+        resetButton.addEventListener('click', function() {
+          if (confirm('Profil fotoğrafını kaldırmak istediğinizden emin misiniz?')) {
+            resetForm.submit();
+          }
+        });
+      }
+
+      // Form field styling
+      const formFields = document.querySelectorAll('#formAccountSettings input, #formAccountSettings select, #formAccountSettings textarea');
+      formFields.forEach(field => {
+        field.classList.add('form-control');
+      });
+    });
+  </script>
+  {% endif %}
+
+  {% endblock extra_javascript %}

@@ -1,0 +1,20 @@
+{% comment %}
+filepath: c:\Users\Resat\Desktop\universite\core\web\apps\bookmark\templates\bookmark\bookmark_button.html
+{% endcomment %}
+{% if show_button %}
+<div class="bookmark-button" 
+     data-app="{{ app_label }}" 
+     data-model="{{ model_name }}" 
+     data-id="{{ object_id }}"
+     data-url="{% url 'bookmark:bookmark_object' %}">
+
+    <button type="button" class="btn btn-text-{% if is_bookmarked %}primary{%else%}secondary{%endif%} waves-effect">
+            <i class="ti {% if is_bookmarked %}tabler-bookmark-filled{% else %}tabler-bookmark{% endif %} scaleX-n1-rtl icon-sm me-1"></i>
+            <span class="bookmark-text me-1 d-none d-md-block" style="position: relative; top: 1px;">
+                {% if is_bookmarked %}Kaydedildi{% else %}Kaydet{% endif %}
+            </span>
+            <span class="bookmark-count" style="position: relative; top: 1px;">({{ bookmark_count }})</span>
+    </button>
+
+</div>
+{% endif %}

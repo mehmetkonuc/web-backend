@@ -1,0 +1,279 @@
+{% extends 'layout/base.html' %}
+{%load static %}
+{% load crispy_forms_tags %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/select2/select2.css' %}" />
+
+<style>
+   .card-footer {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   }
+   .stats-item {
+   display: flex;
+   align-items: center;
+   }
+   .stats-value {
+   font-weight: 600;
+   font-size: 0.9rem;
+   margin: 0 0.25rem 0 0.5rem;
+   }
+   .stats-label {
+   font-size: 0.8rem;
+   color: var(--bs-gray-600);
+   }
+   .stats-divider {
+   width: 1px;
+   height: 20px;
+   background-color: #f0f0f0;
+   }
+</style>
+{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<!-- Üyeler Listesi -->
+<div class="d-flex bd-highlight align-items-center">
+   <div class="flex-grow-1 bd-highlight">
+      <h4 class="fw-bold">
+        {{page_title}}
+      </h4>
+   </div>
+   <div class="bd-highlight">
+      <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+      <i class="ti tabler-filter icon-sm me-1"></i>
+      Filtrele
+      </button>
+   </div>
+</div>
+<!-- Profil Kartları -->
+<div class="row infinite-container g-4">
+   {% if profiles %}
+   {% for member in profiles %}
+   <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 infinite-item ">
+      <div class="card h-100">
+         <div class="card-body">
+            <div class="d-flex flex-wrap bd-highlight mb-2 border-bottom align-items-center">
+              <a href="{% url 'profiles:profile' member.user.username %}" class="text-decoration-none">
+               <div class="bd-highlight me-2 mb-2">
+                  {% if member.user.profile.avatar %}
+                  <div class="avatar avatar-md">
+                     <img src="{{ member.user.profile.avatar.url }}" alt="Avatar" class="rounded-circle">
+                  </div>
+                  {% else %}
+                  <div class="avatar avatar-md">
+                     <span class="avatar-initial rounded-circle bg-label-primary">
+                     {{ member.user.first_name|slice:":1"|upper }}{{ member.user.last_name|slice:":1"|upper }}
+                     </span>
+                  </div>
+                  {% endif %}
+               </div>
+              </a>
+              <a href="{% url 'profiles:profile' member.user.username %}">
+               <div class="bd-highlight mb-2">
+                  <h5 class="mb-0">{{ member.user.get_full_name }}</h5>
+                  <small class="text-muted text-body">@{{ member.user.username }}</small>
+               </div>
+              </a>
+              <div class="ms-auto bd-highlight">
+                {% if member.id in following_ids %}
+                  <button type="button" class="btn rounded-pill btn-label-danger waves-effect waves-light btn-sm follow-btn" data-username="{{ member.user.username }}">
+                  <span class="icon-xs icon-base ti tabler-user-minus scaleX-n1-rtl"></span><span class="follow-text d-none d-md-block ms-2">Çıkar</span>
+                  </button>
+                {% elif member.id in pending_request_ids %}
+                  <button type="button" class="btn rounded-pill btn-outline-secondary waves-effect waves-light btn-sm follow-btn" data-username="{{ member.user.username }}">
+                  <span class="icon-xs icon-base ti tabler-clock scaleX-n1-rtl"></span><span class="follow-text d-none d-md-block ms-2">İsteği İptal Et</span>
+                  </button>
+                {% else %}
+                  <button type="button" class="btn rounded-pill btn-label-primary waves-effect btn-sm follow-btn" data-username="{{ member.user.username }}">
+                  <span class="icon-xs icon-base ti tabler-user-plus scaleX-n1-rtl"></span><span class="follow-text d-none d-md-block ms-2">Takip Et</span>
+                  </button>
+                  {% endif %}
+               </div>
+            </div>
+            <div class="d-flex flex-wrap bd-highlight align-items-center justify-content-center">
+               <div class="p-2 bd-highlight d-flex align-items-center justify-content-center">
+                  <i class="icon-base ti tabler-building icon-lg me-1"></i><span>{{member.university}}</span>
+               </div>
+               <div class="p-2 bd-highlight d-flex align-items-center justify-content-center">
+                  <i class="icon-base ti tabler-book icon-lg me-1"></i><span>{{member.department}}</span>
+               </div>
+               <div class="p-2 bd-highlight d-flex align-items-center justify-content-center">
+                  <i class="icon-base ti tabler-certificate icon-lg me-1"></i><span>{{member.graduation_status}}</span>
+               </div>
+            </div>
+                      <div class="card-footer bg-transparent border-top">
+               <div class="stats-item">
+                  <i class="ti tabler-users text-muted"></i>
+                  <span class="stats-value">{{ member.user.profile.get_followers_count }}</span>
+                  <span class="stats-label">Takipçi</span>
+               </div>
+               <div class="stats-divider"></div>
+               <div class="stats-item">
+                  <i class="ti tabler-user-check text-muted"></i>
+                  <span class="stats-value">{{ member.user.profile.get_following_count }}</span>
+                  <span class="stats-label">Takip</span>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   {% endfor %}
+   {% else %}
+   <div class="col-12">
+      <div class="card">
+         <div class="card-body empty-state">
+            <i class="ti tabler-users"></i>
+            <h5>Üye Bulunamadı</h5>
+            <p class="text-muted">Arama kriterlerinize uygun üye bulunamadı. Lütfen farklı filtreler deneyin.</p>
+            <a href="{% url 'members:members_list' %}" class="btn btn-primary mt-2">
+            <i class="ti tabler-refresh me-1"></i>Filtreleri Temizle
+            </a>
+         </div>
+      </div>
+   </div>
+   {% endif %}
+</div>
+<!-- Sayfalama -->
+<div class="row my-4">
+   <div class="col-12 d-flex justify-content-center">
+      {% if page_obj.has_next %}
+      <a class="infinite-more-link d-none" href="?{% for key, value in request.GET.items %}{{ key }}={{ value }}&{% endfor %}page={{ page_obj.next_page_number }}">Sonraki</a>
+         <div class="spinner-border spinner-border-sm text-primary loading" role="status">
+            <span class="visually-hidden">Loading...</span>
+         </div>
+      {% endif %}
+   </div>
+</div>
+<!-- Filtre Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+   <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasFilterLabel">
+         <i class="ti tabler-filter me-1 text-primary"></i>Üyeleri Filtrele
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+   <div class="offcanvas-body">
+      <!-- Üyeleri Filtreleme -->
+      <div class="filter-section">
+         <form method="get" class="filter-form">
+            {{ filter.form|crispy }}
+            <button type="submit" class="btn btn-primary btn-sm w-100 mb-2">
+            <i class="ti tabler-filter me-1"></i> Filtrele
+            </button>
+            <a href="{% url 'members:clear_filters' %}" class="btn btn-outline-secondary btn-sm w-100">
+            <i class="ti tabler-x me-1"></i> Filtreleri Temizle
+            </a>
+         </form>
+      </div>
+   </div>
+</div>
+{% endblock %}
+{% block extra_javascript %}
+<script src="{% static 'js/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/waypoints/infinite.min.js' %}"></script>
+<script src="{% static 'js/waypoints/custom.js' %}"></script>
+<script src="{% static 'assets/vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'assets/vendor/libs/select2/forms-selects.js' %}"></script>
+<script>
+   // CSRF token alma fonksiyonu
+   function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+         const cookies = document.cookie.split(';');
+         for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+               cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+               break;
+            }
+         }
+      }
+      return cookieValue;
+   }
+   
+   $(document).ready(function() {     
+     // Takip butonlarını aktif etme
+     function initFollowButtons() {
+        $('.follow-btn').off('click').on('click', function() {
+            const button = $(this);
+            const username = button.data('username');
+            
+            // AJAX isteği ile takip durumunu değiştir
+            fetch(`/profile/${username}/follow/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken'),
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'same-origin'
+            })
+            .then(response => response.json())
+            .then(data => {
+                // UI güncelleme
+                const followerValue = button.closest('.card').find('.stats-value').first();
+                followerValue.text(data.followers_count);
+                
+                if (data.status === 'followed') {
+                    // Takip edildi durumu
+                    button.removeClass('btn-primary').addClass('btn-danger');
+                    button.find('.follow-text').text('Çıkar');
+                    button.find('.icon-base').removeClass('tabler-user-plus').addClass('tabler-user-minus');
+                } else if (data.status === 'requested') {
+                    // Takip isteği gönderildi
+                    button.removeClass('btn-primary').addClass('btn-outline-secondary');
+                    button.find('.follow-text').text('İsteği İptal Et');
+                    button.find('.icon-base').removeClass('tabler-user-plus').addClass('tabler-clock');
+                    
+                    // Bilgi mesajı göster (isteğe bağlı)
+                    if (data.message) {
+                        showNotification('info', data.message);
+                    }
+                } else if (data.status === 'request_canceled') {
+                    // Takip isteği iptal edildi
+                    button.removeClass('btn-outline-secondary').addClass('btn-primary');
+                    button.find('.follow-text').text('Takip Et');
+                    button.find('.icon-base').removeClass('tabler-clock').addClass('tabler-user-plus');
+                    
+                    // Bilgi mesajı göster (isteğe bağlı)
+                    if (data.message) {
+                        showNotification('info', data.message);
+                    }
+                } else {
+                    // Takipten çıkıldı
+                    button.removeClass('btn-danger').addClass('btn-primary');
+                    button.find('.follow-text').text('Takip Et');
+                    button.find('.icon-base').removeClass('tabler-user-minus').addClass('tabler-user-plus');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('error', 'İşlem sırasında bir hata oluştu.');
+            });
+        });
+     }
+     
+     // Bildirim gösterme fonksiyonu
+     function showNotification(type, message) {
+         // Eğer SweetAlert2 varsa
+         if (typeof Swal !== 'undefined') {
+             Swal.fire({
+                 icon: type,
+                 title: message,
+                 toast: true,
+                 position: 'top-end',
+                 showConfirmButton: false,
+                 timer: 3000
+             });
+         } else {
+             // Basit bir alert göster
+             alert(message);
+         }
+     }
+     
+     // İlk yükleme sırasında takip butonlarını aktif et
+     initFollowButtons();
+   });
+</script>
+{% endblock %}

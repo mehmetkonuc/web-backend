@@ -1,0 +1,9 @@
+{% comment %}
+Bu template, göreceli zamanı göstermek için kullanılan bir bileşen (component) şablonudur.
+{% endcomment %}
+
+<span class="relative-time {{ css_class }}" 
+      data-timestamp="{{ iso_date }}"
+      {% if show_full_date %}title="{{ full_date }}"{% endif %}>
+  {{ relative_time }}
+</span>

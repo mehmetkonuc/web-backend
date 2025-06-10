@@ -1,0 +1,587 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/css/pages/page-profile.css' %}" />
+<style>
+    .follow-stats {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .follow-stat {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    .follow-count {
+        font-weight: 600;
+        color: #333;
+    }
+    .follow-label {
+        color: #888;
+        font-size: 0.9rem;
+    }
+    
+    /* Takip et/takip ediliyor buton stilleri */
+    .btn-follow {
+        transition: all 0.3s ease;
+    }
+    .btn-follow:hover {
+        transform: translateY(-2px);
+    }
+    .btn-following {
+        background-color: #e9ecef;
+        color: #495057;
+    }
+    .btn-following:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+    .btn-following:hover .follow-text {
+        display: none;
+    }
+    .btn-following:hover .unfollow-text {
+        display: inline;
+    }
+    .unfollow-text {
+        display: none;
+    }
+    
+    /* Engelleme butonu stilleri */
+    .btn-block {
+        transition: all 0.3s ease;
+        margin-left: 0.5rem;
+    }
+    .btn-block:hover {
+        transform: translateY(-2px);
+    }
+    .btn-blocked {
+        background-color: #e9ecef;
+        color: #495057;
+    }
+    .btn-blocked:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+    .btn-blocked:hover .block-text {
+        display: none;
+    }
+    .btn-blocked:hover .unblock-text {
+        display: inline;
+    }
+    .unblock-text {
+        display: none;
+    }
+    
+    .profile-actions {
+        display: flex;
+    }
+    
+    /* Gizlilik ayarları */
+    .privacy-settings {
+        margin-top: 10px;
+    }
+    .private-badge {
+        margin-left: 5px;
+        font-size: 0.75rem;
+    }
+
+    /* Engelleme uyarı mesajı */
+    .blocked-message {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: #f8f9fa;
+        border-radius: 0.25rem;
+        margin: 2rem 0;
+    }
+    .blocked-message i {
+        font-size: 3rem;
+        color: #6c757d;
+        margin-bottom: 1rem;
+    }
+    .blocked-message h4 {
+        margin-bottom: 0.5rem;
+        color: #343a40;
+    }
+    .blocked-message p {
+        color: #6c757d;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+</style>
+
+{% block extra_profile_css %}
+
+{% endblock extra_profile_css %}    
+
+{% endblock extra_css %}
+
+{% block content %}
+   {% for message in messages %}
+   <div class="alert alert-{{ message.tags }} mb-4">{{ message }}</div>
+   {% endfor %}
+    <div class="row">
+    <div class="col-12">
+        <div class="card mb-6 mt-8">
+        <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-5">
+            <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
+                {% if profile.avatar %}
+                {% with profile_photo_url=profile.avatar.url %}
+            <img
+                src="{{ profile.avatar.url }}"
+                alt="user image"
+                class="d-block h-auto ms-0 ms-sm-6 rounded user-profile-img" />
+
+
+                {% endwith %}
+                {% else %}
+                <img
+                src="{% static 'assets/img/avatars/privacy.jpg' %}"
+                alt="user image"
+                class="d-block h-auto ms-0 ms-sm-6 rounded user-profile-img" />
+             {% endif %}
+
+
+            </div>
+            <div class="flex-grow-1 mt-3 mt-lg-5">
+                <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
+                    <div class="user-profile-info text-center text-md-start">
+                        <h4 class="mb-0 mt-lg-6 d-flex align-items-center justify-content-center justify-content-md-start">
+                            {{profile.user.get_full_name}}
+                            {% if profile.is_verified %}
+                            <i class="icon-base ti tabler-rosette-discount-check-filled icon-md text-primary ms-1"></i>
+                            {% endif %}
+                            {% if profile.is_private %}
+                                <i class="icon-base ti tabler-lock icon-xs"></i>
+                            {% endif %}
+                        </h4>
+                <small class="text-body-secondary">@{{ profile.user.username }}</small>
+                <!-- Takipçi ve takip edilen sayıları -->
+                <div class="follow-stats d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4 my-2">
+                    <a href="{% url 'profiles:followers' profile.user.username %}" class="follow-stat text-decoration-none">
+                        <span class="follow-count" id="followers-count">{{ followers_count }}</span>
+                        <span class="follow-label">Takipçi</span>
+                    </a>
+                    <a href="{% url 'profiles:following' profile.user.username %}" class="follow-stat text-decoration-none">
+                        <span class="follow-count">{{ following_count }}</span>
+                        <span class="follow-label">Takip Edilen</span>
+                    </a>
+                </div>
+                
+                <ul
+                    class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4 my-2">
+                    <li class="list-inline-item d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span class="fw-medium">{{profile.university}}</span>
+                    </li>
+                    <li class="list-inline-item d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span class="fw-medium">{{profile.department}}</span>
+                    </li>
+                    <li class="list-inline-item d-flex gap-2 align-items-center">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="fw-medium">{{profile.graduation_status}}</span>
+                    </li>
+                </ul>
+                </div>
+                {% if profile.user.username == user.username %}
+                <div class="d-flex flex-column">
+                    <a href="{% url 'profiles:settings' %}" class="btn btn-danger btn-sm mb-1">
+                        <i class="icon-base ti tabler-settings icon-xs me-2"></i>Ayarlar
+                    </a>
+                    <!-- Gizlilik ayarları -->
+                    <div class="privacy-settings mt-1">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="privacyToggle" {% if profile.is_private %}checked{% endif %}>
+                            <label class="form-check-label" for="privacyToggle">
+                                Gizli Hesap
+                                <i class="icon-base ti {% if profile.is_private %}tabler-lock{% else %}tabler-lock-open{% endif %} icon-xs ms-1"></i>
+                            </label>
+                        </div>
+                        <small class="text-muted d-block mt-1">
+                            {% if profile.is_private %}
+                                Sadece onayladığın kişiler seni takip edebilir.
+                            {% else %}
+                                Herkes seni takip edebilir.
+                            {% endif %}
+                        </small>
+                    </div>
+                    
+                    <!-- Takip istekleri butonu (eğer gizli hesapsa ve bekleyen istekler varsa) -->
+                    {% if profile.is_private %}
+                    <a href="{% url 'profiles:follow_requests' %}" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="icon-base ti tabler-user-question icon-xs me-2"></i>
+                        Takip İstekleri
+                        {% with requests_count=profile.get_pending_follow_requests_count %}
+                            {% if requests_count > 0 %}
+                                <span class="badge bg-danger ms-1">{{ requests_count }}</span>
+                            {% endif %}
+                        {% endwith %}
+                    </a>
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="profile-actions">
+                    <button 
+                        class="btn btn-sm mb-1 me-1 follow-btn {% if is_following %}btn-following{% elif has_pending_request %}btn-outline-secondary{% else %}btn-primary{% endif %}"
+                        data-username="{{ profile.user.username }}"
+                        id="follow-button"
+                        {% if is_blocked_by or is_blocked %}disabled{% endif %}>
+                        <i class="icon-base ti 
+                            {% if is_following %}
+                                tabler-user-check
+                            {% elif has_pending_request %}
+                                tabler-clock
+                            {% else %}
+                                tabler-user-plus
+                            {% endif %} icon-xs me-2"></i>
+                        <span class="follow-text">
+                            {% if is_following %}
+                                Takip Ediliyor
+                            {% elif has_pending_request %}
+                                İsteği İptal Et
+                            {% else %}
+                                Takip Et
+                            {% endif %}
+                        </span>
+                        <span class="unfollow-text">Takibi Bırak</span>
+                    </button>
+                    {% if not is_blocked_by and not profile.message_privacy == 'none' %}
+                        {% if profile.message_privacy != 'followers' or is_following %}
+                        <button 
+                            class="btn btn-sm mb-1 me-1 message-btn btn-label-primary" 
+                            data-user-id="{{ profile.user.id }}">
+                            <i class="icon-base ti tabler-message icon-xs"></i>
+                        </button>
+
+                        {% endif %}
+                    {% endif %}
+
+
+
+                    <button 
+                        class="btn btn-sm mb-1 block-btn {% if is_blocked %}btn-blocked{% else %}btn-outline-danger{% endif %}"
+                        data-username="{{ profile.user.username }}"
+                        id="block-button">
+                        <i class="icon-base ti {% if is_blocked %}tabler-ban{% else %}tabler-ban{% endif %} icon-xs me-2"></i>
+                        <span class="block-text">{% if is_blocked %}Engellendi{% else %}Engelle{% endif %}</span>
+                        <span class="unblock-text">Engeli Kaldır</span>
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    {% if is_blocked_by %}
+    <!-- Kullanıcı engellenmiş durumda - Engelleme uyarı mesajı -->
+    <div class="row">
+        <div class="col-12">
+            <div class="blocked-message">
+                <i class="ti tabler-ban"></i>
+                <h4>Bu içerik sınırlı</h4>
+                <p>{{ profile.user.username }} sizi engellediği için bu kullanıcının içeriklerine erişemezsiniz. Engel kaldırılana kadar bu kullanıcının profil içeriğini, paylaşımlarını ve diğer aktivitelerini görüntüleyemezsiniz.</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    {% block profile-content %}
+    {% endblock profile-content %}
+    {% endif %}
+{% endblock content %}
+
+{% block extra_javascript %}
+<script src="{% static 'assets/js/app-user-view-account.js' %}"></script>
+
+<script>
+    // CSRF token alma fonksiyonu
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Takip et/takibi bırak butonu işlevselliği
+        const followButton = document.getElementById('follow-button');
+        const blockButton = document.getElementById('block-button');
+        const privacyToggle = document.getElementById('privacyToggle');
+        
+        // Gizlilik ayarı değişikliği
+        if (privacyToggle) {
+            privacyToggle.addEventListener('change', function() {
+                // AJAX isteği ile gizlilik durumunu değiştir
+                fetch('/profile/privacy-toggle/', {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken'),
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'same-origin'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Gizlilik durumunu güncelle
+                        const isPrivate = data.is_private;
+                        const icon = privacyToggle.parentElement.querySelector('.icon-base');
+                        const helpText = privacyToggle.parentElement.nextElementSibling;
+                        
+                        if (isPrivate) {
+                            // Gizli profile geçildi
+                            icon.classList.remove('tabler-lock-open');
+                            icon.classList.add('tabler-lock');
+                            helpText.textContent = 'Sadece onayladığın kişiler seni takip edebilir.';
+                            
+                            // Takip istekleri butonunu göster
+                            const container = privacyToggle.closest('.d-flex.flex-column');
+                            if (!container.querySelector('a[href="/follow-requests/"]')) {
+                                const requestsButton = document.createElement('a');
+                                requestsButton.href = "{% url 'profiles:follow_requests' %}";
+                                requestsButton.className = "btn btn-outline-primary btn-sm mt-2";
+                                requestsButton.innerHTML = '<i class="icon-base ti tabler-user-question icon-xs me-2"></i>Takip İstekleri';
+                                container.appendChild(requestsButton);
+                            }
+                            
+                            // Hesap adının yanına gizli işareti ekle
+                            const profileName = document.querySelector('.user-profile-info h4');
+                            if (!profileName.querySelector('.private-badge')) {
+                                const badge = document.createElement('span');
+                                badge.className = 'badge bg-label-warning private-badge';
+                                badge.innerHTML = '<i class="icon-base ti tabler-lock me-1"></i>Gizli Hesap';
+                                profileName.appendChild(badge);
+                            }
+                        } else {
+                            // Herkese açık profile geçildi
+                            icon.classList.remove('tabler-lock');
+                            icon.classList.add('tabler-lock-open');
+                            helpText.textContent = 'Herkes seni takip edebilir.';
+                            
+                            // Takip istekleri butonunu gizle
+                            const requestsButton = privacyToggle.closest('.d-flex.flex-column').querySelector('a[href="/follow-requests/"]');
+                            if (requestsButton) {
+                                requestsButton.remove();
+                            }
+                            
+                            // Gizli hesap işaretini kaldır
+                            const badge = document.querySelector('.private-badge');
+                            if (badge) {
+                                badge.remove();
+                            }
+                        }
+                        
+                        // Başarılı mesajını göster
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000
+                        });
+                        
+                        Toast.fire({
+                            icon: 'success',
+                            title: data.message
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        }
+        
+        // Sayfa yüklendiğinde engelleme butonunun durumunu kontrol et ve doğru göster
+        if (blockButton) {
+            // is_blocked class'ına sahipse engellenmiş demektir
+            if (blockButton.classList.contains('btn-blocked')) {
+                blockButton.querySelector('.block-text').textContent = 'Engellendi';
+            } else {
+                blockButton.querySelector('.block-text').textContent = 'Engelle';
+            }
+        }
+        
+        if (followButton) {
+            followButton.addEventListener('click', function() {
+                const username = this.getAttribute('data-username');
+                
+                // AJAX isteği ile takip durumunu değiştir
+                fetch(`/profile/${username}/follow/`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken'),
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'same-origin'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // UI güncelleme
+                    const followersCount = document.getElementById('followers-count');
+                    followersCount.textContent = data.followers_count;
+                    
+                    if (data.status === 'followed') {
+                        // Takip edildi
+                        followButton.classList.remove('btn-primary');
+                        followButton.classList.add('btn-following');
+                        followButton.querySelector('.follow-text').textContent = 'Takip Ediliyor';
+                        followButton.querySelector('.icon-base').classList.remove('tabler-user-plus');
+                        followButton.querySelector('.icon-base').classList.add('tabler-user-check');
+                    } else if (data.status === 'requested') {
+                        // Takip isteği gönderildi
+                        followButton.classList.remove('btn-primary');
+                        followButton.classList.add('btn-outline-secondary');
+                        followButton.querySelector('.follow-text').textContent = 'İsteği İptal Et';
+                        followButton.querySelector('.icon-base').classList.remove('tabler-user-plus');
+                        followButton.querySelector('.icon-base').classList.add('tabler-clock');
+                        
+                        // Bilgi mesajı göster
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000
+                        });
+                        
+                        Toast.fire({
+                            icon: 'info',
+                            title: data.message
+                        });
+                    } else if (data.status === 'request_canceled') {
+                        // Takip isteği iptal edildi
+                        followButton.classList.remove('btn-outline-secondary');
+                        followButton.classList.add('btn-primary');
+                        followButton.querySelector('.follow-text').textContent = 'Takip Et';
+                        followButton.querySelector('.icon-base').classList.remove('tabler-clock');
+                        followButton.querySelector('.icon-base').classList.add('tabler-user-plus');
+                        
+                        // Bilgi mesajı göster
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000
+                        });
+                        
+                        Toast.fire({
+                            icon: 'info',
+                            title: data.message
+                        });
+                    } else {
+                        // Takipten çıkıldı
+                        followButton.classList.remove('btn-following');
+                        followButton.classList.add('btn-primary');
+                        followButton.querySelector('.follow-text').textContent = 'Takip Et';
+                        followButton.querySelector('.icon-base').classList.remove('tabler-user-check');
+                        followButton.querySelector('.icon-base').classList.add('tabler-user-plus');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        }
+        
+        // Engelle/Engeli Kaldır butonu işlevselliği
+        if (blockButton) {
+            blockButton.addEventListener('click', function() {
+                const username = this.getAttribute('data-username');
+                
+                // AJAX isteği ile engelleme durumunu değiştir
+                fetch(`/profile/${username}/block/`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken'),
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'same-origin'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'blocked') {
+                        // Engellendi
+                        blockButton.classList.remove('btn-outline-danger');
+                        blockButton.classList.add('btn-blocked');
+                        blockButton.querySelector('.block-text').textContent = 'Engellendi';
+                        
+                        // Takip butonunu güncelle
+                        if (followButton) {
+                            followButton.classList.remove('btn-following');
+                            followButton.classList.add('btn-primary');
+                            followButton.querySelector('.follow-text').textContent = 'Takip Et';
+                            followButton.querySelector('.icon-base').classList.remove('tabler-user-check');
+                            followButton.querySelector('.icon-base').classList.add('tabler-user-plus');
+                            followButton.disabled = true;
+                        }
+                    } else {
+                        // Engeli kaldırıldı
+                        blockButton.classList.remove('btn-blocked');
+                        blockButton.classList.add('btn-outline-danger');
+                        blockButton.querySelector('.block-text').textContent = 'Engelle';
+                        
+                        // Takip butonunu etkinleştir
+                        if (followButton) {
+                            followButton.disabled = false;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        }
+    });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".message-btn").forEach(function(button) {
+        button.addEventListener("click", function() {
+            const userId = this.getAttribute("data-user-id");
+
+            fetch("{% url 'chat:create_room' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}",
+                },
+                body: JSON.stringify({ user_id: userId }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    // Sohbet odasına yönlendir
+                    window.location.href = `/chat/${data.id}/`; // kendi URL yapına göre değiştir
+                } else if (data.privacy_error) {
+                    alert("Bu kullanıcı mesaj alamıyor.");
+                } else {
+                    alert("Hata oluştu.");
+                }
+            })
+            .catch(error => {
+                console.error("Mesaj başlatma hatası:", error);
+                alert("Bir hata oluştu.");
+            });
+        });
+    });
+});
+</script>
+
+
+
+{% block extra_js %}
+{% endblock %}
+{% endblock extra_javascript %}
+

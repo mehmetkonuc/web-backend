@@ -1,0 +1,27 @@
+{% load static %}
+{% load time_tags %}
+
+<a href="{% url 'profiles:profile' user.username %}" class="me-3">
+    {% if user.profile.avatar %}
+        <img src="{{ user.profile.avatar.url }}" alt="{{ user.username }}" class="user-avatar">
+    {% else %}
+        <div class="avatar avatar-md">
+            <div class="avatar-initial rounded-circle bg-label-primary">
+                {{ user.username|first|upper }}
+            </div>
+        </div>
+    {% endif %}
+</a>
+<div>
+    <div class="d-flex align-items-center">
+        <a href="{% url 'profiles:profile' user.username %}" class="me-1">
+            <h6 class="mb-0">{{ user.get_full_name|default:user.username }}</h6>
+        </a>
+        {% if user.profile.is_verified %}
+        <i class="icon-base ti tabler-rosette-discount-check-filled icon-sm text-primary"></i>
+
+        {% endif %}
+    </div>
+    <small class="text-muted">{{ user.profile.university }}</small> ·
+    <small class="text-muted comment-date">{{ created_at|relative_time }}</small>
+</div>

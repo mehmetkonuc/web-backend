@@ -1,0 +1,19 @@
+{% comment %}
+filepath: c:\Users\Resat\Desktop\universite\core\web\apps\like\templates\like\like_button.html
+{% endcomment %}
+{% if show_button %}
+<div class="like-button" 
+     data-app="{{ app_name }}" 
+     data-model="{{ model_name }}" 
+     data-id="{{ object_id }}"
+     data-url="{% url 'like:like_object' %}">
+
+    <button type="button" class="btn btn-text-{% if user_liked %}primary{%else%}secondary{%endif%} waves-effect">
+            <i class="ti {% if user_liked %}tabler-heart-filled{% else %}tabler-heart{% endif %} scaleX-n1-rtl icon-sm me-1"></i>
+            <span class="like-text me-1 d-none d-md-block" style="position: relative; top: 1px;">
+                {% if user_liked %}Beğendin{% else %}Beğen{% endif %}
+            </span>
+            <span class="like-count" style="position: relative; top: 1px;">({{ like_count }})</span>
+    </button>
+</div>
+{% endif %}

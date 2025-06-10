@@ -1,0 +1,139 @@
+{% extends 'profiles/layout/base.html' %}
+{% load static %}
+
+{% block profile-content %}
+<div class="card mb-4">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h5 class="card-title mb-0">Takip Edilenler</h5>
+    <span class="badge bg-primary rounded-pill">{{ following|length }}</span>
+  </div>
+  <div class="card-body">
+    {% if is_blocked_by %}
+    <!-- Engelleme uyarısı - bu kısım base.html şablonunda gösterilecek -->
+    {% elif following %}
+      <div class="row g-4">
+        {% for following_profile in following %}
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="avatar me-3">
+                    {% if following_profile.avatar %}
+                      <img src="{{ following_profile.avatar.url }}" alt="{{ following_profile.user.username }}" class="rounded-circle" width="40" height="40">
+                    {% else %}
+                      <div class="avatar-initial rounded-circle bg-label-info">
+                        {{ following_profile.user.username|slice:":1"|upper }}
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="mb-0">
+                      <a href="{% url 'profiles:profile' following_profile.user.username %}" class="text-body">
+                        {{ following_profile.user.first_name }} {{ following_profile.user.last_name }}
+                      </a>
+                    </h6>
+                    <small class="text-muted">@{{ following_profile.user.username }}</small>
+                  </div>
+                  {% if user.is_authenticated and user != following_profile.user %}
+                    <div class="follow-action">
+                      <button 
+                        class="btn btn-sm {% if user.profile.is_following|default_if_none:False %}btn-outline-secondary{% else %}btn-primary{% endif %} follow-toggle-btn"
+                        data-username="{{ following_profile.user.username }}">
+                        {% if following_profile.user.id in following_ids %}Takip Ediliyor{% else %}Takip Et{% endif %}
+                      </button>
+                    </div>
+                  {% endif %}
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="follower-info">
+                    {% if following_profile.university %}
+                      <div class="badge bg-label-primary me-1">{{ following_profile.university }}</div>
+                    {% endif %}
+                    {% if following_profile.department %}
+                      <div class="badge bg-label-info">{{ following_profile.department }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="text-center py-4">
+        <div class="mb-3">
+          <i class="ti tabler-users text-muted" style="font-size: 3rem;"></i>
+        </div>
+        <h6 class="mb-1">Henüz takip ettiğiniz kimse yok</h6>
+        <p class="text-muted mb-0">Yeni bağlantılar kurmak için kişileri takip edin.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_javascript %}
+{{ block.super }}
+<script>
+  // Takip butonları için işlevsellik
+  document.addEventListener('DOMContentLoaded', function() {
+    const followButtons = document.querySelectorAll('.follow-toggle-btn');
+    
+    followButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const username = this.getAttribute('data-username');
+        
+        // AJAX isteği ile takip durumunu değiştir
+        fetch(`/profile/${username}/follow/`, {
+          method: 'POST',
+          headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+            'Content-Type': 'application/json'
+          },
+          credentials: 'same-origin'
+        })
+        .then(response => response.json())
+        .then(data => {
+          // UI güncelleme
+          if (data.status === 'followed') {
+            // Takip edildi
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-outline-secondary');
+            button.textContent = 'Takip Ediliyor';
+          } else {
+            // Takipten çıkıldı
+            button.classList.remove('btn-outline-secondary');
+            button.classList.add('btn-primary');
+            button.textContent = 'Takip Et';
+            
+            // Liste görünümünde takibi bıraktığınızda, bu kişi hala takip edilenler listesinde görünecektir.
+            // İsterseniz elemanı listeden kaldırabilirsiniz, ama bu daha iyi bir UX için sayfayı yenilemeniz 
+            // gerektiği anlamına gelebilir.
+            // Alternatif olarak, sadece stil değişikliği yapabilirsiniz.
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      });
+    });
+    
+    // CSRF token alma fonksiyonu
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+  });
+</script>
+{% endblock %} 

@@ -1,0 +1,746 @@
+{% load static %}
+<!doctype html>
+
+<html
+  lang="en"
+  class="layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-skin="default"
+  data-assets-path="{% static 'assets/' %}"
+  data-template="front-pages"
+  data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Fakulten</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon/favicon.ico' %}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/fonts/iconify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/fonts/tabler-icons.css' %}" />
+
+    <!-- Core CSS -->
+    <!-- build:css assets/vendor/css/theme.css  -->
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/node-waves/node-waves.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/pickr/pickr-themes.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/css/core.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/demo.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/css/pages/front-page.css' %}" />
+
+    <!-- Vendors CSS -->
+
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/nouislider/nouislider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/libs/swiper/swiper.css' %}" />
+
+    <!-- Page CSS -->
+
+    <link rel="stylesheet" href="{% static 'assets/vendor/css/pages/front-page-landing.css' %}" />
+
+    <!-- Helpers -->
+    <script src="{% static 'assets/vendor/js/helpers.js' %}"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="{% static 'assets/vendor/js/template-customizer.js' %}"></script>
+
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+
+    <script src="{% static 'assets/js/front-config.js' %}"></script>
+  </head>
+
+  <body>
+    <script src="{% static 'assets/vendor/js/dropdown-hover.js' %}"></script>
+    <script src="{% static 'assets/vendor/js/mega-dropdown.js' %}"></script>
+    <!-- Navbar: Start -->
+    <nav class="layout-navbar shadow-none py-0">
+      <div class="container">
+        <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-8">
+          <!-- Menu logo wrapper: Start -->
+          <div class="navbar-brand app-brand demo d-flex py-0 me-4 me-xl-8 ms-0">
+            <!-- Mobile menu toggle: Start-->
+            <button
+              class="navbar-toggler border-0 px-0 me-4"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="icon-base ti tabler-menu-2 icon-lg align-middle text-heading fw-medium"></i>
+            </button>
+            <!-- Mobile menu toggle: End-->
+            <a href="landing-page.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <span class="text-primary">
+                  <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
+                      fill="currentColor" />
+                    <path
+                      opacity="0.06"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
+                      fill="#161616" />
+                    <path
+                      opacity="0.06"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
+                      fill="#161616" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
+                      fill="currentColor" />
+                  </svg>
+                </span>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Fakulten</span>
+            </a>
+          </div>
+          <!-- Menu logo wrapper: End -->
+          <!-- Menu wrapper: Start -->
+          <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+            <button
+              class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl p-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="icon-base ti tabler-x icon-lg"></i>
+            </button>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-medium" aria-current="page" href="#starting">Başlangıç</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" aria-current="page" href="#futures">Özellikler</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="#reviews">Yorumlar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-medium" href="#FAQ">SSS</a>
+              </li>
+            </ul>
+          </div>
+          <div class="landing-menu-overlay d-lg-none"></div>
+          <!-- Menu wrapper: End -->
+          <!-- Toolbar: Start -->
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- Style Switcher -->
+            <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-1">
+              <a
+                class="nav-link dropdown-toggle hide-arrow"
+                id="nav-theme"
+                href="javascript:void(0);"
+                data-bs-toggle="dropdown">
+                <i class="icon-base ti tabler-sun icon-lg theme-icon-active"></i>
+                <span class="d-none ms-2" id="nav-theme-text">Toggle theme</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-theme-text">
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item align-items-center active"
+                    data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <span><i class="icon-base ti tabler-sun icon-md me-3" data-icon="sun"></i>Aydınlık</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item align-items-center"
+                    data-bs-theme-value="dark"
+                    aria-pressed="true">
+                    <span><i class="icon-base ti tabler-moon-stars icon-md me-3" data-icon="moon-stars"></i>Karanlık</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item align-items-center"
+                    data-bs-theme-value="system"
+                    aria-pressed="false">
+                    <span
+                      ><i
+                        class="icon-base ti tabler-device-desktop-analytics icon-md me-3"
+                        data-icon="device-desktop-analytics"></i
+                      >Sistem</span
+                    >
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <!-- / Style Switcher-->
+
+            <!-- navbar button: Start -->
+            <li>
+                <a href="{% url 'guest:login' %}" class="btn btn-primary">
+                    <span class="tf-icons icon-base ti tabler-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Giriş</span>
+                </a>
+                <a href="{% url 'guest:register' %}" class="btn btn-danger">
+                    <span class="tf-icons icon-base ti tabler-user-plus scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Kayıt</span>
+                </a>
+            </li>
+            <!-- navbar button: End -->
+          </ul>
+          <!-- Toolbar: End -->
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar: End -->
+
+    <!-- Sections:Start -->
+
+    <div data-bs-spy="scroll" class="scrollspy-example">
+      <!-- Hero: Start -->
+      <section id="starting">
+        <div id="landingHero" class="section-py landing-hero position-relative">
+          <img
+            src="{% static 'assets/img/front-pages/backgrounds/hero-bg.png' %}"
+            alt="hero background"
+            class="position-absolute top-0 start-50 translate-middle-x object-fit-cover w-100 h-100"
+            data-speed="1" />
+          <div class="container">
+            <div class="hero-text-box text-center position-relative">
+              <h1 class="text-primary hero-title display-6 fw-extrabold">
+                Üniversitelilerin Yeni Sosyal Medya Topluluğu
+              </h1>
+              <h2 class="hero-sub-title h6 mb-6">
+                Hemen hesap oluştur ve aramıza katıl<br class="d-none d-lg-block" />
+                yeni kişilerle tanış ve bilgi al.
+              </h2>
+              <div class="landing-hero-btn d-inline-block position-relative">
+                <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium"
+                  >Topluluğa Katıl
+                  <img
+                    src="{% static 'assets/img/front-pages/icons/Join-community-arrow.png' %}"
+                    alt="Join community arrow"
+                    class="scaleX-n1-rtl"
+                /></span>
+                <a href="{% url 'guest:register' %}" class="btn btn-primary btn-lg">Hemen Başla</a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </section>
+      <!-- Hero: End -->
+
+      <!-- Useful features: Start -->
+      <section id="futures" class="section-py landing-features">
+        <div class="container">
+          <div class="text-center mb-4">
+            <span class="badge bg-label-primary">Yararlı Özellikler</span>
+          </div>
+          <h4 class="text-center mb-1">
+            <span class="position-relative fw-extrabold z-1"
+              >Eğitim hayatınızda
+              <img
+                src="{% static 'assets/img/front-pages/icons/section-title-icon.png' %}"
+                alt="laptop charging"
+                class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
+            </span>
+            ve sosyal hayatınızda faydalanabileceğiniz özellikler
+          </h4>
+          <p class="text-center mb-12">
+            Platformumuzda bulunan bazı özelliklerden örnekler aşağıda verilmiştir daha fazlası için kayıt olmanız yeterli.
+          </p>
+          <div class="features-icon-wrapper row gx-0 gy-6 g-sm-12">
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-4">
+                <img src="{% static 'assets/img/front-pages/icons/post.png' %}" alt="laptop charging" style="height: 80px;" />
+              </div>
+              <h5 class="mb-2">Gönderi</h5>
+              <p class="features-icon-description">
+                Fikirlerinizi Paylaşabilir ve Filtreleme özelliği sayesinde istediğini üniversite öğrencilerinin gönderilerini görebilirsiniz.              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-4">
+                <img src="{% static 'assets/img/front-pages/icons/follow.png' %}" alt="transition up" style="height: 80px;" />
+              </div>
+              <h5 class="mb-2">Takipleşme</h5>
+              <p class="features-icon-description">
+                Diğer kullanıcıları takip edebilir ve onların gönderilerini anlık olarak görebilirsiniz.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-4">
+                <img src="{% static 'assets/img/front-pages/icons/chat.png' %}" alt="edit" style="height: 80px;" />
+              </div>
+              <h5 class="mb-2">Sohbet</h5>
+              <p class="features-icon-description">
+                Diğer kullanıcılarla anlık mesajlaşma yapabilir ve grup sohbetleri oluşturabilirsiniz.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-4">
+                <img src="{% static 'assets/img/front-pages/icons/megaphone.png' %}" alt="3d select solid" style="height: 80px;" />
+              </div>
+              <h5 class="mb-2">Trend Konular</h5>
+              <p class="features-icon-description">
+                En çok konuşulan konuları hashtag sistemi sayesinde görebilir ve konu hakkında görüşlerinizi paylaşabilirsiniz.              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-4">
+                <img src="{% static 'assets/img/front-pages/icons/profile.png' %}" alt="lifebelt" style="height: 80px;" />
+              </div>
+              <h5 class="mb-2">Gelişmiş Profil</h5>
+              <p class="features-icon-description">
+                Size özel profil ayarları ile kendinizi ifade edin.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="text-center mb-4">
+                <img src="{% static 'assets/img/front-pages/icons/more.png' %}" alt="google docs" style="height: 80px;" />
+              </div>
+              <h5 class="mb-2">Ve Daha Fazlası</h5>
+              <p class="features-icon-description">
+                Daha fazlasını görmek için topluluğumuza katılın.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Useful features: End -->
+
+      <!-- Real customers reviews: Start -->
+      <section id="reviews" class="section-py bg-body landing-reviews pb-0">
+        <!-- What people say slider: Start -->
+        <div class="container">
+          <div class="row align-items-center gx-0 gy-4 g-lg-5 mb-5 pb-md-5">
+            <div class="col-md-6 col-lg-5 col-xl-3">
+              <div class="mb-4">
+                <span class="badge bg-label-primary">Gerçek Kullanıcı Yorumları</span>
+              </div>
+              <h4 class="mb-1">
+                <span class="position-relative fw-extrabold z-1"
+                  >Söylenenler
+                  <img
+                    src="{% static 'assets/img/front-pages/icons/section-title-icon.png' %}"
+                    alt="laptop charging"
+                    class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
+                </span>
+              </h4>
+              <p class="mb-5 mb-md-12">
+                Üyelerimizin Deneyimleri<br class="d-none d-xl-block" />
+                Hakkında Bir Kaç Yorum.
+              </p>
+              <div class="landing-reviews-btns">
+                <button
+                  id="reviews-previous-btn"
+                  class="btn btn-label-primary reviews-btn me-4 scaleX-n1-rtl"
+                  type="button">
+                  <i class="ti tabler-chevron-left icon-md"></i>
+                </button>
+                <button id="reviews-next-btn" class="btn btn-label-primary reviews-btn scaleX-n1-rtl" type="button">
+                  <i class="ti tabler-chevron-right icon-md"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-7 col-xl-9">
+              <div class="swiper-reviews-carousel overflow-hidden">
+                <div class="swiper" id="swiper-reviews">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="card h-100">
+                        <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+                          <p>
+                            “İlk senemde not bulmak için çırpınırken Fakulten'le tanıştım. İstatistik dersinin tüm arşivi burada! Artık sınav haftaları panik yok. Teşekkürler 💯”
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar me-3 avatar-sm">
+                              <img src="{% static 'assets/img/avatars/1.png' %}" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Mehmet K.</h6>
+                              <p class="small text-muted mb-0">İstanbul Üniversitesi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card h-100">
+                        <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+                          <p>
+                            “Yurtta kalıyorum, elden çıkarmam gereken onlarca kitap vardı. İlanım 1 günde 15 kişiyle eşleşti! Sadece uygulama ara yüzü biraz daha hızlı olsa 5 yıldız 😊”
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar me-3 avatar-sm">
+                              <img src="{% static 'assets/img/avatars/2.png' %}" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Ayşe T.</h6>
+                              <p class="small text-muted mb-0">Ankara Üniversitesi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card h-100">
+                        <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+                          <p>
+                            Pandemi döneminde okulda kimseyi tanımıyordum. Buradan edindiğim arkadaşlarla şimdi aynı kütüphanede ders çalışıyoruz. Sosyalleşme imkânı için mükemmel!
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar me-3 avatar-sm">
+                              <img src="{% static 'assets/img/avatars/3.png' %}" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Berkay K.</h6>
+                              <p class="small text-muted mb-0">Orta Doğu Teknik Üniversitesi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card h-100">
+                        <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+                          <p>
+                            Diğer sosyal medyalar gibi karmaşık değil. Ders programımı profilime bile ekledim. Tek eksiğiniz karanlık mod olsa da yine de favorim 👏
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar me-3 avatar-sm">
+                              <img src="{% static 'assets/img/avatars/4.png' %}" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Elif Y.</h6>
+                              <p class="small text-muted mb-0">Mersin Üniversitesi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card h-100">
+                        <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+                          <p>
+                            “Tablet almak için Efe'yle buradan anlaştım. Fakulten'in 'Öğrenci Doğrulaması' sayesinde içim rahattı. Keşke ödemeler direkt uygulama üzerinden olsa 🤞”
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar me-3 avatar-sm">
+                              <img src="{% static 'assets/img/avatars/5.png' %}" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Ozan A.</h6>
+                              <p class="small text-muted mb-0">Ege Üniversitesi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card h-100">
+                        <div class="card-body text-body d-flex flex-column justify-content-between h-100">
+                          <p>
+                            "Not paylaş, eşya sat, etkinliklere katıl, hatta kantin indirimlerini takip et… Tek uygulamada hepsi! Ücretsiz olması da cabası 🚀"
+                          </p>
+                          <div class="d-flex align-items-center">
+                            <div class="avatar me-3 avatar-sm">
+                              <img src="{% static 'assets/img/avatars/1.png' %}" alt="Avatar" class="rounded-circle" />
+                            </div>
+                            <div>
+                              <h6 class="mb-0">Hakan A.</h6>
+                              <p class="small text-muted mb-0">Marmara Üniversitesi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- What people say slider: End -->
+        <hr class="m-0 mt-6 mt-md-12" />
+      </section>
+      <!-- Real customers reviews: End -->
+
+      <!-- Fun facts: Start -->
+      <section id="university" class="section-py landing-fun-facts">
+                <!-- Logo slider: Start -->
+                <div class="container">
+                  <div class="swiper-logo-carousel">
+                    <div class="swiper" id="swiper-clients-logos">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/gazi.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/mersin.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/dokuz-eylul.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/bogazici.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/selcuk.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/akdeniz.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="{% static 'assets/img/front-pages/branding/anadolu.png' %}"
+                            alt="client logo"
+                            class="client-logo" style="height: 100px;" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Logo slider: End -->
+
+      </section>
+      <!-- Fun facts: End -->
+
+      <!-- FAQ: Start -->
+      <section id="FAQ" class="section-py bg-body landing-faq">
+        <div class="container">
+          <div class="text-center mb-4">
+            <span class="badge bg-label-primary">SSS</span>
+          </div>
+          <h4 class="text-center mb-1">
+            Sıkça Sorulan
+            <span class="position-relative fw-extrabold z-1"
+              >Sorular
+              <img
+                src="{% static 'assets/img/front-pages/icons/section-title-icon.png' %}"
+                alt="laptop charging"
+                class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
+            </span>
+          </h4>
+          <p class="text-center mb-12 pb-md-4">
+            Sık sorulan soruların yanıtlarını bulmak için bu SSS'lere göz atın.
+          </p>
+          <div class="row gy-12 align-items-center">
+            <div class="col-lg-5">
+              <div class="text-center">
+                <img
+                  src="{% static 'assets/img/front-pages/landing-page/faq-boy-with-logos.png' %}"
+                  alt="faq boy with logos"
+                  class="faq-image" />
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="accordion" id="accordionExample">
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      type="button"
+                      class="accordion-button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionOne"
+                      aria-expanded="true"
+                      aria-controls="accordionOne">
+                      Fakulten'de ücretsiz üye olabilir miyim?
+                    </button>
+                  </h2>
+
+                  <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Evet! Fakulten, Türkiye'deki tüm üniversite öğrencilerine ücretsiz olarak açıktır. Üyelik için yalnızca e-posta adresinizi doğrulamanız gerekmektedir.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionTwo"
+                      aria-expanded="false"
+                      aria-controls="accordionTwo">
+                      Paylaştığım ders notları veya satış ilanları herkese açık mı oluyor?
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Eğer profilinizi herkese açık şekilde ayarlarsanız ders notlarınız ve satış için oluşturduğunuz ilanlar herkese açık şekilde görülür, eğer profilinizi gizli yaparsanız bu paylaşımlarınız sadece takipçileriniz tarafından görünür hale gelir.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-item active">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      type="button"
+                      class="accordion-button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionThree"
+                      aria-expanded="false"
+                      aria-controls="accordionThree">
+                      Sitede eşya satarken komisyon veya ücret alınıyor mu?
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionThree"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Fakulten, öğrenciler arasındaki alışverişi kolaylaştırmak için komisyon almaz ve ödeme için aracı olmaz bu alıcı ile satışı arasında bir ticarettir.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionFour"
+                      aria-expanded="false"
+                      aria-controls="accordionFour">
+                      Hesabımı nasıl silebilirim?
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Hesap Ayarları > Hesabı Sil bölümünden istediğiniz zaman hesabınızı silebilirsiniz. Bir hesap silindikten sonra geri getirilmesi mümkün değildir.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionFive"
+                      aria-expanded="false"
+                      aria-controls="accordionFive">
+                      Bir kullanıcıyı rapor etmek veya uygunsuz içerik bildirmek istersem ne yapmalıyım
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Diğer kullanıcıların yaptığı her paylaşımın altında Şikayet Et özelliği mevcuttur. Şikayete konu paylaşımı bildirirseniz moderatörlerimiz tarafından gerekli kontroller yapıldıktan sonra ilgili paylaşım silinir.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ: End -->
+    </div>
+
+    <!-- / Sections:End -->
+
+    <!-- Footer: Start -->
+    <footer class="landing-footer bg-body footer-text">
+
+      <div class="footer-bottom py-3 py-md-5">
+        <div
+          class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+          <div class="mb-2 mb-md-0">
+            <span class="footer-bottom-text"
+              >©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+            </span>
+            <span class="fw-medium text-white">Fakulten</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer: End -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/theme.js -->
+
+    <script src="{% static 'assets/vendor/libs/popper/popper.js' %}"></script>
+    <script src="{% static 'assets/vendor/js/bootstrap.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/node-waves/node-waves.js' %}"></script>
+
+    <script src="{% static 'assets/vendor/libs/@algolia/autocomplete-js.js' %}"></script>
+
+    <script src="{% static 'assets/vendor/libs/pickr/pickr.js' %}"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="{% static 'assets/vendor/libs/nouislider/nouislider.js' %}"></script>
+    <script src="{% static 'assets/vendor/libs/swiper/swiper.js' %}"></script>
+
+    <!-- Main JS -->
+
+    <script src="{% static 'assets/js/front-main.js' %}"></script>
+
+    <!-- Page JS -->
+    <script src="{% static 'assets/js/front-page-landing.js' %}"></script>
+  </body>
+</html>

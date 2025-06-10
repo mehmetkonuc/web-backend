@@ -1,0 +1,37 @@
+{% load static %}
+
+<p class="card-text">{{ comment_obj.body }}</p>
+
+{% if comment_obj.images.exists %}
+<div class="post-images-container images-{{ comment_obj.images.count }}">
+    {% for image in comment_obj.images.all %}
+    <div class="position-relative">
+        <a href="{{ image.image.url }}" data-fancybox="gallery-{{ comment_obj.id }}-{{ image.id }}">
+            <img src="{{ image.image.url }}" alt="Comment Image" class="post-image">
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<div class="d-flex justify-content-between border-top">
+    {% load like_tags %}
+    {% load bookmark_tags %}
+    {% has_user_liked post request.user as user_liked %}
+    {% is_object_bookmarked post request.user as is_bookmarked %}
+    <div class="bd-highlight">
+    {% like_button comment_obj request.user %}
+    </div>
+    <div class="bd-highlight">
+    <a href ="{% url 'comment:comment_detail' comment_obj.pk %}" class="d-flex align-items-center">
+        <button type="button" class="btn btn-text-secondary waves-effect">
+        <i class="ti tabler-message-circle me-1"></i> 
+        {% with reply_count=comment_obj.get_replies.count %}
+            {{ reply_text|default:"Yanıt Yaz" }} ({{ reply_count }})
+        {% endwith %}
+        </button>
+    </a>
+    </div>
+    <div class="bd-highlight">
+    {% bookmark_button comment_obj request.user %}
+    </div>
+</div>
