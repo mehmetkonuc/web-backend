@@ -100,7 +100,6 @@ class LikeViewSet(viewsets.ModelViewSet):
         """
         content_type_id = request.data.get('content_type_id')
         object_id = request.data.get('object_id')
-        
         if not content_type_id or not object_id:
             return Response(
                 {"detail": "Both content_type_id and object_id are required."},
@@ -144,23 +143,26 @@ class LikeViewSet(viewsets.ModelViewSet):
                 
             except Like.DoesNotExist:
                 # Like - create a new like
+
                 like = Like.objects.create(
                     content_type=content_type,
                     object_id=object_id,
                     user=request.user
                 )
                 
-                # Try to create notification
-                try:
-                    from apps.notifications.services import NotificationService
-                    # Only send notification if the like is not from the content owner
-                    if hasattr(content_object, 'user') and content_object.user != request.user:
-                        NotificationService.create_like_notification(
-                            user=request.user,
-                            like_obj=like
-                        )
-                except (ImportError, AttributeError):
-                    pass
+                # # Try to create notification
+                # try:
+
+                #     from apps.notifications.services import NotificationService
+                #     # Only send notification if the like is not from the content owner
+                #     if hasattr(content_object, 'user') and content_object.user != request.user:
+
+                #         NotificationService.create_like_notification(
+                #             user=request.user,
+                #             like_obj=like
+                #         )
+                # except (ImportError, AttributeError):
+                #     pass
                 
                 serializer = self.get_serializer(like)
                 return Response(

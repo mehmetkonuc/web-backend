@@ -113,9 +113,8 @@ class ChatRoomViewSet(viewsets.ModelViewSet):
                 {'detail': reason},
                 status=status.HTTP_403_FORBIDDEN
             )
-        
-        # Get or create the chat room
-        chat_room = ChatRoom.get_or_create_chat_room(request.user, other_user)
+          # Get or create the chat room
+        chat_room, created = ChatRoom.get_or_create_chat_room(request.user, other_user)
         
         # NOT removing the deletion records here
         # Let the MessageViewSet.create method handle this when the user actually sends a message

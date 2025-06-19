@@ -13,41 +13,46 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from datetime import timedelta
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# ==============================================================================
+# ENVIRONMENT CONFIGURATION
+# ==============================================================================
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
+# Environment variables with defaults
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-!(qn^mu9)zl!2bbga-_o7jl%41$emh&dmt&e7ce)024es-(uaw')
+DEBUG = config('DEBUG', default=True, cast=bool)
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
+FRONTEND_URL = config('FRONTEND_URL', default='http://192.168.0.164:8000')
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!(qn^mu9)zl!2bbga-_o7jl%41$emh&dmt&e7ce)024es-(uaw'
+# ==============================================================================
+# APPLICATION DEFINITION
+# ==============================================================================
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*']
-FRONTEND_URL = 'http://192.168.0.164:8000'  # Frontend uygulamanızın URL'si
-
-# Application definition
-
-INSTALLED_APPS = [
-    "daphne",
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',  # Whitenoise için
+]
+
+THIRD_PARTY_APPS = [
+    "daphne",
+    'whitenoise.runserver_nostatic',
     'crispy_forms',
     'crispy_bootstrap5',
     'django_filters',
-    # 'channels',  # Django Channels eklendi
-    'rest_framework',  # Django REST Framework
-    'corsheaders',  # CORS başlıkları için
+    'rest_framework',
+    'corsheaders',
+    # 'channels',  # Uncomment when WebSocket is needed
+]
+
+LOCAL_APPS = [
     'apps.common',
     'apps.guest',
     'apps.dataset',
@@ -62,14 +67,20 @@ INSTALLED_APPS = [
     'apps.push_notifications',
 ]
 
+INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS
+
 # CRISPY FORMS AYARLARI
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
+# ==============================================================================
+# MIDDLEWARE CONFIGURATION
+# ==============================================================================
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # CORS middleware (önce gelmeli)
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -80,15 +91,26 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# ==============================================================================
+# URL & WSGI/ASGI CONFIGURATION
+# ==============================================================================
+
 ROOT_URLCONF = 'core.urls'
+WSGI_APPLICATION = 'core.wsgi.application'
+ASGI_APPLICATION = 'core.asgi.application'
+
+# ==============================================================================
+# TEMPLATE CONFIGURATION
+# ==============================================================================
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -97,49 +119,100 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'core.wsgi.application'
-ASGI_APPLICATION = 'core.asgi.application'  # ASGI uygulaması tanımlandı
+# ==============================================================================
+# CACHE CONFIGURATION
+# ==============================================================================
 
-# Channel Layer Yapılandırması
+# Dynamic cache configuration based on .env settings
+CACHE_BACKEND_TYPE = config('CACHE_BACKEND', default='django.core.cache.backends.locmem.LocMemCache', cast=str)
+
+if 'django_redis' in CACHE_BACKEND_TYPE:
+    # Redis Cache Configuration
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': config('CACHE_LOCATION', default='redis://127.0.0.1:6379/1'),
+            'TIMEOUT': 300,
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+                'CONNECTION_POOL_KWARGS': {
+                    'max_connections': 50,
+                    'retry_on_timeout': True,
+                },
+                'COMPRESSOR': 'django_redis.compressors.zlib.ZlibCompressor',
+                'IGNORE_EXCEPTIONS': True,
+            }
+        }
+    }
+else:
+
+    # Fallback to LocMem Cache
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': config('CACHE_LOCATION', default=''),
+            'TIMEOUT': 300,
+            'OPTIONS': {
+                'MAX_ENTRIES': 1000,
+                'CULL_FREQUENCY': 3,
+            }
+        }
+    }
+
+# ==============================================================================
+# CHANNEL LAYERS (WebSocket)
+# ==============================================================================
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1', 6379)],
+            'hosts': [config('REDIS_URL', default='redis://127.0.0.1:6379')],
         },
     },
 }
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+# ==============================================================================
+# DATABASE CONFIGURATION
+# ==============================================================================
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'core_db',          # Oluşturduğun veritabanı adı
-        'USER': 'core_user',         # Yeni oluşturduğun kullanıcı
-        'PASSWORD': '123456',      # Kullanıcı şifresi
-        'HOST': 'localhost',         # PostgreSQL sunucusu
-        'PORT': '5432',              # Varsayılan port
+        'NAME': config('DB_NAME', default='core_db'),
+        'USER': config('DB_USER', default='core_user'),
+        'PASSWORD': config('DB_PASSWORD', default='123456'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432', cast=int),
+        'CONN_MAX_AGE': 60,
+        'OPTIONS': {
+            'connect_timeout': 10,
+        }
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'core.db'),
-#     }
-# }
+
+# Alternative SQLite for development
+if config('USE_SQLITE', default=False, cast=bool):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'core.db',
+        }
+    }
+
+# ==============================================================================
+# AUTHENTICATION & SECURITY
+# ==============================================================================
 
 # Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 8}
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -154,83 +227,79 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
+# Security settings
+if not DEBUG:
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=False, cast=bool)
+    SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', default=False, cast=bool)
+    CSRF_COOKIE_SECURE = config('CSRF_COOKIE_SECURE', default=False, cast=bool)
 
-# Dil ayarı (Türkçe için)
+# Session configuration
+SESSION_COOKIE_AGE = 1209600  # 2 weeks
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_HTTPONLY = True
+
+# CSRF Configuration - JavaScript'in token'a erişmesine izin ver
+CSRF_COOKIE_HTTPONLY = False  # JavaScript'in CSRF token'a erişmesine izin ver
+CSRF_USE_SESSIONS = False  # Cookie'de CSRF token kullan
+CSRF_COOKIE_SAMESITE = 'Lax'  # CSRF cookie SameSite ayarı
+
+# ==============================================================================
+# INTERNATIONALIZATION
+# ==============================================================================
+
 LANGUAGE_CODE = 'tr'
-
-# Zaman dilimi ayarı (Türkiye saati için)
 TIME_ZONE = 'Europe/Istanbul'
-
-# Lokalizasyon desteğini aktif et
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
+# ==============================================================================
+# STATIC & MEDIA FILES
+# ==============================================================================
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Tema statik dosyalarının yolu
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
 
+# Static files optimization
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SESSION_COOKIE_AGE = 1209600  # 2 hafta (remember_me seçeneği için)
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Tarayıcı kapanınca oturum düşmez
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'mehmetkonuc@gmail.com'
-EMAIL_HOST_PASSWORD = 'fggmbnmwhmnryjix'
-DEFAULT_FROM_EMAIL = 'mehmetkonuc@gmail.com'
-
-# REST Framework ayarları
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
-}
-
-# JWT ayarları
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=365),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=365*5),
-}
-
-# CORS ayarları
-# CORS_ALLOW_ALL_ORIGINS = True  # Geliştirme aşamasında tüm kaynaklara izin ver
-# Üretim ortamında:
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:19006",  # Expo Go
-    "http://localhost:8000",
-    "http://10.0.2.2:8000",    # Android emulator
-    "http://192.168.0.164:8000",  # Local network
-    # Gerekirse diğer IP'ler
+# Static files finders
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+
+# ==============================================================================
+# CORS CONFIGURATION
+# ==============================================================================
+
+# Development vs Production CORS settings
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+    CORS_ALLOW_CREDENTIALS = True
+else:
+    CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='', cast=Csv())
+    CORS_ALLOW_CREDENTIALS = True
+
+# CORS origins for specific environments
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:19006",  # Expo Go
+#     "http://localhost:8000",
+#     "http://10.0.2.2:8000",    # Android emulator
+#     "http://192.168.0.164:8000",  # Local network
+# ]
+
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
@@ -239,6 +308,7 @@ CORS_ALLOW_METHODS = [
     "POST",
     "PUT",
 ]
+
 CORS_ALLOW_HEADERS = [
     "accept",
     "accept-encoding",
@@ -250,3 +320,124 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+
+# ==============================================================================
+# CRISPY FORMS
+# ==============================================================================
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# ==============================================================================
+# LOGGING CONFIGURATION
+# ==============================================================================
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR / 'logs' / 'django.log',
+            'maxBytes': 1024*1024*5,  # 5 MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'apps': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
+# ==============================================================================
+# MISCELLANEOUS
+# ==============================================================================
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# File upload settings
+FILE_UPLOAD_MAX_MEMORY_SIZE = 1242880  # 5MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1242880  # 5MB
+
+
+# ==============================================================================
+# EMAIL CONFIGURATION
+# ==============================================================================
+
+EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='mehmetkonuc@gmail.com')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='fggmbnmwhmnryjix')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='mehmetkonuc@gmail.com')
+
+# ==============================================================================
+# DJANGO REST FRAMEWORK
+# ==============================================================================
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.MultiPartParser',
+        'rest_framework.parsers.FormParser',
+    ],
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '100/hour',
+        'user': '1000/hour'
+    }
+}
+
+# JWT Configuration
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'UPDATE_LAST_LOGIN': True,
+}
+
