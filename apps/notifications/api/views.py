@@ -17,17 +17,20 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
         """Return notifications belonging to the current user"""
         user = self.request.user
         return Notification.objects.filter(recipient=user).order_by('-created_at')
-    
     def list(self, request, *args, **kwargs):
         """Return paginated list of notifications with optional filtering"""
         queryset = self.get_queryset()
         
         # Apply filters if present
         notification_type = request.query_params.get('type')
+        notification_types = request.query_params.getlist('types')  # Support for multiple types
         is_read = request.query_params.get('is_read')
         
         if notification_type:
             queryset = queryset.filter(notification_type__code=notification_type)
+        elif notification_types:
+            # Filter by multiple notification types
+            queryset = queryset.filter(notification_type__code__in=notification_types)
         
         if is_read is not None:
             is_read_bool = is_read.lower() == 'true'
