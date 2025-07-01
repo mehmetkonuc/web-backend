@@ -12,25 +12,35 @@ from apps.common.templatetags.time_tags import relative_time
 
 class NotificationConsumer(AsyncWebsocketConsumer):
     async def connect(self):
-        # URL'den authorization token'ını alma
-        query_string = parse_qs(self.scope['query_string'].decode())
-        auth_header = query_string.get('authorization', [None])[0]
-        token_param = query_string.get('token', [None])[0]
-        
         # Kullanıcıyı varsayılan olarak scope'dan al (web için mevcut yöntem)
         self.user = self.scope["user"]
         
+        # Headers'dan authorization token'ını alma (React Native için - öncelik)
+        headers = dict(self.scope.get('headers', []))
+        auth_header = headers.get(b'authorization', b'').decode('utf-8')
+        
+        # Fallback: Query string'den token alma (eski yöntem)
+        query_string = parse_qs(self.scope['query_string'].decode())
+        query_auth_header = query_string.get('authorization', [None])[0]
+        token_param = query_string.get('token', [None])[0]
+        
         # Eğer user anonim ise ve token varsa (mobil uygulama için)
-        if isinstance(self.user, AnonymousUser) and (auth_header or token_param):
+        if isinstance(self.user, AnonymousUser) and (auth_header or query_auth_header or token_param):
             try:
-                # Önce auth_header'ı kontrol et (Bearer token formatı)
+                # Token'ı al - öncelik sırası: headers > query auth > query token
+                token = None
                 if auth_header and auth_header.startswith('Bearer '):
                     token = auth_header.split(' ')[1]
-                # Sonra token parametresini kontrol et
+                    print(f"Notifications - Token headers'dan alındı: {token[:20]}...")
+                elif query_auth_header and query_auth_header.startswith('Bearer '):
+                    token = query_auth_header.split(' ')[1]
+                    print(f"Notifications - Token query auth'dan alındı: {token[:20]}...")
                 elif token_param:
                     token = token_param
-                else:
-                    # Her ikisi de yoksa bağlantıyı reddet
+                    print(f"Notifications - Token query param'dan alındı: {token[:20]}...")
+                
+                if not token:
+                    print("Notifications - Token bulunamadı")
                     await self.close(code=4003)
                     return
                 
@@ -47,9 +57,11 @@ class NotificationConsumer(AsyncWebsocketConsumer):
                     # Kullanıcıyı veritabanından çek
                     self.user = await self.get_user_by_id(user_id)
                     if not self.user:
+                        print(f"Notifications - Kullanıcı bulunamadı: {user_id}")
                         await self.close(code=4003)
                         return
                 else:
+                    print("Notifications - Token'da user_id bulunamadı")
                     await self.close(code=4003)
                     return
                     
