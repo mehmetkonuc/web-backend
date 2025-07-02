@@ -178,7 +178,12 @@
                   {% if user.profile.avatar %}
                   <img src="{{ user.profile.avatar.url }}" alt class="rounded-circle" />
                   {% else %}
-                  <img src="{% static 'assets/img/avatars/1.png' %}" alt class="rounded-circle" />
+                  <div class="avatar avatar-md">
+                     <div class="w-px-40 h-px-40 avatar-initial rounded-circle bg-label-primary">
+                        {{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}
+                     </div>
+                  </div>
+                  <!-- <img src="{% static 'assets/img/avatars/1.png' %}" alt class="rounded-circle" /> -->
                   {% endif %}
                </div>
             </a>
@@ -191,7 +196,11 @@
                               {% if user.profile.avatar %}
                               <img src="{{ user.profile.avatar.url }}" alt class="w-px-40 h-auto rounded-circle" />
                               {% else %}
-                              <img src="{% static 'assets/img/avatars/1.png' %}" alt class="w-px-40 h-auto rounded-circle" />
+                              <div class="avatar avatar-md">
+                                 <div class="w-px-40 h-px-40 avatar-initial rounded-circle bg-label-primary">
+                                    {{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}
+                                 </div>
+                              </div>
                               {% endif %}
                            </div>
                         </div>

@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Environment variables with defaults
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-!(qn^mu9)zl!2bbga-_o7jl%41$emh&dmt&e7ce)024es-(uaw')
-DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
-FRONTEND_URL = config('FRONTEND_URL', default='http://192.168.0.164:8000')
+DEBUG = config('DEBUG', default=False, cast=bool)  # Production için False
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='kampuslu.com,www.kampuslu.com,94.154.32.28,localhost,127.0.0.1', cast=Csv())
+FRONTEND_URL = config('FRONTEND_URL', default='https://kampuslu.com')
 
 # ==============================================================================
 # APPLICATION DEFINITION

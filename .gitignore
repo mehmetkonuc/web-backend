@@ -108,3 +108,4 @@ dmypy.json
 
 # Static files (uncomment if collected static files should be ignored)
 # staticfiles/
+server-commands.txt

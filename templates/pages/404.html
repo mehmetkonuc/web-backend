@@ -1,0 +1,32 @@
+{% extends 'guest/layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/vendor/css/pages/page-misc.css' %}" />
+
+
+    <!-- Error -->
+      <div class="misc-wrapper">
+        <h1 class="mb-2 mx-2" style="line-height: 6rem; font-size: 6rem">404</h1>
+        <h4 class="mb-2 mx-2">Sayfa Bulunamadı! ⚠️</h4>
+        <p class="mb-6 mx-2">Aradığınız sayfayı bulamadık ana sayfaya dön</p>
+        <a href="{% url 'guest:home' %}" class="btn btn-primary mb-10">Ana Sayfaya Dön</a>
+        <div class="mt-4">
+          <img
+            src="{% static 'assets/img/illustrations/page-misc-error.png' %}"
+            alt="page-misc-error-light"
+            width="225"
+            class="img-fluid" />
+        </div>
+      </div>
+    <div class="container-fluid misc-bg-wrapper">
+      <img
+        src="{% static 'assets/img/illustrations/bg-shape-image-light.png' %}"
+        height="355"
+        alt="page-misc-error"
+        data-app-light-img="illustrations/bg-shape-image-light.png"
+        data-app-dark-img="illustrations/bg-shape-image-dark.png" />
+    </div>
+{% endblock %}
+
