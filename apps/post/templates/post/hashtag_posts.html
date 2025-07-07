@@ -106,7 +106,7 @@
                             <img src="{{ request.user.profile.avatar.url }}" alt="{{ request.user.username }}" class="rounded-circle">
                         {% else %}
                             <div class="avatar-initial rounded-circle bg-label-primary">
-                                {{ request.user.username|first|upper }}
+                                {{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}
                             </div>
                         {% endif %}
                     </div>
@@ -177,7 +177,7 @@
                                 {% else %}
                                     <div class="avatar avatar-md">
                                         <div class="avatar-initial rounded-circle bg-label-primary">
-                                            {{ post.user.username|first|upper }}
+                                            {{ post.user.first_name|first|upper }}{{ post.user.last_name|first|upper }}
                                         </div>
                                     </div>
                                 {% endif %}

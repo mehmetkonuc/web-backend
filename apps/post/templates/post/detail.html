@@ -133,7 +133,7 @@
                             {% else %}
                                 <div class="avatar avatar-md">
                                     <div class="avatar-initial rounded-circle bg-label-primary">
-                                        {{ post.user.username|first|upper }}
+                                        {{ post.user.first_name|first|upper }}{{ post.user.last_name|first|upper }}
                                     </div>
                                 </div>
                             {% endif %}

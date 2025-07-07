@@ -101,6 +101,7 @@ class MessageSerializer(serializers.ModelSerializer):
         
         # Process uploaded images
         for image in uploaded_images:
+            print(image)
             attachment = MessageAttachment.objects.create(
                 message=message,
                 file=image

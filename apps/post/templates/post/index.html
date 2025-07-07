@@ -158,7 +158,7 @@
                   <img src="{{ request.user.profile.avatar.url }}" alt="{{ request.user.username }}" class="rounded-circle">
                   {% else %}
                   <div class="avatar-initial rounded-circle bg-label-primary">
-                     {{ request.user.username|first|upper }}
+                     {{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}
                   </div>
                   {% endif %}
                </div>
@@ -220,7 +220,7 @@
                         {% else %}
                         <div class="avatar avatar-md">
                            <div class="avatar-initial rounded-circle bg-label-primary">
-                              {{ request.user.username|first|upper }}
+                              {{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}
                            </div>
                         </div>
                         {% endif %}
@@ -230,7 +230,7 @@
                            <div class="form-floating">
                            
                            {{ form.content }}
-                           <label for="id_content">Kampüste Neler Oluyor? Herkesle paylaşın...</label>
+                           <label for="id_content">Kampüste Neler Oluyor?</label>
                            </div>
 
                            <div id="characterCounter" class="position-absolute end-0 bottom-0 me-2 mb-2 badge bg-primary rounded-pill">280</div>
@@ -264,7 +264,7 @@
                         {% else %}
                         <div class="avatar avatar-md">
                            <div class="avatar-initial rounded-circle bg-label-primary">
-                              {{ post.user.username|first|upper }}
+                              {{ post.user.first_name|first|upper }}{{ post.user.last_name|first|upper }}
                            </div>
                         </div>
                         {% endif %}

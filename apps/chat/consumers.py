@@ -551,10 +551,10 @@ class ChatConsumer(AsyncWebsocketConsumer):
             for attachment in message.attachments.all():
                 attachments.append({
                     'id': attachment.id,
-                    'file': settings.FRONTEND_URL + attachment.file.url,
+                    'file': 'https://kampuslu.com' + attachment.file.url,
                     'file_type': attachment.file_type
                 })
-            
+
             if attachments:
                 message_data['attachments'] = attachments
             return message_data

@@ -323,7 +323,9 @@
                            class="rounded-circle" 
                            />
                         {% else %}
-                        <span class="avatar-initial rounded-circle bg-label-primary">{{ profile.first_name|first }}{{ profile.last_name|first }}</span>
+                        <span class="avatar-initial rounded-circle bg-label-primary">
+                           {{ profile.user.first_name|first|upper }}{{ profile.user.last_name|first|upper }}
+                        </span>
                         {% endif %}
                      </div>
                   </a>

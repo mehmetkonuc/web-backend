@@ -13,9 +13,18 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+import uuid
 from .forms import UserRegistrationForm, ProfileRegistrationForm, LoginForm, PasswordResetRequestForm, SetNewPasswordForm, PasswordResetStepTwoForm
 from apps.profiles.models import Profile
-import json
+
+def custom_404_view(request, exception=None):
+    """
+    Custom 404 sayfası görünümü
+    Django'nun otomatik olarak çağıracağı handler
+    """
+    return render(request, 'pages/404.html', status=404, context={
+        'page_title': 'Sayfa Bulunamadı',
+    })
 
 def home_view(request):
     """Ana sayfa görünümü"""

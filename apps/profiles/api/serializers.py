@@ -49,7 +49,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         if request and request.user.is_authenticated and request.user != obj.user:
             try:
                 user_profile = request.user.profile
-                return user_profile.is_following(obj.user)
+                return user_profile.is_following(obj.user.profile)
             except Profile.DoesNotExist:
                 pass
         return False

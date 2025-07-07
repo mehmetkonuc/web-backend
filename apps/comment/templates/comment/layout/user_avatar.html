@@ -7,7 +7,7 @@
     {% else %}
         <div class="avatar avatar-md">
             <div class="avatar-initial rounded-circle bg-label-primary">
-                {{ user.username|first|upper }}
+                {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
             </div>
         </div>
     {% endif %}

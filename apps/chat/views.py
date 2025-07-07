@@ -7,7 +7,6 @@ from django.db.models import Q, Max, OuterRef, Subquery
 from django.http import JsonResponse
 from django.utils import timezone
 import json
-
 from .models import ChatRoom, Message, ChatRoomDeletion, MessageAttachment
 from .utils import can_message_user
 
@@ -68,7 +67,7 @@ class ChatView(LoginRequiredMixin, View):
                 },
                 'unread_count': unread_count,
             })
-        
+
         return render(request, 'chat/chat.html', {'chat_rooms': chat_data, 'page_title': 'Sohbetlerim'})
 
 

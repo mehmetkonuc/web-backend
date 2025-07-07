@@ -290,6 +290,7 @@ if DEBUG:
     CORS_ALLOW_CREDENTIALS = True
 else:
     CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default='', cast=Csv())
+    # CORS_ALLOWED_ORIGINS = True
     CORS_ALLOW_CREDENTIALS = True
 
 # CORS origins for specific environments
@@ -384,9 +385,9 @@ LOGGING = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # File upload settings
-FILE_UPLOAD_MAX_MEMORY_SIZE = 1242880  # 5MB
-DATA_UPLOAD_MAX_MEMORY_SIZE = 1242880  # 5MB
-
+FILE_UPLOAD_MAX_MEMORY_SIZE = 26214400  # 5MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 26214400  # 5MB
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 1000
 
 # ==============================================================================
 # EMAIL CONFIGURATION

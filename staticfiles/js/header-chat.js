@@ -221,9 +221,15 @@ document.addEventListener('DOMContentLoaded', function() {
             let messageTime = '';            
             if (room.last_message) {
                 messageContent = room.last_message.content;
+                if (messageContent) {
+
                 if (messageContent.length > 25) {
                     messageContent = messageContent.substring(0, 25) + '...';
+
                 }
+            }else{
+                messageContent = 'Resim Gönderdi'
+            }
                 
                 messageTime = room.last_message.created_at;
             }

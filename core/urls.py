@@ -24,6 +24,12 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
+# 404 handler import
+from apps.guest.views import custom_404_view
+
+# 404 handler tanımlaması
+handler404 = custom_404_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.guest.urls')),

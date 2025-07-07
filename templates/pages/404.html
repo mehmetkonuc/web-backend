@@ -10,8 +10,14 @@
       <div class="misc-wrapper">
         <h1 class="mb-2 mx-2" style="line-height: 6rem; font-size: 6rem">404</h1>
         <h4 class="mb-2 mx-2">Sayfa Bulunamadı! ⚠️</h4>
+        {% if user.is_authenticated %}
         <p class="mb-6 mx-2">Aradığınız sayfayı bulamadık ana sayfaya dön</p>
-        <a href="{% url 'guest:home' %}" class="btn btn-primary mb-10">Ana Sayfaya Dön</a>
+          <a href="{% url 'guest:home' %}" class="btn btn-primary mb-10">Ana Sayfaya Dön</a>
+        {%else%}
+        <p class="mb-6 mx-2">Aradığınız sayfayı görüntülemek için kayıt olmanız gerekmektedir.</p>
+        <a href="{% url 'guest:register' %}" class="btn btn-danger mb-10">Kayıt Ol</a>
+        {% endif %}
+
         <div class="mt-4">
           <img
             src="{% static 'assets/img/illustrations/page-misc-error.png' %}"

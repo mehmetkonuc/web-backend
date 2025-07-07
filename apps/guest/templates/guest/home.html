@@ -88,8 +88,8 @@
               <i class="icon-base ti tabler-menu-2 icon-lg align-middle text-heading fw-medium"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="landing-page.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
+            <a href="#" class="app-brand-link">
+              <!-- <span class="app-brand-logo demo">
                 <span class="text-primary">
                   <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -116,7 +116,8 @@
                       fill="currentColor" />
                   </svg>
                 </span>
-              </span>
+              </span> -->
+              <img src="{% static 'assets/img/logo/logo.png' %}" width="32" height="32" />
               <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Kampüslü</span>
             </a>
           </div>
@@ -152,53 +153,6 @@
           <!-- Menu wrapper: End -->
           <!-- Toolbar: Start -->
           <ul class="navbar-nav flex-row align-items-center ms-auto">
-            <!-- Style Switcher -->
-            <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-1">
-              <a
-                class="nav-link dropdown-toggle hide-arrow"
-                id="nav-theme"
-                href="javascript:void(0);"
-                data-bs-toggle="dropdown">
-                <i class="icon-base ti tabler-sun icon-lg theme-icon-active"></i>
-                <span class="d-none ms-2" id="nav-theme-text">Toggle theme</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-theme-text">
-                <li>
-                  <button
-                    type="button"
-                    class="dropdown-item align-items-center active"
-                    data-bs-theme-value="light"
-                    aria-pressed="false">
-                    <span><i class="icon-base ti tabler-sun icon-md me-3" data-icon="sun"></i>Aydınlık</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="dropdown-item align-items-center"
-                    data-bs-theme-value="dark"
-                    aria-pressed="true">
-                    <span><i class="icon-base ti tabler-moon-stars icon-md me-3" data-icon="moon-stars"></i>Karanlık</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="dropdown-item align-items-center"
-                    data-bs-theme-value="system"
-                    aria-pressed="false">
-                    <span
-                      ><i
-                        class="icon-base ti tabler-device-desktop-analytics icon-md me-3"
-                        data-icon="device-desktop-analytics"></i
-                      >Sistem</span
-                    >
-                  </button>
-                </li>
-              </ul>
-            </li>
-            <!-- / Style Switcher-->
-
             <!-- navbar button: Start -->
             <li>
                 <a href="{% url 'guest:login' %}" class="btn btn-primary">
@@ -376,7 +330,7 @@
                       <div class="card h-100">
                         <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                           <p>
-                            “İlk senemde not bulmak için çırpınırken Fakulten'le tanıştım. İstatistik dersinin tüm arşivi burada! Artık sınav haftaları panik yok. Teşekkürler 💯”
+                            “İlk senemde not bulmak için çırpınırken Kampüslü'yle tanıştım. İstatistik dersinin tüm arşivi burada! Artık sınav haftaları panik yok. Teşekkürler 💯”
                           </p>
                           <div class="d-flex align-items-center">
                             <div class="avatar me-3 avatar-sm">
@@ -448,7 +402,7 @@
                       <div class="card h-100">
                         <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                           <p>
-                            “Tablet almak için Efe'yle buradan anlaştım. Fakulten'in 'Öğrenci Doğrulaması' sayesinde içim rahattı. Keşke ödemeler direkt uygulama üzerinden olsa 🤞”
+                            “Tablet almak için Efe'yle buradan anlaştım. Kampuslu'nun 'Öğrenci Doğrulaması' sayesinde içim rahattı. Keşke ödemeler direkt uygulama üzerinden olsa 🤞”
                           </p>
                           <div class="d-flex align-items-center">
                             <div class="avatar me-3 avatar-sm">
@@ -591,13 +545,13 @@
                       data-bs-target="#accordionOne"
                       aria-expanded="true"
                       aria-controls="accordionOne">
-                      Fakulten'de ücretsiz üye olabilir miyim?
+                      Kampuslu'ye ücretsiz üye olabilir miyim?
                     </button>
                   </h2>
 
                   <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Evet! Fakulten, Türkiye'deki tüm üniversite öğrencilerine ücretsiz olarak açıktır. Üyelik için yalnızca e-posta adresinizi doğrulamanız gerekmektedir.
+                      Evet! Kampüslü, Türkiye'deki tüm üniversite öğrencilerine ücretsiz olarak açıktır. Üyelik için yalnızca e-posta adresinizi doğrulamanız gerekmektedir.
                     </div>
                   </div>
                 </div>
@@ -641,7 +595,7 @@
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Fakulten, öğrenciler arasındaki alışverişi kolaylaştırmak için komisyon almaz ve ödeme için aracı olmaz bu alıcı ile satışı arasında bir ticarettir.
+                      Kampuslu, öğrenciler arasındaki alışverişi kolaylaştırmak için komisyon almaz ve ödeme için aracı olmaz bu alıcı ile satışı arasında bir ticarettir.
                     </div>
                   </div>
                 </div>
@@ -712,7 +666,7 @@
                 document.write(new Date().getFullYear());
               </script>
             </span>
-            <span class="fw-medium text-white">Fakulten</span>
+            <span class="fw-medium text-white">Kampüslü</span>
           </div>
         </div>
       </div>
