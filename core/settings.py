@@ -49,6 +49,7 @@ THIRD_PARTY_APPS = [
     'django_filters',
     'rest_framework',
     'corsheaders',
+    'compressor',
     # 'channels',  # Uncomment when WebSocket is needed
 ]
 
@@ -267,6 +268,28 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Django Compressor ayarları
+COMPRESS_ENABLED = True
+COMPRESS_ROOT = STATIC_ROOT  # Compressed files'ı STATIC_ROOT'ta oluştur
+COMPRESS_URL = STATIC_URL    # Compressed files için aynı URL'yi kullan
+
+# Development vs Production için farklı ayarlar
+if DEBUG:
+    COMPRESS_OFFLINE = False  # Development'ta live compression
+    COMPRESS_PRECOMPILERS = ()
+else:
+    COMPRESS_OFFLINE = True   # Production için offline compression
+
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.rCSSMinFilter',
+]
+COMPRESS_JS_FILTERS = [
+    'compressor.filters.jsmin.JSMinFilter',
+]
+
+# Compressor storage ayarı
+COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -278,6 +301,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 ]
 
 # ==============================================================================

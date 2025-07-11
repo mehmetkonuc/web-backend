@@ -241,6 +241,7 @@
 .app-chat .app-chat-history .chat-history-body .chat-history .chat-message {
   display: flex;
   justify-content: flex-start;
+  
 }
 .app-chat .app-chat-history .chat-history-body .chat-history .chat-message .chat-message-text {
   border-radius: 0.375rem;
@@ -248,6 +249,7 @@
   box-shadow: var(--bs-box-shadow-xs);
   padding-block: 0.543rem;
   padding-inline: 1rem;
+
 }
 .app-chat .app-chat-history .chat-history-body .chat-history .chat-message.chat-message-right {
   justify-content: flex-end;

@@ -41,6 +41,7 @@ urlpatterns = [
     path('comment/', include('apps.comment.urls')),
     path('like/', include('apps.like.urls')),
     path('bookmark/', include('apps.bookmark.urls')),
+    path('common/', include('apps.common.urls')),
 
     # REST Framework browsable API
     path('api-auth/', include('rest_framework.urls')),

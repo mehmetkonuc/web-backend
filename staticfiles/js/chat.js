@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // WebSocket URL'i oluştur
       const wsProtocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
-      const wsUrl = `${wsProtocol}${window.location.host}/ws/chat/${roomId}/`;
+      const wsUrl = `${wsProtocol}${window.location.host}/ws/chat/room/${roomId}/`;
 
       chatSocket = new WebSocket(wsUrl);
 

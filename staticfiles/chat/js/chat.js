@@ -541,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (message.attachments && message.attachments.length > 0) {
          attachmentsHtml = '<div class="chat-message-attachments">';
          message.attachments.forEach(attachment => {
-            attachmentsHtml += `<img src="${attachment.url}" class="chat-message-attachment-img" alt="Image attachment" onclick="window.open('${attachment.url}', '_blank')">`;
+            attachmentsHtml += `<img src="${attachment.file}" class="chat-message-attachment-img" alt="Image attachment" onclick="window.open('${attachment.file}', '_blank')">`;
          });
          attachmentsHtml += '</div>';
       }
@@ -550,7 +550,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let messageTextHtml = '';
       const messageText = message.text || message.content || '';
       if (messageText && messageText.trim() !== '') {
-         messageTextHtml = `<div class="chat-message-text"><p class="mb-0">${messageText}</p></div>`;
+         messageTextHtml = `<div class="chat-message-text"><p class="mb-0 text-break">${messageText}</p></div>`;
       }
 
       // Zaman formatı
@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   if (message.attachments && message.attachments.length > 0) {
                      attachmentsHtml = '<div class="chat-message-attachments">';
                      message.attachments.forEach(attachment => {
-                        attachmentsHtml += `<img src="${attachment.url}" class="chat-message-attachment-img" alt="Image attachment" onclick="window.open('${attachment.url}', '_blank')">`;
+                        attachmentsHtml += `<img src="${attachment.file}" class="chat-message-attachment-img" alt="Image attachment" onclick="window.open('${attachment.file}', '_blank')">`;
                      });
                      attachmentsHtml += '</div>';
                   }
@@ -668,7 +668,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   // Mesaj metni için HTML oluştur (boş değilse)
                   let messageTextHtml = '';
                   if (message.text && message.text.trim() !== '') {
-                     messageTextHtml = `<div class="chat-message-text"><p class="mb-0">${message.text}</p></div>`;
+                     messageTextHtml = `<div class="chat-message-text"><p class="mb-0 text-break">${message.text}</p></div>`;
                   }
 
                   // Mesaj HTML'i (eski mesaj sınıfı ekli)

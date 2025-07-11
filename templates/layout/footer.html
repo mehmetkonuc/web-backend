@@ -1,19 +1,21 @@
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-                <div class="container-xxl">
-                  <div
-                    class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-                    <div class="text-body">
-                      ©
-                      <script>
+<!-- Footer -->
+<footer class="landing-footer bg-dark text-white">
+    <div class="footer-bottom py-3 py-md-5">
+        <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+            <div class="mb-2 mb-md-0">
+                <span class="footer-bottom-text">
+                    ©
+                    <script>
                         document.write(new Date().getFullYear());
-                      </script>
-                      Kampüslü
-                    </div>
-                    <div class="d-none d-lg-inline-block">
-
-                    </div>
-                  </div>
-                </div>
-              </footer>
-              <!-- / Footer -->
+                    </script>
+                </span>
+                <a href="{% url 'guest:home' %}" class="fw-medium text-white">Kampuslu</a>
+            </div>
+            <div class="d-none d-lg-inline-block">
+                <a href="{% url 'common:privacy_policy' %}" class="footer-link me-4 text-white">Gizlilik</a>
+                <a href="{% url 'common:terms_of_service' %}" class="footer-link me-4 text-white">Hizmet Şartları</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / Footer -->

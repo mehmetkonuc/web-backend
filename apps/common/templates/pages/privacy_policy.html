@@ -1,0 +1,242 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="tr" class="layout-navbar-fixed layout-wide" dir="ltr" data-skin="default" data-assets-path="{% static 'assets/' %}" data-template="front-pages" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+        <title>Gizlilik Politikası | Kampuslu</title>
+
+        <meta name="description" content="Kampuslu uygulaması gizlilik politikası ve kişisel veri koruma açıklaması" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon/favicon.ico' %}" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'assets/vendor/fonts/iconify-icons.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/vendor/css/core.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/demo.css' %}" />
+
+        <link rel="stylesheet" href="{% static 'assets/vendor/css/pages/front-page.css' %}" />
+    </head>
+
+    <body>
+        <div class="layout-wrapper layout-content-navbar">
+            <div class="layout-container">
+                <!-- Layout container -->
+                <div class="layout-page">
+                    <nav class="layout-navbar shadow-none py-0">
+                        <div class="container">
+                            <div class="navbar navbar-expand-lg landing-navbar px-3 px-md-8">
+                                <!-- Menu logo wrapper: Start -->
+                                <div class="navbar-brand app-brand demo d-flex py-0 me-4 me-xl-8 ms-0">
+                                    <!-- Mobile menu toggle: Start-->
+                                    <button
+                                        class="navbar-toggler border-0 px-0 me-4"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent"
+                                        aria-controls="navbarSupportedContent"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation"
+                                    >
+                                        <i class="icon-base ti tabler-menu-2 icon-lg align-middle text-heading fw-medium"></i>
+                                    </button>
+                                    <!-- Mobile menu toggle: End-->
+                                    <a href="{% url 'guest:home' %}" class="app-brand-link">
+                                        <img src="{% static 'assets/img/logo/logo.png' %}" width="32" height="32" />
+
+                                        <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Kampuslu</span>
+                                    </a>
+                                </div>
+
+                                <div class="landing-menu-overlay d-lg-none"></div>
+                                <ul class="navbar-nav flex-row align-items-center ms-auto">
+                                    <li>
+                                        <a href="{% url 'guest:home' %}" class="btn btn-primary"> <span class="tf-icons icon-base ti tabler-home scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Ana Sayfa</span> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="content-wrapper">
+                        <div class="container-xxl flex-grow-1 container-p-y">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="text-center mb-4">Gizlilik Politikası</h1>
+                                        <p class="text-center text-muted mb-5">Son güncellenme: 11 Temmuz 2025</p>
+
+                                        <div class="card">
+                                            <div class="card-body p-4 p-md-5">
+                                                <h3 class="mb-3">1. Giriş</h3>
+                                                <p class="mb-4">
+                                                    Kampuslu olarak, kişisel verilerinizin korunması bizim için önemlidir. Bu gizlilik politikası, uygulamımızı kullanırken hangi bilgileri topladığımızı, nasıl kullandığımızı ve koruduğumuzu
+                                                    açıklar.
+                                                </p>
+
+                                                <h3 class="mb-3">2. Topladığımız Bilgiler</h3>
+
+                                                <h4 class="mb-2">2.1 Hesap Bilgileri</h4>
+                                                <ul class="mb-3">
+                                                    <li>Ad ve soyad</li>
+                                                    <li>E-posta adresi</li>
+                                                    <li>Kullanıcı adı</li>
+                                                    <li>Üniversite bilgileri</li>
+                                                    <li>Bölüm ve sınıf bilgileri</li>
+                                                    <li>Profil fotoğrafı (isteğe bağlı)</li>
+                                                </ul>
+
+                                                <h4 class="mb-2">2.2 İçerik Bilgileri</h4>
+                                                <ul class="mb-3">
+                                                    <li>Gönderiler ve fotoğraflar</li>
+                                                    <li>Yorumlar ve beğeniler</li>
+                                                    <li>Mesajlar ve sohbetler</li>
+                                                    <li>Etkinlik katılımları</li>
+                                                </ul>
+
+                                                <h4 class="mb-2">2.3 Teknik Bilgiler</h4>
+                                                <ul class="mb-4">
+                                                    <li>Cihaz bilgileri (model, işletim sistemi)</li>
+                                                    <li>IP adresi</li>
+                                                    <li>Uygulama kullanım verileri</li>
+                                                    <li>Giriş kayıtları</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">3. Bilgileri Nasıl Kullanırız</h3>
+                                                <ul class="mb-4">
+                                                    <li><strong>Hizmet Sağlama:</strong> Uygulamanın temel işlevlerini sunmak için</li>
+                                                    <li><strong>Güvenlik:</strong> Hesabınızı ve platformu korumak için</li>
+                                                    <li><strong>İletişim:</strong> Önemli bildirimler ve güncellemeler için</li>
+                                                    <li><strong>Geliştirme:</strong> Uygulama deneyimini iyileştirmek için</li>
+                                                    <li><strong>Kişiselleştirme:</strong> Size uygun içerik önermek için</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">4. Bilgi Paylaşımı</h3>
+                                                <p class="mb-2">Kişisel verilerinizi aşağıdaki durumlar dışında üçüncü taraflarla paylaşmayız:</p>
+                                                <ul class="mb-4">
+                                                    <li><strong>Yasal Gereklilikler:</strong> Mahkeme kararı veya yasal zorunluluk</li>
+                                                    <li><strong>Güvenlik:</strong> Dolandırıcılık veya güvenlik ihlallerini önlemek</li>
+                                                    <li><strong>Hizmet Sağlayıcılar:</strong> Sadece gerekli teknik hizmetler için</li>
+                                                    <li><strong>Rızanız:</strong> Açık izniniz ile</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">5. Veri Güvenliği</h3>
+                                                <p class="mb-2">Verilerinizi korumak için şu önlemleri alırız:</p>
+                                                <ul class="mb-4">
+                                                    <li>SSL şifreleme ile veri iletimi</li>
+                                                    <li>Güvenli veri depolama</li>
+                                                    <li>Erişim kontrolü ve yetkilendirme</li>
+                                                    <li>Düzenli güvenlik güncellemeleri</li>
+                                                    <li>Sınırlı personel erişimi</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">6. Çerezler (Cookies)</h3>
+                                                <p class="mb-2">Uygulamamız aşağıdaki çerezleri kullanır:</p>
+                                                <ul class="mb-4">
+                                                    <li><strong>Gerekli Çerezler:</strong> Temel işlevler için</li>
+                                                    <li><strong>Performans Çerezleri:</strong> Uygulama performansını izlemek için</li>
+                                                    <li><strong>Tercih Çerezleri:</strong> Ayarlarınızı hatırlamak için</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">7. Haklarınız</h3>
+                                                <p class="mb-2">KVKK kapsamında aşağıdaki haklarınız bulunmaktadır:</p>
+                                                <ul class="mb-4">
+                                                    <li><strong>Erişim Hakkı:</strong> Verilerinizi görme</li>
+                                                    <li><strong>Düzeltme Hakkı:</strong> Yanlış bilgileri düzeltme</li>
+                                                    <li><strong>Silme Hakkı:</strong> Verilerinizi silme</li>
+                                                    <li><strong>Sınırlama Hakkı:</strong> İşlemeyi sınırlama</li>
+                                                    <li><strong>Taşınabilirlik Hakkı:</strong> Verilerinizi alma</li>
+                                                    <li><strong>İtiraz Hakkı:</strong> İşlemeye itiraz etme</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">8. Hesap Silme</h3>
+                                                <p class="mb-4">
+                                                    Hesabınızı silmek istediğinizde, uygulama ayarlarından "Hesabı Sil" seçeneğini kullanabilir veya destek ekibimizle iletişime geçebilirsiniz. Hesap silme işleminden sonra verileriniz kalıcı
+                                                    olarak silinir.
+                                                </p>
+
+                                                <h3 class="mb-3">9. Çocukların Gizliliği</h3>
+                                                <p class="mb-4">
+                                                    Uygulamamız 13 yaş altı çocuklara yönelik değildir. 13 yaş altı çocuklardan bilerek kişisel veri toplamayız. Böyle bir durum tespit ettiğimizde derhal sileriz.
+                                                </p>
+
+                                                <h3 class="mb-3">10. Uluslararası Veri Transferi</h3>
+                                                <p class="mb-4">
+                                                    Verileriniz Türkiye'de bulunan sunucularımızda saklanır. Gerekli durumlarda yurt dışına veri transferi yapılabilir, bu durumda uygun güvenlik önlemleri alınır.
+                                                </p>
+
+                                                <h3 class="mb-3">11. Politika Değişiklikleri</h3>
+                                                <p class="mb-4">
+                                                    Bu gizlilik politikasını güncelleyebiliriz. Önemli değişiklikler uygulama içi bildirim ile duyurulacaktır. Politikayı düzenli olarak gözden geçirmenizi öneririz.
+                                                </p>
+
+                                                <h3 class="mb-3">12. İletişim</h3>
+                                                <p class="mb-2">Gizlilik ile ilgili sorularınız için:</p>
+                                                <ul class="mb-4">
+                                                    <li><strong>E-posta:</strong> gizlilik@kampuslu.com</li>
+                                                    <li><strong>Destek:</strong> destek@kampuslu.com</li>
+                                                    <li><strong>Web sitesi:</strong> www.kampuslu.com</li>
+                                                    <li><strong>Adres:</strong> Türkiye</li>
+                                                </ul>
+
+                                                <h3 class="mb-3">13. KVKK Uyumluluk</h3>
+                                                <p class="mb-4">
+                                                    Bu politika Türkiye Cumhuriyeti Kişisel Verilerin Korunması Kanunu (KVKK) ile uyumlu olarak hazırlanmıştır. Haklarınızı kullanmak için Veri Sorumlusu sıfatıyla bizimle iletişime
+                                                    geçebilirsiniz.
+                                                </p>
+
+                                                <div class="alert alert-primary mt-5">
+                                                    <h5 class="alert-heading">💡 Önemli Bilgi</h5>
+                                                    <p class="mb-0">
+                                                        Gizliliğiniz bizim için önemlidir. Bu politika hakkında sorularınız varsa çekinmeden bize ulaşın.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="landing-footer bg-body footer-text">
+                            <div class="footer-bottom py-3 py-md-5">
+                                <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+                                    <div class="mb-2 mb-md-0">
+                                        <span class="footer-bottom-text">
+                                            ©
+                                            <script>
+                                                document.write(new Date().getFullYear());
+                                            </script>
+                                        </span>
+                                        <a href="{% url 'guest:home' %}" class="fw-medium text-white">Kampuslu</a>
+                                    </div>
+                                    <div class="d-none d-lg-inline-block">
+                                        <a href="{% url 'common:privacy_policy' %}" class="footer-link me-4">Gizlilik</a>
+                                        <a href="{% url 'common:terms_of_service' %}" class="footer-link me-4">Hizmet Şartları</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+
+                        <div class="content-backdrop fade"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout-overlay layout-menu-toggle"></div>
+
+            <div class="drag-target"></div>
+        </div>
+
+        <script src="{% static 'assets/vendor/js/bootstrap.js' %}"></script>
+
+        <script src="{% static 'assets/js/front-main.js' %}"></script>
+    </body>
+</html>
