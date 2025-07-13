@@ -17,7 +17,7 @@ class PostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'post/index.html'
     context_object_name = 'posts'
-    paginate_by = 3
+    paginate_by = 20
     
     def get_queryset(self):
         # First, get all posts
@@ -114,7 +114,7 @@ class HashtagPostListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'post/hashtag_posts.html'
     context_object_name = 'posts'
-    paginate_by = 10
+    paginate_by = 20
     
     def get_queryset(self):
         self.hashtag = get_object_or_404(Hashtag, name=self.kwargs.get('hashtag').lower())

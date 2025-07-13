@@ -17,7 +17,7 @@ class MemberListView(LoginRequiredMixin, ListView):
     model = Profile
     template_name = 'members/members_list.html'
     context_object_name = 'profiles'
-    paginate_by = 12
+    paginate_by = 20
     
     def get_queryset(self):
         # Sadece aktif kullanıcıların profillerini çek

@@ -133,7 +133,7 @@ def comment_detail(request, comment_id):
     all_replies = comment.get_replies()
     
     # Pagination for replies
-    replies_per_page = 2  # Sayfa başına gösterilecek yanıt sayısı
+    replies_per_page = 20  # Sayfa başına gösterilecek yanıt sayısı
     page = request.GET.get('page', 1)
     paginator = Paginator(all_replies, replies_per_page)
     
