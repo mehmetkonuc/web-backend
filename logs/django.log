@@ -5271,3 +5271,940 @@ Traceback (most recent call last):
 AttributeError: type object 'OutstandingToken' has no attribute 'objects'
 WARNING 2025-07-13 21:54:16,763 services 88262 139743501082624 User 1 için aktif push token bulunamadı
 WARNING 2025-07-13 21:54:27,348 services 88262 139743501082624 User 1 için aktif push token bulunamadı
+INFO 2025-07-13 22:06:11,160 autoreload 4352 12268 Watching for file changes with StatReloader
+INFO 2025-07-13 22:06:24,360 runserver 4352 10192 [mHTTP GET / 200 [0.08, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,428 runserver 4352 10192 [mHTTP GET /static/CACHE/js/output.53a8c5868a2d.js 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,430 runserver 4352 10192 [mHTTP GET /static/CACHE/css/output.c51a8b31fc99.css 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,448 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/backgrounds/hero-bg.png 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,463 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/Join-community-arrow.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,533 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/section-title-icon.png 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,535 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/post.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,547 runserver 4352 10192 [mHTTP GET /static/CACHE/js/output.021cc381153f.js 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,549 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/follow.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,573 runserver 4352 10192 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,582 runserver 4352 10192 [mHTTP GET /static/assets/img/logo/logo.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,592 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/chat.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,602 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/megaphone.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,608 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/profile.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,615 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/icons/more.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,620 runserver 4352 10192 [mHTTP GET /static/assets/img/avatars/1.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,631 runserver 4352 10192 [mHTTP GET /static/assets/img/avatars/3.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,631 runserver 4352 10192 [mHTTP GET /static/assets/img/avatars/2.png 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,656 runserver 4352 10192 [mHTTP GET /static/assets/img/avatars/5.png 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,656 runserver 4352 10192 [mHTTP GET /static/assets/img/avatars/4.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,656 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/gazi.png 200 [0.00, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:24,668 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/mersin.png 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,670 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/dokuz-eylul.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,672 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/bogazici.png 200 [0.01, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:24,682 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/anadolu.png 200 [0.01, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:24,684 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/akdeniz.png 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:24,684 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/branding/selcuk.png 200 [0.01, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:24,690 runserver 4352 10192 [mHTTP GET /static/assets/img/front-pages/landing-page/faq-boy-with-logos.png 200 [0.00, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:28,478 runserver 4352 10192 [mHTTP GET /login/ 200 [0.05, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:28,563 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 200 [0.02, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:28,564 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 200 [0.02, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,570 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 200 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:28,571 runserver 4352 10192 [mHTTP GET /static/assets/css/demo.css 200 [0.02, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:28,576 runserver 4352 10192 [mHTTP GET /static/assets/vendor/css/core.css 200 [0.03, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:28,589 runserver 4352 10192 [mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 200 [0.05, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:28,607 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/%40form-validation/form-validation.css 200 [0.03, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:28,608 runserver 4352 10192 [mHTTP GET /static/assets/vendor/css/pages/page-auth.css 200 [0.03, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,610 runserver 4352 10192 [mHTTP GET /static/assets/vendor/js/helpers.js 200 [0.02, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:28,612 runserver 4352 10192 [mHTTP GET /static/assets/js/config.js 200 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:28,625 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 200 [0.02, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:28,628 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/popper/popper.js 200 [0.01, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,669 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 200 [0.01, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,671 runserver 4352 10192 [mHTTP GET /static/assets/vendor/js/bootstrap.js 200 [0.01, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:28,696 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/skin-default.svg 304 [0.02, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,697 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 304 [0.02, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:28,699 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 304 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:28,702 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/skin-border.svg 304 [0.02, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:28,703 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/content-compact.svg 304 [0.02, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:28,710 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/content-wide.svg 304 [0.02, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:28,725 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 304 [0.02, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,726 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 304 [0.02, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:28,728 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/horizontal-static.svg 304 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:28,728 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/navbar-static.svg 304 [0.02, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:28,730 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 304 [0.02, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:28,734 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/direction-ltr.svg 304 [0.02, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:28,754 runserver 4352 10192 [36mHTTP GET /static/assets/img/customizer/direction-rtl.svg 304 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:28,762 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 200 [0.02, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,762 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 200 [0.02, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:28,762 runserver 4352 10192 [mHTTP GET /static/assets/vendor/js/menu.js 200 [0.02, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:28,762 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 200 [0.02, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:28,762 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 200 [0.02, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:28,777 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/%40form-validation/popular.js 200 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:28,782 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/%40form-validation/auto-focus.js 200 [0.01, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:28,784 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/%40form-validation/bootstrap5.js 200 [0.01, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:28,785 runserver 4352 10192 [mHTTP GET /static/assets/js/pages-auth.js 200 [0.01, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:28,787 runserver 4352 10192 [mHTTP GET /static/assets/js/main.js 200 [0.01, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:36,851 runserver 4352 10192 [32mHTTP POST /login/ 302 [0.81, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,026 runserver 4352 10192 [32mHTTP GET / 302 [0.17, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,279 runserver 4352 10192 [mHTTP GET /post/ 200 [0.25, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,342 runserver 4352 10192 [mHTTP GET /static/assets/vendor/fonts/fontawesome.css 200 [0.01, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,352 runserver 4352 10192 [mHTTP GET /static/css/notifications.css 200 [0.02, 127.0.0.1:63720][0m
+INFO 2025-07-13 22:06:37,356 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/select2/select2.css 200 [0.02, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:37,356 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 200 [0.02, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:37,436 runserver 4352 10192 [mHTTP GET /static/js/notifications.js 200 [0.01, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,451 runserver 4352 10192 [mHTTP GET /static/js/header-chat.js 200 [0.01, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,466 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/select2/select2.js 200 [0.01, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,478 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 200 [0.00, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,496 runserver 4352 10192 [mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 200 [0.01, 127.0.0.1:63719][0m
+WARNING 2025-07-13 22:06:37,500 log 4352 4048 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:06:37,502 log 4352 10160 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:06:37,505 runserver 4352 10192 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.17, 127.0.0.1:63708][0m
+WARNING 2025-07-13 22:06:37,509 runserver 4352 10192 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.17, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:37,523 runserver 4352 10192 [mHTTP GET /static/js/relative-time.js 200 [0.02, 127.0.0.1:63719][0m
+INFO 2025-07-13 22:06:37,543 runserver 4352 10192 [mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 200 [0.03, 127.0.0.1:63708][0m
+INFO 2025-07-13 22:06:37,549 runserver 4352 10192 [mHTTP GET /static/js/waypoints/infinite.min.js 200 [0.03, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:37,561 runserver 4352 10192 [mHTTP GET /static/js/waypoints/custom.js 200 [0.03, 127.0.0.1:63719][0m
+WARNING 2025-07-13 22:06:37,572 log 4352 4048 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:06:37,576 runserver 4352 10192 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.15, 127.0.0.1:63715][0m
+INFO 2025-07-13 22:06:37,578 runserver 4352 10192 [mHTTP GET /static/like/js/likes.js 200 [0.02, 127.0.0.1:63709][0m
+INFO 2025-07-13 22:06:37,579 runserver 4352 10192 [mHTTP GET /static/bookmark/js/bookmark.js 200 [0.02, 127.0.0.1:63708][0m
+WARNING 2025-07-13 22:06:37,585 log 4352 13400 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:06:37,587 log 4352 13400 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:06:37,588 runserver 4352 10192 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.16, 127.0.0.1:63720][0m
+WARNING 2025-07-13 22:06:37,590 runserver 4352 10192 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.16, 127.0.0.1:63721][0m
+WARNING 2025-07-13 22:06:37,613 log 4352 13720 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:06:37,615 runserver 4352 10192 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 127.0.0.1:63721][0m
+INFO 2025-07-13 22:06:37,958 runserver 4352 10192 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:63753]
+INFO 2025-07-13 22:06:42,008 runserver 4352 10192 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:63753]
+INFO 2025-07-13 22:06:42,026 runserver 4352 10192 WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63760]
+INFO 2025-07-13 22:06:46,704 runserver 4352 10192 WebSocket DISCONNECT /ws/chat/ [127.0.0.1:63760]
+INFO 2025-07-13 22:06:48,314 runserver 4352 10192 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:63774]
+INFO 2025-07-13 22:06:52,763 runserver 4352 10192 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:63774]
+INFO 2025-07-13 22:06:52,776 runserver 4352 10192 WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:63780]
+INFO 2025-07-13 22:06:57,009 runserver 4352 10192 WebSocket DISCONNECT /ws/chat/ [127.0.0.1:63780]
+INFO 2025-07-13 22:06:58,312 runserver 4352 10192 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:63790]
+ERROR 2025-07-13 22:20:34,077 services 10476 10060 FIREBASE_SERVICE_ACCOUNT_KEY setting tanımlanmamış
+ERROR 2025-07-13 22:20:47,302 services 6600 3368 FIREBASE_SERVICE_ACCOUNT_KEY setting tanımlanmamış
+ERROR 2025-07-13 22:23:01,134 services 9508 15356 Firebase service account key dosyası bulunamadı: C:\Users\Resat\Desktop\universite\core\web\firebase-service-account.json
+ERROR 2025-07-13 22:23:28,386 services 5840 15064 Firebase service account key dosyası bulunamadı: C:\Users\Resat\Desktop\universite\core\web\firebase-service-account.json
+WARNING 2025-07-13 22:25:03,953 services 2904 9916 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:25:13,183 services 9056 17636 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:25:36,545 services 5804 17760 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:25:53,070 services 3936 16644 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:25:53,089 log 3936 16644 Unauthorized: /api/v1/push-notifications/user-tokens/
+WARNING 2025-07-13 22:26:29,897 services 604 15564 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:27:30,321 services 17692 3716 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:31:39,889 services 14708 17548 Firebase devre dışı (service account key dosyası bulunamadı)
+INFO 2025-07-13 22:31:42,329 runserver 14708 17548 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50428]
+INFO 2025-07-13 22:31:47,007 runserver 14708 17548 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50428]
+INFO 2025-07-13 22:31:47,027 runserver 14708 17548 WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:50538]
+INFO 2025-07-13 22:31:51,252 runserver 14708 17548 WebSocket DISCONNECT /ws/chat/ [127.0.0.1:50538]
+WARNING 2025-07-13 22:32:17,899 services 9548 8680 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:32:45,109 services 17144 3880 Firebase devre dışı (service account key dosyası bulunamadı)
+WARNING 2025-07-13 22:32:53,800 services 17144 6388 Firebase devre dışı (service account key dosyası bulunamadı)
+INFO 2025-07-13 22:36:14,475 autoreload 6464 11344 Watching for file changes with StatReloader
+INFO 2025-07-13 22:36:15,100 services 6464 11344 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-13 22:36:15,757 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50951]
+INFO 2025-07-13 22:36:20,015 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50951]
+INFO 2025-07-13 22:36:20,032 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:50964]
+INFO 2025-07-13 22:36:24,480 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [127.0.0.1:50964]
+INFO 2025-07-13 22:36:30,321 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:50988]
+INFO 2025-07-13 22:36:31,130 runserver 6464 11420 [mHTTP GET /post/ 200 [0.63, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,190 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:50988]
+INFO 2025-07-13 22:36:31,283 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/fonts/fontawesome.css 304 [0.01, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,285 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/css/core.css 304 [0.01, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,285 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 304 [0.01, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,305 runserver 6464 11420 [36mHTTP GET /static/assets/css/demo.css 304 [0.01, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,310 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 304 [0.01, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,317 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,347 runserver 6464 11420 [36mHTTP GET /static/css/notifications.css 304 [0.01, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,348 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 304 [0.02, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,355 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,379 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/helpers.js 304 [0.02, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,382 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/select2.css 304 [0.02, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,382 runserver 6464 11420 [36mHTTP GET /static/assets/js/config.js 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,404 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,497 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/skin-default.svg 304 [0.01, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,503 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 304 [0.00, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,515 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 304 [0.01, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,524 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/skin-border.svg 304 [0.00, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,543 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/content-compact.svg 304 [0.02, 127.0.0.1:50991][0m
+WARNING 2025-07-13 22:36:31,563 log 6464 18752 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:36:31,563 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+INFO 2025-07-13 22:36:31,567 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/content-wide.svg 304 [0.02, 127.0.0.1:50991][0m
+WARNING 2025-07-13 22:36:31,569 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.17, 127.0.0.1:50992][0m
+WARNING 2025-07-13 22:36:31,571 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.18, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,596 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,598 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 304 [0.02, 127.0.0.1:51003][0m
+INFO 2025-07-13 22:36:31,599 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/horizontal-static.svg 304 [0.02, 127.0.0.1:51002][0m
+INFO 2025-07-13 22:36:31,599 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 304 [0.02, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,600 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-static.svg 304 [0.01, 127.0.0.1:51004][0m
+INFO 2025-07-13 22:36:31,600 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/direction-rtl.svg 304 [0.01, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,622 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/direction-ltr.svg 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,630 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/popper/popper.js 304 [0.02, 127.0.0.1:51004][0m
+INFO 2025-07-13 22:36:31,631 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 304 [0.02, 127.0.0.1:51003][0m
+INFO 2025-07-13 22:36:31,650 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/bootstrap.js 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,672 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 304 [0.03, 127.0.0.1:51003][0m
+INFO 2025-07-13 22:36:31,677 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 304 [0.04, 127.0.0.1:51004][0m
+INFO 2025-07-13 22:36:31,686 runserver 6464 11420 [36mHTTP GET /static/assets/img/logo/logo.png 304 [0.03, 127.0.0.1:50991][0m
+WARNING 2025-07-13 22:36:31,700 log 6464 18756 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:36:31,706 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.10, 127.0.0.1:51002][0m
+WARNING 2025-07-13 22:36:31,706 log 6464 18752 Not Found: /media/posts/2025/06/post_image_3.jpg
+INFO 2025-07-13 22:36:31,709 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 304 [0.03, 127.0.0.1:51004][0m
+WARNING 2025-07-13 22:36:31,712 log 6464 18756 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:36:31,715 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.10, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,717 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 304 [0.03, 127.0.0.1:51003][0m
+WARNING 2025-07-13 22:36:31,721 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.11, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,734 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 304 [0.04, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,837 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/menu.js 304 [0.12, 127.0.0.1:51004][0m
+INFO 2025-07-13 22:36:31,838 runserver 6464 11420 [36mHTTP GET /static/assets/js/main.js 304 [0.12, 127.0.0.1:51002][0m
+INFO 2025-07-13 22:36:31,840 runserver 6464 11420 [36mHTTP GET /static/js/notifications.js 304 [0.11, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,841 runserver 6464 11420 [36mHTTP GET /static/js/header-chat.js 304 [0.11, 127.0.0.1:51003][0m
+INFO 2025-07-13 22:36:31,844 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/select2.js 304 [0.11, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,860 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,867 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 304 [0.02, 127.0.0.1:50992][0m
+INFO 2025-07-13 22:36:31,868 runserver 6464 11420 [36mHTTP GET /static/js/relative-time.js 304 [0.02, 127.0.0.1:51002][0m
+INFO 2025-07-13 22:36:31,868 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 304 [0.02, 127.0.0.1:51003][0m
+INFO 2025-07-13 22:36:31,871 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/custom.js 304 [0.02, 127.0.0.1:50994][0m
+INFO 2025-07-13 22:36:31,872 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/infinite.min.js 304 [0.02, 127.0.0.1:51004][0m
+INFO 2025-07-13 22:36:31,882 runserver 6464 11420 [36mHTTP GET /static/bookmark/js/bookmark.js 304 [0.02, 127.0.0.1:50991][0m
+INFO 2025-07-13 22:36:31,886 runserver 6464 11420 [36mHTTP GET /static/like/js/likes.js 304 [0.01, 127.0.0.1:51002][0m
+WARNING 2025-07-13 22:36:31,912 log 6464 18756 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:36:31,913 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 127.0.0.1:51002][0m
+INFO 2025-07-13 22:36:34,800 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [127.0.0.1:51014]
+INFO 2025-07-13 22:36:34,810 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [127.0.0.1:51014]
+INFO 2025-07-13 22:36:35,432 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [127.0.0.1:51017]
+INFO 2025-07-13 22:36:35,437 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [127.0.0.1:51017]
+WARNING 2025-07-13 22:36:35,471 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:36:35,471 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 127.0.0.1:51002][0m
+INFO 2025-07-13 22:38:33,883 runserver 6464 11420 [mHTTP GET / 200 [0.04, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:33,959 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [127.0.0.1:51014]
+INFO 2025-07-13 22:38:33,959 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [127.0.0.1:51017]
+INFO 2025-07-13 22:38:33,990 runserver 6464 11420 [mHTTP GET /static/CACHE/css/output.c51a8b31fc99.css 200 [0.02, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:33,992 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/backgrounds/hero-bg.png 304 [0.02, 192.168.1.24:51144][0m
+INFO 2025-07-13 22:38:33,994 runserver 6464 11420 [mHTTP GET /static/CACHE/js/output.53a8c5868a2d.js 200 [0.02, 192.168.1.24:51141][0m
+INFO 2025-07-13 22:38:33,995 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/Join-community-arrow.png 304 [0.02, 192.168.1.24:51145][0m
+INFO 2025-07-13 22:38:34,032 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/section-title-icon.png 304 [0.00, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:34,102 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/post.png 304 [0.01, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:34,105 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/follow.png 304 [0.01, 192.168.1.24:51141][0m
+INFO 2025-07-13 22:38:34,153 runserver 6464 11420 [mHTTP GET /static/CACHE/js/output.021cc381153f.js 200 [0.01, 192.168.1.24:51141][0m
+INFO 2025-07-13 22:38:34,166 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/chat.png 304 [0.02, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:34,168 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/megaphone.png 304 [0.02, 192.168.1.24:51145][0m
+INFO 2025-07-13 22:38:34,170 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/profile.png 304 [0.02, 192.168.1.24:51144][0m
+INFO 2025-07-13 22:38:34,170 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.02, 192.168.1.24:51147][0m
+INFO 2025-07-13 22:38:34,178 runserver 6464 11420 [mHTTP GET /static/assets/img/logo/logo.png 200 [0.03, 192.168.1.24:51148][0m
+INFO 2025-07-13 22:38:34,187 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/icons/more.png 304 [0.02, 192.168.1.24:51141][0m
+INFO 2025-07-13 22:38:34,192 runserver 6464 11420 [36mHTTP GET /static/assets/img/avatars/1.png 304 [0.02, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:34,198 runserver 6464 11420 [36mHTTP GET /static/assets/img/avatars/2.png 304 [0.02, 192.168.1.24:51147][0m
+INFO 2025-07-13 22:38:34,199 runserver 6464 11420 [36mHTTP GET /static/assets/img/avatars/3.png 304 [0.02, 192.168.1.24:51145][0m
+INFO 2025-07-13 22:38:34,204 runserver 6464 11420 [36mHTTP GET /static/assets/img/avatars/4.png 304 [0.02, 192.168.1.24:51148][0m
+INFO 2025-07-13 22:38:34,206 runserver 6464 11420 [36mHTTP GET /static/assets/img/avatars/5.png 304 [0.01, 192.168.1.24:51144][0m
+INFO 2025-07-13 22:38:34,208 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/gazi.png 304 [0.01, 192.168.1.24:51141][0m
+INFO 2025-07-13 22:38:34,213 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/mersin.png 304 [0.02, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:38:34,225 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/dokuz-eylul.png 304 [0.02, 192.168.1.24:51147][0m
+INFO 2025-07-13 22:38:34,226 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/bogazici.png 304 [0.02, 192.168.1.24:51145][0m
+INFO 2025-07-13 22:38:34,228 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/selcuk.png 304 [0.02, 192.168.1.24:51148][0m
+INFO 2025-07-13 22:38:34,231 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/akdeniz.png 304 [0.01, 192.168.1.24:51141][0m
+INFO 2025-07-13 22:38:34,232 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/branding/anadolu.png 304 [0.01, 192.168.1.24:51144][0m
+INFO 2025-07-13 22:38:34,233 runserver 6464 11420 [36mHTTP GET /static/assets/img/front-pages/landing-page/faq-boy-with-logos.png 304 [0.01, 192.168.1.24:51140][0m
+INFO 2025-07-13 22:39:55,427 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51311]
+INFO 2025-07-13 22:39:55,449 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51312]
+INFO 2025-07-13 22:39:55,732 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51312]
+INFO 2025-07-13 22:39:55,735 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51311]
+INFO 2025-07-13 22:39:55,907 runserver 6464 11420 [mHTTP GET /api/v1/likes/content-types/ 200 [0.45, 192.168.1.24:51315][0m
+INFO 2025-07-13 22:39:55,909 runserver 6464 11420 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.45, 192.168.1.24:51314][0m
+INFO 2025-07-13 22:39:55,940 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/ 200 [0.49, 192.168.1.24:51313][0m
+INFO 2025-07-13 22:39:56,099 runserver 6464 11420 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.16, 192.168.1.24:51314][0m
+INFO 2025-07-13 22:39:56,713 runserver 6464 11420 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.10, 192.168.1.24:51313][0m
+INFO 2025-07-13 22:39:56,728 runserver 6464 11420 [mHTTP GET /api/v1/profiles/me/ 200 [0.11, 192.168.1.24:51314][0m
+INFO 2025-07-13 22:39:57,093 runserver 6464 11420 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.08, 192.168.1.24:51313][0m
+INFO 2025-07-13 22:39:57,425 runserver 6464 11420 [mHTTP GET /api/v1/posts/posts/?posts_type=all&page=1 200 [0.25, 192.168.1.24:51313][0m
+WARNING 2025-07-13 22:39:59,470 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:39:59,472 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.02, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:39:59,481 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:39:59,481 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51335][0m
+INFO 2025-07-13 22:39:59,499 runserver 6464 11420 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.07, 192.168.1.24:51313][0m
+WARNING 2025-07-13 22:39:59,535 log 6464 18752 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:39:59,536 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.01, 192.168.1.24:51335][0m
+WARNING 2025-07-13 22:39:59,539 log 6464 18756 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:39:59,539 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.02, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:39:59,563 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:39:59,563 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.01, 192.168.1.24:51336][0m
+INFO 2025-07-13 22:40:09,888 runserver 6464 11420 [mHTTP GET /login/ 200 [0.06, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,064 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 304 [0.02, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,065 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/css/core.css 304 [0.02, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,072 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 304 [0.02, 192.168.1.24:51362][0m
+INFO 2025-07-13 22:40:10,075 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 304 [0.03, 192.168.1.24:51363][0m
+INFO 2025-07-13 22:40:10,079 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 304 [0.03, 192.168.1.24:51364][0m
+INFO 2025-07-13 22:40:10,082 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/form-validation.css 304 [0.03, 192.168.1.24:51365][0m
+INFO 2025-07-13 22:40:10,101 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/css/pages/page-auth.css 304 [0.03, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,106 runserver 6464 11420 [36mHTTP GET /static/assets/css/demo.css 304 [0.03, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,111 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.03, 192.168.1.24:51362][0m
+INFO 2025-07-13 22:40:10,112 runserver 6464 11420 [36mHTTP GET /static/assets/js/config.js 304 [0.03, 192.168.1.24:51363][0m
+INFO 2025-07-13 22:40:10,115 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/helpers.js 304 [0.02, 192.168.1.24:51364][0m
+INFO 2025-07-13 22:40:10,121 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 304 [0.01, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,124 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/popper/popper.js 304 [0.01, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,195 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/bootstrap.js 304 [0.01, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,199 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 304 [0.01, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,265 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/skin-default.svg 304 [0.02, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,267 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/skin-border.svg 304 [0.02, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,268 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 304 [0.02, 192.168.1.24:51364][0m
+INFO 2025-07-13 22:40:10,268 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/content-wide.svg 304 [0.02, 192.168.1.24:51365][0m
+INFO 2025-07-13 22:40:10,268 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 304 [0.02, 192.168.1.24:51363][0m
+INFO 2025-07-13 22:40:10,270 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/content-compact.svg 304 [0.02, 192.168.1.24:51362][0m
+INFO 2025-07-13 22:40:10,291 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 304 [0.02, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,292 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/horizontal-static.svg 304 [0.02, 192.168.1.24:51363][0m
+INFO 2025-07-13 22:40:10,292 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 304 [0.02, 192.168.1.24:51364][0m
+INFO 2025-07-13 22:40:10,293 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-static.svg 304 [0.02, 192.168.1.24:51365][0m
+INFO 2025-07-13 22:40:10,293 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 304 [0.02, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,295 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/direction-ltr.svg 304 [0.02, 192.168.1.24:51362][0m
+INFO 2025-07-13 22:40:10,306 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/direction-rtl.svg 304 [0.01, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,313 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 304 [0.01, 192.168.1.24:51362][0m
+INFO 2025-07-13 22:40:10,315 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 304 [0.01, 192.168.1.24:51365][0m
+INFO 2025-07-13 22:40:10,317 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 304 [0.02, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,319 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/menu.js 304 [0.02, 192.168.1.24:51364][0m
+INFO 2025-07-13 22:40:10,321 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 304 [0.02, 192.168.1.24:51363][0m
+INFO 2025-07-13 22:40:10,328 runserver 6464 11420 [36mHTTP GET /static/assets/img/logo/logo.png 304 [0.02, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:10,347 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/popular.js 304 [0.02, 192.168.1.24:51364][0m
+INFO 2025-07-13 22:40:10,349 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/auto-focus.js 304 [0.02, 192.168.1.24:51365][0m
+INFO 2025-07-13 22:40:10,350 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/bootstrap5.js 304 [0.02, 192.168.1.24:51363][0m
+INFO 2025-07-13 22:40:10,353 runserver 6464 11420 [36mHTTP GET /static/assets/js/pages-auth.js 304 [0.01, 192.168.1.24:51361][0m
+INFO 2025-07-13 22:40:10,356 runserver 6464 11420 [36mHTTP GET /static/assets/js/main.js 304 [0.02, 192.168.1.24:51358][0m
+INFO 2025-07-13 22:40:16,088 runserver 6464 11420 [32mHTTP POST /login/ 302 [1.24, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:16,270 runserver 6464 11420 [32mHTTP GET / 302 [0.18, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:16,522 runserver 6464 11420 [mHTTP GET /post/ 200 [0.25, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:16,598 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/fonts/fontawesome.css 304 [0.01, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:16,604 runserver 6464 11420 [36mHTTP GET /static/css/notifications.css 304 [0.02, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:16,608 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/select2.css 304 [0.02, 192.168.1.24:51382][0m
+INFO 2025-07-13 22:40:16,611 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 304 [0.02, 192.168.1.24:51381][0m
+WARNING 2025-07-13 22:40:16,643 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:16,645 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.05, 192.168.1.24:51383][0m
+WARNING 2025-07-13 22:40:16,645 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:16,646 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.04, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:16,663 log 6464 18756 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:40:16,665 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.02, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:16,687 log 6464 18756 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:40:16,689 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.02, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:16,725 runserver 6464 11420 [36mHTTP GET /static/js/notifications.js 304 [0.01, 192.168.1.24:51383][0m
+INFO 2025-07-13 22:40:16,727 runserver 6464 11420 [36mHTTP GET /static/js/header-chat.js 304 [0.01, 192.168.1.24:51382][0m
+INFO 2025-07-13 22:40:16,729 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/select2.js 304 [0.01, 192.168.1.24:51381][0m
+INFO 2025-07-13 22:40:16,730 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 304 [0.01, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:16,733 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 304 [0.02, 192.168.1.24:51373][0m
+WARNING 2025-07-13 22:40:16,748 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+INFO 2025-07-13 22:40:16,749 runserver 6464 11420 [36mHTTP GET /static/js/relative-time.js 304 [0.01, 192.168.1.24:51382][0m
+INFO 2025-07-13 22:40:16,750 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 304 [0.02, 192.168.1.24:51383][0m
+WARNING 2025-07-13 22:40:16,752 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.05, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:16,754 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/infinite.min.js 304 [0.01, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:16,759 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/custom.js 304 [0.02, 192.168.1.24:51381][0m
+INFO 2025-07-13 22:40:16,759 runserver 6464 11420 [36mHTTP GET /static/bookmark/js/bookmark.js 304 [0.02, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:16,765 runserver 6464 11420 [36mHTTP GET /static/like/js/likes.js 304 [0.01, 192.168.1.24:51382][0m
+WARNING 2025-07-13 22:40:16,779 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:16,779 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:16,887 log 6464 18756 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:40:16,889 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:16,928 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51389]
+INFO 2025-07-13 22:40:16,936 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51389]
+INFO 2025-07-13 22:40:16,955 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51390]
+INFO 2025-07-13 22:40:16,962 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51390]
+WARNING 2025-07-13 22:40:17,149 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:17,151 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:21,003 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:21,005 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:21,227 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:21,228 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:22,609 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:22,611 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:22,721 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:22,722 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:23,005 log 6464 18752 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:40:23,006 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.02, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:23,012 log 6464 18752 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:40:23,013 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.02, 192.168.1.24:51335][0m
+WARNING 2025-07-13 22:40:23,015 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:40:23,015 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.02, 192.168.1.24:51336][0m
+WARNING 2025-07-13 22:40:23,025 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:23,027 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.01, 192.168.1.24:51397][0m
+INFO 2025-07-13 22:40:23,271 runserver 6464 11420 [mHTTP GET /api/v1/posts/posts/?posts_type=all&page=1 200 [0.20, 192.168.1.24:51313][0m
+WARNING 2025-07-13 22:40:23,387 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:23,389 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.02, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:23,393 log 6464 18756 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:40:23,396 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.03, 192.168.1.24:51335][0m
+WARNING 2025-07-13 22:40:23,398 log 6464 18752 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:40:23,399 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.03, 192.168.1.24:51336][0m
+WARNING 2025-07-13 22:40:23,401 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:40:23,402 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.03, 192.168.1.24:51397][0m
+WARNING 2025-07-13 22:40:23,694 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:23,695 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:23,905 log 6464 18756 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:40:23,911 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.02, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:23,914 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:40:23,915 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.03, 192.168.1.24:51335][0m
+WARNING 2025-07-13 22:40:23,920 log 6464 18752 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:40:23,920 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:23,921 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.03, 192.168.1.24:51397][0m
+WARNING 2025-07-13 22:40:23,922 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.03, 192.168.1.24:51336][0m
+WARNING 2025-07-13 22:40:23,942 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:23,942 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51399][0m
+WARNING 2025-07-13 22:40:24,271 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:24,272 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:40:24,389 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:24,390 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+INFO 2025-07-13 22:40:25,312 runserver 6464 11420 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.07, 192.168.1.24:51314][0m
+INFO 2025-07-13 22:40:25,502 runserver 6464 11420 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.27, 192.168.1.24:51313][0m
+WARNING 2025-07-13 22:40:27,377 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:27,378 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+INFO 2025-07-13 22:40:33,404 runserver 6464 11420 [32mHTTP GET /logout/ 302 [0.06, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:33,417 runserver 6464 11420 [mHTTP GET /login/ 200 [0.01, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:33,462 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51389]
+INFO 2025-07-13 22:40:33,463 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51390]
+INFO 2025-07-13 22:40:38,621 runserver 6464 11420 [32mHTTP POST /login/ 302 [0.87, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:38,688 runserver 6464 11420 [32mHTTP GET / 302 [0.06, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:38,873 runserver 6464 11420 [mHTTP GET /post/ 200 [0.18, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:38,946 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:38,948 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.03, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:38,975 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:38,978 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.05, 192.168.1.24:51382][0m
+WARNING 2025-07-13 22:40:39,004 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:40:39,005 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.05, 192.168.1.24:51381][0m
+WARNING 2025-07-13 22:40:39,007 log 6464 18752 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:40:39,008 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.06, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:39,011 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:39,012 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.03, 192.168.1.24:51373][0m
+WARNING 2025-07-13 22:40:39,041 log 6464 18756 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:40:39,042 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.1.24:51373][0m
+WARNING 2025-07-13 22:40:39,057 log 6464 18752 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:40:39,057 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.11, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:39,064 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51422]
+INFO 2025-07-13 22:40:39,069 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51422]
+INFO 2025-07-13 22:40:39,094 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51423]
+INFO 2025-07-13 22:40:39,104 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51423]
+INFO 2025-07-13 22:40:42,159 runserver 6464 11420 [mHTTP POST /like/like/ 200 [0.07, 192.168.1.24:51374][0m
+WARNING 2025-07-13 22:40:45,161 services 6464 16104 User 1 için aktif FCM token bulunamadı
+INFO 2025-07-13 22:40:45,166 runserver 6464 11420 [mHTTP POST /like/like/ 200 [0.09, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:51,919 runserver 6464 11420 [mHTTP GET /profile/admin/ 200 [0.18, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:51,958 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51422]
+INFO 2025-07-13 22:40:51,958 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51423]
+INFO 2025-07-13 22:40:51,982 runserver 6464 11420 [mHTTP GET /static/assets/vendor/css/pages/page-profile.css 200 [0.01, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:51,995 runserver 6464 11420 [mHTTP GET /static/assets/img/avatars/privacy.jpg 200 [0.01, 192.168.1.24:51373][0m
+WARNING 2025-07-13 22:40:52,012 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:52,013 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.03, 192.168.1.24:51374][0m
+WARNING 2025-07-13 22:40:52,032 log 6464 18752 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:52,032 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.02, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:52,083 runserver 6464 11420 [mHTTP GET /static/assets/js/app-user-view-account.js 200 [0.01, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:52,108 runserver 6464 11420 [mHTTP GET /static/assets/vendor/fonts/fontawesome/fa-solid-900.woff2 200 [0.02, 192.168.1.24:51373][0m
+WARNING 2025-07-13 22:40:52,133 log 6464 18752 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:40:52,135 log 6464 13488 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:40:52,135 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.05, 192.168.1.24:51384][0m
+WARNING 2025-07-13 22:40:52,137 log 6464 18752 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:40:52,139 log 6464 13488 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:52,139 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.06, 192.168.1.24:51374][0m
+WARNING 2025-07-13 22:40:52,142 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.05, 192.168.1.24:51381][0m
+WARNING 2025-07-13 22:40:52,142 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.06, 192.168.1.24:51382][0m
+WARNING 2025-07-13 22:40:52,168 log 6464 18752 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:40:52,169 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.07, 192.168.1.24:51383][0m
+WARNING 2025-07-13 22:40:52,201 log 6464 18752 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:40:52,202 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.1.24:51383][0m
+INFO 2025-07-13 22:40:52,227 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51436]
+INFO 2025-07-13 22:40:52,239 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51436]
+INFO 2025-07-13 22:40:52,255 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51437]
+INFO 2025-07-13 22:40:52,268 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51437]
+INFO 2025-07-13 22:40:55,162 runserver 6464 11420 [mHTTP GET /chat/80/ 200 [0.13, 192.168.1.24:51383][0m
+INFO 2025-07-13 22:40:55,203 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51436]
+INFO 2025-07-13 22:40:55,205 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51437]
+INFO 2025-07-13 22:40:55,219 runserver 6464 11420 [mHTTP GET /static/assets/vendor/css/pages/app-chat.css 200 [0.01, 192.168.1.24:51383][0m
+INFO 2025-07-13 22:40:55,225 runserver 6464 11420 [mHTTP GET /static/chat/css/chat.css 200 [0.01, 192.168.1.24:51382][0m
+WARNING 2025-07-13 22:40:55,273 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:40:55,274 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.06, 192.168.1.24:51381][0m
+WARNING 2025-07-13 22:40:55,275 log 6464 18752 Not Found: /media/chat_attachments/2025/06/12/image_0_1749743798584.jpg
+WARNING 2025-07-13 22:40:55,277 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/06/12/image_0_1749743798584.jpg 404 [0.06, 192.168.1.24:51374][0m
+INFO 2025-07-13 22:40:55,299 runserver 6464 11420 [mHTTP GET /static/chat/js/chat.js 200 [0.01, 192.168.1.24:51382][0m
+INFO 2025-07-13 22:40:55,452 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51440]
+INFO 2025-07-13 22:40:55,462 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51440]
+WARNING 2025-07-13 22:40:55,468 log 6464 13488 Not Found: /media/chat_attachments/2025/07/04/image_0_1751579935634.jpg
+WARNING 2025-07-13 22:40:55,468 log 6464 18752 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg
+WARNING 2025-07-13 22:40:55,471 log 6464 18756 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg
+WARNING 2025-07-13 22:40:55,473 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751579935634.jpg 404 [0.19, 192.168.1.24:51381][0m
+WARNING 2025-07-13 22:40:55,474 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg 404 [0.19, 192.168.1.24:51383][0m
+WARNING 2025-07-13 22:40:55,475 log 6464 13488 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg
+WARNING 2025-07-13 22:40:55,477 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg 404 [0.19, 192.168.1.24:51373][0m
+INFO 2025-07-13 22:40:55,481 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51442]
+WARNING 2025-07-13 22:40:55,484 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg 404 [0.20, 192.168.1.24:51384][0m
+INFO 2025-07-13 22:40:55,500 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51442]
+INFO 2025-07-13 22:40:55,514 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/80/ [192.168.1.24:51443]
+WARNING 2025-07-13 22:40:55,549 log 6464 18756 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:40:55,551 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.11, 192.168.1.24:51382][0m
+INFO 2025-07-13 22:40:55,685 runserver 6464 11420 WebSocket CONNECT /ws/chat/80/ [192.168.1.24:51443]
+WARNING 2025-07-13 22:40:59,935 services 6464 6916 User 1 için aktif FCM token bulunamadı
+WARNING 2025-07-13 22:41:02,791 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:41:02,792 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51334][0m
+INFO 2025-07-13 22:41:02,885 runserver 6464 11420 [mHTTP POST /api/v1/profiles/batch-block-status/ 200 [0.06, 192.168.1.24:51313][0m
+INFO 2025-07-13 22:41:04,350 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/80/ 200 [0.09, 192.168.1.24:51313][0m
+INFO 2025-07-13 22:41:04,574 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/80/messages/?page=1&page_size=20 200 [0.15, 192.168.1.24:51313][0m
+WARNING 2025-07-13 22:41:05,182 log 6464 13488 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:41:05,183 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.24:51334][0m
+WARNING 2025-07-13 22:41:05,187 log 6464 18756 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg
+WARNING 2025-07-13 22:41:05,187 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg 404 [0.02, 192.168.1.24:51335][0m
+WARNING 2025-07-13 22:41:05,195 log 6464 18752 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg
+WARNING 2025-07-13 22:41:05,196 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg 404 [0.02, 192.168.1.24:51336][0m
+WARNING 2025-07-13 22:41:05,203 log 6464 18756 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg
+WARNING 2025-07-13 22:41:05,205 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg 404 [0.01, 192.168.1.24:51397][0m
+INFO 2025-07-13 22:41:05,520 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/80/ [192.168.1.24:51455]
+INFO 2025-07-13 22:41:05,532 runserver 6464 11420 WebSocket CONNECT /ws/chat/80/ [192.168.1.24:51455]
+INFO 2025-07-13 22:41:05,914 runserver 6464 11420 [mHTTP POST /api/v1/chat/rooms/80/mark_as_read/ 200 [0.18, 192.168.1.24:51313][0m
+WARNING 2025-07-13 22:41:10,472 services 6464 6916 User 2 için aktif FCM token bulunamadı
+INFO 2025-07-13 22:42:11,007 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.21:53033]
+INFO 2025-07-13 22:42:11,018 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.21:53034]
+INFO 2025-07-13 22:42:11,124 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.21:53033]
+INFO 2025-07-13 22:42:11,125 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.21:53034]
+INFO 2025-07-13 22:42:11,150 runserver 6464 11420 [mHTTP GET /api/v1/notifications/list/unread_count/ 200 [0.13, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:11,151 runserver 6464 11420 [mHTTP GET /api/v1/likes/content-types/ 200 [0.13, 192.168.1.21:52551][0m
+INFO 2025-07-13 22:42:11,164 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/ 200 [0.14, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:11,468 runserver 6464 11420 [mHTTP GET /api/v1/posts/filter-options/ 200 [0.15, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:11,477 runserver 6464 11420 [mHTTP GET /api/v1/profiles/me/ 200 [0.16, 192.168.1.21:52551][0m
+INFO 2025-07-13 22:42:11,557 runserver 6464 11420 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.29, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:11,595 runserver 6464 11420 [mHTTP GET /api/v1/posts/filter-preferences/ 200 [0.11, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:12,149 runserver 6464 11420 [mHTTP GET /api/v1/posts/posts/?posts_type=all&page=1 200 [0.54, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:12,313 log 6464 8808 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:42:12,315 log 6464 18752 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:42:12,315 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.03, 192.168.1.21:52551][0m
+WARNING 2025-07-13 22:42:12,316 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.03, 192.168.1.21:52550][0m
+WARNING 2025-07-13 22:42:12,316 log 6464 13488 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:12,317 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.03, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:12,317 log 6464 18756 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:42:12,319 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.03, 192.168.1.21:52552][0m
+WARNING 2025-07-13 22:42:12,337 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:42:12,337 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:12,337 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.01, 192.168.1.21:52551][0m
+WARNING 2025-07-13 22:42:12,339 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:12,388 runserver 6464 11420 [mHTTP GET /api/v1/posts/posts/trending/ 200 [0.08, 192.168.1.21:52553][0m
+WARNING 2025-07-13 22:42:12,413 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:12,413 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:14,192 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:14,194 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:14,262 runserver 6464 11420 [mHTTP POST /api/v1/profiles/batch-block-status/ 200 [0.07, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:15,500 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/80/ 200 [0.10, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:15,776 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/80/messages/?page=1&page_size=20 200 [0.26, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:15,959 log 6464 13488 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:15,959 log 6464 18752 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg
+WARNING 2025-07-13 22:42:15,959 log 6464 13488 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg
+WARNING 2025-07-13 22:42:15,960 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:15,960 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg 404 [0.02, 192.168.1.21:52550][0m
+WARNING 2025-07-13 22:42:15,960 log 6464 8808 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg
+WARNING 2025-07-13 22:42:15,962 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg 404 [0.02, 192.168.1.21:52552][0m
+WARNING 2025-07-13 22:42:15,963 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg 404 [0.03, 192.168.1.21:52551][0m
+INFO 2025-07-13 22:42:16,000 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/80/ [192.168.1.21:53035]
+INFO 2025-07-13 22:42:16,024 runserver 6464 11420 WebSocket CONNECT /ws/chat/80/ [192.168.1.21:53035]
+WARNING 2025-07-13 22:42:16,029 log 6464 18756 Not Found: /media/chat_attachments/2025/07/04/image_0_1751579935634.jpg
+WARNING 2025-07-13 22:42:16,029 log 6464 8808 Not Found: /media/chat_attachments/2025/06/12/image_0_1749743798584.jpg
+WARNING 2025-07-13 22:42:16,030 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751579935634.jpg 404 [0.03, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:16,032 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/06/12/image_0_1749743798584.jpg 404 [0.03, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:16,067 runserver 6464 11420 [mHTTP POST /api/v1/chat/rooms/80/mark_as_read/ 200 [0.09, 192.168.1.21:52553][0m
+WARNING 2025-07-13 22:42:18,596 services 6464 6916 User 2 için aktif FCM token bulunamadı
+INFO 2025-07-13 22:42:25,267 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51311]
+INFO 2025-07-13 22:42:25,272 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51312]
+INFO 2025-07-13 22:42:25,280 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/80/ [192.168.1.24:51455]
+WARNING 2025-07-13 22:42:27,505 log 6464 12964 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg
+WARNING 2025-07-13 22:42:27,507 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg 404 [0.01, 192.168.1.24:51551][0m
+WARNING 2025-07-13 22:42:27,523 log 6464 12964 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:27,525 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.24:51550][0m
+WARNING 2025-07-13 22:42:27,526 log 6464 8808 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg
+WARNING 2025-07-13 22:42:27,527 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg 404 [0.02, 192.168.1.24:51553][0m
+WARNING 2025-07-13 22:42:27,537 log 6464 12964 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg
+WARNING 2025-07-13 22:42:27,538 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg 404 [0.02, 192.168.1.24:51552][0m
+WARNING 2025-07-13 22:42:29,956 services 6464 6916 User 1 için aktif FCM token bulunamadı
+INFO 2025-07-13 22:42:32,127 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/80/ [192.168.1.21:53035]
+INFO 2025-07-13 22:42:34,406 runserver 6464 11420 [mHTTP GET /post/ 200 [0.23, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,531 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51440]
+INFO 2025-07-13 22:42:34,534 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51442]
+INFO 2025-07-13 22:42:34,535 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/80/ [192.168.1.24:51443]
+INFO 2025-07-13 22:42:34,573 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 304 [0.01, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,602 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/fonts/fontawesome.css 304 [0.03, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,604 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 304 [0.02, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,606 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 304 [0.02, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,612 runserver 6464 11420 [36mHTTP GET /static/assets/css/demo.css 304 [0.03, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,615 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/css/core.css 304 [0.02, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,617 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 304 [0.03, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,632 runserver 6464 11420 [36mHTTP GET /static/css/notifications.css 304 [0.02, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,632 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/select2.css 304 [0.01, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,634 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 304 [0.01, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,638 runserver 6464 11420 [36mHTTP GET /static/assets/js/config.js 304 [0.01, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,642 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.02, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,645 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/helpers.js 304 [0.02, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,662 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 304 [0.01, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,662 runserver 6464 11420 [36mHTTP GET /static/assets/img/logo/logo.png 304 [0.01, 192.168.1.24:51572][0m
+WARNING 2025-07-13 22:42:34,686 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:34,687 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.04, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,767 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/skin-default.svg 304 [0.00, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,790 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 304 [0.02, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,792 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/skin-border.svg 304 [0.02, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,792 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 304 [0.02, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,794 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/content-wide.svg 304 [0.02, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,794 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/content-compact.svg 304 [0.01, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,795 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 304 [0.02, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,819 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 304 [0.02, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,820 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/horizontal-static.svg 304 [0.02, 192.168.1.24:51558][0m
+INFO 2025-07-13 22:42:34,822 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-static.svg 304 [0.02, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,827 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/direction-ltr.svg 304 [0.02, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,827 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/direction-rtl.svg 304 [0.02, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,832 runserver 6464 11420 [36mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 304 [0.02, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,851 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/popper/popper.js 304 [0.02, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,853 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 304 [0.01, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,855 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/bootstrap.js 304 [0.01, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,857 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 304 [0.01, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,882 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 304 [0.02, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,890 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 304 [0.03, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,893 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 304 [0.03, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,894 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/js/menu.js 304 [0.03, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,919 runserver 6464 11420 [36mHTTP GET /static/assets/js/main.js 304 [0.02, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,920 runserver 6464 11420 [36mHTTP GET /static/js/notifications.js 304 [0.02, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,921 runserver 6464 11420 [36mHTTP GET /static/js/header-chat.js 304 [0.01, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,921 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/select2.js 304 [0.01, 192.168.1.24:51572][0m
+WARNING 2025-07-13 22:42:34,927 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:42:34,930 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.09, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,935 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 304 [0.01, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,939 runserver 6464 11420 [36mHTTP GET /static/js/relative-time.js 304 [0.01, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,940 runserver 6464 11420 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 304 [0.01, 192.168.1.24:51572][0m
+INFO 2025-07-13 22:42:34,941 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 304 [0.01, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:34,947 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/infinite.min.js 304 [0.01, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,952 runserver 6464 11420 [36mHTTP GET /static/js/waypoints/custom.js 304 [0.01, 192.168.1.24:51563][0m
+INFO 2025-07-13 22:42:34,953 runserver 6464 11420 [36mHTTP GET /static/like/js/likes.js 304 [0.01, 192.168.1.24:51570][0m
+INFO 2025-07-13 22:42:34,955 runserver 6464 11420 [36mHTTP GET /static/bookmark/js/bookmark.js 304 [0.01, 192.168.1.24:51572][0m
+WARNING 2025-07-13 22:42:34,973 log 6464 12964 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:42:34,977 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.14, 192.168.1.24:51558][0m
+WARNING 2025-07-13 22:42:34,987 log 6464 18756 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:42:34,989 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.04, 192.168.1.24:51573][0m
+WARNING 2025-07-13 22:42:34,991 log 6464 12964 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:42:34,991 log 6464 18752 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:42:34,993 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.04, 192.168.1.24:51563][0m
+WARNING 2025-07-13 22:42:34,993 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.04, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:34,997 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51576]
+INFO 2025-07-13 22:42:35,005 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51576]
+INFO 2025-07-13 22:42:35,020 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51577]
+INFO 2025-07-13 22:42:35,025 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51577]
+INFO 2025-07-13 22:42:35,264 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/80/ 200 [0.09, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:35,407 runserver 6464 11420 [mHTTP GET /api/v1/chat/rooms/80/messages/?page=1&page_size=20 200 [0.13, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:35,424 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/80/ [192.168.1.21:53036]
+INFO 2025-07-13 22:42:35,438 runserver 6464 11420 WebSocket CONNECT /ws/chat/80/ [192.168.1.21:53036]
+WARNING 2025-07-13 22:42:35,480 log 6464 13488 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:35,483 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:35,485 log 6464 18752 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg
+WARNING 2025-07-13 22:42:35,487 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580473077.jpg 404 [0.03, 192.168.1.21:52550][0m
+WARNING 2025-07-13 22:42:35,488 log 6464 8808 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg
+WARNING 2025-07-13 22:42:35,488 log 6464 12964 Not Found: /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg
+WARNING 2025-07-13 22:42:35,490 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580363395.jpg 404 [0.03, 192.168.1.21:52551][0m
+WARNING 2025-07-13 22:42:35,490 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751580222679.jpg 404 [0.03, 192.168.1.21:52552][0m
+WARNING 2025-07-13 22:42:35,500 log 6464 13488 Not Found: /media/chat_attachments/2025/07/04/image_0_1751579935634.jpg
+WARNING 2025-07-13 22:42:35,502 runserver 6464 11420 [33mHTTP GET /media/chat_attachments/2025/07/04/image_0_1751579935634.jpg 404 [0.01, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:35,550 runserver 6464 11420 [mHTTP POST /api/v1/chat/rooms/80/mark_as_read/ 200 [0.09, 192.168.1.21:52553][0m
+INFO 2025-07-13 22:42:35,992 runserver 6464 11420 [mHTTP GET /api/v1/profiles/2/ 200 [0.08, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:36,029 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:36,029 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:39,757 services 6464 17948 User 2 için aktif FCM token bulunamadı
+INFO 2025-07-13 22:42:39,765 runserver 6464 11420 [mHTTP POST /api/v1/profiles/follow/test/ 200 [0.27, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:44,988 log 6464 13488 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-13 22:42:44,989 runserver 6464 11420 [33mHTTP GET /api/v1/posts/posts/user_posts/?username=test&page=2 404 [0.11, 192.168.1.21:52550][0m
+INFO 2025-07-13 22:42:45,009 runserver 6464 11420 [mHTTP GET /api/v1/posts/posts/user_posts/?username=test&page=1 200 [0.13, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:45,085 log 6464 18752 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:45,085 log 6464 13488 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:45,085 log 6464 8808 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:45,086 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.21:52551][0m
+WARNING 2025-07-13 22:42:45,087 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.21:52550][0m
+WARNING 2025-07-13 22:42:45,087 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:46,038 runserver 6464 11420 [mHTTP GET /api/v1/likes/content-types/ 200 [0.06, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:46,107 runserver 6464 11420 [mHTTP POST /api/v1/likes/likes/toggle/ 200 [0.06, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:47,122 runserver 6464 11420 [mHTTP GET /api/v1/likes/content-types/ 200 [0.06, 192.168.1.21:52549][0m
+WARNING 2025-07-13 22:42:47,225 services 6464 18092 User 2 için aktif FCM token bulunamadı
+INFO 2025-07-13 22:42:47,245 runserver 6464 11420 [mHTTP POST /api/v1/likes/likes/toggle/ 201 [0.11, 192.168.1.21:52549][0m
+INFO 2025-07-13 22:42:48,354 runserver 6464 11420 [mHTTP GET /post/96/ 200 [0.13, 192.168.1.24:51571][0m
+WARNING 2025-07-13 22:42:48,452 log 6464 12156 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:48,454 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:48,539 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51576]
+INFO 2025-07-13 22:42:48,542 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51577]
+WARNING 2025-07-13 22:42:48,590 log 6464 18756 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:48,592 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.01, 192.168.1.24:51571][0m
+WARNING 2025-07-13 22:42:48,670 log 6464 8808 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:42:48,672 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:48,686 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51600]
+INFO 2025-07-13 22:42:48,692 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51600]
+INFO 2025-07-13 22:42:48,706 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51603]
+INFO 2025-07-13 22:42:48,713 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51603]
+INFO 2025-07-13 22:42:50,613 runserver 6464 11420 [mHTTP GET /post/ 200 [0.22, 192.168.1.24:51571][0m
+INFO 2025-07-13 22:42:50,656 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:51600]
+INFO 2025-07-13 22:42:50,656 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:51603]
+WARNING 2025-07-13 22:42:50,683 log 6464 12156 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:50,684 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.02, 192.168.1.24:51571][0m
+WARNING 2025-07-13 22:42:50,724 log 6464 18756 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 22:42:50,725 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.02, 192.168.1.24:51571][0m
+WARNING 2025-07-13 22:42:50,754 log 6464 18756 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 22:42:50,756 log 6464 12964 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 22:42:50,761 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.03, 192.168.1.24:51571][0m
+WARNING 2025-07-13 22:42:50,762 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.03, 192.168.1.24:51563][0m
+WARNING 2025-07-13 22:42:50,767 log 6464 8808 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 22:42:50,768 runserver 6464 11420 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.03, 192.168.1.24:51558][0m
+WARNING 2025-07-13 22:42:50,813 log 6464 18756 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 22:42:50,814 runserver 6464 11420 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.08, 192.168.1.24:51573][0m
+WARNING 2025-07-13 22:42:50,849 log 6464 8808 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 22:42:50,849 runserver 6464 11420 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.1.24:51573][0m
+INFO 2025-07-13 22:42:50,870 runserver 6464 11420 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:51607]
+INFO 2025-07-13 22:42:50,875 runserver 6464 11420 WebSocket CONNECT /ws/notifications/ [192.168.1.24:51607]
+INFO 2025-07-13 22:42:50,898 runserver 6464 11420 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:51608]
+INFO 2025-07-13 22:42:50,907 runserver 6464 11420 WebSocket CONNECT /ws/chat/ [192.168.1.24:51608]
+INFO 2025-07-13 22:42:58,268 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/80/ [192.168.1.21:53036]
+INFO 2025-07-13 22:43:00,364 runserver 6464 11420 WebSocket DISCONNECT /ws/chat/ [192.168.1.21:53033]
+INFO 2025-07-13 22:43:00,365 runserver 6464 11420 WebSocket DISCONNECT /ws/notifications/ [192.168.1.21:53034]
+INFO 2025-07-13 22:56:47,545 autoreload 6464 11344 C:\Users\Resat\Desktop\universite\core\web\apps\notifications\models.py changed, reloading.
+INFO 2025-07-13 22:56:49,274 autoreload 16992 3880 Watching for file changes with StatReloader
+INFO 2025-07-13 22:56:50,054 services 16992 3880 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-13 22:56:51,996 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:52349]
+INFO 2025-07-13 22:56:52,243 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.24:52349]
+INFO 2025-07-13 22:56:54,000 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:52353]
+INFO 2025-07-13 22:56:54,010 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.24:52353]
+INFO 2025-07-13 23:01:52,734 runserver 16992 14860 [mHTTP GET /post/trending/ 200 [0.18, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:52,855 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 304 [0.02, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:52,860 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/fonts/fontawesome.css 304 [0.02, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:52,878 runserver 16992 14860 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:52349]
+INFO 2025-07-13 23:01:52,882 runserver 16992 14860 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:52353]
+INFO 2025-07-13 23:01:52,891 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 304 [0.04, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:52,897 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 304 [0.05, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:52,900 runserver 16992 14860 [36mHTTP GET /static/css/notifications.css 304 [0.05, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:52,903 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/css/core.css 304 [0.05, 192.168.1.24:52612][0m
+INFO 2025-07-13 23:01:52,937 runserver 16992 14860 [36mHTTP GET /static/assets/css/demo.css 304 [0.07, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:52,940 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 304 [0.07, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:52,953 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/helpers.js 304 [0.04, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:52,956 runserver 16992 14860 [36mHTTP GET /static/assets/js/config.js 304 [0.04, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:52,958 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.04, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:52,973 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 304 [0.02, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,028 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/popper/popper.js 304 [0.00, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,061 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/skin-default.svg 304 [0.01, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,098 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/skin-border.svg 304 [0.03, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:53,099 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/content-compact.svg 304 [0.04, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:53,099 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 304 [0.03, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:53,099 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 304 [0.03, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:53,102 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/content-wide.svg 304 [0.03, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,139 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 304 [0.03, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:53,141 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/horizontal-static.svg 304 [0.04, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:53,143 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/navbar-static.svg 304 [0.04, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,144 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 304 [0.04, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:53,148 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 304 [0.04, 192.168.1.24:52610][0m
+WARNING 2025-07-13 23:01:53,167 log 16992 6012 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 23:01:53,173 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.23, 192.168.1.24:52612][0m
+INFO 2025-07-13 23:01:53,174 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/direction-ltr.svg 304 [0.02, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:53,179 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/direction-rtl.svg 304 [0.03, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:53,184 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/bootstrap.js 304 [0.03, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:53,189 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 304 [0.03, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:53,193 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 304 [0.04, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,227 runserver 16992 14860 [36mHTTP GET /static/assets/img/logo/logo.png 304 [0.04, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:53,230 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 304 [0.03, 192.168.1.24:52612][0m
+INFO 2025-07-13 23:01:53,233 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 304 [0.03, 192.168.1.24:52603][0m
+INFO 2025-07-13 23:01:53,235 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 304 [0.03, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:53,245 runserver 16992 14860 [36mHTTP GET /static/assets/js/main.js 304 [0.03, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:53,246 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/menu.js 304 [0.03, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:53,268 runserver 16992 14860 [36mHTTP GET /static/js/notifications.js 304 [0.03, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:53,269 runserver 16992 14860 [36mHTTP GET /static/js/header-chat.js 304 [0.01, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:53,368 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:52617]
+WARNING 2025-07-13 23:01:53,373 log 16992 6012 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 23:01:53,374 runserver 16992 14860 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:53,455 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.24:52617]
+INFO 2025-07-13 23:01:53,475 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:52620]
+INFO 2025-07-13 23:01:53,484 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.24:52620]
+INFO 2025-07-13 23:01:53,771 runserver 16992 14860 [mHTTP GET /members/ 200 [0.16, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:53,813 runserver 16992 14860 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:52617]
+INFO 2025-07-13 23:01:53,815 runserver 16992 14860 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:52620]
+INFO 2025-07-13 23:01:53,835 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/select2/select2.css 304 [0.00, 192.168.1.24:52610][0m
+WARNING 2025-07-13 23:01:53,886 log 16992 6012 Not Found: /media/avatars/2025/05/103c6f6c-55de-42cf-b38d-33729e7eda1c.jpeg
+WARNING 2025-07-13 23:01:53,886 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/05/103c6f6c-55de-42cf-b38d-33729e7eda1c.jpeg 404 [0.05, 192.168.1.24:52610][0m
+WARNING 2025-07-13 23:01:53,927 log 16992 6012 Not Found: /media/avatars/2025/04/9c18a001-14f5-47b5-8ca8-a5add9f4e744.jpeg
+WARNING 2025-07-13 23:01:53,929 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/9c18a001-14f5-47b5-8ca8-a5add9f4e744.jpeg 404 [0.02, 192.168.1.24:52610][0m
+WARNING 2025-07-13 23:01:53,976 log 16992 6012 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 23:01:53,978 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.14, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:54,006 runserver 16992 14860 [36mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 304 [0.01, 192.168.1.24:52611][0m
+INFO 2025-07-13 23:01:54,008 runserver 16992 14860 [36mHTTP GET /static/js/waypoints/infinite.min.js 304 [0.02, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:54,008 runserver 16992 14860 [36mHTTP GET /static/js/waypoints/custom.js 304 [0.02, 192.168.1.24:52613][0m
+INFO 2025-07-13 23:01:54,015 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/select2/select2.js 304 [0.02, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:54,015 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 304 [0.02, 192.168.1.24:52612][0m
+WARNING 2025-07-13 23:01:54,178 log 16992 6012 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 23:01:54,180 runserver 16992 14860 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:54,201 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:52624]
+INFO 2025-07-13 23:01:54,213 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.24:52624]
+INFO 2025-07-13 23:01:54,241 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:52626]
+INFO 2025-07-13 23:01:54,249 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.24:52626]
+INFO 2025-07-13 23:01:54,801 runserver 16992 14860 [mHTTP GET /post/ 200 [0.39, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:54,858 runserver 16992 14860 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:52624]
+INFO 2025-07-13 23:01:54,860 runserver 16992 14860 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:52626]
+INFO 2025-07-13 23:01:54,867 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 304 [0.01, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:54,878 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 304 [0.01, 192.168.1.24:52613][0m
+WARNING 2025-07-13 23:01:54,908 log 16992 6012 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 23:01:54,910 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.04, 192.168.1.24:52612][0m
+INFO 2025-07-13 23:01:54,928 runserver 16992 14860 [36mHTTP GET /static/js/relative-time.js 304 [0.01, 192.168.1.24:52612][0m
+INFO 2025-07-13 23:01:54,975 runserver 16992 14860 [36mHTTP GET /static/bookmark/js/bookmark.js 304 [0.02, 192.168.1.24:52608][0m
+INFO 2025-07-13 23:01:54,975 runserver 16992 14860 [36mHTTP GET /static/like/js/likes.js 304 [0.02, 192.168.1.24:52612][0m
+WARNING 2025-07-13 23:01:55,060 log 16992 6012 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 23:01:55,061 log 16992 5656 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 23:01:55,073 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.12, 192.168.1.24:52613][0m
+WARNING 2025-07-13 23:01:55,075 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.12, 192.168.1.24:52611][0m
+WARNING 2025-07-13 23:01:55,093 log 16992 18500 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 23:01:55,095 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.11, 192.168.1.24:52612][0m
+WARNING 2025-07-13 23:01:55,160 log 16992 5656 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 23:01:55,163 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.20, 192.168.1.24:52603][0m
+WARNING 2025-07-13 23:01:55,163 log 16992 18500 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 23:01:55,166 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.21, 192.168.1.24:52610][0m
+WARNING 2025-07-13 23:01:55,196 log 16992 5656 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 23:01:55,198 runserver 16992 14860 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.01, 192.168.1.24:52610][0m
+INFO 2025-07-13 23:01:55,225 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:52633]
+INFO 2025-07-13 23:01:55,236 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.24:52633]
+INFO 2025-07-13 23:01:55,268 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:52635]
+INFO 2025-07-13 23:01:55,371 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.24:52635]
+INFO 2025-07-13 23:01:58,852 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.21:53691]
+INFO 2025-07-13 23:01:58,853 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.21:53690]
+INFO 2025-07-13 23:01:58,861 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.21:53691]
+INFO 2025-07-13 23:01:58,863 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.21:53690]
+INFO 2025-07-13 23:01:58,963 runserver 16992 14860 [mHTTP GET /api/v1/chat/rooms/ 200 [0.11, 192.168.1.21:52571][0m
+INFO 2025-07-13 23:01:59,864 runserver 16992 14860 WebSocket DISCONNECT /ws/chat/ [192.168.1.21:53690]
+INFO 2025-07-13 23:01:59,864 runserver 16992 14860 WebSocket DISCONNECT /ws/notifications/ [192.168.1.21:53691]
+INFO 2025-07-13 23:01:59,936 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.21:53692]
+INFO 2025-07-13 23:01:59,938 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.21:53693]
+INFO 2025-07-13 23:01:59,948 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.21:53692]
+INFO 2025-07-13 23:01:59,951 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.21:53693]
+INFO 2025-07-13 23:02:00,036 runserver 16992 14860 [mHTTP GET /api/v1/chat/rooms/ 200 [0.10, 192.168.1.21:52571][0m
+INFO 2025-07-13 23:02:01,979 runserver 16992 14860 [mHTTP GET /api/v1/notifications/list/?page=1&page_size=20 200 [0.13, 192.168.1.21:52572][0m
+INFO 2025-07-13 23:02:02,020 runserver 16992 14860 [mHTTP GET /api/v1/notifications/notification-types/ 200 [0.17, 192.168.1.21:52571][0m
+INFO 2025-07-13 23:08:11,206 runserver 16992 14860 [32mHTTP GET /logout/ 302 [0.07, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,228 runserver 16992 14860 [mHTTP GET /login/ 200 [0.02, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,287 runserver 16992 14860 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:52633]
+INFO 2025-07-13 23:08:11,288 runserver 16992 14860 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:52635]
+INFO 2025-07-13 23:08:11,333 runserver 16992 14860 [36mHTTP GET /static/assets/css/demo.css 304 [0.03, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,334 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/form-validation.css 304 [0.03, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:11,336 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/css/pages/page-auth.css 304 [0.03, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:11,339 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/css/core.css 304 [0.03, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,341 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css 304 [0.03, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:11,343 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/fonts/iconify-icons.css 304 [0.03, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:11,399 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.css 304 [0.05, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,401 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr-themes.css 304 [0.04, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:11,402 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/helpers.js 304 [0.04, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:11,402 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/template-customizer.js 304 [0.04, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:11,405 runserver 16992 14860 [36mHTTP GET /static/assets/js/config.js 304 [0.04, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,415 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/jquery/jquery.js 304 [0.02, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:11,425 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/popper/popper.js 304 [0.01, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,459 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/bootstrap.js 304 [0.00, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,464 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/node-waves/node-waves.js 304 [0.01, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:11,482 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/skin-default.svg 304 [0.01, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,502 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/skin-border.svg 304 [0.03, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:11,503 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/content-compact.svg 304 [0.03, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:11,503 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/layouts-collapsed.svg 304 [0.03, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:11,505 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/layouts-expanded.svg 304 [0.03, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:11,505 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/horizontal-fixed.svg 304 [0.03, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,520 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/content-wide.svg 304 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,533 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/horizontal-static.svg 304 [0.03, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:11,536 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/navbar-hidden.svg 304 [0.03, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:11,538 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/navbar-sticky.svg 304 [0.03, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:11,538 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/navbar-static.svg 304 [0.03, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:11,542 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/direction-ltr.svg 304 [0.03, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,550 runserver 16992 14860 [36mHTTP GET /static/assets/img/customizer/direction-rtl.svg 304 [0.03, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,563 runserver 16992 14860 [36mHTTP GET /static/assets/img/logo/logo.png 304 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:11,572 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js 304 [0.02, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:11,573 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/%40algolia/autocomplete-js.js 304 [0.02, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,575 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/hammer/hammer.js 304 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:11,578 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/pickr/pickr.js 304 [0.02, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:11,579 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/js/menu.js 304 [0.02, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:11,606 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/popular.js 304 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:11,609 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/bootstrap5.js 304 [0.02, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:11,612 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/%40form-validation/auto-focus.js 304 [0.01, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:11,615 runserver 16992 14860 [36mHTTP GET /static/assets/js/main.js 304 [0.01, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:11,618 runserver 16992 14860 [36mHTTP GET /static/assets/js/pages-auth.js 304 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,073 runserver 16992 14860 [32mHTTP POST /login/ 302 [0.85, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,140 runserver 16992 14860 [32mHTTP GET / 302 [0.06, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,389 runserver 16992 14860 [mHTTP GET /post/ 200 [0.24, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,457 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/fonts/fontawesome.css 304 [0.01, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,457 runserver 16992 14860 [36mHTTP GET /static/css/notifications.css 304 [0.01, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:16,458 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.css 304 [0.01, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:16,460 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/select2/select2.css 304 [0.01, 192.168.1.24:53020][0m
+WARNING 2025-07-13 23:08:16,502 log 16992 14180 Not Found: /media/posts/2025/06/post_image_0.jpg
+WARNING 2025-07-13 23:08:16,502 log 16992 5656 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 23:08:16,504 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_0.jpg 404 [0.04, 192.168.1.24:53020][0m
+WARNING 2025-07-13 23:08:16,505 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.04, 192.168.1.24:53029][0m
+WARNING 2025-07-13 23:08:16,572 log 16992 14180 Not Found: /media/posts/2025/06/post_image_2.jpg
+WARNING 2025-07-13 23:08:16,572 log 16992 5656 Not Found: /media/posts/2025/06/post_image_1.jpg
+WARNING 2025-07-13 23:08:16,574 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_2.jpg 404 [0.04, 192.168.1.24:53020][0m
+WARNING 2025-07-13 23:08:16,576 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_1.jpg 404 [0.04, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,593 runserver 16992 14860 [36mHTTP GET /static/js/notifications.js 304 [0.02, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:16,594 runserver 16992 14860 [36mHTTP GET /static/js/header-chat.js 304 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:16,596 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/select2/select2.js 304 [0.01, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:16,597 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/select2/forms-selects.js 304 [0.01, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,597 runserver 16992 14860 [36mHTTP GET /static/assets/vendor/libs/fancybox/jquery.fancybox.min.js 304 [0.01, 192.168.1.24:53020][0m
+WARNING 2025-07-13 23:08:16,605 log 16992 19176 Not Found: /media/posts/2025/06/post_image_3.jpg
+WARNING 2025-07-13 23:08:16,606 runserver 16992 14860 [33mHTTP GET /media/posts/2025/06/post_image_3.jpg 404 [0.05, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:16,626 runserver 16992 14860 [36mHTTP GET /static/js/relative-time.js 304 [0.02, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:16,626 runserver 16992 14860 [36mHTTP GET /static/js/waypoints/jquery.waypoints.min.js 304 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:16,628 runserver 16992 14860 [36mHTTP GET /static/bookmark/js/bookmark.js 304 [0.02, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:16,630 runserver 16992 14860 [36mHTTP GET /static/js/waypoints/infinite.min.js 304 [0.02, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:16,632 runserver 16992 14860 [36mHTTP GET /static/js/waypoints/custom.js 304 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:16,638 runserver 16992 14860 [36mHTTP GET /static/like/js/likes.js 304 [0.02, 192.168.1.24:53031][0m
+WARNING 2025-07-13 23:08:16,719 log 16992 18500 Not Found: /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg
+WARNING 2025-07-13 23:08:16,722 runserver 16992 14860 [33mHTTP GET /media/avatars/2025/04/18dc23c2-8068-4127-9628-5199c9d35431.jpeg 404 [0.09, 192.168.1.24:53029][0m
+WARNING 2025-07-13 23:08:16,737 log 16992 5656 Not Found: /static/assets/json/search-vertical.json
+WARNING 2025-07-13 23:08:16,739 runserver 16992 14860 [33mHTTP GET /static/assets/json/search-vertical.json 404 [0.02, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:16,776 runserver 16992 14860 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.24:53042]
+INFO 2025-07-13 23:08:16,841 runserver 16992 14860 WebSocket CONNECT /ws/notifications/ [192.168.1.24:53042]
+INFO 2025-07-13 23:08:16,857 runserver 16992 14860 WebSocket HANDSHAKING /ws/chat/ [192.168.1.24:53044]
+INFO 2025-07-13 23:08:16,867 runserver 16992 14860 WebSocket CONNECT /ws/chat/ [192.168.1.24:53044]
+INFO 2025-07-13 23:08:18,639 runserver 16992 14860 [mHTTP GET /admin/ 200 [0.20, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:18,677 runserver 16992 14860 WebSocket DISCONNECT /ws/notifications/ [192.168.1.24:53042]
+INFO 2025-07-13 23:08:18,678 runserver 16992 14860 WebSocket DISCONNECT /ws/chat/ [192.168.1.24:53044]
+INFO 2025-07-13 23:08:18,698 runserver 16992 14860 [mHTTP GET /static/admin/css/base.css 200 [0.02, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:18,702 runserver 16992 14860 [mHTTP GET /static/admin/css/dashboard.css 200 [0.02, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:18,704 runserver 16992 14860 [mHTTP GET /static/admin/js/theme.js 200 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:18,705 runserver 16992 14860 [mHTTP GET /static/admin/css/dark_mode.css 200 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:18,707 runserver 16992 14860 [mHTTP GET /static/admin/css/nav_sidebar.css 200 [0.02, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:18,710 runserver 16992 14860 [mHTTP GET /static/admin/css/responsive.css 200 [0.02, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:18,745 runserver 16992 14860 [mHTTP GET /static/admin/js/nav_sidebar.js 200 [0.01, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:18,767 runserver 16992 14860 [mHTTP GET /static/admin/img/icon-addlink.svg 200 [0.01, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:18,769 runserver 16992 14860 [mHTTP GET /static/admin/img/icon-deletelink.svg 200 [0.01, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:18,770 runserver 16992 14860 [mHTTP GET /static/admin/img/icon-changelink.svg 200 [0.01, 192.168.1.24:53030][0m
+WARNING 2025-07-13 23:08:18,851 log 16992 19176 Not Found: /favicon.ico
+WARNING 2025-07-13 23:08:18,851 runserver 16992 14860 [33mHTTP GET /favicon.ico 404 [0.01, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:23,629 runserver 16992 14860 [mHTTP GET /admin/push_notifications/fcmtoken/ 200 [0.25, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:23,679 runserver 16992 14860 [mHTTP GET /static/admin/css/changelists.css 200 [0.01, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:23,688 runserver 16992 14860 [mHTTP GET /static/admin/css/forms.css 200 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:23,690 runserver 16992 14860 [mHTTP GET /static/admin/js/vendor/jquery/jquery.min.js 200 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:23,693 runserver 16992 14860 [mHTTP GET /static/admin/js/jquery.init.js 200 [0.02, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:23,694 runserver 16992 14860 [mHTTP GET /static/admin/js/core.js 200 [0.02, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:23,710 runserver 16992 14860 [mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 200 [0.02, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:23,720 runserver 16992 14860 [mHTTP GET /static/admin/js/actions.js 200 [0.02, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:23,721 runserver 16992 14860 [mHTTP GET /static/admin/css/widgets.css 200 [0.02, 192.168.1.24:53025][0m
+INFO 2025-07-13 23:08:23,723 runserver 16992 14860 [mHTTP GET /static/admin/js/urlify.js 200 [0.02, 192.168.1.24:53028][0m
+INFO 2025-07-13 23:08:23,724 runserver 16992 14860 [mHTTP GET /static/admin/js/prepopulate.js 200 [0.02, 192.168.1.24:53031][0m
+INFO 2025-07-13 23:08:23,735 runserver 16992 14860 [mHTTP GET /static/admin/js/vendor/xregexp/xregexp.min.js 200 [0.02, 192.168.1.24:53030][0m
+INFO 2025-07-13 23:08:23,740 runserver 16992 14860 [mHTTP GET /static/admin/img/search.svg 200 [0.01, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:23,749 runserver 16992 14860 [mHTTP GET /static/admin/js/filters.js 200 [0.00, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:23,905 runserver 16992 14860 [mHTTP GET /admin/jsi18n/ 200 [0.23, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:23,945 runserver 16992 14860 [mHTTP GET /static/admin/img/icon-viewlink.svg 200 [0.00, 192.168.1.24:53029][0m
+INFO 2025-07-13 23:08:23,946 runserver 16992 14860 [mHTTP GET /static/admin/img/tooltag-add.svg 200 [0.00, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:26,488 runserver 16992 14860 [mHTTP GET /admin/push_notifications/notificationlog/ 200 [0.08, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:08:26,748 runserver 16992 14860 [mHTTP GET /admin/jsi18n/ 200 [0.23, 192.168.1.24:53020][0m
+INFO 2025-07-13 23:32:06,135 autoreload 16992 3880 C:\Users\Resat\Desktop\universite\core\web\apps\push_notifications\api\serializers.py changed, reloading.
+INFO 2025-07-13 23:32:08,243 autoreload 12528 7420 Watching for file changes with StatReloader
+INFO 2025-07-13 23:32:09,005 services 12528 7420 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-13 23:32:09,401 runserver 12528 19200 WebSocket HANDSHAKING /ws/notifications/ [192.168.1.21:54853]
+INFO 2025-07-13 23:32:09,404 runserver 12528 19200 WebSocket HANDSHAKING /ws/chat/ [192.168.1.21:54854]
+INFO 2025-07-13 23:32:09,598 runserver 12528 19200 WebSocket CONNECT /ws/notifications/ [192.168.1.21:54853]
+INFO 2025-07-13 23:32:09,599 runserver 12528 19200 WebSocket CONNECT /ws/chat/ [192.168.1.21:54854]
+INFO 2025-07-13 23:32:23,474 runserver 12528 19200 [mHTTP GET /admin/push_notifications/notificationlog/ 200 [0.17, 192.168.1.24:54588][0m
+INFO 2025-07-13 23:32:23,584 runserver 12528 19200 [36mHTTP GET /static/admin/css/base.css 304 [0.01, 192.168.1.24:54588][0m
+INFO 2025-07-13 23:32:23,615 runserver 12528 19200 [36mHTTP GET /static/admin/js/theme.js 304 [0.03, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:23,615 runserver 12528 19200 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.03, 192.168.1.24:54593][0m
+INFO 2025-07-13 23:32:23,616 runserver 12528 19200 [36mHTTP GET /static/admin/css/changelists.css 304 [0.03, 192.168.1.24:54595][0m
+INFO 2025-07-13 23:32:23,616 runserver 12528 19200 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.03, 192.168.1.24:54594][0m
+INFO 2025-07-13 23:32:23,616 runserver 12528 19200 [36mHTTP GET /static/admin/css/responsive.css 304 [0.02, 192.168.1.24:54596][0m
+INFO 2025-07-13 23:32:23,616 runserver 12528 19200 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.min.js 304 [0.02, 192.168.1.24:54588][0m
+INFO 2025-07-13 23:32:23,648 runserver 12528 19200 [36mHTTP GET /static/admin/js/core.js 304 [0.02, 192.168.1.24:54593][0m
+INFO 2025-07-13 23:32:23,650 runserver 12528 19200 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.02, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:23,650 runserver 12528 19200 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.02, 192.168.1.24:54594][0m
+INFO 2025-07-13 23:32:23,653 runserver 12528 19200 [36mHTTP GET /static/admin/js/actions.js 304 [0.03, 192.168.1.24:54596][0m
+INFO 2025-07-13 23:32:23,654 runserver 12528 19200 [36mHTTP GET /static/admin/js/urlify.js 304 [0.03, 192.168.1.24:54588][0m
+INFO 2025-07-13 23:32:23,673 runserver 12528 19200 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.02, 192.168.1.24:54593][0m
+INFO 2025-07-13 23:32:23,674 runserver 12528 19200 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.min.js 304 [0.02, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:23,683 runserver 12528 19200 [36mHTTP GET /static/admin/img/search.svg 304 [0.02, 192.168.1.24:54594][0m
+INFO 2025-07-13 23:32:23,702 runserver 12528 19200 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.01, 192.168.1.24:54594][0m
+INFO 2025-07-13 23:32:23,715 runserver 12528 19200 [36mHTTP GET /static/admin/js/filters.js 304 [0.01, 192.168.1.24:54594][0m
+INFO 2025-07-13 23:32:23,766 runserver 12528 19200 [mHTTP GET /admin/jsi18n/ 200 [0.14, 192.168.1.24:54595][0m
+INFO 2025-07-13 23:32:23,804 runserver 12528 19200 [36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.00, 192.168.1.24:54595][0m
+INFO 2025-07-13 23:32:23,807 runserver 12528 19200 [36mHTTP GET /static/admin/img/tooltag-add.svg 304 [0.00, 192.168.1.24:54594][0m
+INFO 2025-07-13 23:32:23,809 runserver 12528 19200 [36mHTTP GET /static/admin/img/icon-viewlink.svg 304 [0.00, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:26,144 runserver 12528 19200 [mHTTP GET /admin/push_notifications/fcmtoken/ 200 [0.08, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:26,192 runserver 12528 19200 [36mHTTP GET /static/admin/css/forms.css 304 [0.01, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:26,213 runserver 12528 19200 [36mHTTP GET /static/admin/css/widgets.css 304 [0.00, 192.168.1.24:54589][0m
+INFO 2025-07-13 23:32:26,268 runserver 12528 19200 [mHTTP GET /admin/jsi18n/ 200 [0.08, 192.168.1.24:54594][0m

@@ -171,10 +171,10 @@ class Notification(models.Model):
     def send_push_notification(self):
         """Push notification gönder"""
         try:
-            from apps.push_notifications.services import send_notification_push
+            from apps.push_notifications.services import firebase_service
             
             # Kullanıcıya push notification gönder
-            success = send_notification_push(
+            success = firebase_service.send_notification(
                 user_id=self.recipient.id,
                 title=self.title,
                 body=self.text,

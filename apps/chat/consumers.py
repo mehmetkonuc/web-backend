@@ -9,7 +9,7 @@ import jwt
 from .models import ChatRoom, Message
 from apps.common.templatetags.time_tags import relative_time
 from .utils import can_message_user
-from apps.push_notifications.services import ExpoPushNotificationService
+from apps.push_notifications.services import firebase_service
 
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
@@ -666,35 +666,29 @@ class ChatConsumer(AsyncWebsocketConsumer):
         Sadece offline olan kullanıcılara gönderir
         """
         try:
-            push_service = ExpoPushNotificationService()
-            
             for recipient in recipients:
-                # Kullanıcının aktif push token'ları var mı kontrol et
-                tokens = push_service.get_user_tokens(recipient.id)
+                # Firebase servisi ile push notification gönder
+                title = f"Yeni mesaj - {message.sender.get_full_name() or message.sender.username}"
+                body = message.text[:100] + "..." if len(message.text) > 100 else message.text
                 
-                if tokens:
-                    # Push notification mesajını hazırla
-                    title = f"Yeni mesaj - {message.sender.get_full_name() or message.sender.username}"
-                    body = message.text[:100] + "..." if len(message.text) > 100 else message.text
-                    
-                    # Ekstra data
-                    data = {
-                        'type': 'chat_message',
-                        'room_id': str(chat_room.id),
-                        'message_id': str(message.id),
-                        'sender_id': str(message.sender.id),
-                        'sender_name': message.sender.get_full_name() or message.sender.username
-                    }
-                    
-                    # Bulk notification gönder
-                    push_service.send_bulk_notification(
-                        tokens=tokens,
-                                            title=title,
-                        body=body,
-                        data=data
-                    )
-                    
-                    print(f"Chat: Push notification sent to {recipient.username} for message {message.id}")
+                # Ekstra data
+                data = {
+                    'type': 'chat_message',
+                    'room_id': str(chat_room.id),
+                    'message_id': str(message.id),
+                    'sender_id': str(message.sender.id),
+                    'sender_name': message.sender.get_full_name() or message.sender.username
+                }
+                
+                # Firebase servis ile push notification gönder
+                firebase_service.send_notification(
+                    user_id=recipient.id,
+                    title=title,
+                    body=body,
+                    data=data
+                )
+                
+                print(f"Chat: Push notification sent to {recipient.username} for message {message.id}")
                 
         except Exception as e:
             print(f"Chat: Push notification error: {str(e)}")

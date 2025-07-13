@@ -20,7 +20,7 @@ from django.contrib.auth.models import User
 from apps.notifications.services import NotificationService
 from apps.push_notifications.models import PushToken
 from apps.chat.models import ChatRoom, Message
-from apps.push_notifications.services import ExpoPushNotificationService
+from apps.push_notifications.services import firebase_service
 
 def test_push_notifications():
     print("🚀 Push Notifications Test Başlıyor...")

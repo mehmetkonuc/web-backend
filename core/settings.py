@@ -466,3 +466,16 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True,
 }
 
+# ==============================================================================
+# FIREBASE CONFIGURATION
+# ==============================================================================
+
+# Firebase Admin SDK Service Account Key dosyasının yolu
+FIREBASE_SERVICE_ACCOUNT_KEY = config(
+    'FIREBASE_SERVICE_ACCOUNT_KEY', 
+    default=os.path.join(BASE_DIR, 'firebase-service-account.json')
+)
+
+# Firebase service account key dosyası var mı kontrol et
+FIREBASE_ENABLED = os.path.exists(FIREBASE_SERVICE_ACCOUNT_KEY)
+
