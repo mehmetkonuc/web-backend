@@ -114,6 +114,7 @@ class FirebaseNotificationService:
         Tek bir kullanıcıya push notification gönderir
         """
         try:
+            logger.error("deneme", FIREBASE_AVAILABLE, self.app)
             if not FIREBASE_AVAILABLE or not self.app:
                 logger.error("Firebase başlatılmamış veya mevcut değil")
                 return False
@@ -196,6 +197,8 @@ class FirebaseNotificationService:
         results = {"success": 0, "failed": 0}
         
         if not FIREBASE_AVAILABLE or not self.app:
+            logger.error("deneme", FIREBASE_AVAILABLE, self.app)
+
             logger.error("Firebase başlatılmamış veya mevcut değil")
             return results
         
