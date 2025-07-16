@@ -8,20 +8,47 @@ from apps.comment.models import Comment, CommentImage
 
 class UserSerializer(serializers.ModelSerializer):
     avatar_url = serializers.SerializerMethodField()
+    avatar_thumbnail = serializers.SerializerMethodField()
+    avatar_medium = serializers.SerializerMethodField()
     full_name = serializers.SerializerMethodField()
     is_verified = serializers.SerializerMethodField()
     university = serializers.SerializerMethodField()
     
     class Meta:
         model = User
-        fields = ['id', 'username', 'avatar_url', 'full_name', 'is_verified', 'university']
+        fields = [
+            'id', 'username', 'avatar_url', 'avatar_thumbnail', 
+            'avatar_medium', 'full_name', 'is_verified', 'university'
+        ]
     
     def get_avatar_url(self, obj):
-        if hasattr(obj, 'profile') and obj.profile.avatar:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.profile.avatar.url)
-            return obj.profile.avatar.url
+        """Backward compatibility için original avatar"""
+        if hasattr(obj, 'profile') and obj.profile:
+            url = obj.profile.get_avatar_url('original')
+            if url:
+                request = self.context.get('request')
+                if request:
+                    return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_thumbnail(self, obj):
+        """Avatar thumbnail (150x150)"""
+        if hasattr(obj, 'profile') and obj.profile:
+            url = obj.profile.get_avatar_url('thumbnail')
+            if url:
+                request = self.context.get('request')
+                if request:
+                    return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_medium(self, obj):
+        """Avatar medium (300x300)"""
+        if hasattr(obj, 'profile') and obj.profile:
+            url = obj.profile.get_avatar_url('medium')
+            if url:
+                request = self.context.get('request')
+                if request:
+                    return request.build_absolute_uri(url)
         return None
     
     def get_full_name(self, obj):
@@ -39,18 +66,80 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class CommentImageSerializer(serializers.ModelSerializer):
-    image = serializers.SerializerMethodField()
+    """
+    Optimize edilmiş CommentImage serializer - multiple image sizes destekler
+    """
+    # Multiple image sizes
+    image_thumbnail = serializers.SerializerMethodField()
+    image_medium = serializers.SerializerMethodField()
+    image_large = serializers.SerializerMethodField()
+    image_original = serializers.SerializerMethodField()
+    
+    # Metadata
+    file_size_formatted = serializers.SerializerMethodField()
+    dimensions = serializers.SerializerMethodField()
     
     class Meta:
         model = CommentImage
-        fields = ['id', 'image', 'order']
+        fields = [
+            'id', 'order', 'processed',
+            'image_thumbnail', 'image_medium', 'image_large', 'image_original',
+            'file_size', 'file_size_formatted', 'format', 'dimensions'
+        ]
     
-    def get_image(self, obj):
-        request = self.context.get('request')
-        if obj.image and hasattr(obj.image, 'url'):
+    def get_image_thumbnail(self, obj):
+        """Thumbnail URL'ini döndür (150x150)"""
+        url = obj.get_best_image_url('thumbnail')
+        if url:
+            request = self.context.get('request')
             if request:
-                return request.build_absolute_uri(obj.image.url)
-            return obj.image.url
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_image_medium(self, obj):
+        """Medium URL'ini döndür (600x600)"""
+        url = obj.get_best_image_url('medium')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_image_large(self, obj):
+        """Large URL'ini döndür (1200x1200)"""
+        url = obj.get_best_image_url('large')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_image_original(self, obj):
+        """Original URL'ini döndür"""
+        url = obj.get_best_image_url('original')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_file_size_formatted(self, obj):
+        """Dosya boyutunu human-readable formatta döndür"""
+        if not obj.file_size:
+            return None
+        
+        # Convert bytes to human readable format
+        file_size = obj.file_size
+        for unit in ['B', 'KB', 'MB', 'GB']:
+            if file_size < 1024.0:
+                return f"{file_size:.1f} {unit}"
+            file_size /= 1024.0
+        return f"{file_size:.1f} TB"
+    
+    def get_dimensions(self, obj):
+        """Resim boyutlarını döndür"""
+        if obj.original_width and obj.original_height:
+            return f"{obj.original_width}x{obj.original_height}"
         return None
 
 

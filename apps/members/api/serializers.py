@@ -18,11 +18,16 @@ class MemberListSerializer(serializers.ModelSerializer):
     is_following = serializers.SerializerMethodField()
     has_pending_request = serializers.SerializerMethodField()
     is_blocked = serializers.SerializerMethodField()
+    # Multi-size avatar support
+    avatar_thumbnail = serializers.URLField(read_only=True)
+    avatar_medium = serializers.URLField(read_only=True)
+    avatar_large = serializers.URLField(read_only=True)
     
     class Meta:
         model = Profile
         fields = [
-            'user', 'avatar', 'university', 'university_name', 
+            'user', 'avatar', 'avatar_thumbnail', 'avatar_medium', 'avatar_large',
+            'university', 'university_name', 
             'department', 'department_name', 'graduation_status', 
             'graduation_status_name', 'is_private', 'is_verified', 'bio',
             'followers_count', 'following_count', 'is_following', 

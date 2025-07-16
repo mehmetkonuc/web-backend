@@ -18,6 +18,13 @@ class ProfileSerializer(serializers.ModelSerializer):
     university_name = serializers.CharField(source='university.name', read_only=True)
     department_name = serializers.CharField(source='department.name', read_only=True)
     graduation_status_name = serializers.CharField(source='graduation_status.name', read_only=True)
+    
+    # Multi-size avatar support
+    avatar_url = serializers.SerializerMethodField()
+    avatar_thumbnail = serializers.SerializerMethodField()
+    avatar_medium = serializers.SerializerMethodField()
+    avatar_large = serializers.SerializerMethodField()
+    
     followers_count = serializers.SerializerMethodField()
     following_count = serializers.SerializerMethodField()
     is_following = serializers.SerializerMethodField()
@@ -30,13 +37,49 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = [
-            'user', 'avatar', 'university', 'university_name', 
-            'department', 'department_name', 'graduation_status', 
+            'user', 'avatar', 'avatar_url', 'avatar_thumbnail', 'avatar_medium', 'avatar_large',
+            'university', 'university_name', 'department', 'department_name', 'graduation_status', 
             'graduation_status_name', 'is_private', 'is_verified', 'bio',
             'followers_count', 'following_count', 'is_following', 'has_pending_request',
             'is_blocked_by', 'is_blocked', 'follow_requests_count', 'email_verified', 'is_messaging',
             'message_privacy'
         ]
+    
+    def get_avatar_url(self, obj):
+        """Backward compatibility için original avatar"""
+        url = obj.get_avatar_url('original')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_thumbnail(self, obj):
+        """Avatar thumbnail (150x150)"""
+        url = obj.get_avatar_url('thumbnail')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_medium(self, obj):
+        """Avatar medium (300x300)"""
+        url = obj.get_avatar_url('medium')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_large(self, obj):
+        """Avatar large (600x600)"""
+        url = obj.get_avatar_url('large')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
     
     def get_followers_count(self, obj):
         return obj.get_followers_count()

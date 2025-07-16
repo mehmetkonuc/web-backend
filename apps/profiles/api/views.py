@@ -500,16 +500,28 @@ class AvatarUploadView(APIView):
                 # Base64'ten dosyaya dönüştürme
                 data = ContentFile(base64.b64decode(imgstr))
                 
-                # Profil resmi güncelleme
+                # Eski avatar resimlerini temizle
                 if profile.avatar:
-                    # Eski resmi sil
+                    # Eski resmi sil (signal handler yeni boyutları oluşturacak)
                     if os.path.isfile(profile.avatar.path):
                         os.remove(profile.avatar.path)
                 
+                # Processing flag'ini sıfırla ki signal handler çalışsın
+                profile.avatar_processed = False
+                
+                # Yeni avatar'ı kaydet (signal handler otomatik olarak processing yapacak)
                 profile.avatar.save(filename, data, save=True)
                 
+                # Signal handler'ın işlemesini bekle
+                profile.refresh_from_db()
+                
+                # Response'a yeni multi-size avatar bilgilerini ekle
                 serializer = ProfileSerializer(profile, context={'request': request})
-                return Response(serializer.data)
+                return Response({
+                    "success": True,
+                    "message": "Profil resmi başarıyla yüklendi",
+                    "profile": serializer.data
+                })
             except Exception as e:
                 return Response({"detail": f"Profil resmi yüklenirken hata oluştu: {str(e)}"}, 
                                 status=status.HTTP_400_BAD_REQUEST)
@@ -530,16 +542,34 @@ class AvatarDeleteView(APIView):
             
             # Profil resmi varsa sil
             if profile.avatar:
-                # Dosya sisteminden sil
+                # Dosya sisteminden sil (original)
                 if os.path.isfile(profile.avatar.path):
                     os.remove(profile.avatar.path)
+                
+                # Tüm processed boyutları da sil
+                try:
+                    avatar_dir = os.path.dirname(profile.avatar.path)
+                    avatar_name = os.path.splitext(os.path.basename(profile.avatar.path))[0]
+                    
+                    # thumbnail, medium, large dosyalarını ara ve sil
+                    for size in ['thumbnail', 'medium', 'large']:
+                        processed_file = os.path.join(avatar_dir, f"{avatar_name}_{size}.webp")
+                        if os.path.isfile(processed_file):
+                            os.remove(processed_file)
+                except Exception as e:
+                    # Processed dosyalar silinmese de devam et
+                    pass
                 
                 # Veritabanı kaydını sil
                 profile.avatar = None
                 profile.save()
                 
                 serializer = ProfileSerializer(profile, context={'request': request})
-                return Response(serializer.data)
+                return Response({
+                    "success": True,
+                    "message": "Profil resmi başarıyla silindi",
+                    "profile": serializer.data
+                })
             else:
                 return Response({"detail": "Kaldırılacak bir profil resmi bulunamadı"}, 
                                 status=status.HTTP_400_BAD_REQUEST)

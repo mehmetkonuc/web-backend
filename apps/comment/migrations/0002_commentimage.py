@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             name='CommentImage',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to=apps.comment.models.post_image_upload_path, verbose_name='Resim')),
+                ('image', models.ImageField(upload_to=apps.comment.models.comment_image_upload_path, verbose_name='Resim')),
                 ('order', models.PositiveSmallIntegerField(default=0, verbose_name='Sıralama')),
                 ('comment', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='comment.comment', verbose_name='Yorum')),
             ],

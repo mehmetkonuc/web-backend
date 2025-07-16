@@ -189,3 +189,25 @@ class CommentViewSet(viewsets.ModelViewSet):
                 {"detail": f"Error retrieving parent info: {str(e)}"},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+    def create(self, request, *args, **kwargs):
+        """
+        Override create to provide better response with optimized image data
+        """
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        # Create comment (serializer'da image processing dahil)
+        comment = serializer.save()
+        
+        # Response için fresh serializer kullan (tüm relationship'ler ile)
+        response_serializer = self.get_serializer(comment)
+        
+        return Response(
+            {
+                'success': True,
+                'message': 'Yorum başarıyla oluşturuldu',
+                'comment': response_serializer.data
+            },
+            status=status.HTTP_201_CREATED
+        )

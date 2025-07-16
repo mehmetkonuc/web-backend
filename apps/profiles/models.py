@@ -4,15 +4,25 @@ from apps.dataset.models import University, Department, GraduationStatus
 import os
 from datetime import datetime
 from apps.notifications.services import NotificationService
-from django.db.models.signals import post_delete, pre_save
+from django.db.models.signals import post_delete, pre_save, post_save
 from django.dispatch import receiver
 
 def avatar_upload_path(instance, filename):
-    # Dosyanın yükleneceği yolu yıl/ay formatında ayarla
+    """Upload path for profile avatars organized by date and user ID"""
+    # Hibrit yaklaşım: Tarih bazında ana klasörleme + user ID klasörü + dosyalar
     now = datetime.now()
-    path = os.path.join('avatars', str(now.year), str(now.month).zfill(2))
-    # Dosya adını korumak için
-    return os.path.join(path, filename)
+    user_id = instance.user.id if hasattr(instance, 'user') and instance.user else 'temp'
+    
+    # Format: avatars/2025/07/15/100/user_100_avatar.webp
+    path = os.path.join(
+        'avatars',
+        str(now.year),
+        str(now.month).zfill(2),
+        str(now.day).zfill(2),
+        str(user_id),
+        f'user_{user_id}_{filename}'
+    )
+    return path
 
 # Create your models here.
 class Profile(models.Model):
@@ -24,7 +34,15 @@ class Profile(models.Model):
     ]
     
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile', verbose_name="Kullanıcı")
-    avatar = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, verbose_name="Profil Fotoğrafı")
+    
+    # Avatar images - multiple sizes için
+    avatar = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Profil Fotoğrafı (Orijinal)")
+    avatar_thumbnail = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Avatar Thumbnail (150x150)")
+    avatar_medium = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Avatar Medium (300x300)")
+    
+    # Avatar metadata
+    avatar_processed = models.BooleanField(default=False, verbose_name="Avatar İşlenmiş", help_text="Avatar backend tarafından işlendi mi?")
+    
     university = models.ForeignKey(University, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Üniversite")
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Bölüm")
     graduation_status = models.ForeignKey(GraduationStatus, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Mezuniyet Durumu")
@@ -240,6 +258,40 @@ class Profile(models.Model):
         else:  # 'everyone'
             return True
     
+    def get_avatar_url(self, size='medium'):
+        """
+        En uygun avatar URL'ini döndür.
+        
+        Args:
+            size: 'thumbnail', 'medium', 'original'
+        """
+        if size == 'thumbnail' and self.avatar_thumbnail:
+            return self.avatar_thumbnail.url
+        elif size == 'medium' and self.avatar_medium:
+            return self.avatar_medium.url
+        elif size == 'original' and self.avatar:
+            return self.avatar.url
+        else:
+            # Fallback: En yakın boyutu döndür
+            if self.avatar_medium:
+                return self.avatar_medium.url
+            elif self.avatar_thumbnail:
+                return self.avatar_thumbnail.url
+            elif self.avatar:
+                return self.avatar.url
+            return None
+    
+    def get_all_avatar_sizes(self):
+        """Mevcut tüm avatar boyutlarını döndür"""
+        sizes = {}
+        if self.avatar_thumbnail:
+            sizes['thumbnail'] = self.avatar_thumbnail.url
+        if self.avatar_medium:
+            sizes['medium'] = self.avatar_medium.url
+        if self.avatar:
+            sizes['original'] = self.avatar.url
+        return sizes
+    
     class Meta:
         verbose_name = "Kullanıcı Profili"
         verbose_name_plural = "Kullanıcı Profilleri"
@@ -337,26 +389,82 @@ class FollowRequest(models.Model):
 
 # Signal fonksiyonları
 @receiver(post_delete, sender=Profile)
-def delete_avatar_on_profile_delete(sender, instance, **kwargs):
-    """Profil silindiğinde avatar dosyasını da sil"""
-    if instance.avatar and hasattr(instance.avatar, 'path'):
-        if os.path.isfile(instance.avatar.path):
-            os.remove(instance.avatar.path)
+def delete_avatar_files_on_profile_delete(sender, instance, **kwargs):
+    """Profil silindiğinde tüm avatar dosyalarını sil"""
+    for field_name in ['avatar', 'avatar_thumbnail', 'avatar_medium']:
+        field = getattr(instance, field_name)
+        if field and hasattr(field, 'path') and os.path.isfile(field.path):
+            os.remove(field.path)
+
 
 @receiver(pre_save, sender=Profile)
-def delete_old_avatar_on_change(sender, instance, **kwargs):
-    """Avatar değiştirildiğinde veya silindiğinde eski dosyayı sil"""
+def delete_old_avatar_files_on_change(sender, instance, **kwargs):
+    """Avatar değiştirildiğinde veya silindiğinde eski dosyaları sil"""
     if not instance.pk:
         return  # Yeni kayıt ise hiçbir şey yapma
 
     try:
         old_instance = Profile.objects.get(pk=instance.pk)
-        old_avatar = old_instance.avatar
-        new_avatar = instance.avatar
         
-        # Eğer avatar değişmişse veya silinmişse eski dosyayı sil
-        if old_avatar and old_avatar != new_avatar:
-            if hasattr(old_avatar, 'path') and os.path.isfile(old_avatar.path):
-                os.remove(old_avatar.path)
+        # Eğer avatar değişmişse eski dosyaları sil ve processed flag'ını reset et
+        if old_instance.avatar != instance.avatar:
+            # Eski dosyaları sil
+            for field_name in ['avatar', 'avatar_thumbnail', 'avatar_medium']:
+                old_field = getattr(old_instance, field_name)
+                if old_field and hasattr(old_field, 'path') and os.path.isfile(old_field.path):
+                    os.remove(old_field.path)
+            
+            # Avatar değiştiği için processed flag'ını reset et
+            if instance.avatar:  # Yeni avatar varsa
+                instance.avatar_processed = False
+                # Eski thumbnail/medium field'larını temizle
+                instance.avatar_thumbnail = None
+                instance.avatar_medium = None
+                print(f"Avatar changed for user {instance.user.username}, processing will be triggered")
+            
     except Profile.DoesNotExist:
         pass  # Profil mevcut değilse hiçbir şey yapma
+
+
+@receiver(post_save, sender=Profile)
+def process_profile_avatar(sender, instance, created, **kwargs):
+    """
+    Profile kaydedildiğinde avatar'ı otomatik olarak işle
+    """
+    # Sadece avatar varsa ve henüz işlenmemişse işle
+    if instance.avatar and not instance.avatar_processed:
+        # Sonsuz döngüyü önlemek için update_fields kontrolü
+        if 'avatar_processed' in (kwargs.get('update_fields') or []):
+            return
+            
+        try:
+            from apps.common.utils.image_processor import process_profile_image
+            
+            print(f"Processing avatar for user {instance.user.username}...")
+            
+            # Profile için convenience fonksiyonu kullan
+            saved_files = process_profile_image(instance.avatar, instance.user.id)
+            
+            if saved_files:
+                # Processed dosyaları profile field'larına ata
+                if 'thumbnail' in saved_files:
+                    instance.avatar_thumbnail.name = saved_files['thumbnail']
+                if 'medium' in saved_files:
+                    instance.avatar_medium.name = saved_files['medium']
+                
+                # İşleme başarılı oldu - signal handler'ı bypass et
+                Profile.objects.filter(pk=instance.pk).update(
+                    avatar_thumbnail=instance.avatar_thumbnail.name if instance.avatar_thumbnail else '',
+                    avatar_medium=instance.avatar_medium.name if instance.avatar_medium else '',
+                    avatar_processed=True
+                )
+                print(f"Profile avatar processed successfully for user {instance.user.username}")
+            else:
+                print(f"Profile avatar processing failed for user {instance.user.username}")
+            
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Profile avatar processing failed for user {instance.user.username}: {e}")
+            print(f"Profile avatar processing error: {e}")
+            # İşleme başarısız olursa orijinal avatar'ı kullan

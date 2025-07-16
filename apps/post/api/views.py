@@ -140,9 +140,32 @@ class PostViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         """
-        Set the user when creating a post
+        Set the user when creating a post - serializer kendi validation'ını yapacak
         """
-        serializer.save(user=self.request.user)
+        # Serializer'da zaten user set ediliyor, burada ek bir işlem yok
+        pass
+        
+    def create(self, request, *args, **kwargs):
+        """
+        Override create to provide better response with optimized image data
+        """
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        # Create post (serializer'da image processing dahil)
+        post = serializer.save()
+        
+        # Response için fresh serializer kullan (tüm relationship'ler ile)
+        response_serializer = self.get_serializer(post)
+        
+        return Response(
+            {
+                'success': True,
+                'message': 'Post başarıyla oluşturuldu',
+                'post': response_serializer.data
+            },
+            status=status.HTTP_201_CREATED
+        )
         
     def retrieve(self, request, *args, **kwargs):
         """
