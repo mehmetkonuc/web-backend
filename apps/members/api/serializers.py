@@ -19,9 +19,9 @@ class MemberListSerializer(serializers.ModelSerializer):
     has_pending_request = serializers.SerializerMethodField()
     is_blocked = serializers.SerializerMethodField()
     # Multi-size avatar support
-    avatar_thumbnail = serializers.URLField(read_only=True)
-    avatar_medium = serializers.URLField(read_only=True)
-    avatar_large = serializers.URLField(read_only=True)
+    avatar_thumbnail = serializers.SerializerMethodField()
+    avatar_medium = serializers.SerializerMethodField()
+    avatar_large = serializers.SerializerMethodField()
     
     class Meta:
         model = Profile
@@ -39,6 +39,33 @@ class MemberListSerializer(serializers.ModelSerializer):
     
     def get_following_count(self, obj):
         return obj.get_following_count()
+    
+    def get_avatar_thumbnail(self, obj):
+        """Avatar thumbnail (150x150)"""
+        url = obj.get_avatar_url('thumbnail')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_medium(self, obj):
+        """Avatar medium (300x300)"""
+        url = obj.get_avatar_url('medium')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
+    
+    def get_avatar_large(self, obj):
+        """Avatar large (600x600)"""
+        url = obj.get_avatar_url('large')
+        if url:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(url)
+        return None
     
     def get_is_following(self, obj):
         request = self.context.get('request')

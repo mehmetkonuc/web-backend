@@ -1,0 +1,407 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load post_tags %}
+{% load like_tags %}
+{% load bookmark_tags %}
+{% load comment_tags %}
+
+{% block title %}{{ confession.user.username }} - Gönderi{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/fancybox/jquery.fancybox.min.css' %}">
+<style>
+    .post-card {
+        border-radius: 0.5rem;
+    }
+    
+    .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .post-input-box {
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    }
+    .post-image-preview {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
+    .post-image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    }
+    .post-images-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+        margin-top: 15px;
+    }
+    .remove-image {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ea5455;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    }
+    .post-images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-top: 15px;
+    }
+    .post-images-container.images-1 {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-images-container.images-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .post-images-container.images-3,
+    .post-images-container.images-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .post-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+    .image-count-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 12px;
+    }
+    .user-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .small-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .post-date {
+        font-size: 0.8rem;
+        color: #82868b;
+    }
+    .image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        
+        <!-- Ana İçerik Alanı -->
+        <div class="col-xl-8 col-lg-7 col-md-12 mx-auto">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <a href="{% url 'confession:confession_list' %}" class="btn btn-outline-primary">
+                    <i class="ti tabler-arrow-left me-1"></i> Gönderilere Dön
+                </a>
+            </div>
+            <div class="card post-card">
+                  <div class="card-body">
+                     <!-- İtiraf Başlığı -->
+                     <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex align-items-center">
+                           <div class="avatar avatar-md me-2">
+                              {% if confession.is_privacy %}
+                                    <span class="avatar-initial rounded-circle bg-label-primary">
+                                       {{ confession.get_author_info.display_name|default:confession.user.username|first|upper }}
+                                    </span>
+                              {% else %}
+                                 {% if confession.user.profile.avatar %}
+                                    <img src="{{ confession.user.profile.avatar.url }}" alt="Avatar" class="rounded-circle">
+                                 {% else %}
+                                    <span class="avatar-initial rounded-circle bg-label-primary">
+                                       {{ confession.user.first_name|default:confession.user.username|first|upper }}{{ confession.user.last_name|default:confession.user.username|first|upper }}
+                                    </span>
+                                 {% endif %}
+                              {% endif %}
+                           </div>
+                           <div>
+                              <h6 class="mb-0">
+                                 {% if confession.is_privacy %}
+                                    {{ confession.get_author_info.display_name }}
+                                 {% else %}
+                                    {{ confession.user.get_full_name|default:confession.user.username }}
+                                 {% endif %}
+                              </h6>
+                              {% if not confession.is_privacy %}
+                           <small class="text-muted">{{ confession.user.profile.university }}</small> ·
+                           {% endif %}
+                           <small class="text-muted post-date">{{ confession.created_at }}</small>
+                     </div>
+
+                        </div>
+                        <div class="dropdown">
+                           <button class="btn btn-sm btn-text-secondary" type="button" data-bs-toggle="dropdown">
+                              <i class="ti tabler-dots-vertical"></i>
+                           </button>
+                           <ul class="dropdown-menu">
+                              {% if confession.user == request.user %}
+                                 <li><a class="dropdown-item" href="{% url 'confession:confession_update' confession.pk %}">
+                                    <i class="ti tabler-edit me-2"></i>Düzenle</a></li>
+                                 <li><a class="dropdown-item text-danger" href="{% url 'confession:confession_delete' confession.pk %}">
+                                    <i class="ti tabler-trash me-2"></i>Sil</a></li>
+                              {% else %}
+                                 <li><a class="dropdown-item" href="#"><i class="ti tabler-flag me-2"></i>Şikayet Et</a></li>
+                              {% endif %}
+                           </ul>
+                        </div>
+                     </div>
+
+                     <!-- Kategori Badge -->
+                     <div class="mb-3">
+                        <span class="badge bg-primary">{{ confession.category.name }}</span>
+                        {% if confession.university %}
+                           <span class="badge bg-secondary">{{ confession.university.name }}</span>
+                        {% endif %}
+                     </div>
+
+                     <!-- İtiraf İçeriği -->
+                      <a href="{% url 'confession:confession_detail' confession.pk %}" class="text-decoration-none text-body">
+                     <div class="mb-3">
+                        <p class="mb-0 ">{{ confession.content|linebreaks }}</p>
+                     </div>
+                      </a>
+
+                     <!-- İtiraf Resimleri -->
+                     {% if confession.images.exists %}
+                    <div class="post-images-container images-{{ confession.images.count }}">
+                        {% for image in confession.images.all %}
+                        <div class="position-relative">
+                        <a href="{{ image.image.url }}" data-fancybox="gallery-{{ confession.id }}-{{ image.id }}">
+                            
+                            <img src="{{ image.image.url }}" alt="Post Image" class="post-image">
+                        </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                     {% endif %}
+                     <div class="d-flex justify-content-between border-top">
+                        {% has_user_liked confession request.user as user_liked %}
+                        {% is_object_bookmarked confession request.user as is_bookmarked %}
+                        <div class="bd-highlight">
+                        {% like_button confession request.user %}
+                        </div>
+                        <div class="bd-highlight">
+                        <a href ="{% url 'confession:confession_detail' confession.pk %}" class="d-flex align-items-center">
+                           <button type="button" class="btn btn-text-secondary waves-effect">
+                           <i class="ti tabler-message-circle icon-sm me-1 scaleX-n1-rtl"></i>
+                           <span class="d-none d-md-block me-1" style="position: relative; top: 1px;">Yorum Yap</span>
+                           <span style="position: relative; top: 1px;">({% get_comment_count confession %})</span>
+                           </button>
+                        </a>
+                        </div>
+                        <div class="bd-highlight">
+                           {% bookmark_button confession request.user %}
+                        </div>
+                     </div>
+                     <!-- Etkileşim Butonları -->
+                     <!-- <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-3">
+                           <button class="btn btn-sm btn-outline-primary like-btn" data-confession-id="{{ confession.pk }}">
+                              <i class="ti tabler-heart me-1"></i>
+                              <span class="like-count">{{ confession.likes.count }}</span>
+                           </button>
+                           <a href="{% url 'confession:confession_detail' confession.pk %}" class="btn btn-sm btn-outline-secondary">
+                              <i class="ti tabler-message-circle me-1"></i>
+                              {{ confession.comments.count }}
+                           </a>
+                           <button class="btn btn-sm btn-outline-warning bookmark-btn" data-confession-id="{{ confession.pk }}">
+                              <i class="ti tabler-bookmark me-1"></i>
+                           </button>
+                        </div>
+                        <small class="text-muted">
+                           <i class="ti tabler-eye me-1"></i>
+                           {{ confession.view_count|default:0 }} görüntülenme
+                        </small>
+                     </div> -->
+                  </div>
+            </div>
+            {% render_comments confession %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_javascript %}
+<script src="{% static 'assets/vendor/libs/fancybox/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'js/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/waypoints/infinite.min.js' %}"></script>
+<script src="{% static 'js/waypoints/custom.js' %}"></script>
+<script src="{% static 'bookmark/js/bookmark.js' %}"></script>
+<script src="{% static 'like/js/likes.js' %}"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Image preview functionality
+        const imageInput = document.getElementById('id_images');
+        const previewContainer = document.getElementById('imagePreviewContainer');
+        const maxImages = 4;
+        let selectedImages = [];
+        
+        // Karakter sayacı ve autosize işlevselliği
+        const contentTextarea = document.getElementById('commentBody');
+        const characterCounter = document.getElementById('characterCounter');
+        const maxLength = 280;
+        const submitButton = document.getElementById('postSubmitBtn');
+        
+        // Textarea'yı otomatik boyutlandırma fonksiyonu
+        function autosize(textarea) {
+            // Önce yüksekliği resetleyelim
+            textarea.style.height = 'auto';
+            
+            // Sonra içeriğe göre yüksekliği ayarlayalım (ekstra 2px border için)
+            textarea.style.height = (textarea.scrollHeight) + 'px';
+            
+            // Maksimum yükseklik kontrolü
+            const maxHeight = 200; // Piksel cinsinden maksimum yükseklik
+            if (textarea.scrollHeight > maxHeight) {
+                textarea.style.height = maxHeight + 'px';
+                textarea.style.overflowY = 'auto';
+            } else {
+                textarea.style.overflowY = 'hidden';
+            }
+        }
+        
+        // Sayacı başlangıçta güncelleyelim
+        if(contentTextarea && characterCounter) {
+            // Başlangıç değerini ayarla
+            updateCharacterCount();
+            
+            // Başlangıçta textarea boyutunu ayarla
+            autosize(contentTextarea);
+            
+            // Her tuş vuruşunda sayacı ve textarea boyutunu güncelle
+            contentTextarea.addEventListener('input', function() {
+                updateCharacterCount();
+                autosize(this);
+            });
+            
+            function updateCharacterCount() {
+                const currentLength = contentTextarea.value.length;
+                const remainingChars = maxLength - currentLength;
+                
+                // Sayacı güncelle
+                characterCounter.textContent = remainingChars;
+                
+                // Sayacın rengini kalan karakter sayısına göre değiştir
+                if(remainingChars <= 10) {
+                    characterCounter.className = 'position-absolute end-0 bottom-0 me-2 mb-2 badge bg-danger rounded-pill';
+                } else if(remainingChars <= 20) {
+                    characterCounter.className = 'position-absolute end-0 bottom-0 me-2 mb-2 badge bg-warning rounded-pill';
+                } else {
+                    characterCounter.className = 'position-absolute end-0 bottom-0 me-2 mb-2 badge bg-primary rounded-pill';
+                }
+                
+                // Karakter sayısı sınırı aşıldığında butonu devre dışı bırak
+                if(currentLength > maxLength || currentLength === 0) {
+                    submitButton.disabled = true;
+                } else {
+                    submitButton.disabled = false;
+                }
+            }
+        }
+        
+        imageInput.style.display = 'none'; // Hide the default file input
+        
+        imageInput.addEventListener('change', function() {
+            const files = Array.from(this.files);
+            
+            // Validate number of images
+            if (files.length > maxImages) {
+                alert(`En fazla ${maxImages} resim yükleyebilirsiniz.`);
+                this.value = '';
+                return;
+            }
+            
+            // Clear previous previews
+            previewContainer.innerHTML = '';
+            selectedImages = [];
+            
+            // Create preview for each file
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const previewWrapper = document.createElement('div');
+                    previewWrapper.className = 'post-image-preview';
+                    
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'img-thumbnail';
+                    
+                    const removeBtn = document.createElement('span');
+                    removeBtn.className = 'remove-image';
+                    removeBtn.innerHTML = '&times;';
+                    removeBtn.addEventListener('click', function() {
+                        previewWrapper.remove();
+                        
+                        // Remove from selected images
+                        const index = selectedImages.indexOf(file);
+                        if (index > -1) {
+                            selectedImages.splice(index, 1);
+                        }
+                        
+                        // Update file input
+                        const dataTransfer = new DataTransfer();
+                        selectedImages.forEach(img => dataTransfer.items.add(img));
+                        imageInput.files = dataTransfer.files;
+                    });
+                    
+                    previewWrapper.appendChild(img);
+                    previewWrapper.appendChild(removeBtn);
+                    previewContainer.appendChild(previewWrapper);
+                    
+                    // Add to selected images
+                    selectedImages.push(file);
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+ </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+</script>
+{% endblock %}

@@ -36,7 +36,13 @@
                 <i class="menu-icon icon-base ti tabler-user-search"></i>
                 <div data-i18n="Page 2">Kişi Bul</div>
             </a>
-            </li>
+        </li>
+        <li class="menu-item {% if active_tab == 'confession' %}active{% endif %}">
+            <a href="{% url 'confession:confession_list' %}" class="menu-link">
+                <i class="menu-icon icon-base ti tabler-spy"></i>
+                <div data-i18n="Page 2">İtiraflar</div>
+            </a>
+        </li>
     </ul>
 </aside>
 

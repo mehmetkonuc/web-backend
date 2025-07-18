@@ -42,6 +42,7 @@ urlpatterns = [
     path('like/', include('apps.like.urls')),
     path('bookmark/', include('apps.bookmark.urls')),
     path('common/', include('apps.common.urls')),
+    path('confession/', include('apps.confession.urls')),
 
     # REST Framework browsable API
     path('api-auth/', include('rest_framework.urls')),
@@ -61,6 +62,7 @@ urlpatterns = [
     path('api/v1/bookmark/', include('apps.bookmark.api.urls')),
     path('api/v1/notifications/', include('apps.notifications.api.urls')),
     path('api/v1/chat/', include('apps.chat.api.urls')),
+    path('api/v1/confessions/', include('apps.confession.api.urls')),
     path('api/v1/push-notifications/', include('apps.push_notifications.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

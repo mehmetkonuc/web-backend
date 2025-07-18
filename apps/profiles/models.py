@@ -39,6 +39,7 @@ class Profile(models.Model):
     avatar = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Profil Fotoğrafı (Orijinal)")
     avatar_thumbnail = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Avatar Thumbnail (150x150)")
     avatar_medium = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Avatar Medium (300x300)")
+    avatar_large = models.ImageField(upload_to=avatar_upload_path, blank=True, null=True, max_length=255, verbose_name="Avatar Large (600x600)")
     
     # Avatar metadata
     avatar_processed = models.BooleanField(default=False, verbose_name="Avatar İşlenmiş", help_text="Avatar backend tarafından işlendi mi?")
@@ -263,22 +264,48 @@ class Profile(models.Model):
         En uygun avatar URL'ini döndür.
         
         Args:
-            size: 'thumbnail', 'medium', 'original'
+            size: 'thumbnail', 'medium', 'large', 'original'
         """
         if size == 'thumbnail' and self.avatar_thumbnail:
             return self.avatar_thumbnail.url
         elif size == 'medium' and self.avatar_medium:
             return self.avatar_medium.url
+        elif size == 'large' and self.avatar_large:
+            return self.avatar_large.url
         elif size == 'original' and self.avatar:
             return self.avatar.url
         else:
             # Fallback: En yakın boyutu döndür
-            if self.avatar_medium:
-                return self.avatar_medium.url
-            elif self.avatar_thumbnail:
-                return self.avatar_thumbnail.url
-            elif self.avatar:
-                return self.avatar.url
+            if size == 'large':
+                # Large için önce large, sonra original, medium, thumbnail
+                if self.avatar_large:
+                    return self.avatar_large.url
+                elif self.avatar:
+                    return self.avatar.url
+                elif self.avatar_medium:
+                    return self.avatar_medium.url
+                elif self.avatar_thumbnail:
+                    return self.avatar_thumbnail.url
+            elif size == 'medium':
+                # Medium için önce medium, sonra large, thumbnail, original
+                if self.avatar_medium:
+                    return self.avatar_medium.url
+                elif self.avatar_large:
+                    return self.avatar_large.url
+                elif self.avatar_thumbnail:
+                    return self.avatar_thumbnail.url
+                elif self.avatar:
+                    return self.avatar.url
+            else:
+                # Thumbnail veya diğer boyutlar için
+                if self.avatar_thumbnail:
+                    return self.avatar_thumbnail.url
+                elif self.avatar_medium:
+                    return self.avatar_medium.url
+                elif self.avatar_large:
+                    return self.avatar_large.url
+                elif self.avatar:
+                    return self.avatar.url
             return None
     
     def get_all_avatar_sizes(self):
@@ -288,6 +315,8 @@ class Profile(models.Model):
             sizes['thumbnail'] = self.avatar_thumbnail.url
         if self.avatar_medium:
             sizes['medium'] = self.avatar_medium.url
+        if self.avatar_large:
+            sizes['large'] = self.avatar_large.url
         if self.avatar:
             sizes['original'] = self.avatar.url
         return sizes
@@ -391,7 +420,7 @@ class FollowRequest(models.Model):
 @receiver(post_delete, sender=Profile)
 def delete_avatar_files_on_profile_delete(sender, instance, **kwargs):
     """Profil silindiğinde tüm avatar dosyalarını sil"""
-    for field_name in ['avatar', 'avatar_thumbnail', 'avatar_medium']:
+    for field_name in ['avatar', 'avatar_thumbnail', 'avatar_medium', 'avatar_large']:
         field = getattr(instance, field_name)
         if field and hasattr(field, 'path') and os.path.isfile(field.path):
             os.remove(field.path)
@@ -406,20 +435,41 @@ def delete_old_avatar_files_on_change(sender, instance, **kwargs):
     try:
         old_instance = Profile.objects.get(pk=instance.pk)
         
-        # Eğer avatar değişmişse eski dosyaları sil ve processed flag'ını reset et
-        if old_instance.avatar != instance.avatar:
-            # Eski dosyaları sil
-            for field_name in ['avatar', 'avatar_thumbnail', 'avatar_medium']:
+        # Avatar tamamen silinmiş mi kontrol et
+        avatar_completely_deleted = (
+            old_instance.avatar and not instance.avatar
+        )
+        
+        # Avatar dosyası değişmiş mi kontrol et
+        avatar_file_changed = (
+            old_instance.avatar != instance.avatar
+        )
+        
+        if avatar_file_changed or avatar_completely_deleted:
+            # Eski dosyaları fiziksel olarak sil
+            for field_name in ['avatar', 'avatar_thumbnail', 'avatar_medium', 'avatar_large']:
                 old_field = getattr(old_instance, field_name)
                 if old_field and hasattr(old_field, 'path') and os.path.isfile(old_field.path):
-                    os.remove(old_field.path)
+                    try:
+                        os.remove(old_field.path)
+                        print(f"Deleted old {field_name}: {old_field.path}")
+                    except Exception as e:
+                        print(f"Failed to delete {field_name}: {e}")
             
-            # Avatar değiştiği için processed flag'ını reset et
-            if instance.avatar:  # Yeni avatar varsa
-                instance.avatar_processed = False
-                # Eski thumbnail/medium field'larını temizle
+            if avatar_completely_deleted:
+                # Avatar tamamen silinmişse - tüm boyutları ve işleme flag'ini temizle
                 instance.avatar_thumbnail = None
                 instance.avatar_medium = None
+                instance.avatar_large = None
+                instance.avatar_processed = False
+                print(f"Avatar completely deleted for user {instance.user.username}, all avatar fields cleared")
+                
+            elif instance.avatar:  
+                # Yeni avatar yüklenmişse - işleme için hazırla
+                instance.avatar_processed = False
+                instance.avatar_thumbnail = None
+                instance.avatar_medium = None
+                instance.avatar_large = None
                 print(f"Avatar changed for user {instance.user.username}, processing will be triggered")
             
     except Profile.DoesNotExist:
@@ -451,11 +501,14 @@ def process_profile_avatar(sender, instance, created, **kwargs):
                     instance.avatar_thumbnail.name = saved_files['thumbnail']
                 if 'medium' in saved_files:
                     instance.avatar_medium.name = saved_files['medium']
+                if 'large' in saved_files:
+                    instance.avatar_large.name = saved_files['large']
                 
                 # İşleme başarılı oldu - signal handler'ı bypass et
                 Profile.objects.filter(pk=instance.pk).update(
                     avatar_thumbnail=instance.avatar_thumbnail.name if instance.avatar_thumbnail else '',
                     avatar_medium=instance.avatar_medium.name if instance.avatar_medium else '',
+                    avatar_large=instance.avatar_large.name if instance.avatar_large else '',
                     avatar_processed=True
                 )
                 print(f"Profile avatar processed successfully for user {instance.user.username}")

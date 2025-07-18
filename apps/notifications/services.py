@@ -98,12 +98,19 @@ class NotificationService:
         if hasattr(like_obj.content_object, 'user') and like_obj.content_object.user != user:
             # Beğenilen içeriğin modeli
             model_name = like_obj.content_type.model
-            
             if model_name == "post":
                 return NotificationService.create_notification(
                     sender=user,
                     recipient=like_obj.content_object.user,
                     code="post_like",
+                    content_object=like_obj,
+                    parent_content_object=like_obj.content_object  # Post'un kendisi ana içerik
+                )
+            elif model_name == "confessionmodel":
+                return NotificationService.create_notification(
+                    sender=user,
+                    recipient=like_obj.content_object.user,
+                    code="confession_like",
                     content_object=like_obj,
                     parent_content_object=like_obj.content_object  # Post'un kendisi ana içerik
                 )

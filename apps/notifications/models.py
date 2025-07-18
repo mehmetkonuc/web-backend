@@ -134,6 +134,13 @@ class Notification(models.Model):
             }
             notification_data.update(data)
 
+        elif self.notification_type.code == "confession_like":
+            data = {
+                'parent_content_type_name' : self.parent_content_type.model if self.parent_content_type else None,
+                'parent_object_id' : self.parent_object_id,
+            }
+            notification_data.update(data)
+
         elif self.notification_type.code == "comment_like":
             from apps.comment.models import Comment
             comment = Comment.objects.get(id=self.parent_object_id)
@@ -148,13 +155,14 @@ class Notification(models.Model):
         elif self.notification_type.code == "reply_like":
             from apps.comment.models import Comment
             reply = Comment.objects.get(id=self.parent_object_id)
-
+            print('deneme', reply.content_type.model)
             data = {
                 'parent_object_id' : reply.id,
                 'reply_parent_id' : reply.parent_id if reply else None,
                 'origin_object_id' : reply.object_id if reply else None,
                 'parent_content_type' : self.content_type.id if self.content_type else None,
                 'origin_content_type' : reply.content_type.id if reply else None,
+                'origin_content_type_name' : reply.content_type.model if reply else None,
             }
             notification_data.update(data)        # Alıcı kullanıcının bildirim kanalına mesaj gönder
         async_to_sync(channel_layer.group_send)(
@@ -239,7 +247,17 @@ def get_defaults_by_code(code, sender):
                 "icon_class": "tabler-heart"
             },
             "title": "Yeni Beğeni",
-            "text": f"{sender.username} paylaşımınızı beğendi."
+            "text": f"{sender.username} gönderinizi beğendi."
+        }
+    elif "confession_like" == code:
+        return {
+            "defaults": {
+                "name": "Beğeni Bildirimi",
+                "description": "Bir kullanıcı itirafınızı beğendiğinde gönderilir",
+                "icon_class": "tabler-heart"
+            },
+            "title": "Yeni Beğeni",
+            "text": f"{sender.username} itirafınızı beğendi."
         }
     elif "comment_like" == code:
         return {
@@ -323,6 +341,20 @@ def create_notifications(sender, recipient, code, content_object=None, parent_co
             # Direkt olarak yorumun detay sayfasına yönlendir
             url_path = f"/comment/comment/{content_object.id}/"
     # Beğeni bildirimleri için URL yapılandırması
+    elif code == "confession_like" and content_object:
+        # Like objesi üzerinden content_object'e erişim (Like modelinin GenericForeignKey'i)
+        if hasattr(content_object, 'content_object') and hasattr(content_object.content_object, 'id'):
+            # Beğenilen içeriğin ID'sini al ve URL'yi oluştur
+            liked_object = content_object.content_object
+            if hasattr(liked_object, 'get_absolute_url'):
+                url_path = liked_object.get_absolute_url()
+            else:
+                # Post için varsayılan URL
+                if hasattr(liked_object, 'id'):
+                    app_name = liked_object._meta.app_label
+                    model_name = liked_object._meta.model_name
+                    if app_name == 'confessionmodel' and model_name == 'confessionmodel':
+                        url_path = f"/confession/detail/{liked_object.id}/"
     elif code == "post_like" and content_object:
         # Like objesi üzerinden content_object'e erişim (Like modelinin GenericForeignKey'i)
         if hasattr(content_object, 'content_object') and hasattr(content_object.content_object, 'id'):

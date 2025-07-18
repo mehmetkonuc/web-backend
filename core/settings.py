@@ -66,6 +66,7 @@ LOCAL_APPS = [
     'apps.like',
     'apps.bookmark',
     'apps.push_notifications',
+    'apps.confession',
 ]
 
 INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS

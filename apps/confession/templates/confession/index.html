@@ -1,0 +1,265 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load post_tags %}
+{% load like_tags %}
+{% load bookmark_tags %}
+{% load comment_tags %}
+{% block title %}İtifalar{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/fancybox/jquery.fancybox.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/select2/select2.css' %}" />
+{% endblock %}
+{% block content %}
+   {% for message in messages %}
+   <div class="alert alert-{{ message.tags }} mb-4">{{ message }}</div>
+   {% endfor %}
+   <div class="d-flex bd-highlight align-items-center">
+      <div class="flex-grow-1 bd-highlight">
+         <h4 class="fw-bold">
+            {{page_title}}
+         </h4>
+      </div>
+      <div class="bd-highlight me-2">
+         <a href="{% url 'confession:confession_create' %}" class="btn btn-primary btn-sm">
+         <i class="ti tabler-plus icon-sm me-1"></i>
+         Oluştur
+         </a>
+      </div>
+      <div class="bd-highlight">
+         <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+         <i class="ti tabler-filter icon-sm me-1"></i>
+         Filtrele
+         </button>
+      </div>
+   </div>
+   <div class="row">
+      <!-- Ana İçerik Alanı -->
+      <div class="col-lg-8 col-md-8 col-12 order-0 order-md-1">
+         {% if confessions %}
+            {% for confession in confessions %}
+               <div class="card mb-4">
+                  <div class="card-body">
+                     <!-- İtiraf Başlığı -->
+                     <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex align-items-center">
+                           <div class="avatar avatar-md me-2">
+                              {% if confession.is_privacy %}
+                                    <span class="avatar-initial rounded-circle bg-label-primary">
+                                       {{ confession.get_author_info.display_name|default:confession.user.username|first|upper }}
+                                    </span>
+                              {% else %}
+                                 {% if confession.user.profile.avatar %}
+                                    <img src="{{ confession.user.profile.avatar.url }}" alt="Avatar" class="rounded-circle">
+                                 {% else %}
+                                    <span class="avatar-initial rounded-circle bg-label-primary">
+                                       {{ confession.user.first_name|default:confession.user.username|first|upper }}{{ confession.user.last_name|default:confession.user.username|first|upper }}
+                                    </span>
+                                 {% endif %}
+                              {% endif %}
+                           </div>
+                           <div>
+                              <h6 class="mb-0">
+                                 {% if confession.is_privacy %}
+                                    {{ confession.get_author_info.display_name }}
+                                 {% else %}
+                                    {{ confession.user.get_full_name|default:confession.user.username }}
+                                 {% endif %}
+                              </h6>
+                              {% if not confession.is_privacy %}
+                           <small class="text-muted">{{ confession.user.profile.university }}</small> ·
+                           {% endif %}
+                           <small class="text-muted post-date">{{ confession.created_at }}</small>
+                     </div>
+
+                        </div>
+                        <div class="dropdown">
+                           <button class="btn btn-sm btn-text-secondary" type="button" data-bs-toggle="dropdown">
+                              <i class="ti tabler-dots-vertical"></i>
+                           </button>
+                           <ul class="dropdown-menu">
+                              {% if confession.user == request.user %}
+                                 <li><a class="dropdown-item" href="{% url 'confession:confession_update' confession.pk %}">
+                                    <i class="ti tabler-edit me-2"></i>Düzenle</a></li>
+                                 <li><a class="dropdown-item text-danger" href="{% url 'confession:confession_delete' confession.pk %}">
+                                    <i class="ti tabler-trash me-2"></i>Sil</a></li>
+                              {% else %}
+                                 <li><a class="dropdown-item" href="#"><i class="ti tabler-flag me-2"></i>Şikayet Et</a></li>
+                              {% endif %}
+                           </ul>
+                        </div>
+                     </div>
+
+                     <!-- Kategori Badge -->
+                     <div class="mb-3">
+                        <span class="badge bg-primary">{{ confession.category.name }}</span>
+                        {% if confession.university %}
+                           <span class="badge bg-secondary">{{ confession.university.name }}</span>
+                        {% endif %}
+                     </div>
+
+                     <!-- İtiraf İçeriği -->
+                      <a href="{% url 'confession:confession_detail' confession.pk %}" class="text-decoration-none text-body">
+                     <div class="mb-3">
+                        <p class="mb-0 ">{{ confession.content|linebreaks|truncatechars:280 }}</p>
+                     </div>
+                      </a>
+
+                     <!-- İtiraf Resimleri -->
+                     <!-- {% if confession.images.exists %}
+                        <div class="mb-3">
+                           <div class="row g-2">
+                              {% for image in confession.images.all %}
+                                 <div class="col-6 col-md-4">
+                                    <a href="{{ image.large_image_url }}" data-fancybox="gallery-{{ confession.pk }}">
+                                       <img src="{{ image.image_url }}" class="img-fluid rounded" alt="İtiraf resmi">
+                                    </a>
+                                 </div>
+                              {% endfor %}
+                           </div>
+                        </div>
+                     {% endif %} -->
+                     <div class="d-flex justify-content-between border-top">
+                        {% has_user_liked confession request.user as user_liked %}
+                        {% is_object_bookmarked confession request.user as is_bookmarked %}
+                        <div class="bd-highlight">
+                        {% like_button confession request.user %}
+                        </div>
+                        <div class="bd-highlight">
+                        <a href ="{% url 'confession:confession_detail' confession.pk %}" class="d-flex align-items-center">
+                           <button type="button" class="btn btn-text-secondary waves-effect">
+                           <i class="ti tabler-message-circle icon-sm me-1 scaleX-n1-rtl"></i>
+                           <span class="d-none d-md-block me-1" style="position: relative; top: 1px;">Yorum Yap</span>
+                           <span style="position: relative; top: 1px;">({% get_comment_count confession %})</span>
+                           </button>
+                        </a>
+                        </div>
+                        <div class="bd-highlight">
+                           {% bookmark_button confession request.user %}
+                        </div>
+                     </div>
+                     <!-- Etkileşim Butonları -->
+                     <!-- <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-3">
+                           <button class="btn btn-sm btn-outline-primary like-btn" data-confession-id="{{ confession.pk }}">
+                              <i class="ti tabler-heart me-1"></i>
+                              <span class="like-count">{{ confession.likes.count }}</span>
+                           </button>
+                           <a href="{% url 'confession:confession_detail' confession.pk %}" class="btn btn-sm btn-outline-secondary">
+                              <i class="ti tabler-message-circle me-1"></i>
+                              {{ confession.comments.count }}
+                           </a>
+                           <button class="btn btn-sm btn-outline-warning bookmark-btn" data-confession-id="{{ confession.pk }}">
+                              <i class="ti tabler-bookmark me-1"></i>
+                           </button>
+                        </div>
+                        <small class="text-muted">
+                           <i class="ti tabler-eye me-1"></i>
+                           {{ confession.view_count|default:0 }} görüntülenme
+                        </small>
+                     </div> -->
+                  </div>
+               </div>
+            {% endfor %}
+
+            <!-- Pagination -->
+            {% if is_paginated %}
+               <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                     {% if page_obj.has_previous %}
+                        <li class="page-item">
+                           <a class="page-link" href="?page=1{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.university %}&university={{ request.GET.university }}{% endif %}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">İlk</a>
+                        </li>
+                        <li class="page-item">
+                           <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.university %}&university={{ request.GET.university }}{% endif %}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Önceki</a>
+                        </li>
+                     {% endif %}
+
+                     <li class="page-item active">
+                        <span class="page-link">{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                     </li>
+
+                     {% if page_obj.has_next %}
+                        <li class="page-item">
+                           <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.university %}&university={{ request.GET.university }}{% endif %}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Sonraki</a>
+                        </li>
+                        <li class="page-item">
+                           <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.university %}&university={{ request.GET.university }}{% endif %}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Son</a>
+                        </li>
+                     {% endif %}
+                  </ul>
+               </nav>
+            {% endif %}
+         {% else %}
+            <div class="card">
+               <div class="card-body text-center py-5">
+                  <i class="ti tabler-message-circle-off display-4 text-muted mb-3"></i>
+                  <h5 class="text-muted">Henüz itiraf bulunmuyor</h5>
+                  <p class="text-muted">İlk itirafı sen paylaş!</p>
+                  <a href="{% url 'confession:confession_create' %}" class="btn btn-primary">
+                     <i class="ti tabler-plus me-2"></i>Yeni İtiraf
+                  </a>
+               </div>
+            </div>
+         {% endif %}
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4 col-md-4 col-12 order-1 order-md-0">
+         <div class="card mb-4">
+            <div class="card-body">
+               <h6 class="card-title mb-3">Popüler Kategoriler</h6>
+               {% for category in categories %}
+                  <a href="{% url 'confession:confession_category' category.id %}" class="badge bg-outline-primary me-2 mb-2">
+                     {{ category.name }} ({{ category.total_confessions }})
+                  </a>
+               {% endfor %}
+            </div>
+         </div>
+
+         <div class="card">
+            <div class="card-body">
+               <h6 class="card-title mb-3">Yeni İtiraf Paylaş</h6>
+               <p class="text-muted">Aklındaki itirafı anonim olarak paylaş!</p>
+               <a href="{% url 'confession:confession_create' %}" class="btn btn-primary w-100">
+                  <i class="ti tabler-plus me-2"></i>Yeni İtiraf
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+      <div class="offcanvas-header">
+         <h5 class="offcanvas-title" id="offcanvasFilterLabel">Gönderileri Filtrele</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+         <!-- Gönderi Filtreleme -->
+         <div class="filter-section">
+            <form method="get" action="{% url 'confession:confession_list' %}" class="filter-form">
+               {{filter.form|crispy}}
+               <div class="d-flex gap-2">
+                  <button type="submit" class="btn btn-primary btn-sm flex-fill">
+                     <i class="ti tabler-filter me-1"></i> Filtrele
+                  </button>
+                  <a href="{% url 'confession:clear_filters' %}" class="btn btn-outline-secondary btn-sm flex-fill">
+                     <i class="ti tabler-x me-1"></i> Temizle
+                  </a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+{% endblock %}
+{% block extra_javascript %}
+<script src="{% static 'assets/vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'assets/vendor/libs/select2/forms-selects.js' %}"></script>
+
+<script src="{% static 'assets/vendor/libs/fancybox/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'js/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/waypoints/infinite.min.js' %}"></script>
+<script src="{% static 'js/waypoints/custom.js' %}"></script>
+<script src="{% static 'bookmark/js/bookmark.js' %}"></script>
+<script src="{% static 'like/js/likes.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load post_tags %}
+{% block title %}İtifalar Ekle{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/vendor/libs/select2/select2.css' %}" />
+
+{% endblock %}
+{% block content %}
+   {% for message in messages %}
+   <div class="alert alert-{{ message.tags }} mb-4">{{ message }}</div>
+   {% endfor %}
+   <div class="d-flex bd-highlight align-items-center">
+      <div class="flex-grow-1 bd-highlight">
+         <h4 class="fw-bold">
+            <a href="{% url 'confession:confession_list' %}"> İtiraflar > </a>{{page_title}}
+         </h4>
+      </div>
+   </div>
+   <div class="row">
+      <!-- Ana İçerik Alanı -->
+      <div class="col-lg-12 col-md-12 col-12 order-0 order-md-1">
+         <div class="card">
+            <div class="card-header">
+               <h5 class="card-title mb-0">Yeni İtiraf Oluştur</h5>
+            </div>
+            <div class="card-body">
+               <!-- Form Errors -->
+               {% if form.errors %}
+               <div class="alert alert-danger">
+                  <h6>Form Hataları:</h6>
+                  <ul class="mb-0">
+                     {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                        <li>{{ field }}: {{ error }}</li>
+                        {% endfor %}
+                     {% endfor %}
+                  </ul>
+               </div>
+               {% endif %}
+               
+               <!-- Non-field errors -->
+               {% if form.non_field_errors %}
+               <div class="alert alert-danger">
+                  {% for error in form.non_field_errors %}
+                  <p class="mb-0">{{ error }}</p>
+                  {% endfor %}
+               </div>
+               {% endif %}
+               
+               <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+
+                  {{ form|crispy }}
+                  <!-- Image Upload Field -->
+                  {{image_form|crispy}}
+
+                  <!-- Submit Button -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                     <a href="{% url 'confession:confession_list' %}" class="btn btn-outline-secondary me-md-2">İptal</a>
+                     <button type="submit" class="btn btn-primary">İtiraf Oluştur</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+{% endblock %}
+{% block extra_javascript %}
+<script src="{% static 'assets/vendor/libs/select2/select2.js' %}"></script>
+<script src="{% static 'assets/vendor/libs/select2/forms-selects.js' %}"></script>
+{% endblock %}

@@ -541,33 +541,18 @@ class AvatarDeleteView(APIView):
             profile = request.user.profile
             
             # Profil resmi varsa sil
-            if profile.avatar:
-                # Dosya sisteminden sil (original)
-                if os.path.isfile(profile.avatar.path):
-                    os.remove(profile.avatar.path)
-                
-                # Tüm processed boyutları da sil
-                try:
-                    avatar_dir = os.path.dirname(profile.avatar.path)
-                    avatar_name = os.path.splitext(os.path.basename(profile.avatar.path))[0]
-                    
-                    # thumbnail, medium, large dosyalarını ara ve sil
-                    for size in ['thumbnail', 'medium', 'large']:
-                        processed_file = os.path.join(avatar_dir, f"{avatar_name}_{size}.webp")
-                        if os.path.isfile(processed_file):
-                            os.remove(processed_file)
-                except Exception as e:
-                    # Processed dosyalar silinmese de devam et
-                    pass
-                
-                # Veritabanı kaydını sil
+            if profile.avatar or profile.avatar_thumbnail or profile.avatar_medium or profile.avatar_large:
+                # Avatar'ı None yaparak sil - signal handler gerisini halleder
                 profile.avatar = None
-                profile.save()
+                profile.save()  # Signal handler dosyaları ve diğer field'ları temizleyecek
+                
+                # Profile'ı fresh data ile yeniden yükle
+                profile.refresh_from_db()
                 
                 serializer = ProfileSerializer(profile, context={'request': request})
                 return Response({
                     "success": True,
-                    "message": "Profil resmi başarıyla silindi",
+                    "message": "Profil resmi ve tüm boyutları başarıyla silindi",
                     "profile": serializer.data
                 })
             else:
@@ -576,6 +561,9 @@ class AvatarDeleteView(APIView):
                 
         except Profile.DoesNotExist:
             return Response({"detail": "Profil bulunamadı"}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({"detail": f"Beklenmeyen bir hata oluştu: {str(e)}"}, 
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class PasswordChangeView(APIView):

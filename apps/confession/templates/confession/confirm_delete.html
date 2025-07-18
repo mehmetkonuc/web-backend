@@ -1,0 +1,44 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block title %}Gönderi Sil{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Sosyal / <a href="{% url 'confession:confession_list' %}">İtiraflar</a> /</span> İtirafı Sil
+    </h4>
+    
+    <div class="row">
+        <div class="col-md-8 col-12 mx-auto">
+            <div class="card">
+                <div class="card-header border-bottom">
+                    <h5 class="card-title mb-0">İtirafı Silme Onayı</h5>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning" role="alert">
+                        <div class="d-flex">
+                            <i class="ti tabler-alert-triangle tabler-lg me-2"></i>
+                            <div>
+                                <h6 class="alert-heading mb-1">İtirafı silmek istediğinizden emin misiniz?</h6>
+                                <p class="mb-0">Bu işlem geri alınamaz ve tüm itiraf içeriği, görseller ve ilişkili veriler kalıcı olarak silinecektir.</p>
+                            </div>
+                        </div>
+                    </div>                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'confession:confession_list' %}" class="btn btn-outline-secondary">
+                                <i class="ti tabler-x me-1"></i> İptal
+                            </a>
+                            <button type="submit" class="btn btn-danger">
+                                <i class="ti tabler-trash me-1"></i> İtirafı Sil
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

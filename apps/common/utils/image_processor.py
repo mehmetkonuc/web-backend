@@ -49,10 +49,10 @@ class ImageProcessor:
     
     # Boyut presetleri (farklı kullanım alanları için)
     SIZE_PRESETS = {
-        'thumbnail': (150, 150),      # Avatar thumbnails
+        'thumbnail': (150, 150),      # Avatar thumbnails (150x150)
         'small': (300, 300),          # List view images
-        'medium': (600, 600),         # Detail view images  
-        'large': (1200, 1200),        # Full size view
+        'medium': (300, 300),         # Avatar medium (300x300)  
+        'large': (600, 600),          # Avatar large (600x600)
         'original': None              # Orijinal boyut (sınırlı)
     }
     
@@ -333,7 +333,7 @@ def process_profile_image(image_file, user_id: Optional[int] = None):
     processor = ImageProcessor()
     processed = processor.process_image(
         image_file, 
-        size_presets=['thumbnail', 'medium'],
+        size_presets=['thumbnail', 'medium', 'large'],
         context='profile'
     )
     
