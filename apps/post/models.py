@@ -10,6 +10,10 @@ from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver
 from django.core.files.storage import default_storage
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericRelation
+from apps.comment.models import Comment
+from apps.like.models import Like
+from apps.bookmark.models import Bookmark
 
 def post_image_upload_path(instance, filename):
     """Upload path for post images organized by date and post ID"""
@@ -71,7 +75,10 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Oluşturulma Tarihi")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Güncellenme Tarihi")
     hashtags = models.ManyToManyField(Hashtag, related_name='posts', blank=True, verbose_name="Hashtagler")
-    
+    comments = GenericRelation(Comment)
+    likes = GenericRelation(Like)
+    bookmarks = GenericRelation(Bookmark)
+
     class Meta:
         verbose_name = "Gönderi"
         verbose_name_plural = "Gönderiler"
@@ -80,7 +87,13 @@ class Post(models.Model):
     def __str__(self):
         # return f"{self.user.username}: {self.content[:50]}..."
         return f"Gönderi: {self.content[:60]}..."
-    
+        
+    def delete(self, *args, **kwargs):
+        self.comments.all().delete()  # İlişkili yorumları sil
+        self.likes.all().delete()  # İlişkili beğenileri sil
+        self.bookmarks.all().delete()  # İlişkili yer imlerini sil
+        super().delete(*args, **kwargs)  # Sonra itirafı sil
+
     def get_absolute_url(self):
         return reverse('post:post_detail', kwargs={'pk': self.pk})
     

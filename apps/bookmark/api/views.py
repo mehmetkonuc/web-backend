@@ -237,6 +237,7 @@ def get_content_types(request):
     important_models = {
         'post': 'apps.post.models.Post',
         'comment': 'apps.comment.models.Comment',
+        'confessionmodel': 'apps.confession.models.ConfessionModel',
         # Other important models can be added here
     }
     

@@ -1,46 +1,666 @@
-WARNING 2025-07-18 17:48:57,954 log 222974 140314598969344 Not Found: /wp-admin/setup-config.php
-WARNING 2025-07-18 17:49:04,906 log 222973 140314598969344 Not Found: /ayri-yazilan-birlesik-sozcukler/
-WARNING 2025-07-18 17:49:50,364 log 222972 140314598969344 Not Found: /wordpress/wp-admin/setup-config.php
-WARNING 2025-07-18 17:50:25,254 log 222972 140314598969344 Not Found: /wordpress/wp-admin/setup-config.php
-WARNING 2025-07-18 17:52:11,621 log 222974 140314598969344 Not Found: /wp-admin/setup-config.php
-INFO 2025-07-18 18:07:55,942 services 945 139627466018816 Firebase Admin SDK başarıyla başlatıldı
-INFO 2025-07-18 18:08:04,238 services 958 140011926536192 Firebase Admin SDK başarıyla başlatıldı
-INFO 2025-07-18 18:08:09,116 services 956 140011926536192 Firebase Admin SDK başarıyla başlatıldı
-INFO 2025-07-18 18:08:16,699 services 957 140011926536192 Firebase Admin SDK başarıyla başlatıldı
-WARNING 2025-07-18 18:12:13,998 log 958 140011926536192 Not Found: /temel-kavramlar/kampuslu.com/tyt-notu
-WARNING 2025-07-18 18:29:23,696 log 957 140011926536192 Not Found: /_profiler/phpinfo
-WARNING 2025-07-18 18:34:17,425 log 958 140011926536192 Not Found: /xmlrpc.php
-WARNING 2025-07-18 18:34:59,149 log 957 140011926536192 Not Found: /xmlrpc.php
-WARNING 2025-07-18 18:37:19,093 log 957 140011926536192 Not Found: /wp-admin/css/
-WARNING 2025-07-18 18:37:23,390 log 958 140011926536192 Not Found: /.well-known/
-WARNING 2025-07-18 18:37:30,721 log 956 140011926536192 Not Found: /sites/default/files/
-WARNING 2025-07-18 18:37:44,421 log 958 140011926536192 Not Found: /uploads/
-WARNING 2025-07-18 18:37:52,719 log 956 140011926536192 Not Found: /images/
-WARNING 2025-07-18 18:38:00,475 log 957 140011926536192 Not Found: /files/
-WARNING 2025-07-18 18:58:27,885 log 957 140011926536192 Not Found: /api/v1/posts/posts/user_posts/
-WARNING 2025-07-18 20:12:44,753 log 957 140011926536192 Not Found: /category/trderecelerinden/dersnotlari/tyt/tyt-kimya/
-WARNING 2025-07-18 20:17:13,590 log 956 140011926536192 Not Found: /ab2g
-WARNING 2025-07-18 20:17:13,810 log 958 140011926536192 Not Found: /ab2h
-WARNING 2025-07-18 20:17:14,034 log 956 140011926536192 Not Found: /alive.php
-WARNING 2025-07-18 20:17:15,772 log 956 140011926536192 Not Found: /teorema505
-WARNING 2025-07-18 20:27:06,596 log 957 140011926536192 Not Found: /sdk
-WARNING 2025-07-18 20:27:06,626 log 958 140011926536192 Not Found: /odinhttpcall1752859626
-WARNING 2025-07-18 20:27:06,830 log 957 140011926536192 Not Found: /HNAP1
-WARNING 2025-07-18 20:27:06,893 log 958 140011926536192 Not Found: /evox/about
-WARNING 2025-07-18 20:27:07,753 log 956 140011926536192 Forbidden (Referer checking failed - no Referer.): /
-WARNING 2025-07-18 20:33:10,940 log 958 140011926536192 Not Found: /tyt-biyoloji/
-WARNING 2025-07-18 21:55:24,493 log 956 140011926536192 Not Found: /api/v1/posts/posts/direct/18/
-WARNING 2025-07-18 21:55:27,691 log 956 140011926536192 Not Found: /api/v1/bookmark/toggle/
-WARNING 2025-07-18 21:55:34,989 log 957 140011926536192 Not Found: /api/v1/bookmark/toggle/
-WARNING 2025-07-18 21:55:37,616 log 956 140011926536192 Not Found: /api/v1/posts/posts/direct/18/
-WARNING 2025-07-18 21:55:38,878 log 958 140011926536192 Not Found: /api/v1/bookmark/toggle/
-WARNING 2025-07-18 21:55:40,173 log 958 140011926536192 Not Found: /api/v1/posts/posts/direct/18/
-WARNING 2025-07-18 21:56:30,106 log 956 140011926536192 Not Found: /favicon.ico
-WARNING 2025-07-18 22:03:01,412 log 957 140011926536192 Not Found: /dispatch.asp
-WARNING 2025-07-18 22:03:58,857 services 958 140011926536192 User 6 için aktif FCM token bulunamadı
-WARNING 2025-07-18 22:05:42,392 log 958 140011926536192 Not Found: /api/v1/comments/comments/8/
-WARNING 2025-07-18 22:05:43,587 log 958 140011926536192 Not Found: /api/v1/bookmark/toggle/
-WARNING 2025-07-18 22:05:45,045 log 958 140011926536192 Not Found: /api/v1/comments/comments/8/
-WARNING 2025-07-18 22:19:20,513 log 956 140011926536192 Not Found: /api/v1/posts/posts/45/delete_post/
-WARNING 2025-07-18 22:19:23,093 log 958 140011926536192 Not Found: /api/v1/posts/posts/45/delete_post/
-WARNING 2025-07-18 23:02:47,746 log 958 140011926536192 Not Found: /autodiscover/autodiscover.json
+
+WARNING 2025-07-19 23:27:00,564 log 22397 140322994708480 Not Found: /favicon.ico
+WARNING 2025-07-19 23:27:56,934 log 22399 140322994708480 Not Found: /favicon.ico
+WARNING 2025-07-19 23:28:28,056 log 22399 140322994708480 Not Found: /sitemap.xml
+WARNING 2025-07-19 23:28:28,085 log 22397 140322994708480 Not Found: /robots.txt
+WARNING 2025-07-19 23:28:28,514 log 22399 140322994708480 Not Found: /wp-content/uploads/2021/08/8-min-1.jpg
+WARNING 2025-07-19 23:51:31,346 log 22397 140322994708480 Not Found: /index.html
+WARNING 2025-07-19 23:51:53,770 log 22399 140322994708480 Not Found: /index.jsp
+WARNING 2025-07-19 23:52:05,909 log 22397 140322994708480 Not Found: /cgi-bin/config.exp
+WARNING 2025-07-19 23:52:18,183 log 22398 140322994708480 Not Found: /sitecore/shell/sitecore.version.xml
+WARNING 2025-07-19 23:52:29,222 log 22399 140322994708480 Not Found: /Telerik.Web.UI.WebResource.axd
+WARNING 2025-07-19 23:52:41,457 log 22398 140322994708480 Not Found: /helpdesk/WebObjects/Helpdesk.woa
+WARNING 2025-07-19 23:52:51,146 log 22399 140322994708480 Not Found: /ssi.cgi/Login.htm
+WARNING 2025-07-19 23:53:09,310 log 22399 140322994708480 Not Found: /ext-js/app/common/zld_product_spec.js
+WARNING 2025-07-19 23:53:10,069 log 22398 140322994708480 Not Found: /OA_HTML/AppsLocalLogin.jsp
+WARNING 2025-07-19 23:53:18,351 log 22398 140322994708480 Not Found: /js/NewWindow_2_all.js
+WARNING 2025-07-19 23:53:19,115 log 22399 140322994708480 Not Found: /WebInterface/
+WARNING 2025-07-19 23:53:24,862 log 22397 140322994708480 Not Found: /owa/
+WARNING 2025-07-19 23:53:25,680 log 22398 140322994708480 Not Found: /owncloud/status.php
+WARNING 2025-07-19 23:53:33,763 log 22397 140322994708480 Not Found: /status.php
+WARNING 2025-07-19 23:53:40,598 log 22399 140322994708480 Not Found: /internal_forms_authentication
+WARNING 2025-07-19 23:53:48,261 log 22397 140322994708480 Not Found: /identity
+WARNING 2025-07-19 23:53:59,776 log 22399 140322994708480 Not Found: /favicon.ico
+WARNING 2025-07-19 23:54:11,042 log 22398 140322994708480 Not Found: /solr/
+WARNING 2025-07-19 23:54:20,481 log 22397 140322994708480 Not Found: /login.html
+WARNING 2025-07-19 23:54:40,487 log 22399 140322994708480 Not Found: /jasperserver/login.html
+WARNING 2025-07-19 23:54:56,106 log 22397 140322994708480 Not Found: /jasperserver-pro/login.html
+WARNING 2025-07-19 23:55:01,156 log 22398 140322994708480 Not Found: /jasperserverTest/login.html
+WARNING 2025-07-19 23:55:19,710 log 22397 140322994708480 Not Found: /cgi-bin/authLogin.cgi
+WARNING 2025-07-19 23:55:28,542 log 22399 140322994708480 Not Found: /xmldata
+WARNING 2025-07-19 23:55:29,283 log 22398 140322994708480 Not Found: /license.txt
+WARNING 2025-07-19 23:55:43,510 log 22397 140322994708480 Not Found: /wp-json
+WARNING 2025-07-19 23:55:46,847 log 22399 140322994708480 Not Found: /api/session/properties
+WARNING 2025-07-19 23:55:56,211 log 22398 140322994708480 Not Found: /favicon.ico
+WARNING 2025-07-19 23:55:57,559 log 22399 140322994708480 Not Found: /aspera/faspex/
+WARNING 2025-07-19 23:55:58,400 log 22398 140322994708480 Not Found: /webfig/
+WARNING 2025-07-19 23:56:02,339 log 22399 140322994708480 Not Found: /showLogin.cc
+WARNING 2025-07-19 23:56:05,212 log 22397 140322994708480 Not Found: /php/login.php
+WARNING 2025-07-19 23:56:10,479 log 22399 140322994708480 Not Found: /cf_scripts/scripts/ajax/ckeditor/ckeditor.js
+WARNING 2025-07-19 23:56:11,352 log 22397 140322994708480 Not Found: /console
+WARNING 2025-07-19 23:56:16,952 log 22399 140322994708480 Not Found: /sugar_version.json
+WARNING 2025-07-19 23:56:18,518 log 22398 140322994708480 Not Found: /zabbix/favicon.ico
+WARNING 2025-07-19 23:56:19,823 log 22399 140322994708480 Not Found: /login.do
+WARNING 2025-07-19 23:56:21,736 log 22398 140322994708480 Not Found: /css/images/PTZOptics_powerby.png
+WARNING 2025-07-19 23:56:22,498 log 22399 140322994708480 Not Found: /favicon-32x32.png
+WARNING 2025-07-19 23:56:24,339 log 22397 140322994708480 Not Found: /partymgr/control/main
+WARNING 2025-07-20 00:07:42,246 log 22398 140322994708480 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 00:13:08,814 log 22397 140322994708480 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 00:48:31,977 log 22397 140322994708480 Not Found: /wp-login.php
+WARNING 2025-07-20 01:29:07,604 log 22398 140322994708480 Not Found: /.well-known/traffic-advice
+WARNING 2025-07-20 01:34:00,924 log 22397 140322994708480 Not Found: /wp-login.php
+INFO 2025-07-20 01:42:27,032 services 25574 139903597424640 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-20 01:42:29,449 services 25576 140108720009216 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-20 01:42:30,425 services 25577 140108720009216 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-20 01:43:51,054 services 25575 140108720009216 Firebase Admin SDK başarıyla başlatıldı
+WARNING 2025-07-20 01:50:47,645 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 01:51:26,046 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 01:51:40,595 log 25575 140108720009216 Not Found: /wiki
+WARNING 2025-07-20 02:00:21,063 log 25575 140108720009216 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2025-07-20 02:00:21,071 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 02:00:21,087 log 25576 140108720009216 Not Found: /apple-touch-icon.png
+WARNING 2025-07-20 02:09:58,215 log 25576 140108720009216 Not Found: /xmlrpc.php
+WARNING 2025-07-20 02:23:36,751 log 25577 140108720009216 Not Found: /ss.php
+WARNING 2025-07-20 03:00:05,035 log 25576 140108720009216 Not Found: /wordpress
+WARNING 2025-07-20 03:00:05,317 log 25577 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 03:00:05,588 log 25576 140108720009216 Not Found: /wp-admin/install.php
+WARNING 2025-07-20 03:00:05,859 log 25577 140108720009216 Not Found: /wp
+WARNING 2025-07-20 03:00:06,150 log 25575 140108720009216 Not Found: /blog
+WARNING 2025-07-20 03:00:06,447 log 25577 140108720009216 Not Found: /new
+WARNING 2025-07-20 03:00:06,761 log 25576 140108720009216 Not Found: /old
+WARNING 2025-07-20 03:00:07,044 log 25577 140108720009216 Not Found: /newsite
+WARNING 2025-07-20 03:00:07,321 log 25576 140108720009216 Not Found: /test
+WARNING 2025-07-20 03:00:07,602 log 25575 140108720009216 Not Found: /main
+WARNING 2025-07-20 03:00:07,872 log 25577 140108720009216 Not Found: /testing
+WARNING 2025-07-20 03:00:08,147 log 25575 140108720009216 Not Found: /site
+WARNING 2025-07-20 03:00:08,421 log 25577 140108720009216 Not Found: /backup
+WARNING 2025-07-20 03:00:08,691 log 25575 140108720009216 Not Found: /demo
+WARNING 2025-07-20 03:00:08,961 log 25577 140108720009216 Not Found: /home
+WARNING 2025-07-20 03:00:09,237 log 25575 140108720009216 Not Found: /tmp
+WARNING 2025-07-20 03:00:09,510 log 25577 140108720009216 Not Found: /dev
+WARNING 2025-07-20 03:00:09,801 log 25575 140108720009216 Not Found: /cms
+WARNING 2025-07-20 03:00:10,073 log 25577 140108720009216 Not Found: /portal
+WARNING 2025-07-20 03:00:10,348 log 25575 140108720009216 Not Found: /web
+WARNING 2025-07-20 03:12:22,479 log 25575 140108720009216 Not Found: /wp-content/plugins/hellopress/wp_filemanager.php
+WARNING 2025-07-20 03:12:23,011 log 25577 140108720009216 Not Found: /wp-admin/fucku.php
+WARNING 2025-07-20 03:12:23,542 log 25576 140108720009216 Not Found: /wp-trackback.php
+WARNING 2025-07-20 03:12:24,068 log 25577 140108720009216 Not Found: /wp-content/index.php
+WARNING 2025-07-20 03:12:24,599 log 25576 140108720009216 Not Found: /xx.php
+WARNING 2025-07-20 03:12:25,125 log 25577 140108720009216 Not Found: /about.php
+WARNING 2025-07-20 03:12:25,652 log 25576 140108720009216 Not Found: /gelay.php
+WARNING 2025-07-20 03:12:26,180 log 25577 140108720009216 Not Found: /ar.php
+WARNING 2025-07-20 03:12:26,705 log 25576 140108720009216 Not Found: /htaccess.php
+WARNING 2025-07-20 03:12:27,230 log 25575 140108720009216 Not Found: /readme.php
+WARNING 2025-07-20 03:12:27,755 log 25576 140108720009216 Not Found: /as.php
+WARNING 2025-07-20 03:12:28,287 log 25577 140108720009216 Not Found: /403.php
+WARNING 2025-07-20 03:12:28,812 log 25575 140108720009216 Not Found: /max.php
+WARNING 2025-07-20 03:12:29,339 log 25576 140108720009216 Not Found: /m.php
+WARNING 2025-07-20 03:12:29,869 log 25575 140108720009216 Not Found: /post.php
+WARNING 2025-07-20 03:12:30,396 log 25576 140108720009216 Not Found: /themes.php
+WARNING 2025-07-20 03:12:30,925 log 25575 140108720009216 Not Found: /wp-content/themes/astra/inc/ki1k.php
+WARNING 2025-07-20 03:12:31,458 log 25576 140108720009216 Not Found: /ALFA_DATA/index.php
+WARNING 2025-07-20 03:12:31,991 log 25575 140108720009216 Not Found: /wp-admin/maint/about.php
+WARNING 2025-07-20 03:12:32,520 log 25576 140108720009216 Not Found: /wp-admin/network/wp-conflg.php
+WARNING 2025-07-20 03:12:33,046 log 25577 140108720009216 Not Found: /click.php
+WARNING 2025-07-20 03:12:33,579 log 25576 140108720009216 Not Found: /install.php
+WARNING 2025-07-20 03:12:34,112 log 25577 140108720009216 Not Found: /lv.php
+WARNING 2025-07-20 03:12:34,642 log 25576 140108720009216 Not Found: /simple.php
+WARNING 2025-07-20 03:12:35,171 log 25577 140108720009216 Not Found: /13k.php
+WARNING 2025-07-20 03:12:35,699 log 25575 140108720009216 Not Found: /css.php
+WARNING 2025-07-20 03:12:36,224 log 25577 140108720009216 Not Found: /up.php
+WARNING 2025-07-20 03:12:36,751 log 25576 140108720009216 Not Found: /0x1949.php
+WARNING 2025-07-20 03:12:37,279 log 25577 140108720009216 Not Found: /cong.php
+WARNING 2025-07-20 03:12:37,810 log 25576 140108720009216 Not Found: /fw.php
+WARNING 2025-07-20 03:12:38,337 log 25577 140108720009216 Not Found: /bs1.php
+WARNING 2025-07-20 03:12:38,865 log 25576 140108720009216 Not Found: /wp-includes/images/wp-login.php
+WARNING 2025-07-20 03:12:39,391 log 25577 140108720009216 Not Found: /termps.php
+WARNING 2025-07-20 03:12:39,920 log 25575 140108720009216 Not Found: /brand.php
+WARNING 2025-07-20 03:12:40,450 log 25577 140108720009216 Not Found: /goods.php
+WARNING 2025-07-20 03:12:40,977 log 25575 140108720009216 Not Found: /cong.php
+WARNING 2025-07-20 03:12:41,503 log 25576 140108720009216 Not Found: /atomlib.php
+WARNING 2025-07-20 03:12:42,034 log 25577 140108720009216 Not Found: /w.php
+WARNING 2025-07-20 03:12:42,564 log 25575 140108720009216 Not Found: /404.php
+WARNING 2025-07-20 03:12:43,093 log 25577 140108720009216 Not Found: /404.php
+WARNING 2025-07-20 03:12:43,618 log 25576 140108720009216 Not Found: /article.php
+WARNING 2025-07-20 03:12:44,143 log 25575 140108720009216 Not Found: /wp-content/product.php
+WARNING 2025-07-20 03:12:44,671 log 25577 140108720009216 Not Found: /wp-content/function.php
+WARNING 2025-07-20 03:12:45,197 log 25575 140108720009216 Not Found: /0x.php
+WARNING 2025-07-20 03:12:45,727 log 25576 140108720009216 Not Found: /css.php
+WARNING 2025-07-20 03:12:46,262 log 25575 140108720009216 Not Found: /modules/mod_simplefileuploadv1.3/elements/filemanager.php
+WARNING 2025-07-20 03:12:46,793 log 25576 140108720009216 Not Found: /wp-content/index.php
+WARNING 2025-07-20 03:12:47,324 log 25575 140108720009216 Not Found: /1.php
+WARNING 2025-07-20 03:12:47,853 log 25576 140108720009216 Not Found: /admin.php
+WARNING 2025-07-20 03:12:48,379 log 25575 140108720009216 Not Found: /wp-admin/maint/maint.php
+WARNING 2025-07-20 03:12:48,906 log 25576 140108720009216 Not Found: /classwithtostring.php
+WARNING 2025-07-20 03:12:49,437 log 25575 140108720009216 Not Found: /dropdown.php
+WARNING 2025-07-20 03:12:49,965 log 25576 140108720009216 Not Found: /moon.php
+WARNING 2025-07-20 03:12:50,493 log 25577 140108720009216 Not Found: /0x.php
+WARNING 2025-07-20 03:12:51,018 log 25576 140108720009216 Not Found: /moon.php
+WARNING 2025-07-20 03:12:51,544 log 25575 140108720009216 Not Found: /autoload_classmap.php
+WARNING 2025-07-20 03:12:52,075 log 25576 140108720009216 Not Found: /inputs.php
+WARNING 2025-07-20 03:12:52,605 log 25575 140108720009216 Not Found: /default.php
+WARNING 2025-07-20 03:12:53,134 log 25576 140108720009216 Not Found: /fm.php
+WARNING 2025-07-20 03:12:53,659 log 25575 140108720009216 Not Found: /fm.php
+WARNING 2025-07-20 03:12:54,190 log 25577 140108720009216 Not Found: /about.php
+WARNING 2025-07-20 03:12:54,721 log 25576 140108720009216 Not Found: /file.php
+WARNING 2025-07-20 03:12:55,250 log 25575 140108720009216 Not Found: /alfa.php
+WARNING 2025-07-20 03:12:55,777 log 25576 140108720009216 Not Found: /buy.php
+WARNING 2025-07-20 03:12:56,304 log 25575 140108720009216 Not Found: /themes/twentytwentytwo/index.php
+WARNING 2025-07-20 03:12:56,832 log 25576 140108720009216 Not Found: /wp-admin/js/wp-conflg.php
+WARNING 2025-07-20 03:12:57,359 log 25575 140108720009216 Not Found: /wp-admin/wp-conflg.php
+WARNING 2025-07-20 03:12:57,889 log 25577 140108720009216 Not Found: /wp-admin/css/wp-conflg.php
+WARNING 2025-07-20 03:12:58,419 log 25576 140108720009216 Not Found: /manager.php
+WARNING 2025-07-20 03:12:58,949 log 25577 140108720009216 Not Found: /js/fm.php
+WARNING 2025-07-20 03:12:59,477 log 25575 140108720009216 Not Found: /item.php
+WARNING 2025-07-20 03:13:00,005 log 25576 140108720009216 Not Found: /plugins/Cache/footer.php
+WARNING 2025-07-20 03:13:00,532 log 25575 140108720009216 Not Found: /404.php
+WARNING 2025-07-20 03:13:01,061 log 25576 140108720009216 Not Found: /mail.php
+WARNING 2025-07-20 03:13:01,591 log 25577 140108720009216 Not Found: /wp-content/plugins/index.php
+WARNING 2025-07-20 03:13:02,119 log 25576 140108720009216 Not Found: /sx.php
+WARNING 2025-07-20 03:13:02,646 log 25577 140108720009216 Not Found: /wp-admin/maint/admin.php
+WARNING 2025-07-20 03:13:03,172 log 25576 140108720009216 Not Found: /article.php
+WARNING 2025-07-20 03:13:03,708 log 25577 140108720009216 Not Found: /alfa.php
+WARNING 2025-07-20 03:13:04,237 log 25575 140108720009216 Not Found: /1.php
+WARNING 2025-07-20 03:13:04,767 log 25576 140108720009216 Not Found: /403.php
+WARNING 2025-07-20 03:13:05,295 log 25577 140108720009216 Not Found: /link.php
+WARNING 2025-07-20 03:13:05,821 log 25575 140108720009216 Not Found: /bak.php
+WARNING 2025-07-20 03:13:06,346 log 25576 140108720009216 Not Found: /ini.php
+WARNING 2025-07-20 03:13:06,874 log 25577 140108720009216 Not Found: /ws.php
+WARNING 2025-07-20 03:13:07,401 log 25576 140108720009216 Not Found: /lock360.php
+WARNING 2025-07-20 03:13:07,932 log 25577 140108720009216 Not Found: /wp-trackback.php
+WARNING 2025-07-20 03:13:08,459 log 25576 140108720009216 Not Found: /.well-known/index.php
+WARNING 2025-07-20 03:13:08,986 log 25577 140108720009216 Not Found: /wp-includes/certificates/plugins.php
+WARNING 2025-07-20 03:13:09,513 log 25576 140108720009216 Not Found: /wp-content/themes/seotheme/mar.php
+WARNING 2025-07-20 03:13:10,040 log 25575 140108720009216 Not Found: /wp-admin/network/plugins.php
+WARNING 2025-07-20 03:13:10,568 log 25576 140108720009216 Not Found: /wp-admin/about.php
+WARNING 2025-07-20 03:13:11,093 log 25575 140108720009216 Not Found: /wp-includes/Requests/about.php
+WARNING 2025-07-20 03:13:11,621 log 25576 140108720009216 Not Found: /chosen.php
+WARNING 2025-07-20 03:13:12,149 log 25575 140108720009216 Not Found: /wp-includes/ID3/about.php
+WARNING 2025-07-20 03:13:12,677 log 25576 140108720009216 Not Found: /css/index.php
+WARNING 2025-07-20 03:13:13,204 log 25575 140108720009216 Not Found: /wp-admin/includes/xmrlpc.php
+WARNING 2025-07-20 03:13:13,733 log 25576 140108720009216 Not Found: /wp-includes/SimplePie/wp-login.php
+WARNING 2025-07-20 03:13:14,266 log 25575 140108720009216 Not Found: /wp-content/themes/about.php
+WARNING 2025-07-20 03:13:14,791 log 25576 140108720009216 Not Found: /filemanager/dialog.php
+WARNING 2025-07-20 03:13:16,120 log 25577 140108720009216 Not Found: /wp-admin/maint/index.php
+WARNING 2025-07-20 03:13:16,673 log 25576 140108720009216 Not Found: /wp-includes/Requests/Text/admin.php
+WARNING 2025-07-20 03:13:17,223 log 25577 140108720009216 Not Found: /wp-includes/customize/about.php
+WARNING 2025-07-20 03:13:17,772 log 25576 140108720009216 Not Found: /index/function.php
+WARNING 2025-07-20 03:13:18,319 log 25575 140108720009216 Not Found: /uploads/autoload_classmap.php
+WARNING 2025-07-20 03:13:18,869 log 25577 140108720009216 Not Found: /wp-includes/css/dist/preferences/wp-login.php
+WARNING 2025-07-20 03:13:19,421 log 25575 140108720009216 Not Found: /wp-includes/style-engine/about.php
+WARNING 2025-07-20 03:13:19,980 log 25577 140108720009216 Not Found: /.well-known/acme-challenge/mariju.php
+WARNING 2025-07-20 03:13:20,531 log 25575 140108720009216 Not Found: /about/function.php
+WARNING 2025-07-20 03:13:21,085 log 25577 140108720009216 Not Found: /wp-includes/theme-compat/chosen.php
+WARNING 2025-07-20 03:13:22,530 log 25575 140108720009216 Not Found: /.well-known/acme-challenge/index.php
+WARNING 2025-07-20 03:13:23,085 log 25576 140108720009216 Not Found: /css/colors/blue/index.php
+WARNING 2025-07-20 03:13:23,634 log 25575 140108720009216 Not Found: /wp-content/plugins/pwnd/as.php
+WARNING 2025-07-20 03:13:24,187 log 25576 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 03:13:24,741 log 25575 140108720009216 Not Found: /wp-admin/user/about.php
+WARNING 2025-07-20 03:13:25,302 log 25576 140108720009216 Not Found: /wp-admin/js/index.php
+WARNING 2025-07-20 03:13:25,855 log 25575 140108720009216 Not Found: /wp-content/upgrade/about.php
+WARNING 2025-07-20 03:13:26,409 log 25576 140108720009216 Not Found: /wp-includes/assets/index.php
+WARNING 2025-07-20 03:13:26,961 log 25575 140108720009216 Not Found: /wp-content/radio.php
+WARNING 2025-07-20 03:13:27,515 log 25576 140108720009216 Not Found: /wp-includes/fonts/index.php
+WARNING 2025-07-20 03:13:28,081 log 25575 140108720009216 Not Found: /.well-known/gecko-litespeed.php
+WARNING 2025-07-20 03:13:28,635 log 25576 140108720009216 Not Found: /.well-known/admin.php
+WARNING 2025-07-20 03:13:29,186 log 25575 140108720009216 Not Found: /wp-content/admin.php
+WARNING 2025-07-20 03:13:29,738 log 25577 140108720009216 Not Found: /wp-content/plugins/admin.php
+WARNING 2025-07-20 03:13:30,293 log 25576 140108720009216 Not Found: /wp-content/themes/twentytwentytwo/index.php
+WARNING 2025-07-20 03:13:30,848 log 25577 140108720009216 Not Found: /wp-includes/theme-compat/index.php
+WARNING 2025-07-20 03:13:31,397 log 25575 140108720009216 Not Found: /.well-known/log.php
+WARNING 2025-07-20 03:13:31,947 log 25577 140108720009216 Not Found: /class.php
+WARNING 2025-07-20 03:13:32,496 log 25575 140108720009216 Not Found: /bless.php
+WARNING 2025-07-20 03:13:33,050 log 25576 140108720009216 Not Found: /wp-includes/js/codemirror/index.php
+WARNING 2025-07-20 03:13:33,608 log 25575 140108720009216 Not Found: /wp-includes/block-patterns/index.php
+WARNING 2025-07-20 03:13:34,165 log 25576 140108720009216 Not Found: /lock360.php
+WARNING 2025-07-20 03:13:34,713 log 25575 140108720009216 Not Found: /system_log.php
+WARNING 2025-07-20 03:13:35,261 log 25577 140108720009216 Not Found: /admin.php
+WARNING 2025-07-20 03:13:35,813 log 25576 140108720009216 Not Found: /class.php
+WARNING 2025-07-20 03:13:36,366 log 25577 140108720009216 Not Found: /lock360.php
+WARNING 2025-07-20 03:13:36,921 log 25576 140108720009216 Not Found: /wp-admin/maint/admin.php
+WARNING 2025-07-20 03:13:37,472 log 25577 140108720009216 Not Found: /file.php
+WARNING 2025-07-20 03:13:38,024 log 25575 140108720009216 Not Found: /mail.php
+WARNING 2025-07-20 03:16:22,520 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-6-540x540.jpg
+WARNING 2025-07-20 03:19:34,902 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:36,340 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:37,355 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:39,010 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:40,244 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:41,141 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:42,327 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:43,224 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:44,343 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:45,618 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:47,246 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:48,229 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:49,351 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:50,654 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:51,607 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:52,908 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:54,431 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:55,471 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:56,306 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:19:57,602 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/3-min-7-540x540.png
+WARNING 2025-07-20 03:44:28,012 log 25576 140108720009216 Not Found: /accounts/login/
+WARNING 2025-07-20 03:44:40,176 log 25575 140108720009216 Not Found: /apple-touch-icon-120x120-precomposed.png
+WARNING 2025-07-20 03:44:40,420 log 25577 140108720009216 Not Found: /apple-touch-icon-120x120.png
+WARNING 2025-07-20 03:44:40,581 log 25575 140108720009216 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2025-07-20 03:44:40,731 log 25577 140108720009216 Not Found: /apple-touch-icon.png
+WARNING 2025-07-20 03:45:12,565 log 25576 140108720009216 Not Found: /ab2g
+WARNING 2025-07-20 03:45:13,409 log 25577 140108720009216 Not Found: /ab2h
+WARNING 2025-07-20 03:45:14,173 log 25575 140108720009216 Not Found: /alive.php
+WARNING 2025-07-20 03:45:21,246 log 25575 140108720009216 Not Found: /teorema505
+WARNING 2025-07-20 03:56:15,951 log 25577 140108720009216 Not Found: /webui/
+WARNING 2025-07-20 03:59:18,516 log 25575 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 04:10:52,306 log 25575 140108720009216 Not Found: /geoserver/web/
+WARNING 2025-07-20 04:13:16,386 log 25575 140108720009216 Not Found: /.git/config
+WARNING 2025-07-20 04:19:38,191 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 04:30:55,647 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 04:31:04,541 log 25577 140108720009216 Not Found: /psikoloji/
+WARNING 2025-07-20 04:43:59,085 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:43:59,968 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:01,230 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:02,427 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:08,593 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:09,843 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:10,937 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:22,109 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:27,858 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:28,775 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:29,613 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:30,667 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:31,717 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:33,497 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:34,509 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:35,621 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:36,586 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:37,675 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:38,787 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 04:44:39,563 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6-540x540.jpg
+WARNING 2025-07-20 05:03:12,843 log 25576 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 05:05:11,072 log 25577 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 05:05:31,185 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 05:05:45,965 log 25577 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 05:06:28,121 log 25575 140108720009216 Not Found: /kampuslu.com/surekli-kocluk
+WARNING 2025-07-20 05:26:47,844 log 25576 140108720009216 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 05:26:56,809 log 25577 140108720009216 Unauthorized: /api/v1/chat/rooms/
+ERROR 2025-07-20 05:26:56,905 log 25575 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+WARNING 2025-07-20 05:26:58,567 log 25577 140108720009216 Unauthorized: /api/v1/profiles/me/
+ERROR 2025-07-20 05:26:58,621 log 25576 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+WARNING 2025-07-20 05:27:18,302 log 25575 140108720009216 Unauthorized: /api/v1/auth/login/
+WARNING 2025-07-20 05:27:25,063 log 25577 140108720009216 Unauthorized: /api/v1/auth/login/
+WARNING 2025-07-20 05:27:29,276 log 25576 140108720009216 Unauthorized: /api/v1/auth/login/
+WARNING 2025-07-20 05:27:34,292 log 25577 140108720009216 Unauthorized: /api/v1/auth/login/
+INFO 2025-07-20 05:30:24,579 image_processor 25575 140108720009216 Resim işleniyor: posts/2025/07/20/50/post_50_post_image_0.jpg, boyut: (1080, 810), format: JPEG
+INFO 2025-07-20 05:30:25,372 image_processor 25575 140108720009216 Preset 'thumbnail' işlendi: (150, 113), 3456 bytes
+INFO 2025-07-20 05:30:25,413 image_processor 25575 140108720009216 Preset 'medium' işlendi: (300, 225), 15954 bytes
+INFO 2025-07-20 05:30:25,505 image_processor 25575 140108720009216 Preset 'large' işlendi: (600, 450), 64228 bytes
+INFO 2025-07-20 05:30:25,506 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_0_thumbnail.webp
+INFO 2025-07-20 05:30:25,507 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_0_medium.webp
+INFO 2025-07-20 05:30:25,509 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_0_large.webp
+INFO 2025-07-20 05:30:25,519 image_processor 25575 140108720009216 Resim işleniyor: posts/2025/07/20/50/post_50_post_image_1.jpg, boyut: (1080, 1440), format: JPEG
+INFO 2025-07-20 05:30:26,590 image_processor 25575 140108720009216 Preset 'thumbnail' işlendi: (112, 150), 3752 bytes
+INFO 2025-07-20 05:30:26,627 image_processor 25575 140108720009216 Preset 'medium' işlendi: (225, 300), 17338 bytes
+INFO 2025-07-20 05:30:26,735 image_processor 25575 140108720009216 Preset 'large' işlendi: (450, 600), 69142 bytes
+INFO 2025-07-20 05:30:26,736 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_1_thumbnail.webp
+INFO 2025-07-20 05:30:26,738 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_1_medium.webp
+INFO 2025-07-20 05:30:26,739 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_1_large.webp
+INFO 2025-07-20 05:30:26,749 image_processor 25575 140108720009216 Resim işleniyor: posts/2025/07/20/50/post_50_post_image_2.jpg, boyut: (1080, 1440), format: JPEG
+INFO 2025-07-20 05:30:27,375 image_processor 25575 140108720009216 Preset 'thumbnail' işlendi: (112, 150), 1554 bytes
+INFO 2025-07-20 05:30:27,405 image_processor 25575 140108720009216 Preset 'medium' işlendi: (225, 300), 9506 bytes
+INFO 2025-07-20 05:30:27,500 image_processor 25575 140108720009216 Preset 'large' işlendi: (450, 600), 46988 bytes
+INFO 2025-07-20 05:30:27,508 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_2_thumbnail.webp
+INFO 2025-07-20 05:30:27,509 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_2_medium.webp
+INFO 2025-07-20 05:30:27,510 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_2_large.webp
+INFO 2025-07-20 05:30:27,519 image_processor 25575 140108720009216 Resim işleniyor: posts/2025/07/20/50/post_50_post_image_3.jpg, boyut: (1080, 1440), format: JPEG
+INFO 2025-07-20 05:30:28,142 image_processor 25575 140108720009216 Preset 'thumbnail' işlendi: (112, 150), 2672 bytes
+INFO 2025-07-20 05:30:28,172 image_processor 25575 140108720009216 Preset 'medium' işlendi: (225, 300), 12882 bytes
+INFO 2025-07-20 05:30:28,268 image_processor 25575 140108720009216 Preset 'large' işlendi: (450, 600), 66158 bytes
+INFO 2025-07-20 05:30:28,277 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_3_thumbnail.webp
+INFO 2025-07-20 05:30:28,278 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_3_medium.webp
+INFO 2025-07-20 05:30:28,279 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/50/posts2025072050post_50_post_image_3_large.webp
+INFO 2025-07-20 05:30:57,128 image_processor 25575 140108720009216 Resim işleniyor: posts/2025/07/20/51/post_51_post_image_0.jpg, boyut: (1080, 810), format: JPEG
+INFO 2025-07-20 05:30:57,693 image_processor 25575 140108720009216 Preset 'thumbnail' işlendi: (150, 113), 3456 bytes
+INFO 2025-07-20 05:30:57,744 image_processor 25575 140108720009216 Preset 'medium' işlendi: (300, 225), 15954 bytes
+INFO 2025-07-20 05:30:57,866 image_processor 25575 140108720009216 Preset 'large' işlendi: (600, 450), 64228 bytes
+INFO 2025-07-20 05:30:57,868 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/51/posts2025072051post_51_post_image_0_thumbnail.webp
+INFO 2025-07-20 05:30:57,869 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/51/posts2025072051post_51_post_image_0_medium.webp
+INFO 2025-07-20 05:30:57,870 image_processor 25575 140108720009216 Resim kaydedildi: posts/2025/07/20/51/posts2025072051post_51_post_image_0_large.webp
+WARNING 2025-07-20 05:33:18,120 log 25576 140108720009216 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 05:39:15,744 log 25576 140108720009216 Not Found: /developmentserver/metadatauploader
+INFO 2025-07-20 05:47:03,720 image_processor 25576 140108720009216 Resim işleniyor: posts/2025/07/20/52/post_52_post_image_0.jpg, boyut: (1080, 1440), format: JPEG
+INFO 2025-07-20 05:47:05,287 image_processor 25576 140108720009216 Preset 'thumbnail' işlendi: (112, 150), 3386 bytes
+INFO 2025-07-20 05:47:05,333 image_processor 25576 140108720009216 Preset 'medium' işlendi: (225, 300), 15454 bytes
+INFO 2025-07-20 05:47:05,487 image_processor 25576 140108720009216 Preset 'large' işlendi: (450, 600), 65910 bytes
+INFO 2025-07-20 05:47:05,494 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_0_thumbnail.webp
+INFO 2025-07-20 05:47:05,495 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_0_medium.webp
+INFO 2025-07-20 05:47:05,496 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_0_large.webp
+INFO 2025-07-20 05:47:05,521 image_processor 25576 140108720009216 Resim işleniyor: posts/2025/07/20/52/post_52_post_image_1.jpg, boyut: (1080, 1920), format: JPEG
+INFO 2025-07-20 05:47:06,591 image_processor 25576 140108720009216 Preset 'thumbnail' işlendi: (84, 150), 2952 bytes
+INFO 2025-07-20 05:47:06,646 image_processor 25576 140108720009216 Preset 'medium' işlendi: (169, 300), 14054 bytes
+INFO 2025-07-20 05:47:06,874 image_processor 25576 140108720009216 Preset 'large' işlendi: (337, 600), 55318 bytes
+INFO 2025-07-20 05:47:06,877 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_1_thumbnail.webp
+INFO 2025-07-20 05:47:06,878 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_1_medium.webp
+INFO 2025-07-20 05:47:06,880 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_1_large.webp
+INFO 2025-07-20 05:47:06,897 image_processor 25576 140108720009216 Resim işleniyor: posts/2025/07/20/52/post_52_post_image_2.jpg, boyut: (1080, 810), format: JPEG
+INFO 2025-07-20 05:47:07,493 image_processor 25576 140108720009216 Preset 'thumbnail' işlendi: (150, 113), 3456 bytes
+INFO 2025-07-20 05:47:07,542 image_processor 25576 140108720009216 Preset 'medium' işlendi: (300, 225), 15954 bytes
+INFO 2025-07-20 05:47:07,652 image_processor 25576 140108720009216 Preset 'large' işlendi: (600, 450), 64228 bytes
+INFO 2025-07-20 05:47:07,655 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_2_thumbnail.webp
+INFO 2025-07-20 05:47:07,656 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_2_medium.webp
+INFO 2025-07-20 05:47:07,658 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_2_large.webp
+INFO 2025-07-20 05:47:07,668 image_processor 25576 140108720009216 Resim işleniyor: posts/2025/07/20/52/post_52_post_image_3.jpg, boyut: (1080, 1440), format: JPEG
+INFO 2025-07-20 05:47:08,330 image_processor 25576 140108720009216 Preset 'thumbnail' işlendi: (112, 150), 3752 bytes
+INFO 2025-07-20 05:47:08,362 image_processor 25576 140108720009216 Preset 'medium' işlendi: (225, 300), 17338 bytes
+INFO 2025-07-20 05:47:08,463 image_processor 25576 140108720009216 Preset 'large' işlendi: (450, 600), 69142 bytes
+INFO 2025-07-20 05:47:08,465 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_3_thumbnail.webp
+INFO 2025-07-20 05:47:08,466 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_3_medium.webp
+INFO 2025-07-20 05:47:08,467 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/52/posts2025072052post_52_post_image_3_large.webp
+INFO 2025-07-20 05:47:44,027 image_processor 25577 140108720009216 Resim işleniyor: posts/2025/07/20/53/post_53_post_image_0.jpg, boyut: (1080, 1440), format: JPEG
+INFO 2025-07-20 05:47:44,879 image_processor 25577 140108720009216 Preset 'thumbnail' işlendi: (112, 150), 1554 bytes
+INFO 2025-07-20 05:47:44,911 image_processor 25577 140108720009216 Preset 'medium' işlendi: (225, 300), 9506 bytes
+INFO 2025-07-20 05:47:45,019 image_processor 25577 140108720009216 Preset 'large' işlendi: (450, 600), 46988 bytes
+INFO 2025-07-20 05:47:45,020 image_processor 25577 140108720009216 Resim kaydedildi: posts/2025/07/20/53/posts2025072053post_53_post_image_0_thumbnail.webp
+INFO 2025-07-20 05:47:45,022 image_processor 25577 140108720009216 Resim kaydedildi: posts/2025/07/20/53/posts2025072053post_53_post_image_0_medium.webp
+INFO 2025-07-20 05:47:45,023 image_processor 25577 140108720009216 Resim kaydedildi: posts/2025/07/20/53/posts2025072053post_53_post_image_0_large.webp
+INFO 2025-07-20 06:09:17,514 image_processor 25576 140108720009216 Resim işleniyor: posts/2025/07/20/54/post_54_post_image_0.jpg, boyut: (1080, 1006), format: JPEG
+INFO 2025-07-20 06:09:17,957 image_processor 25576 140108720009216 Preset 'thumbnail' işlendi: (150, 140), 2516 bytes
+INFO 2025-07-20 06:09:17,996 image_processor 25576 140108720009216 Preset 'medium' işlendi: (300, 279), 9704 bytes
+INFO 2025-07-20 06:09:18,138 image_processor 25576 140108720009216 Preset 'large' işlendi: (600, 559), 25782 bytes
+INFO 2025-07-20 06:09:18,141 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/54/posts2025072054post_54_post_image_0_thumbnail.webp
+INFO 2025-07-20 06:09:18,145 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/54/posts2025072054post_54_post_image_0_medium.webp
+INFO 2025-07-20 06:09:18,146 image_processor 25576 140108720009216 Resim kaydedildi: posts/2025/07/20/54/posts2025072054post_54_post_image_0_large.webp
+WARNING 2025-07-20 06:12:14,232 log 25575 140108720009216 Not Found: /api/v1/profiles/1/followers/
+WARNING 2025-07-20 06:12:14,240 log 25577 140108720009216 Not Found: /api/v1/profiles/1/following/
+WARNING 2025-07-20 06:12:32,156 log 25575 140108720009216 Not Found: /api/v1/profiles/1/followers/
+WARNING 2025-07-20 06:12:32,171 log 25576 140108720009216 Not Found: /api/v1/profiles/1/following/
+WARNING 2025-07-20 06:42:31,928 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 06:55:58,074 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 06:55:59,658 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 07:23:28,394 log 25575 140108720009216 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 07:28:04,027 log 25577 140108720009216 Not Found: /tyt-tarih/tyt-turkce
+WARNING 2025-07-20 07:29:23,834 log 25576 140108720009216 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 07:29:29,518 log 25575 140108720009216 Not Found: /api/v1/chat/rooms/16/mark_as_read/
+WARNING 2025-07-20 07:30:49,866 log 25575 140108720009216 Not Found: /api/v1/posts/posts/user_posts/
+WARNING 2025-07-20 07:30:52,405 log 25576 140108720009216 Not Found: /api/v1/profiles/11/followers/
+WARNING 2025-07-20 07:30:52,417 log 25577 140108720009216 Not Found: /api/v1/profiles/11/following/
+WARNING 2025-07-20 07:43:04,039 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 07:43:30,838 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 07:43:43,111 log 25577 140108720009216 Not Found: /wiki
+WARNING 2025-07-20 08:08:21,562 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 08:09:16,975 log 25575 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 08:11:13,373 log 25577 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 08:11:13,821 log 25576 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 08:49:16,375 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 08:49:16,545 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 08:49:22,141 log 25575 140108720009216 Not Found: /index.html
+WARNING 2025-07-20 09:02:46,120 log 25575 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 09:02:46,927 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 09:02:46,920 log 25576 140108720009216 Not Found: /sitemap.xml
+WARNING 2025-07-20 09:02:57,979 log 25576 140108720009216 Not Found: /sitemap.xml
+WARNING 2025-07-20 09:02:57,986 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 09:15:02,300 log 25576 140108720009216 Not Found: /owa/auth/x.js
+WARNING 2025-07-20 09:31:16,721 log 25576 140108720009216 Not Found: /wp-admin/css/
+WARNING 2025-07-20 09:31:29,337 log 25577 140108720009216 Not Found: /.well-known/
+WARNING 2025-07-20 09:31:42,366 log 25575 140108720009216 Not Found: /sites/default/files/
+WARNING 2025-07-20 09:31:59,182 log 25575 140108720009216 Not Found: /uploads/
+WARNING 2025-07-20 09:32:06,984 log 25576 140108720009216 Not Found: /images/
+WARNING 2025-07-20 09:32:12,991 log 25577 140108720009216 Not Found: /files/
+WARNING 2025-07-20 09:33:29,843 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 09:41:18,535 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 09:51:25,167 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 10:13:56,519 log 25576 140108720009216 Not Found: /.env
+WARNING 2025-07-20 10:13:58,508 log 25577 140108720009216 Not Found: /.git/config
+WARNING 2025-07-20 10:37:13,900 log 25577 140108720009216 Not Found: /.env
+WARNING 2025-07-20 10:39:37,868 log 25577 140108720009216 Not Found: /.env
+WARNING 2025-07-20 10:42:56,672 log 25577 140108720009216 Not Found: /actuator/gateway/routes
+WARNING 2025-07-20 10:51:09,201 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/5-min-6.jpg
+WARNING 2025-07-20 10:51:15,706 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 10:53:30,441 log 25576 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 11:20:03,239 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 11:46:14,767 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:15,754 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:17,062 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:18,382 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:19,573 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:21,010 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:22,140 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:23,350 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:24,636 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:26,752 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:27,897 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:29,331 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:30,213 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:32,363 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:33,493 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:34,704 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:35,601 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:36,990 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:38,043 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 11:46:39,746 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/2-min-12-540x540.jpg
+WARNING 2025-07-20 12:22:18,976 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 12:28:29,702 log 25577 140108720009216 Not Found: /category/blog/
+WARNING 2025-07-20 12:29:54,688 log 25576 140108720009216 Not Found: /author/sezginomerfaruk/page/1/
+WARNING 2025-07-20 12:36:18,150 log 25577 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 12:36:23,177 log 25576 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 12:36:32,752 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 12:39:38,045 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 12:56:14,566 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-6.jpg
+WARNING 2025-07-20 13:06:19,799 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 13:06:20,074 log 25575 140108720009216 Not Found: /sitemap.xml
+WARNING 2025-07-20 13:06:20,269 log 25576 140108720009216 Not Found: /.well-known/security.txt
+WARNING 2025-07-20 13:10:40,707 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/10-min-1.jpg
+WARNING 2025-07-20 13:26:26,235 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 13:26:27,791 log 25575 140108720009216 Not Found: /ads.txt
+WARNING 2025-07-20 13:44:24,247 log 25575 140108720009216 Not Found: /version
+WARNING 2025-07-20 13:45:27,245 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 13:45:46,742 log 25576 140108720009216 Not Found: /wp-login.php
+WARNING 2025-07-20 14:00:17,352 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 14:00:27,310 log 25577 140108720009216 Not Found: /ayt-kimya/ayt-biyoloji
+WARNING 2025-07-20 14:01:55,141 log 25576 140108720009216 Not Found: //wp-includes/ID3/license.txt
+WARNING 2025-07-20 14:01:55,353 log 25575 140108720009216 Not Found: //feed/
+WARNING 2025-07-20 14:01:55,565 log 25577 140108720009216 Not Found: //xmlrpc.php
+WARNING 2025-07-20 14:01:55,776 log 25575 140108720009216 Not Found: //blog/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:55,986 log 25577 140108720009216 Not Found: //web/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:56,194 log 25576 140108720009216 Not Found: //wordpress/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:56,405 log 25577 140108720009216 Not Found: //wp/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:56,617 log 25576 140108720009216 Not Found: //2020/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:56,834 log 25577 140108720009216 Not Found: //2019/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:57,048 log 25576 140108720009216 Not Found: //2021/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:57,256 log 25577 140108720009216 Not Found: //shop/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:57,467 log 25575 140108720009216 Not Found: //wp1/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:57,680 log 25577 140108720009216 Not Found: //test/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:57,892 log 25575 140108720009216 Not Found: //site/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:01:58,103 log 25577 140108720009216 Not Found: //cms/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 14:04:11,897 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 14:17:58,488 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 14:18:19,327 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 14:18:25,792 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 15:23:06,632 log 25575 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 15:54:42,546 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 15:54:58,835 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 16:09:23,748 log 25575 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 16:09:24,799 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 16:17:09,094 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 16:17:19,746 log 25575 140108720009216 Not Found: /category/trderecelerinden/dersnotlari/tyt/tyt-mat/
+WARNING 2025-07-20 16:20:23,190 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:23,935 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:24,777 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:25,570 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:27,271 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:28,715 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:29,580 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:30,419 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:31,195 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:33,169 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:34,433 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:35,779 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:36,926 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:38,555 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:40,375 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:41,676 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:42,724 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:43,654 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:44,737 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:20:46,397 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/1-min-17-540x540.jpg
+WARNING 2025-07-20 16:26:18,002 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 16:26:20,835 log 25576 140108720009216 Not Found: /actuator/health
+WARNING 2025-07-20 16:30:26,459 log 25576 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 16:33:07,663 log 25577 140108720009216 Not Found: //wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:07,942 log 25575 140108720009216 Not Found: //xmlrpc.php
+WARNING 2025-07-20 16:33:08,818 log 25575 140108720009216 Not Found: //blog/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:09,015 log 25577 140108720009216 Not Found: //web/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:09,406 log 25576 140108720009216 Not Found: //wordpress/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:09,604 log 25577 140108720009216 Not Found: //website/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:09,902 log 25576 140108720009216 Not Found: //wp/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:10,054 log 25577 140108720009216 Not Found: //news/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:10,444 log 25575 140108720009216 Not Found: //2018/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:10,699 log 25577 140108720009216 Not Found: //2019/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:10,854 log 25575 140108720009216 Not Found: //shop/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:11,093 log 25576 140108720009216 Not Found: //wp1/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:11,301 log 25575 140108720009216 Not Found: //test/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:11,634 log 25576 140108720009216 Not Found: //wp2/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:11,829 log 25575 140108720009216 Not Found: //site/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:11,984 log 25576 140108720009216 Not Found: //cms/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:33:12,206 log 25575 140108720009216 Not Found: //sito/wp-includes/wlwmanifest.xml
+WARNING 2025-07-20 16:41:53,613 log 25575 140108720009216 Not Found: /wp-login.php
+WARNING 2025-07-20 16:41:53,743 log 25576 140108720009216 Not Found: /wp-admin/
+WARNING 2025-07-20 16:50:50,521 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 16:50:57,043 log 25576 140108720009216 Not Found: /temel-kavramlar/
+WARNING 2025-07-20 16:56:10,269 log 25577 140108720009216 Not Found: /category/bolumtanitim/
+WARNING 2025-07-20 17:02:12,623 log 25577 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 17:29:23,539 log 25576 140108720009216 Not Found: /xmlrpc.php
+WARNING 2025-07-20 17:30:50,827 log 25575 140108720009216 Not Found: /xmlrpc.php
+WARNING 2025-07-20 17:33:46,126 log 25577 140108720009216 Not Found: /xmlrpc.php
+WARNING 2025-07-20 17:44:31,500 log 25575 140108720009216 Not Found: /hello.world
+WARNING 2025-07-20 17:44:32,453 log 25576 140108720009216 Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:33,455 log 25577 140108720009216 Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:34,649 log 25576 140108720009216 Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:35,752 log 25575 140108720009216 Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:36,824 log 25577 140108720009216 Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+WARNING 2025-07-20 17:44:37,819 log 25576 140108720009216 Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:38,849 log 25577 140108720009216 Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:40,172 log 25576 140108720009216 Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:41,395 log 25577 140108720009216 Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:42,514 log 25575 140108720009216 Not Found: /phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:43,683 log 25576 140108720009216 Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:45,122 log 25575 140108720009216 Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:46,459 log 25576 140108720009216 Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:47,612 log 25575 140108720009216 Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:48,704 log 25576 140108720009216 Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:49,988 log 25577 140108720009216 Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:51,203 log 25576 140108720009216 Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:54,656 log 25574 139903496402496 Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:56,347 log 25577 140108720009216 Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:57,545 log 25576 140108720009216 Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:58,683 log 25574 139903485912640 Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:44:59,874 log 25577 140108720009216 Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:01,383 log 25576 140108720009216 Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:02,583 log 25577 140108720009216 Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:03,798 log 25576 140108720009216 Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:04,959 log 25575 140108720009216 Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:06,266 log 25577 140108720009216 Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:07,822 log 25576 140108720009216 Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:09,026 log 25577 140108720009216 Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:11,466 log 25576 140108720009216 Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:12,586 log 25575 140108720009216 Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:13,878 log 25576 140108720009216 Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:15,073 log 25575 140108720009216 Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:16,259 log 25576 140108720009216 Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:17,871 log 25575 140108720009216 Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:19,082 log 25577 140108720009216 Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-20 17:45:20,255 log 25576 140108720009216 Not Found: /index.php
+WARNING 2025-07-20 17:45:21,459 log 25577 140108720009216 Not Found: /public/index.php
+WARNING 2025-07-20 17:45:22,718 log 25576 140108720009216 Not Found: /index.php
+WARNING 2025-07-20 17:45:24,298 log 25575 140108720009216 Not Found: /index.php
+WARNING 2025-07-20 17:45:25,647 log 25577 140108720009216 Not Found: /containers/json
+WARNING 2025-07-20 18:04:00,903 log 25576 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 18:04:09,071 log 25575 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 18:04:59,064 log 25577 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 18:05:44,617 log 25576 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 18:06:20,179 log 25576 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 18:14:10,083 log 25577 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 18:22:36,448 log 25575 140108720009216 Not Found: /wp-admin
+WARNING 2025-07-20 18:28:12,261 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 19:14:38,859 log 25576 140108720009216 Not Found: /sitemap.txt
+WARNING 2025-07-20 19:23:04,544 log 25576 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 19:30:44,755 log 25576 140108720009216 Not Found: /api/v1/posts/posts/my_posts/
+WARNING 2025-07-20 19:39:42,805 log 25576 140108720009216 Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2025-07-20 19:52:46,394 log 25577 140108720009216 Not Found: /actuator/gateway/routes
+WARNING 2025-07-20 20:11:53,545 log 25575 140108720009216 Not Found: /wp-admin/css/
+WARNING 2025-07-20 20:12:05,721 log 25577 140108720009216 Not Found: /.well-known/
+WARNING 2025-07-20 20:12:19,413 log 25575 140108720009216 Not Found: /sites/default/files/
+WARNING 2025-07-20 20:12:47,417 log 25575 140108720009216 Not Found: /uploads/
+WARNING 2025-07-20 20:13:07,995 log 25576 140108720009216 Not Found: /images/
+WARNING 2025-07-20 20:13:22,378 log 25575 140108720009216 Not Found: /files/
+WARNING 2025-07-20 20:36:39,147 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-20 20:38:44,585 log 25577 140108720009216 Not Found: /security.txt
+WARNING 2025-07-20 20:59:41,360 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 21:41:02,764 log 25577 140108720009216 Not Found: /category/trderecelerinden/dersnotlari/ayt/ayt-edebiyat/
+WARNING 2025-07-20 21:52:28,285 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/9-min-1.jpg
+WARNING 2025-07-20 21:58:30,227 log 25575 140108720009216 Not Found: /.env
+WARNING 2025-07-20 21:58:32,458 log 25577 140108720009216 Not Found: /.git/config
+WARNING 2025-07-20 22:29:52,087 log 25576 140108720009216 Not Found: /wp-admin/css/
+WARNING 2025-07-20 22:30:18,345 log 25575 140108720009216 Not Found: /.well-known/
+WARNING 2025-07-20 22:30:31,583 log 25576 140108720009216 Not Found: /sites/default/files/
+WARNING 2025-07-20 22:30:53,330 log 25576 140108720009216 Not Found: /uploads/
+WARNING 2025-07-20 22:31:03,528 log 25577 140108720009216 Not Found: /images/
+WARNING 2025-07-20 22:31:19,809 log 25575 140108720009216 Not Found: /files/
+WARNING 2025-07-20 23:10:19,020 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 23:10:19,906 log 25576 140108720009216 Not Found: /robots.txt

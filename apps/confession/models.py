@@ -184,6 +184,12 @@ class ConfessionModel(models.Model):
     def __str__(self):
         return f"{self.content[:50]}... - {self.category.name}"
     
+    def delete(self, *args, **kwargs):
+        self.comments.all().delete()  # İlişkili yorumları sil
+        self.likes.all().delete()  # İlişkili beğenileri sil
+        self.bookmarks.all().delete()  # İlişkili yer imlerini sil
+        super().delete(*args, **kwargs)  # Sonra itirafı sil
+        
     def get_absolute_url(self):
         from django.urls import reverse
         return reverse('confession:confession_detail', kwargs={'pk': self.pk})

@@ -10,6 +10,9 @@ from django.dispatch import receiver
 from django.core.files.storage import default_storage
 from apps.notifications.services import NotificationService
 from django.urls import reverse
+from django.contrib.contenttypes.fields import GenericRelation
+from apps.like.models import Like
+from apps.bookmark.models import Bookmark
 
 def comment_image_upload_path(instance, filename):
     """Upload path for comment images organized by date and comment ID"""
@@ -41,7 +44,9 @@ class Comment(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
-    
+    likes = GenericRelation(Like)
+    bookmarks = GenericRelation(Bookmark)
+
     class Meta:
         ordering = ['-created_at']
         indexes = [
@@ -51,6 +56,11 @@ class Comment(models.Model):
     def __str__(self):
         # return f"Comment by {self.user.username} on {self.content_object}"
         return f"Yorum: {self.body[:60]}"
+        
+    def delete(self, *args, **kwargs):
+        self.likes.all().delete()  # İlişkili beğenileri sil
+        self.bookmarks.all().delete()  # İlişkili yer imlerini sil
+        super().delete(*args, **kwargs)  # Sonra itirafı sil
 
     def get_absolute_url(self):
         return reverse('comment:comment_detail', kwargs={'comment_id': self.pk})
