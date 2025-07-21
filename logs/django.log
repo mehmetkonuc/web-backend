@@ -664,3 +664,530 @@ WARNING 2025-07-20 22:31:03,528 log 25577 140108720009216 Not Found: /images/
 WARNING 2025-07-20 22:31:19,809 log 25575 140108720009216 Not Found: /files/
 WARNING 2025-07-20 23:10:19,020 log 25577 140108720009216 Not Found: /robots.txt
 WARNING 2025-07-20 23:10:19,906 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-20 23:31:24,215 log 25575 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 23:32:58,845 log 25575 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-20 23:35:03,661 log 25577 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 23:35:06,349 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 23:35:55,234 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-20 23:39:58,657 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:39:59,704 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:00,891 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:03,310 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:04,983 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:07,116 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:08,281 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:09,553 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:10,691 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:11,801 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:17,673 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:18,995 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:20,245 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:21,929 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:23,359 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:24,870 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:26,025 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:27,031 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:28,971 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:40:30,216 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/2-min-8-540x540.png
+WARNING 2025-07-20 23:55:27,402 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 00:32:01,908 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:03,151 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:04,561 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:05,961 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:07,168 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:07,952 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:09,329 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:11,387 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:12,497 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:13,805 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:15,985 log 25575 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:17,175 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:18,376 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:19,598 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:20,796 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:21,926 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:22,867 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:24,550 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:26,089 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:32:27,423 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-4-540x540.jpg
+WARNING 2025-07-21 00:48:01,122 log 25576 140108720009216 Not Found: /hello.world
+WARNING 2025-07-21 00:48:01,519 log 25575 140108720009216 Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:02,096 log 25576 140108720009216 Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:02,700 log 25575 140108720009216 Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:03,322 log 25576 140108720009216 Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:03,848 log 25575 140108720009216 Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+WARNING 2025-07-21 00:48:04,317 log 25576 140108720009216 Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:04,916 log 25575 140108720009216 Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:05,414 log 25576 140108720009216 Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:05,808 log 25575 140108720009216 Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:06,248 log 25576 140108720009216 Not Found: /phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:06,667 log 25575 140108720009216 Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:07,153 log 25576 140108720009216 Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:07,723 log 25575 140108720009216 Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:08,321 log 25576 140108720009216 Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:08,778 log 25575 140108720009216 Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:09,499 log 25576 140108720009216 Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:10,136 log 25575 140108720009216 Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:10,966 log 25574 139903496402496 Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:11,696 log 25576 140108720009216 Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:12,284 log 25575 140108720009216 Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:12,922 log 25574 139903496402496 Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:13,628 log 25576 140108720009216 Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:14,150 log 25575 140108720009216 Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:14,667 log 25576 140108720009216 Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:15,256 log 25575 140108720009216 Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:15,903 log 25576 140108720009216 Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:16,464 log 25575 140108720009216 Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:17,198 log 25577 140108720009216 Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:17,670 log 25575 140108720009216 Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:18,729 log 25575 140108720009216 Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:19,158 log 25577 140108720009216 Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:19,718 log 25575 140108720009216 Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:20,124 log 25577 140108720009216 Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:20,663 log 25575 140108720009216 Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:21,043 log 25577 140108720009216 Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:21,423 log 25575 140108720009216 Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 00:48:21,817 log 25577 140108720009216 Not Found: /index.php
+WARNING 2025-07-21 00:48:22,349 log 25576 140108720009216 Not Found: /public/index.php
+WARNING 2025-07-21 00:48:22,928 log 25577 140108720009216 Not Found: /index.php
+WARNING 2025-07-21 00:48:23,326 log 25576 140108720009216 Not Found: /index.php
+WARNING 2025-07-21 00:48:23,960 log 25575 140108720009216 Not Found: /containers/json
+WARNING 2025-07-21 01:04:21,523 log 25577 140108720009216 Not Found: /wordpress
+WARNING 2025-07-21 01:04:22,135 log 25577 140108720009216 Not Found: /wp
+WARNING 2025-07-21 01:04:22,439 log 25575 140108720009216 Not Found: /bc
+WARNING 2025-07-21 01:04:22,747 log 25577 140108720009216 Not Found: /bk
+WARNING 2025-07-21 01:04:23,054 log 25575 140108720009216 Not Found: /backup
+WARNING 2025-07-21 01:04:23,362 log 25577 140108720009216 Not Found: /old
+WARNING 2025-07-21 01:04:23,677 log 25575 140108720009216 Not Found: /new
+WARNING 2025-07-21 01:04:23,990 log 25577 140108720009216 Not Found: /main
+WARNING 2025-07-21 01:04:24,302 log 25575 140108720009216 Not Found: /home
+WARNING 2025-07-21 01:07:27,620 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 01:07:28,879 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 01:21:52,843 log 25576 140108720009216 Not Found: /category/trderecelerinden/dersnotlari/ayt/ayt-matematik/
+WARNING 2025-07-21 01:38:19,889 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 01:38:26,647 log 25575 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 01:38:27,718 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 01:42:38,329 log 25577 140108720009216 Not Found: /hello.world
+WARNING 2025-07-21 01:42:42,085 log 25576 140108720009216 Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:42:45,118 log 25575 140108720009216 Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:42:50,034 log 25576 140108720009216 Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:42:54,038 log 25575 140108720009216 Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:42:57,003 log 25577 140108720009216 Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+WARNING 2025-07-21 01:43:00,578 log 25575 140108720009216 Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:03,716 log 25577 140108720009216 Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:06,881 log 25575 140108720009216 Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:10,959 log 25577 140108720009216 Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:15,724 log 25575 140108720009216 Not Found: /phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:19,912 log 25577 140108720009216 Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:24,170 log 25575 140108720009216 Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:27,198 log 25576 140108720009216 Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:32,599 log 25577 140108720009216 Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:35,740 log 25575 140108720009216 Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:40,096 log 25577 140108720009216 Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:45,274 log 25575 140108720009216 Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:49,458 log 25574 139903485912640 Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:52,728 log 25576 140108720009216 Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:55,997 log 25575 140108720009216 Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:43:59,263 log 25574 139903496402496 Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:03,403 log 25577 140108720009216 Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:06,443 log 25575 140108720009216 Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:09,845 log 25576 140108720009216 Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:14,161 log 25575 140108720009216 Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:17,890 log 25576 140108720009216 Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:22,894 log 25575 140108720009216 Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:27,393 log 25577 140108720009216 Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:32,846 log 25575 140108720009216 Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:40,766 log 25576 140108720009216 Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:44,438 log 25577 140108720009216 Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:46,990 log 25576 140108720009216 Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:50,289 log 25575 140108720009216 Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:54,074 log 25576 140108720009216 Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:44:58,549 log 25575 140108720009216 Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:45:02,001 log 25576 140108720009216 Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2025-07-21 01:45:06,047 log 25577 140108720009216 Not Found: /index.php
+WARNING 2025-07-21 01:45:09,749 log 25575 140108720009216 Not Found: /public/index.php
+WARNING 2025-07-21 01:45:12,991 log 25576 140108720009216 Not Found: /index.php
+WARNING 2025-07-21 01:45:16,312 log 25575 140108720009216 Not Found: /index.php
+WARNING 2025-07-21 01:45:20,855 log 25576 140108720009216 Not Found: /containers/json
+WARNING 2025-07-21 02:11:12,531 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 02:27:59,341 log 25575 140108720009216 Not Found: /wp-login.php
+WARNING 2025-07-21 02:27:59,520 log 25577 140108720009216 Not Found: /wp-login.php
+WARNING 2025-07-21 02:27:59,591 log 25575 140108720009216 Not Found: /wp-admin/
+WARNING 2025-07-21 02:30:24,835 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 02:30:25,368 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 02:37:09,998 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 02:37:10,443 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 02:46:07,499 log 25575 140108720009216 Not Found: //wp-includes/ID3/license.txt
+WARNING 2025-07-21 02:46:07,684 log 25577 140108720009216 Not Found: //feed/
+WARNING 2025-07-21 02:46:07,872 log 25576 140108720009216 Not Found: //xmlrpc.php
+WARNING 2025-07-21 02:46:08,059 log 25575 140108720009216 Not Found: //blog/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:08,246 log 25577 140108720009216 Not Found: //web/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:08,434 log 25575 140108720009216 Not Found: //wordpress/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:08,620 log 25577 140108720009216 Not Found: //wp/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:08,805 log 25575 140108720009216 Not Found: //2020/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:08,995 log 25577 140108720009216 Not Found: //2019/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:09,187 log 25576 140108720009216 Not Found: //2021/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:09,374 log 25575 140108720009216 Not Found: //shop/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:09,558 log 25576 140108720009216 Not Found: //wp1/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:09,746 log 25575 140108720009216 Not Found: //test/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:09,935 log 25576 140108720009216 Not Found: //site/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 02:46:10,120 log 25575 140108720009216 Not Found: //cms/wp-includes/wlwmanifest.xml
+WARNING 2025-07-21 03:01:52,924 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 03:02:32,032 log 25577 140108720009216 Not Found: /autodiscover/autodiscover.json
+WARNING 2025-07-21 03:22:46,440 log 25576 140108720009216 Not Found: /.git/config
+WARNING 2025-07-21 03:24:25,713 log 25575 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 03:36:41,430 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 04:00:19,811 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 04:00:20,238 log 25576 140108720009216 Not Found: /tyt-turkce/tyt-kimya
+WARNING 2025-07-21 04:09:52,730 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 04:17:56,681 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 04:59:53,563 log 25577 140108720009216 Not Found: /dispatch.asp
+WARNING 2025-07-21 05:07:05,768 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 05:07:06,213 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 05:32:22,102 log 25577 140108720009216 Not Found: /ayt-cografya/
+WARNING 2025-07-21 05:36:02,479 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 05:52:07,924 log 25576 140108720009216 Not Found: /owa/auth/logon.aspx
+WARNING 2025-07-21 05:57:21,059 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 06:24:51,185 log 25576 140108720009216 Not Found: /wordpress
+WARNING 2025-07-21 06:24:51,483 log 25577 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-21 06:24:51,764 log 25576 140108720009216 Not Found: /wp-admin/install.php
+WARNING 2025-07-21 06:24:52,042 log 25577 140108720009216 Not Found: /wp
+WARNING 2025-07-21 06:24:52,321 log 25576 140108720009216 Not Found: /blog
+WARNING 2025-07-21 06:24:52,603 log 25577 140108720009216 Not Found: /new
+WARNING 2025-07-21 06:24:52,895 log 25575 140108720009216 Not Found: /old
+WARNING 2025-07-21 06:24:53,174 log 25577 140108720009216 Not Found: /newsite
+WARNING 2025-07-21 06:24:53,453 log 25575 140108720009216 Not Found: /test
+WARNING 2025-07-21 06:24:53,733 log 25577 140108720009216 Not Found: /main
+WARNING 2025-07-21 06:24:54,021 log 25575 140108720009216 Not Found: /testing
+WARNING 2025-07-21 06:24:54,916 log 25577 140108720009216 Not Found: /site
+WARNING 2025-07-21 06:24:55,196 log 25576 140108720009216 Not Found: /backup
+WARNING 2025-07-21 06:24:55,483 log 25575 140108720009216 Not Found: /demo
+WARNING 2025-07-21 06:24:55,774 log 25576 140108720009216 Not Found: /home
+WARNING 2025-07-21 06:24:56,054 log 25575 140108720009216 Not Found: /tmp
+WARNING 2025-07-21 06:24:56,336 log 25576 140108720009216 Not Found: /dev
+WARNING 2025-07-21 06:24:56,648 log 25575 140108720009216 Not Found: /cms
+WARNING 2025-07-21 06:24:56,927 log 25576 140108720009216 Not Found: /portal
+WARNING 2025-07-21 06:24:57,318 log 25575 140108720009216 Not Found: /web
+WARNING 2025-07-21 06:47:57,192 log 25577 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 06:52:35,653 log 25575 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-21 06:53:00,270 log 25577 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-21 06:53:15,107 log 25576 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-21 06:54:36,854 log 25577 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-21 07:04:17,058 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 07:08:48,118 log 25575 140108720009216 Not Found: /developmentserver/metadatauploader
+WARNING 2025-07-21 07:36:11,207 log 25575 140108720009216 Not Found: /_layouts/15/spinstall0.aspx
+WARNING 2025-07-21 07:47:35,364 log 25576 140108720009216 Not Found: /wp-includes/css/buttons.css
+WARNING 2025-07-21 07:58:32,717 log 25576 140108720009216 Not Found: /ab2g
+WARNING 2025-07-21 07:58:32,959 log 25577 140108720009216 Not Found: /ab2h
+WARNING 2025-07-21 07:58:33,175 log 25576 140108720009216 Not Found: /alive.php
+WARNING 2025-07-21 07:58:35,040 log 25576 140108720009216 Not Found: /teorema505
+WARNING 2025-07-21 08:07:27,740 log 25575 140108720009216 Not Found: /.env
+WARNING 2025-07-21 08:07:27,814 log 25576 140108720009216 Not Found: /.env.local
+WARNING 2025-07-21 08:07:27,880 log 25575 140108720009216 Not Found: /.env.dev
+WARNING 2025-07-21 08:07:27,949 log 25576 140108720009216 Not Found: /.env.development
+WARNING 2025-07-21 08:07:28,017 log 25575 140108720009216 Not Found: /.env.prod
+WARNING 2025-07-21 08:07:28,087 log 25576 140108720009216 Not Found: /.env.production
+WARNING 2025-07-21 08:07:28,165 log 25575 140108720009216 Not Found: /.env.stage
+WARNING 2025-07-21 08:07:28,232 log 25576 140108720009216 Not Found: /.env.test
+WARNING 2025-07-21 08:07:28,300 log 25575 140108720009216 Not Found: /.env.example
+WARNING 2025-07-21 08:07:28,370 log 25576 140108720009216 Not Found: /.env.bak
+WARNING 2025-07-21 08:07:29,134 log 25575 140108720009216 Not Found: /.env.old
+WARNING 2025-07-21 08:07:29,236 log 25576 140108720009216 Not Found: /config/.env
+WARNING 2025-07-21 08:07:29,318 log 25575 140108720009216 Not Found: /config/config.env
+WARNING 2025-07-21 08:07:29,395 log 25576 140108720009216 Not Found: /app/.env
+WARNING 2025-07-21 08:07:39,902 log 25575 140108720009216 Not Found: /api/.env
+WARNING 2025-07-21 08:07:39,966 log 25577 140108720009216 Not Found: /apps/.env
+WARNING 2025-07-21 08:07:40,041 log 25575 140108720009216 Not Found: /server/.env
+WARNING 2025-07-21 08:07:40,105 log 25577 140108720009216 Not Found: /backend/.env
+WARNING 2025-07-21 08:07:40,168 log 25575 140108720009216 Not Found: /aws/credentials
+WARNING 2025-07-21 08:07:40,232 log 25577 140108720009216 Not Found: /.aws/credentials
+WARNING 2025-07-21 08:07:40,293 log 25575 140108720009216 Not Found: /.aws/config
+WARNING 2025-07-21 08:07:40,354 log 25577 140108720009216 Not Found: /config/aws.yml
+WARNING 2025-07-21 08:07:40,417 log 25575 140108720009216 Not Found: /config/aws.json
+WARNING 2025-07-21 08:07:40,480 log 25577 140108720009216 Not Found: /docker-compose.yml
+WARNING 2025-07-21 08:07:40,544 log 25575 140108720009216 Not Found: /docker-compose.override.yml
+WARNING 2025-07-21 08:07:40,606 log 25577 140108720009216 Not Found: /docker-compose.prod.yml
+WARNING 2025-07-21 08:07:40,673 log 25575 140108720009216 Not Found: /docker-compose.dev.yml
+WARNING 2025-07-21 08:07:40,738 log 25577 140108720009216 Not Found: /config/config.json
+WARNING 2025-07-21 08:07:40,801 log 25575 140108720009216 Not Found: /config.json
+WARNING 2025-07-21 08:07:40,864 log 25577 140108720009216 Not Found: /config.yaml
+WARNING 2025-07-21 08:07:40,930 log 25575 140108720009216 Not Found: /config.yml
+WARNING 2025-07-21 08:07:40,994 log 25577 140108720009216 Not Found: /secrets.json
+WARNING 2025-07-21 08:07:41,061 log 25575 140108720009216 Not Found: /secrets.yml
+WARNING 2025-07-21 08:07:41,124 log 25577 140108720009216 Not Found: /credentials.json
+WARNING 2025-07-21 08:07:41,190 log 25575 140108720009216 Not Found: /.git-credentials
+WARNING 2025-07-21 08:07:41,257 log 25577 140108720009216 Not Found: /.git/config
+WARNING 2025-07-21 08:07:41,320 log 25575 140108720009216 Not Found: /.gitignore
+WARNING 2025-07-21 08:07:41,384 log 25577 140108720009216 Not Found: /.gitlab-ci.yml
+WARNING 2025-07-21 08:07:41,879 log 25575 140108720009216 Not Found: /.github/workflows/
+WARNING 2025-07-21 08:07:41,942 log 25577 140108720009216 Not Found: /.idea/workspace.xml
+WARNING 2025-07-21 08:07:42,009 log 25576 140108720009216 Not Found: /.vscode/settings.json
+WARNING 2025-07-21 08:07:42,073 log 25575 140108720009216 Not Found: /storage/logs/laravel.log
+WARNING 2025-07-21 08:07:42,136 log 25576 140108720009216 Not Found: /storage/logs/error.log
+WARNING 2025-07-21 08:07:42,200 log 25575 140108720009216 Not Found: /logs/debug.log
+WARNING 2025-07-21 08:07:42,268 log 25576 140108720009216 Not Found: /logs/app.log
+WARNING 2025-07-21 08:07:42,330 log 25575 140108720009216 Not Found: /debug.log
+WARNING 2025-07-21 08:07:42,393 log 25576 140108720009216 Not Found: /error.log
+WARNING 2025-07-21 08:07:42,457 log 25575 140108720009216 Not Found: /.DS_Store
+WARNING 2025-07-21 08:07:42,519 log 25576 140108720009216 Not Found: /backup.zip
+WARNING 2025-07-21 08:07:42,585 log 25577 140108720009216 Not Found: /.backup
+WARNING 2025-07-21 08:07:42,652 log 25575 140108720009216 Not Found: /db.sql
+WARNING 2025-07-21 08:07:42,717 log 25577 140108720009216 Not Found: /dump.sql
+WARNING 2025-07-21 08:07:42,783 log 25575 140108720009216 Not Found: /database.sql
+WARNING 2025-07-21 08:07:42,850 log 25577 140108720009216 Not Found: /backup.tar.gz
+WARNING 2025-07-21 08:10:08,513 log 25577 140108720009216 Not Found: /.git/config
+WARNING 2025-07-21 08:15:59,018 log 25577 140108720009216 Not Found: /hello.world
+WARNING 2025-07-21 08:24:23,427 log 25576 140108720009216 Not Found: /webui/
+WARNING 2025-07-21 08:28:44,616 log 25576 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 08:41:17,201 log 25575 140108720009216 Not Found: /geoserver/web/
+WARNING 2025-07-21 08:43:58,577 log 25577 140108720009216 Not Found: /.git/config
+WARNING 2025-07-21 08:54:58,458 log 25576 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-6-540x540.jpg
+WARNING 2025-07-21 09:06:18,876 log 25577 140108720009216 Not Found: //contact
+WARNING 2025-07-21 09:30:32,651 log 25575 140108720009216 Not Found: /tyt-geometri
+WARNING 2025-07-21 11:01:48,232 log 25575 140108720009216 Not Found: /dispatch.asp
+WARNING 2025-07-21 11:15:17,047 log 25575 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-21 11:16:26,591 log 25576 140108720009216 Not Found: /wp-admin/setup-config.php
+WARNING 2025-07-21 11:16:50,972 log 25577 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-21 11:17:01,327 log 25575 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-21 11:19:08,367 log 25577 140108720009216 Not Found: /wordpress/wp-admin/setup-config.php
+WARNING 2025-07-21 11:44:52,211 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 11:44:57,735 log 25577 140108720009216 Not Found: /psikoloji/
+WARNING 2025-07-21 11:46:45,247 log 25577 140108720009216 Not Found: /actuator/gateway/routes
+WARNING 2025-07-21 12:12:32,057 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 12:39:28,438 log 25575 140108720009216 Not Found: /.git/config
+WARNING 2025-07-21 12:50:29,705 log 25577 140108720009216 Not Found: /.env
+WARNING 2025-07-21 12:50:30,780 log 25575 140108720009216 Not Found: /api/.env
+WARNING 2025-07-21 12:50:31,286 log 25577 140108720009216 Not Found: /backend/.env
+WARNING 2025-07-21 12:50:33,331 log 25577 140108720009216 Not Found: /.env.example
+WARNING 2025-07-21 12:50:33,849 log 25575 140108720009216 Not Found: /app_dev.php/_profiler/phpinfo
+WARNING 2025-07-21 12:50:35,675 log 25575 140108720009216 Not Found: /data/.env
+WARNING 2025-07-21 12:50:37,299 log 25576 140108720009216 Not Found: /www/.env
+WARNING 2025-07-21 12:50:37,775 log 25575 140108720009216 Not Found: /developer/.env
+WARNING 2025-07-21 12:50:38,289 log 25576 140108720009216 Not Found: /home/.env
+WARNING 2025-07-21 12:50:40,248 log 25575 140108720009216 Not Found: /docs/.env
+WARNING 2025-07-21 12:50:40,752 log 25576 140108720009216 Not Found: /old/.env
+WARNING 2025-07-21 12:50:41,656 log 25575 140108720009216 Not Found: /.env.local
+WARNING 2025-07-21 12:50:43,135 log 25576 140108720009216 Not Found: /cms/.env
+WARNING 2025-07-21 12:50:43,659 log 25575 140108720009216 Not Found: /config.js
+WARNING 2025-07-21 13:05:51,750 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 13:26:44,179 log 25576 140108720009216 Not Found: /ads.txt
+WARNING 2025-07-21 13:33:03,141 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/3-min-6.jpg
+WARNING 2025-07-21 13:39:05,304 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:06,266 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:07,334 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:08,270 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:09,322 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:10,186 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:10,954 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:11,908 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:12,785 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:13,804 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:14,827 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:15,851 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:17,042 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:18,059 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:18,898 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:19,748 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:20,813 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:21,734 log 25577 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:22,731 log 25575 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:39:28,495 log 25576 140108720009216 Not Found: /wp-content/uploads/2022/07/1-min-2-540x540.png
+WARNING 2025-07-21 13:49:24,847 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/6-min-6.jpg
+WARNING 2025-07-21 13:58:14,159 log 25575 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 14:01:02,533 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 14:12:30,738 log 25576 140108720009216 Not Found: /robots.txt
+WARNING 2025-07-21 15:00:28,411 log 25577 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 15:22:10,292 log 25577 140108720009216 Not Found: /wp-includes/css/buttons.css
+WARNING 2025-07-21 15:55:42,572 log 25576 140108720009216 Not Found: /wp-login.php
+WARNING 2025-07-21 15:55:42,932 log 25577 140108720009216 Not Found: /wp-admin/
+WARNING 2025-07-21 16:12:26,623 log 25577 140108720009216 Not Found: /wp-content/uploads/2021/08/1@2x.jpg
+WARNING 2025-07-21 16:23:41,189 log 25575 140108720009216 Not Found: /.git/config
+WARNING 2025-07-21 16:46:04,538 log 25575 140108720009216 Unauthorized: /api/v1/likes/content-types/
+WARNING 2025-07-21 16:46:04,536 log 25576 140108720009216 Unauthorized: /api/v1/chat/rooms/
+WARNING 2025-07-21 16:46:04,545 log 25577 140108720009216 Unauthorized: /api/v1/notifications/list/unread_count/
+ERROR 2025-07-21 16:46:04,789 log 25576 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-07-21 16:46:04,827 log 25575 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-07-21 16:46:04,844 log 25577 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+WARNING 2025-07-21 16:46:05,073 log 25575 140108720009216 Unauthorized: /api/v1/posts/filter-options/
+ERROR 2025-07-21 16:46:05,186 log 25576 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+WARNING 2025-07-21 16:46:05,278 log 25575 140108720009216 Unauthorized: /api/v1/posts/filter-preferences/
+ERROR 2025-07-21 16:46:05,376 log 25577 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+WARNING 2025-07-21 16:46:05,466 log 25575 140108720009216 Unauthorized: /api/v1/posts/posts/
+ERROR 2025-07-21 16:46:05,551 log 25576 140108720009216 Internal Server Error: /api/v1/token/refresh/
+Traceback (most recent call last):
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/serializers.py", line 141, in validate
+    refresh.outstand()
+  File "/var/www/kampuslu/venv/lib/python3.10/site-packages/rest_framework_simplejwt/tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+INFO 2025-07-21 16:47:12,667 services 25575 140108720009216 FCM Token güncellendi: Merve - android
+INFO 2025-07-21 16:48:00,287 services 25575 140108720009216 FCM mesajı gönderildi: projects/kampuslu-notifications/messages/0:1753105680190640%58c6daff58c6daff
+INFO 2025-07-21 16:49:20,086 services 25575 140108720009216 FCM mesajı gönderildi: projects/kampuslu-notifications/messages/0:1753105760006903%58c6daff58c6daff
+WARNING 2025-07-21 16:51:40,606 log 25575 140108720009216 Not Found: /favicon.ico
+WARNING 2025-07-21 16:52:03,179 log 25575 140108720009216 Not Found: /sitemap.xml
+INFO 2025-07-21 17:27:59,228 services 52884 140363153608704 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-21 17:28:35,215 services 52900 140233065496576 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-21 17:28:35,219 services 52899 140233065496576 Firebase Admin SDK başarıyla başlatıldı
+INFO 2025-07-21 17:28:35,246 services 52901 140233065496576 Firebase Admin SDK başarıyla başlatıldı

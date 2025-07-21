@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-posta Doğrulama - Fakulten</title>
+    <title>E-posta Doğrulama - Kampuslu</title>
     <style type="text/css">
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -48,13 +48,13 @@
 <body>
     <div class="container">
         <div class="header">
-            <h2>Fakulten E-posta Doğrulama</h2>
+            <h2>Kampuslu E-posta Doğrulama</h2>
         </div>
         
         <div class="content">
             <p>Merhaba {{ user.first_name }},</p>
             
-            <p>Fakulten hesabınız başarıyla oluşturuldu. E-posta adresinizi doğrulamak için aşağıdaki bağlantıya tıklayın:</p>
+            <p>Kampuslu hesabınız başarıyla oluşturuldu. E-posta adresinizi doğrulamak için aşağıdaki bağlantıya tıklayın:</p>
             
             <p style="text-align: center;">
                 <a href="{{ verification_url }}" class="button">E-posta Adresimi Doğrula</a>
@@ -67,7 +67,7 @@
         </div>
         
         <div class="footer">
-            <p>Bu e-posta, Fakulten'e kayıt olduğunuz için gönderilmiştir.</p>
+            <p>Bu e-posta, Kampuslu'ye kayıt olduğunuz için gönderilmiştir.</p>
             <p>Eğer bu e-postayı siz talep etmediyseniz, lütfen dikkate almayın.</p>
         </div>
     </div>

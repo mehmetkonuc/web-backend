@@ -118,7 +118,7 @@ class Step2RegisterView(generics.GenericAPIView):
             verification_url = f"{request.scheme}://{request.get_host()}/profile/verify-email/{verification_token}/"
             
             # E-posta hazırla
-            subject = "Fakulten - E-posta Adresinizi Doğrulayın"
+            subject = "Kampuslu - E-posta Adresinizi Doğrulayın"
             message = render_to_string('profiles/email_verification_email.html', {
                 'user': user,
                 'verification_url': verification_url,

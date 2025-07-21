@@ -43,7 +43,6 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 token = None
                 if auth_header and auth_header.startswith('Bearer '):
                     token = auth_header.split(' ')[1]
-                    print(f"Token headers'dan alındı: {token[:20]}...")
                 elif query_auth_header and query_auth_header.startswith('Bearer '):
                     token = query_auth_header.split(' ')[1]
                     print(f"Token query auth'dan alındı: {token[:20]}...")

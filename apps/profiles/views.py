@@ -524,7 +524,7 @@ def profile_settings_view(request):
                 
                 # Send verification email to new address
                 verification_url = f"{request.scheme}://{request.get_host()}/profile/verify-email/{profile.email_verification_token}/"
-                subject = "Fakulten - E-posta Adresinizi Doğrulayın"
+                subject = "Kampuslu - E-posta Adresinizi Doğrulayın"
                 message = render_to_string('profiles/email_verification_email.html', {
                     'user': request.user,
                     'verification_url': verification_url,
@@ -697,7 +697,7 @@ def resend_verification_email_view(request):
     profile.save()
       # Doğrulama bağlantısını hazırla ve e-posta gönder
     verification_url = f"{request.scheme}://{request.get_host()}/profile/verify-email/{profile.email_verification_token}/"
-    subject = "Fakulten - E-posta Adresinizi Doğrulayın"
+    subject = "Kampuslu - E-posta Adresinizi Doğrulayın"
     message = render_to_string('profiles/email_verification_email.html', {
         'user': request.user,
         'verification_url': verification_url,

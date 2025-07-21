@@ -61,12 +61,38 @@ class Hashtag(models.Model):
     
     @classmethod
     def get_trending_hashtags(cls, limit=10):
-        """Returns trending hashtags based on usage in the last 24 hours"""
+        """
+        Returns trending hashtags based on usage in the last 24 hours.
+        If not enough hashtags found in last 24h, fills the rest with most popular hashtags of all time.
+        """
         last_24h = timezone.now() - timezone.timedelta(hours=24)
-        trending = cls.objects.filter(posts__created_at__gte=last_24h) \
-                    .annotate(count=models.Count('posts')) \
-                    .order_by('-count')[:limit]
-        return trending
+        
+        # Son 24 saatteki trend hashtag'leri al
+        trending_24h = cls.objects.filter(posts__created_at__gte=last_24h) \
+                        .annotate(count=models.Count('posts')) \
+                        .order_by('-count')
+        
+        # Eğer son 24 saatte yeterli hashtag varsa, sadece onları döndür
+        if trending_24h.count() >= limit:
+            return trending_24h[:limit]
+        
+        # Son 24 saatteki hashtag'lerin ID'lerini al
+        trending_24h_ids = list(trending_24h.values_list('id', flat=True))
+        
+        # Tüm zamanların en popüler hashtag'lerini al (son 24 saatte olanları hariç tut)
+        all_time_trending = cls.objects.exclude(id__in=trending_24h_ids) \
+                            .annotate(count=models.Count('posts')) \
+                            .filter(count__gt=0) \
+                            .order_by('-count')
+        
+        # Eksik olan sayı kadar hashtag al
+        needed_count = limit - trending_24h.count()
+        additional_hashtags = all_time_trending[:needed_count]
+        
+        # İki listeyi birleştir: önce son 24 saat, sonra tüm zamanlar
+        result_list = list(trending_24h) + list(additional_hashtags)
+        
+        return result_list
 
 class Post(models.Model):
     """Model for user posts similar to Twitter"""

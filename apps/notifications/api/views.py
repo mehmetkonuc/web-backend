@@ -87,6 +87,23 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
     
+    @action(detail=False, methods=['delete'])
+    def delete_all(self, request):
+        """Delete all notifications for the current user"""
+        try:
+            count = Notification.objects.filter(recipient=request.user).count()
+            Notification.objects.filter(recipient=request.user).delete()
+            return Response({
+                "success": True,
+                "count": count,
+                "message": f"{count} notifications deleted successfully."
+            })
+        except Exception as e:
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+    
     @action(detail=False, methods=['get'])
     def unread_count(self, request):
         """Get count of unread notifications"""

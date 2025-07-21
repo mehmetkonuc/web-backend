@@ -109,7 +109,7 @@ def register_view(request):
                 
                 # E-posta doğrulama bağlantısı gönder
                 verification_url = f"{request.scheme}://{request.get_host()}/profile/verify-email/{verification_token}/"
-                subject = "Fakulten - E-posta Adresinizi Doğrulayın"
+                subject = "Kampuslu - E-posta Adresinizi Doğrulayın"
                 message = render_to_string('profiles/email_verification_email.html', {
                     'user': user,
                     'verification_url': verification_url,
