@@ -50,6 +50,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'corsheaders',
     'compressor',
+    'django_recaptcha',  # reCAPTCHA - isteğe bağlı
     # 'channels',  # Uncomment when WebSocket is needed
 ]
 
@@ -91,6 +92,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'apps.common.middleware.SecurityMiddleware',
+    'apps.common.middleware.HoneypotMiddleware',
+    'apps.common.rate_limiting.GlobalRateLimitMiddleware',
+    'apps.common.rate_limiting.ContentSpamMiddleware',
 ]
 
 # ==============================================================================
@@ -324,6 +329,7 @@ else:
 #     "http://localhost:8000",
 #     "http://10.0.2.2:8000",    # Android emulator
 #     "http://192.168.0.164:8000",  # Local network
+#     "http://192.168.1.24:8000",  # Local network
 # ]
 
 CORS_ALLOW_METHODS = [
@@ -370,6 +376,10 @@ LOGGING = {
             'format': '{levelname} {message}',
             'style': '{',
         },
+        'security': {
+            'format': '{levelname} {asctime} {module} SECURITY: {message}',
+            'style': '{',
+        },
     },
     'handlers': {
         'file': {
@@ -379,6 +389,14 @@ LOGGING = {
             'maxBytes': 1024*1024*5,  # 5 MB
             'backupCount': 5,
             'formatter': 'verbose',
+        },
+        'security_file': {
+            'level': 'WARNING',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR / 'logs' / 'security.log',
+            'maxBytes': 1024*1024*5,  # 5 MB
+            'backupCount': 10,
+            'formatter': 'security',
         },
         'console': {
             'level': 'DEBUG',
@@ -398,6 +416,11 @@ LOGGING = {
         'apps': {
             'handlers': ['file', 'console'],
             'level': 'DEBUG',
+            'propagate': False,
+        },
+        'security': {
+            'handlers': ['security_file', 'console'],
+            'level': 'WARNING',
             'propagate': False,
         },
     },
@@ -460,11 +483,18 @@ REST_FRAMEWORK = {
 
 # JWT Configuration
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=168),  # 24 saatten 1 saate düşür
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
     'UPDATE_LAST_LOGIN': True,
+    'ALGORITHM': 'HS256',
+    'SIGNING_KEY': config('JWT_SECRET_KEY', default=SECRET_KEY),  # Ayrı JWT secret key
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+    'TOKEN_OBTAIN_SERIALIZER': 'rest_framework_simplejwt.serializers.TokenObtainPairSerializer',
+    'TOKEN_REFRESH_SERIALIZER': 'rest_framework_simplejwt.serializers.TokenRefreshSerializer',
 }
 
 # ==============================================================================
@@ -479,4 +509,84 @@ FIREBASE_SERVICE_ACCOUNT_KEY = config(
 
 # Firebase service account key dosyası var mı kontrol et
 FIREBASE_ENABLED = os.path.exists(FIREBASE_SERVICE_ACCOUNT_KEY)
+
+# ==============================================================================
+# RECAPTCHA CONFIGURATION
+# ==============================================================================
+
+# reCAPTCHA ayarları (Google reCAPTCHA v2)
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY', default='')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY', default='')
+RECAPTCHA_REQUIRED_SCORE = 0.85  # v3 için score threshold
+
+# reCAPTCHA zorunlu mu? (Bot saldırısı durumunda True yapın)
+RECAPTCHA_REQUIRED = config('RECAPTCHA_REQUIRED', default=False, cast=bool)
+
+# Development'ta reCAPTCHA'yı devre dışı bırak
+if DEBUG:
+    SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+    RECAPTCHA_REQUIRED = False  # Development'ta asla zorunlu olmasın
+
+# ==============================================================================
+# ADDITIONAL SECURITY SETTINGS
+# ==============================================================================
+
+# IP Whitelist (isteğe bağlı)
+ALLOWED_IPS = config('ALLOWED_IPS', default='', cast=Csv())
+
+# Blocked IPs (şüpheli IP'ler için)
+BLOCKED_IPS = config('BLOCKED_IPS', default='', cast=Csv())
+
+# Minimum account age for posting (spam prevention)
+MINIMUM_ACCOUNT_AGE_HOURS = config('MINIMUM_ACCOUNT_AGE_HOURS', default=24, cast=int)
+
+# ==============================================================================
+# GLOBAL RATE LIMITING CONFIGURATION
+# ==============================================================================
+
+# Global rate limiting ayarları
+GLOBAL_RATE_LIMITS = {
+    'post_creation': {
+        'requests': 5,      # 5 dakikada 5 post
+        'window': 300,      # 5 dakika (saniye)
+        'block_duration': 1800  # 30 dakika block
+    },
+    'comment_creation': {
+        'requests': 10,     # 5 dakikada 10 yorum
+        'window': 300,
+        'block_duration': 900   # 15 dakika block
+    },
+    'confession_creation': {
+        'requests': 5,      # 5 dakikada 5 itiraf
+        'window': 300,
+        'block_duration': 2700  # 45 dakika block
+    },
+    'like_action': {
+        'requests': 50,     # 5 dakikada 50 like/unlike
+        'window': 300,
+        'block_duration': 600   # 10 dakika block
+    },
+    'bookmark_action': {
+        'requests': 30,     # 5 dakikada 30 bookmark
+        'window': 300,
+        'block_duration': 600   # 10 dakika block
+    },
+    'general_api': {
+        'requests': 30,     # 5 dakikada 30 genel API request
+        'window': 300,
+        'block_duration': 900
+    },
+    'web_forms': {
+        'requests': 20,     # 5 dakikada 20 form submission
+        'window': 300,
+        'block_duration': 1200
+    }
+}
+
+# Yeni hesaplar için günlük limitler
+NEW_ACCOUNT_DAILY_LIMITS = {
+    'posts': config('NEW_ACCOUNT_POST_LIMIT', default=5, cast=int),
+    'comments': config('NEW_ACCOUNT_COMMENT_LIMIT', default=10, cast=int),
+    'likes': config('NEW_ACCOUNT_LIKE_LIMIT', default=50, cast=int)
+}
 

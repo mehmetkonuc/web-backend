@@ -61,9 +61,24 @@ class Step1RegisterSerializer(serializers.ModelSerializer):
         required=True
     )
     
+    # Honeypot field - Bot'lar genelde tüm field'ları doldurur
+    website = serializers.CharField(
+        required=False, 
+        allow_blank=True,
+        write_only=True,
+        help_text="Bu alanı boş bırakın"
+    )
+    
+    # reCAPTCHA field (opsiyonel - yoğun bot saldırısı durumunda aktive edilir)
+    recaptcha = serializers.CharField(
+        required=False,
+        write_only=True,
+        help_text="reCAPTCHA token (opsiyonel)"
+    )
+    
     class Meta:
         model = User
-        fields = ('username', 'password', 'password2', 'email', 'first_name', 'last_name')
+        fields = ('username', 'password', 'password2', 'email', 'first_name', 'last_name', 'website', 'recaptcha')
         extra_kwargs = {
             'first_name': {'required': True},
             'last_name': {'required': True}
@@ -74,6 +89,36 @@ class Step1RegisterSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 {"password": "Şifreler eşleşmiyor"}
             )
+        
+        # Güvenlik kontrolleri
+        from apps.common.security import validate_registration_data, log_suspicious_activity
+        from django.conf import settings
+        
+        # IP adresini request'ten al
+        request = self.context.get('request')
+        ip_address = request.META.get('REMOTE_ADDR') if request else 'unknown'
+        
+        # reCAPTCHA kontrolü (eğer aktifse)
+        recaptcha_token = attrs.get('recaptcha', '')
+        if getattr(settings, 'RECAPTCHA_REQUIRED', False) and not recaptcha_token:
+            raise serializers.ValidationError({"recaptcha": "reCAPTCHA doğrulaması gerekli"})
+        
+        # reCAPTCHA token'ı attrs'dan kaldır (database'e kaydedilmesin)
+        if 'recaptcha' in attrs:
+            del attrs['recaptcha']
+        
+        # Güvenlik validasyonu
+        security_errors = validate_registration_data(attrs, ip_address)
+        if security_errors:
+            # Şüpheli aktiviteyi logla
+            log_suspicious_activity(
+                ip_address=ip_address,
+                email=attrs.get('email'),
+                reason="Registration validation failed",
+                additional_data={'errors': security_errors, 'data': {k: v for k, v in attrs.items() if k not in ['password', 'password2']}}
+            )
+            raise serializers.ValidationError({"security": security_errors})
+        
         return attrs
 
 

@@ -56,20 +56,39 @@ class ChatConsumer(AsyncWebsocketConsumer):
                     return
                 
                 # JWT token'ı çözümle
-                payload = jwt.decode(
-                    token,
-                    settings.SECRET_KEY,
-                    algorithms=["HS256"]
-                )
+                from rest_framework_simplejwt.tokens import UntypedToken
+                from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
+                from django.contrib.auth import get_user_model
                 
-                # Token'dan user_id al
-                user_id = payload.get('user_id')
-                if user_id:
-                    self.user = await self.get_user_by_id(user_id)
-                    if not self.user:
+                try:
+                    # JWT settings'ten key'i al
+                    jwt_settings = settings.SIMPLE_JWT
+                    signing_key = jwt_settings.get('SIGNING_KEY', settings.SECRET_KEY)
+                    algorithm = jwt_settings.get('ALGORITHM', 'HS256')
+                    
+                    # Token'ı doğrula
+                    UntypedToken(token)  # Token geçerliliğini kontrol et
+                    
+                    # Payload'ı decode et
+                    payload = jwt.decode(
+                        token,
+                        signing_key,
+                        algorithms=[algorithm]
+                    )
+                    
+                    # Token'dan user_id al
+                    user_id = payload.get('user_id')
+                    if user_id:
+                        self.user = await self.get_user_by_id(user_id)
+                        if not self.user:
+                            await self.close(code=4003)
+                            return
+                    else:
                         await self.close(code=4003)
                         return
-                else:
+                        
+                except (jwt.DecodeError, jwt.ExpiredSignatureError, InvalidToken, TokenError) as e:
+                    print(f"Token doğrulama hatası: {str(e)}")
                     await self.close(code=4003)
                     return
                     

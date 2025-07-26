@@ -1,0 +1,10 @@
+Bot Saldırısı Durumunda:
+
+# 1. Durumu analiz et
+python manage.py security_analysis --hours=1
+
+# 2. Şüpheli hesapları temizle  
+python manage.py clean_suspicious_accounts
+
+# 3. Gerekirse reCAPTCHA aktive et
+export RECAPTCHA_REQUIRED=True

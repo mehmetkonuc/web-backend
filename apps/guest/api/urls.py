@@ -7,7 +7,8 @@ from rest_framework_simplejwt.views import (
 from .views import (
     RegisterView, UserDetailView, CurrentUserView, ChangePasswordView,
     Step1RegisterView, Step2RegisterView, LoginView, DatasetOptionsView,
-    CheckUsernameView, PasswordResetStep1View, PasswordResetStep2View, PasswordResetConfirmView
+    CheckUsernameView, PasswordResetStep1View, PasswordResetStep2View, 
+    PasswordResetConfirmView, CaptchaStatusView
 )
 
 
@@ -28,6 +29,9 @@ urlpatterns = [
     
     # Veri seçenekleri
     path('dataset-options/', DatasetOptionsView.as_view(), name='dataset-options'),  # Kayıt için veri seçenekleri
+    
+    # Güvenlik
+    path('captcha-status/', CaptchaStatusView.as_view(), name='captcha-status'),  # reCAPTCHA gerekli mi?
     
     # JWT Token
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # JWT token al
