@@ -142,17 +142,18 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     async def disconnect(self, close_code):
         # Eğer belirli bir odaya bağlıysa, gruptan ayrıl
-        if self.is_room_specific:
+        if hasattr(self, 'is_room_specific') and self.is_room_specific and hasattr(self, 'room_group_name'):
             await self.channel_layer.group_discard(
                 self.room_group_name,
                 self.channel_name
             )
         
-        # Kişisel gruptan ayrıl
-        await self.channel_layer.group_discard(
-            self.personal_group_name,
-            self.channel_name
-        )
+        # Kişisel gruptan ayrıl - sadece group_name varsa
+        if hasattr(self, 'personal_group_name'):
+            await self.channel_layer.group_discard(
+                self.personal_group_name,
+                self.channel_name
+            )
 
     async def receive(self, text_data):
         data = json.loads(text_data)

@@ -48,6 +48,7 @@ THIRD_PARTY_APPS = [
     'crispy_bootstrap5',
     'django_filters',
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',  # JWT Token Blacklist
     'corsheaders',
     'compressor',
     'django_recaptcha',  # reCAPTCHA - isteğe bağlı
@@ -483,10 +484,10 @@ REST_FRAMEWORK = {
 
 # JWT Configuration
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=168),  # 24 saatten 1 saate düşür
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
-    'ROTATE_REFRESH_TOKENS': True,
-    'BLACKLIST_AFTER_ROTATION': True,
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),  # Test için 1 dakika
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),    # 7 gün (normal değer)
+    'ROTATE_REFRESH_TOKENS': True,   # ✅ Güvenlik için True
+    'BLACKLIST_AFTER_ROTATION': True,  # ✅ Eski token'ları geçersiz kıl
     'UPDATE_LAST_LOGIN': True,
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': config('JWT_SECRET_KEY', default=SECRET_KEY),  # Ayrı JWT secret key

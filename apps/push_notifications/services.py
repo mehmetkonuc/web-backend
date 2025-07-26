@@ -32,6 +32,11 @@ class FirebaseNotificationService:
         Firebase Admin SDK'yı başlatır
         """
         try:
+            # Development modda Firebase'i devre dışı bırak
+            if getattr(settings, 'DEBUG', False):
+                logger.info("Firebase devre dışı (DEBUG=True)")
+                return
+                
             # Firebase mevcut değilse pas geç
             if not FIREBASE_AVAILABLE:
                 logger.warning("Firebase Admin SDK mevcut değil")
@@ -114,7 +119,7 @@ class FirebaseNotificationService:
         Tek bir kullanıcıya push notification gönderir
         """
         try:
-            logger.error("deneme", FIREBASE_AVAILABLE, self.app)
+            logger.debug(f"Firebase durumu - FIREBASE_AVAILABLE: {FIREBASE_AVAILABLE}, app: {self.app}")
             if not FIREBASE_AVAILABLE or not self.app:
                 logger.error("Firebase başlatılmamış veya mevcut değil")
                 return False
